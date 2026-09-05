@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use quantcheck or the audit dataset, please cite the paper below."
+title: "quantcheck: functional acceptance testing for quantized LLM artifacts"
+authors:
+  - family-names: Patodiya
+    given-names: Aditi
+    orcid: "https://orcid.org/0009-0002-3162-4863"
+repository-code: "https://github.com/aditi-p31/quantcheck"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Broken on Arrival: Silently Defective LLM Artifacts in Public Model Registries and How to Catch Them"
+  authors:
+    - family-names: Patodiya
+      given-names: Aditi
+      orcid: "https://orcid.org/0009-0002-3162-4863"
+  year: 2026
+  notes: "Under review. arXiv identifier will be added on announcement."

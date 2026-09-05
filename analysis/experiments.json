@@ -1,0 +1,76 @@
+{
+ "native": [
+  {
+   "file": "deepseek-coder-6.7b-instruct.Q3_K_M.native.jsonl",
+   "smoke15": 6,
+   "full164": 22
+  },
+  {
+   "file": "deepseek-coder-6.7b-instruct.Q4_K_M.native.jsonl",
+   "smoke15": 4,
+   "full164": 16
+  }
+ ],
+ "sensitivity": [
+  {
+   "artifact": "deepseek-coder_6.7b-instruct-q4_K_S",
+   "passed": 29,
+   "attempted": 49,
+   "rate": 0.592
+  },
+  {
+   "artifact": "gemma2_2b-instruct-q3_K_L",
+   "passed": 21,
+   "attempted": 49,
+   "rate": 0.429
+  },
+  {
+   "artifact": "granite-code_3b-instruct-128k-q6_K",
+   "passed": 23,
+   "attempted": 49,
+   "rate": 0.469
+  },
+  {
+   "artifact": "granite-code_3b-instruct-q3_K_M",
+   "passed": 12,
+   "attempted": 49,
+   "rate": 0.245
+  },
+  {
+   "artifact": "granite3.1-dense_2b-instruct-q4_K_S",
+   "passed": 22,
+   "attempted": 49,
+   "rate": 0.449
+  },
+  {
+   "artifact": "llama3.2_3b-instruct-q3_K_L",
+   "passed": 19,
+   "attempted": 49,
+   "rate": 0.388
+  },
+  {
+   "artifact": "llama3.2_3b-instruct-q4_K_S",
+   "passed": 26,
+   "attempted": 49,
+   "rate": 0.531
+  },
+  {
+   "artifact": "mistral_7b-instruct-q3_K_S",
+   "passed": 11,
+   "attempted": 49,
+   "rate": 0.224
+  },
+  {
+   "artifact": "phi3.5_3.8b-mini-instruct-q5_K_S",
+   "passed": 21,
+   "attempted": 49,
+   "rate": 0.429
+  },
+  {
+   "artifact": "yi-coder_1.5b-chat-q4_K_S",
+   "passed": 22,
+   "attempted": 49,
+   "rate": 0.449
+  }
+ ]
+}

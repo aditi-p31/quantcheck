@@ -1,0 +1,18 @@
+{
+ "artifacts": [
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_M",
+   "family": "qwen2.5-coder",
+   "quant": "q3_K_M",
+   "params_b": 3.0,
+   "channel": "metal-replication"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q2_K",
+   "family": "phi3.5",
+   "quant": "q2_K",
+   "params_b": 3.8,
+   "channel": "metal-replication"
+  }
+ ]
+}

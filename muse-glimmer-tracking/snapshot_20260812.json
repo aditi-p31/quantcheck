@@ -1,0 +1,924 @@
+{
+ "captured": "2026-08-12T08:21:32-0700",
+ "n": 100,
+ "models": [
+  {
+   "id": "meta-models/Muse-Glimmer-30B",
+   "createdAt": "2026-08-09T17:51:35.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "unsloth/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T09:11:29.000Z",
+   "downloads": 0,
+   "siblings": [
+    "BF16/Muse-Glimmer-30B-BF16-00001-of-00002.gguf",
+    "BF16/Muse-Glimmer-30B-BF16-00002-of-00002.gguf",
+    "Muse-Glimmer-30B-Q8_0.gguf",
+    "Muse-Glimmer-30B-UD-IQ2_M.gguf",
+    "Muse-Glimmer-30B-UD-IQ2_XS.gguf",
+    "Muse-Glimmer-30B-UD-IQ2_XXS.gguf",
+    "Muse-Glimmer-30B-UD-IQ3_M.gguf",
+    "Muse-Glimmer-30B-UD-IQ3_XXS.gguf",
+    "Muse-Glimmer-30B-UD-Q2_K_XL.gguf",
+    "Muse-Glimmer-30B-UD-Q3_K_XL.gguf",
+    "Muse-Glimmer-30B-UD-Q4_K_XL.gguf",
+    "Muse-Glimmer-30B-UD-Q5_K_L.gguf",
+    "Muse-Glimmer-30B-UD-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-UD-Q5_K_XL.gguf",
+    "Muse-Glimmer-30B-UD-Q6_K_XL.gguf",
+    "Muse-Glimmer-30B-UD-Q8_K_XL.gguf",
+    "dflash-kquant.gguf",
+    "mmproj-Muse-Glimmer-30B-BF16.gguf",
+    "mmproj-Muse-Glimmer-30B-Q8_0.gguf",
+    "mmproj-kquant.gguf"
+   ]
+  },
+  {
+   "id": "meta-models/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-09T17:54:22.000Z",
+   "downloads": 0,
+   "siblings": [
+    "dflash-kquant.gguf",
+    "mmproj-kquant.gguf",
+    "muse-glimmer-30B-kquant-17gb.gguf",
+    "muse-glimmer-30B-kquant-dynamic.gguf"
+   ]
+  },
+  {
+   "id": "meta-models/Muse-Glimmer-30B-assistant",
+   "createdAt": "2026-08-09T17:55:23.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "meta-models/Muse-Glimmer-30B-ExecuTorch-PTE",
+   "createdAt": "2026-08-10T04:44:00.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Blackfrost-AI/Muse-Glimmer-30B-Abliterated-GGUF",
+   "createdAt": "2026-08-10T19:35:00.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-Abliterated-Q2_K.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q3_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q3_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q4_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q5_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q6_K.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q8_0.gguf",
+    "dflash-Muse-Glimmer-30B-Abliterated-F16.gguf",
+    "mmproj-Muse-Glimmer-30B-Abliterated-F16.gguf",
+    "mmproj-Muse-Glimmer-30B-Abliterated-Q8_0.gguf"
+   ]
+  },
+  {
+   "id": "vmlinux/Muse-Glimmer-30B-ROCmFPX-GGUF",
+   "createdAt": "2026-08-10T14:11:43.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-DFlash-ROCmFP4.gguf",
+    "Muse-Glimmer-30B-DFlash-ROCmFP8.gguf",
+    "Muse-Glimmer-30B-ROCmFP4-Q6-QUALITY.gguf",
+    "Muse-Glimmer-30B-ROCmFP4.gguf",
+    "Muse-Glimmer-30B-ROCmFP8.gguf",
+    "mmproj-Muse-Glimmer-30B-BF16.gguf"
+   ]
+  },
+  {
+   "id": "bartowski/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T16:11:06.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-IQ2_M.gguf",
+    "Muse-Glimmer-30B-IQ2_S.gguf",
+    "Muse-Glimmer-30B-IQ2_XS.gguf",
+    "Muse-Glimmer-30B-IQ2_XXS.gguf",
+    "Muse-Glimmer-30B-IQ3_M.gguf",
+    "Muse-Glimmer-30B-IQ3_XS.gguf",
+    "Muse-Glimmer-30B-IQ3_XXS.gguf",
+    "Muse-Glimmer-30B-IQ4_NL.gguf",
+    "Muse-Glimmer-30B-IQ4_XS.gguf",
+    "Muse-Glimmer-30B-Q2_K.gguf",
+    "Muse-Glimmer-30B-Q2_K_L.gguf",
+    "Muse-Glimmer-30B-Q3_K_L.gguf",
+    "Muse-Glimmer-30B-Q3_K_M.gguf",
+    "Muse-Glimmer-30B-Q3_K_S.gguf",
+    "Muse-Glimmer-30B-Q3_K_XL.gguf",
+    "Muse-Glimmer-30B-Q4_0.gguf",
+    "Muse-Glimmer-30B-Q4_1.gguf",
+    "Muse-Glimmer-30B-Q4_K_L.gguf",
+    "Muse-Glimmer-30B-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-Q4_K_S.gguf",
+    "Muse-Glimmer-30B-Q5_K_L.gguf",
+    "Muse-Glimmer-30B-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-Q5_K_S.gguf",
+    "Muse-Glimmer-30B-Q6_K.gguf",
+    "Muse-Glimmer-30B-Q6_K_L.gguf",
+    "Muse-Glimmer-30B-Q8_0.gguf",
+    "Muse-Glimmer-30B-bf16/Muse-Glimmer-30B-bf16-00001-of-00002.gguf",
+    "Muse-Glimmer-30B-bf16/Muse-Glimmer-30B-bf16-00002-of-00002.gguf",
+    "Muse-Glimmer-30B-imatrix.gguf",
+    "mmproj-Muse-Glimmer-30B-bf16.gguf",
+    "mmproj-Muse-Glimmer-30B-f16.gguf"
+   ]
+  },
+  {
+   "id": "RedHatAI/Muse-Glimmer-30B-NVFP4",
+   "createdAt": "2026-08-10T22:23:41.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "unsloth/Muse-Glimmer-30B",
+   "createdAt": "2026-08-10T09:12:04.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mlx-community/Muse-Glimmer-30B-4bit",
+   "createdAt": "2026-08-10T12:08:18.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Abiray/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T17:08:00.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-IQ3_M.gguf",
+    "Muse-Glimmer-30B-IQ3_XS.gguf",
+    "Muse-Glimmer-30B-IQ3_XXS.gguf",
+    "Muse-Glimmer-30B-IQ4_NL.gguf",
+    "Muse-Glimmer-30B-IQ4_XS.gguf",
+    "Muse-Glimmer-30B-Q3_K_M.gguf",
+    "Muse-Glimmer-30B-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-Q6_K.gguf",
+    "Muse-Glimmer-30B-Q8_0.gguf",
+    "mmproj-Muse-Glimmer-30B-BF16.gguf",
+    "mmproj-Muse-Glimmer-30B-Q8_0.gguf"
+   ]
+  },
+  {
+   "id": "bartowski/darkc0de_Muse-Glimmer-30B-heretic-GGUF",
+   "createdAt": "2026-08-11T18:19:40.000Z",
+   "downloads": 0,
+   "siblings": [
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ2_M.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ2_S.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ2_XS.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ2_XXS.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ3_M.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ3_XS.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ3_XXS.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ4_NL.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-IQ4_XS.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q2_K.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q2_K_L.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q3_K_L.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q3_K_M.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q3_K_S.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q3_K_XL.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q4_0.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q4_1.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q4_K_L.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q4_K_M.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q4_K_S.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q5_K_L.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q5_K_M.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q5_K_S.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q6_K.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q6_K_L.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-Q8_0.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-bf16/darkc0de_Muse-Glimmer-30B-heretic-bf16-00001-of-00002.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-bf16/darkc0de_Muse-Glimmer-30B-heretic-bf16-00002-of-00002.gguf",
+    "darkc0de_Muse-Glimmer-30B-heretic-imatrix.gguf",
+    "mmproj-darkc0de_Muse-Glimmer-30B-heretic-bf16.gguf",
+    "mmproj-darkc0de_Muse-Glimmer-30B-heretic-f16.gguf"
+   ]
+  },
+  {
+   "id": "darkc0de/Muse-Glimmer-30B-heretic",
+   "createdAt": "2026-08-10T14:50:42.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "AaryanK/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-11T10:06:07.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-AK-Q2_K_XL.gguf",
+    "Muse-Glimmer-30B-AK-Q3_K_XL.gguf",
+    "Muse-Glimmer-30B-AK-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-AK-Q4_K_XL.gguf",
+    "Muse-Glimmer-30B-AK-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-AK-Q6_K_XL.gguf",
+    "Muse-Glimmer-30B-AK-Q8_K_L.gguf",
+    "Muse-Glimmer-30B-AK-Q8_K_XL.gguf",
+    "mmproj-Muse-Glimmer-30B-BF16.gguf"
+   ]
+  },
+  {
+   "id": "lmstudio-community/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T02:37:45.000Z",
+   "downloads": 0,
+   "siblings": [
+    "mmproj-kquant.gguf",
+    "muse-glimmer-30B-kquant-17gb.gguf"
+   ]
+  },
+  {
+   "id": "unsloth/Muse-Glimmer-30B-unsloth-bnb-4bit",
+   "createdAt": "2026-08-10T09:12:21.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "AtomicChat/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T11:05:54.000Z",
+   "downloads": 0,
+   "siblings": [
+    "BF16/Muse-Glimmer-30B-BF16-00001-of-00002.gguf",
+    "BF16/Muse-Glimmer-30B-BF16-00002-of-00002.gguf",
+    "Muse-Glimmer-30B-AD-IQ2_M.gguf",
+    "Muse-Glimmer-30B-AD-IQ2_XXS.gguf",
+    "Muse-Glimmer-30B-AD-IQ3_M.gguf",
+    "Muse-Glimmer-30B-AD-IQ3_XXS.gguf",
+    "Muse-Glimmer-30B-AD-IQ4_XS.gguf",
+    "Muse-Glimmer-30B-AD-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-AD-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-AD-Q6_K.gguf",
+    "Muse-Glimmer-30B-AD-Q8_0.gguf",
+    "Muse-Glimmer-30B-Q8_0.gguf",
+    "dflash-Muse-Glimmer-30B-BF16.gguf",
+    "experiments/Muse-Glimmer-30B-IQ2_M_STOCK.gguf",
+    "experiments/Muse-Glimmer-30B-IQ3_XXS_STOCK.gguf",
+    "experiments/Muse-Glimmer-30B-IQ4_XS_FLAT.gguf",
+    "experiments/Muse-Glimmer-30B-IQ4_XS_STOCK.gguf",
+    "experiments/Muse-Glimmer-30B-Q4_K_M_STOCK.gguf",
+    "experiments/Muse-Glimmer-30B-Q8_0-embd-bf16.gguf",
+    "experiments/Muse-Glimmer-30B-Q8_0-out-bf16.gguf",
+    "imatrix/muse-glimmer.imatrix.gguf",
+    "mmproj-Muse-Glimmer-30B-BF16.gguf"
+   ]
+  },
+  {
+   "id": "RedHatAI/Muse-Glimmer-30B-FP8-block",
+   "createdAt": "2026-08-10T13:26:57.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mlx-community/Muse-Glimmer-30B-bf16",
+   "createdAt": "2026-08-10T12:08:20.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Preyazz/Muse-Glimmer-30B-NVFP4",
+   "createdAt": "2026-08-10T12:43:12.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "RadixArk/Muse-Glimmer-NVFP4",
+   "createdAt": "2026-08-09T06:29:30.000Z",
+   "downloads": 40,
+   "siblings": []
+  },
+  {
+   "id": "NANI-Nithin/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T12:20:54.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-F16.gguf",
+    "Muse-Glimmer-30B-IQ3_M.gguf",
+    "Muse-Glimmer-30B-IQ4_NL.gguf",
+    "Muse-Glimmer-30B-IQ4_XS.gguf",
+    "Muse-Glimmer-30B-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-Q6_K.gguf",
+    "Muse-Glimmer-30B-Q8_0.gguf"
+   ]
+  },
+  {
+   "id": "coder3101/Muse-Glimmer-30B-heretic",
+   "createdAt": "2026-08-11T05:23:06.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "cyankiwi/Muse-Glimmer-30B-AWQ-INT4",
+   "createdAt": "2026-08-11T11:06:33.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "RadixArk/Muse-Glimmer-q4-MLX",
+   "createdAt": "2026-08-07T02:52:48.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "turboderp/Muse-Glimmer-30B-exl3",
+   "createdAt": "2026-08-11T00:07:09.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Inferact/Muse-Glimmer-30B-NVFP4-W4A4",
+   "createdAt": "2026-08-10T08:02:11.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "dealignai/Muse-Glimmer-30B-CRACK-GGUF",
+   "createdAt": "2026-08-11T08:14:38.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-CRACK-Q2_K.gguf",
+    "Muse-Glimmer-30B-CRACK-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-CRACK-Q8_0.gguf",
+    "mmproj-Muse-Glimmer-30B-f16.gguf"
+   ]
+  },
+  {
+   "id": "DaoCloud/Muse-Glimmer-30B-DSpark",
+   "createdAt": "2026-08-12T03:26:45.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "merve/muse-glimmer-ft-clicking-v2",
+   "createdAt": "2026-08-12T06:36:08.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "RadixArk/Muse-Glimmer-q4km-gs128-MLX",
+   "createdAt": "2026-08-07T05:09:18.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "RadixArk/Muse-Glimmer-q4k-dynamic-MLX",
+   "createdAt": "2026-08-07T06:00:55.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mlx-community/Muse-Glimmer-30B-nvfp4",
+   "createdAt": "2026-08-10T12:08:22.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "OsaurusAI/Muse-Glimmer-30B-JANG_6M",
+   "createdAt": "2026-08-10T12:17:28.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "cloudnathan5/Muse-Glimmer-30B-NVFP4",
+   "createdAt": "2026-08-10T14:44:17.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Jundot/Muse-Glimmer-30B-oQ4e",
+   "createdAt": "2026-08-10T16:57:03.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "0bserverx/Muse-Glimmer-30B-Heretic-Uncensored-GGUF",
+   "createdAt": "2026-08-10T21:07:35.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-Heretic-F16.gguf",
+    "Muse-Glimmer-30B-Heretic-Q4_K_S.gguf"
+   ]
+  },
+  {
+   "id": "mlasli/Muse-Glimmer-30B-Abliterated-BF16",
+   "createdAt": "2026-08-11T14:51:01.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "RedHatAI/Muse-Glimmer-30B-W4A16",
+   "createdAt": "2026-08-11T18:38:23.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "prithivMLmods/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T10:36:40.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B.F16.gguf",
+    "Muse-Glimmer-30B.Q4_K_M.gguf",
+    "Muse-Glimmer-30B.mmproj-f16.gguf"
+   ]
+  },
+  {
+   "id": "OsaurusAI/Muse-Glimmer-30B-JANG_4M",
+   "createdAt": "2026-08-10T12:04:29.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "DevQuasar/meta-models.Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T14:04:24.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Q2_K/meta-models.Muse-Glimmer-30B.f16.gguf.Q2_K.gguf",
+    "Q3_K_M/meta-models.Muse-Glimmer-30B.f16.gguf.Q3_K_M.gguf",
+    "Q4_K_M/meta-models.Muse-Glimmer-30B.f16.gguf.Q4_K_M.gguf",
+    "Q5_K_M/meta-models.Muse-Glimmer-30B.f16.gguf.Q5_K_M.gguf",
+    "Q6_K/meta-models.Muse-Glimmer-30B.f16.gguf.Q6_K.gguf",
+    "Q8_0/meta-models.Muse-Glimmer-30B.f16.gguf.Q8_0.gguf",
+    "dflash-meta-models.Muse-Glimmer-30B.Q4_K_M.gguf",
+    "dflash-meta-models.Muse-Glimmer-30B.Q8_0.gguf",
+    "dflash-meta-models.Muse-Glimmer-30B.bf16.gguf",
+    "mmproj-meta-models.Muse-Glimmer-30B.f16.gguf"
+   ]
+  },
+  {
+   "id": "Shiftedx/Muse-Glimmer-30B-MXFP8-Vision-MLX",
+   "createdAt": "2026-08-10T14:39:27.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "manjunathshiva/Muse-Glimmer-30B-tq3-g64",
+   "createdAt": "2026-08-10T15:31:52.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "ddh0/Muse-Glimmer-30B-GGUF",
+   "createdAt": "2026-08-10T19:32:10.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-4.66bpw.gguf",
+    "Muse-Glimmer-30B-5.03bpw.gguf",
+    "Muse-Glimmer-30B-6.68bpw.gguf",
+    "Muse-Glimmer-30B-Q8_0.gguf",
+    "Muse-Glimmer-30B-assistant-4.30bpw.gguf",
+    "Muse-Glimmer-30B-assistant-4.85bpw.gguf",
+    "Muse-Glimmer-30B-assistant-5.51bpw.gguf",
+    "Muse-Glimmer-30B-assistant-Q8_0.gguf",
+    "Muse-Glimmer-30B-assistant-bf16-orig.gguf",
+    "Muse-Glimmer-30B-bf16-orig.gguf",
+    "Muse-Glimmer-30B-ddh0_v2-imatrix.gguf",
+    "mmproj-Muse-Glimmer-30B-15.16bpw.gguf",
+    "mmproj-Muse-Glimmer-30B-5.86bpw.gguf",
+    "mmproj-Muse-Glimmer-30B-6.78bpw.gguf",
+    "mmproj-Muse-Glimmer-30B-f32.gguf"
+   ]
+  },
+  {
+   "id": "kingjones777/Muse-Glimmer-30B-ROCmFP4-Strix-Halo-DFlash-GGUF",
+   "createdAt": "2026-08-10T22:21:37.000Z",
+   "downloads": 0,
+   "siblings": [
+    "dflash-ROCmFP4-STRIX.gguf",
+    "dflash-kquant.gguf",
+    "mmproj-kquant.gguf",
+    "muse-glimmer-30B-ROCmFP4-BASE.gguf",
+    "muse-glimmer-30B-ROCmFP4-FAST.gguf",
+    "muse-glimmer-30B-ROCmFP4-STRIX.gguf",
+    "muse-glimmer-30B-ROCmFP4-STRIX_LEAN.gguf"
+   ]
+  },
+  {
+   "id": "OpensourceWTF/Muse-Glimmer-30B-MLX-q4",
+   "createdAt": "2026-08-10T22:23:58.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Blackfrost-AI/Muse-Glimmer-30B-Abliterated-MLX-6bit",
+   "createdAt": "2026-08-10T23:13:36.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "turboderp/Muse-Glimmer-30B-assistant-exl3",
+   "createdAt": "2026-08-11T00:03:15.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "cvgro/Muse-Glimmer-30B-Abliterated-GGUF",
+   "createdAt": "2026-08-11T00:05:06.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-Abliterated-Q2_K.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q3_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q3_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q4_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q5_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q6_K.gguf",
+    "Muse-Glimmer-30B-Abliterated-Q8_0.gguf",
+    "dflash-Muse-Glimmer-30B-Abliterated-F16.gguf",
+    "mmproj-Muse-Glimmer-30B-Abliterated-F16.gguf",
+    "mmproj-Muse-Glimmer-30B-Abliterated-Q8_0.gguf"
+   ]
+  },
+  {
+   "id": "YTan2000/Muse-Glimmer-30B-TQ3_4S",
+   "createdAt": "2026-08-11T00:42:52.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-TQ3_4S.gguf",
+    "mmproj-Muse-Glimmer-30B-Q8_0.gguf"
+   ]
+  },
+  {
+   "id": "Blackfrost-AI/Muse-Glimmer-30B-Abliterated-NVFP4",
+   "createdAt": "2026-08-11T00:59:26.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "original-el8/Muse-Glimmer-30B-NVFP4",
+   "createdAt": "2026-08-11T02:08:36.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "lucyknada/Muse-Glimmer-30B-kld-gguf",
+   "createdAt": "2026-08-11T04:41:53.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-kld-0.009753-refusals-46of100/Muse-Glimmer-30B-kld-0.009753-refusals-46of100-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-kld-0.009753-refusals-46of100/Muse-Glimmer-30B-kld-0.009753-refusals-46of100-Q6_K.gguf",
+    "Muse-Glimmer-30B-kld-0.046365-refusals-7of100/Muse-Glimmer-30B-kld-0.046365-refusals-7of100-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-kld-0.046365-refusals-7of100/Muse-Glimmer-30B-kld-0.046365-refusals-7of100-Q6_K.gguf"
+   ]
+  },
+  {
+   "id": "mlasli/Muse-Glimmer-30B-Abliterated-Q6_K-GGUF",
+   "createdAt": "2026-08-11T15:20:37.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-Abliterated-Q6_K.gguf"
+   ]
+  },
+  {
+   "id": "vmlinux/Muse-Glimmer-30B-heretic-ROCmFPX-GGUF",
+   "createdAt": "2026-08-11T17:28:16.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-DFlash-ROCmFP4.gguf",
+    "Muse-Glimmer-30B-DFlash-ROCmFP8.gguf",
+    "Muse-Glimmer-30B-heretic-ROCmFP4-Q6-QUALITY.gguf",
+    "Muse-Glimmer-30B-heretic-ROCmFP4.gguf",
+    "Muse-Glimmer-30B-heretic-ROCmFP8.gguf",
+    "mmproj-Muse-Glimmer-30B-heretic-BF16.gguf"
+   ]
+  },
+  {
+   "id": "kaitchup/Muse-Glimmer-30B-autoscheme-3.5bit",
+   "createdAt": "2026-08-11T18:32:42.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "TrevorJS/Muse-Glimmer-30B-uncensored",
+   "createdAt": "2026-08-11T23:15:22.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "brenden7158/ZuckLM-Muse-Glimmer-30B-MLX-LoRA",
+   "createdAt": "2026-08-12T02:13:31.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "basecompute/Muse-Glimmer-30B",
+   "createdAt": "2026-08-12T02:44:50.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mradermacher/Muse-Glimmer-30B-Heretic-Abliterated-BF16-i1-GGUF",
+   "createdAt": "2026-08-12T09:52:38.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ1_M.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ1_S.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ2_M.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ2_S.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ2_XS.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ2_XXS.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ3_M.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ3_S.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ3_XS.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ3_XXS.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-IQ4_XS.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q2_K.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q2_K_S.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q3_K_L.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q3_K_M.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q3_K_S.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q4_0.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q4_1.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q4_K_S.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q5_K_S.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.i1-Q6_K.gguf",
+    "Muse-Glimmer-30B-Heretic-Abliterated-BF16.imatrix.gguf"
+   ]
+  },
+  {
+   "id": "jorkle/Muse-Glimmer-30B-Abliterated-GGUF",
+   "createdAt": "2026-08-12T12:56:38.000Z",
+   "downloads": 0,
+   "siblings": [
+    "abliterated-aggressive-Q4_K_M.gguf",
+    "abliterated-aggressive-Q8_0.gguf",
+    "abliterated-normal-Q4_K_M.gguf",
+    "abliterated-normal-Q8_0.gguf",
+    "base-Q4_K_M.gguf",
+    "base-Q8_0.gguf"
+   ]
+  },
+  {
+   "id": "Uzbekswe/Muse-Glimmer-30B-Q4_K_M-GGUF",
+   "createdAt": "2026-08-12T07:11:22.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-custom-Q4_K_M.gguf"
+   ]
+  },
+  {
+   "id": "Blackfrost-AI/Muse-Glimmer-30B-Abliterated-BF16",
+   "createdAt": "2026-08-10T19:19:42.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mradermacher/Muse-Glimmer-30B-Abliterated-BF16-i1-GGUF",
+   "createdAt": "2026-08-12T08:27:10.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ1_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ1_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ2_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ2_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ2_XS.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ2_XXS.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ3_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ3_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ3_XS.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ3_XXS.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-IQ4_XS.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q2_K.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q2_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q3_K_L.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q3_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q3_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q4_0.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q4_1.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q4_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q5_K_S.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.i1-Q6_K.gguf",
+    "Muse-Glimmer-30B-Abliterated-BF16.imatrix.gguf"
+   ]
+  },
+  {
+   "id": "weareapexcreators/Muse-Glimmer-30B-LocalAI",
+   "createdAt": "2026-08-10T11:14:41.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-UD-Q2_K_XL.gguf"
+   ]
+  },
+  {
+   "id": "mlx-community/Muse-Glimmer-30B-5bit",
+   "createdAt": "2026-08-10T12:08:19.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mlx-community/Muse-Glimmer-30B-6bit",
+   "createdAt": "2026-08-10T12:08:19.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mlx-community/Muse-Glimmer-30B-8bit",
+   "createdAt": "2026-08-10T12:08:20.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mlx-community/Muse-Glimmer-30B-mxfp4",
+   "createdAt": "2026-08-10T12:08:21.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mlx-community/Muse-Glimmer-30B-mxfp8",
+   "createdAt": "2026-08-10T12:08:22.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "nguyenthilaitrieulong/Muse-Glimmer-30B",
+   "createdAt": "2026-08-10T12:42:36.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "nguyenthilaitrieulong/Muse-Glimmer-30B-assistant",
+   "createdAt": "2026-08-10T12:42:52.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "olka-fi/Muse-Glimmer-30B-MXFP4",
+   "createdAt": "2026-08-10T14:11:29.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Shiftedx/Muse-Glimmer-30B-MXFP4-Vision-MLX",
+   "createdAt": "2026-08-10T14:35:25.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "ddalcu/Muse-Glimmer-30B-MLX-Serve-8bit",
+   "createdAt": "2026-08-10T14:51:32.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "bullerwins/Muse-Glimmer-30B-NVFP4",
+   "createdAt": "2026-08-10T15:00:42.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "georgeis55/Muse-Glimmer-30B-MLX-6bit",
+   "createdAt": "2026-08-10T15:14:24.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "manjunathshiva/Muse-Glimmer-30B-tq4-g64",
+   "createdAt": "2026-08-10T15:22:26.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "gghfexp/muse-glimmer-30b-jlens-ckpt",
+   "createdAt": "2026-08-10T15:23:50.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "OsaurusAI/Muse-Glimmer-30B-JANG_2D",
+   "createdAt": "2026-08-10T16:36:28.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "soyrsoyr/Muse-Glimmer-30B-FP8-dynamic",
+   "createdAt": "2026-08-10T17:27:46.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "soyrsoyr/Muse-Glimmer-30B-W4A16-AWQ-GPTQ",
+   "createdAt": "2026-08-10T17:29:28.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "soyrsoyr/Muse-Glimmer-30B-NVFP4",
+   "createdAt": "2026-08-10T17:30:15.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "pipenetwork/Muse-Glimmer-30B-MLX-3bit",
+   "createdAt": "2026-08-10T17:46:50.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "forkjoin-ai/muse-glimmer-30b",
+   "createdAt": "2026-08-10T18:28:15.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Minachist/Muse-Glimmer-30B-INT8-AutoRound",
+   "createdAt": "2026-08-10T18:28:28.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "pipenetwork/Muse-Glimmer-30B-MLX-8bit",
+   "createdAt": "2026-08-10T18:50:35.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "pipenetwork/Muse-Glimmer-30B-MLX-4bit",
+   "createdAt": "2026-08-10T18:54:05.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "dudeman2512/Muse-Glimmer-30B-INT4-W4A16",
+   "createdAt": "2026-08-10T19:05:56.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "dudeman2512/Muse-Glimmer-30B-NVFP4",
+   "createdAt": "2026-08-10T19:05:56.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "blackfan23/Muse-Glimmer-30B-oQ4e",
+   "createdAt": "2026-08-10T19:33:28.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "vs4vijay/Muse-Glimmer-30B",
+   "createdAt": "2026-08-10T19:35:23.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "mph/muse-glimmer-30b-mxfp8",
+   "createdAt": "2026-08-10T20:06:38.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "SAIFIINDUSTRIES/Muse-Glimmer-30B",
+   "createdAt": "2026-08-10T21:17:26.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "blackfan23/Muse-Glimmer-30B-oQ5e",
+   "createdAt": "2026-08-10T21:19:54.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Sawfwair/Muse-Glimmer-30B-MLX-4bit",
+   "createdAt": "2026-08-10T22:26:16.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "blackfan23/Muse-Glimmer-30B-oQ6e",
+   "createdAt": "2026-08-10T23:00:21.000Z",
+   "downloads": 0,
+   "siblings": []
+  },
+  {
+   "id": "Krasnopjorovs/Muse-Glimmer-30B-Imatrix-GGUF",
+   "createdAt": "2026-08-10T23:01:44.000Z",
+   "downloads": 0,
+   "siblings": [
+    "Muse-Glimmer-30B-IQ4_NL.gguf",
+    "Muse-Glimmer-30B-IQ4_XS.gguf",
+    "Muse-Glimmer-30B-Q4_K_L.gguf",
+    "Muse-Glimmer-30B-Q4_K_M.gguf",
+    "Muse-Glimmer-30B-Q4_K_S.gguf",
+    "Muse-Glimmer-30B-Q5_K_L.gguf",
+    "Muse-Glimmer-30B-Q5_K_M.gguf",
+    "Muse-Glimmer-30B-Q5_K_S.gguf",
+    "Muse-Glimmer-30B-Q6_K.gguf",
+    "Muse-Glimmer-30B-Q6_K_L.gguf",
+    "Muse-Glimmer-30B-Q8_0.gguf"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,792 @@
+[
+ {
+  "tag": "llama3.1:8b-instruct-q2_K",
+  "family_size": "llama3.1/8b",
+  "smoke_pass": 10,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.1:8b-instruct-q3_K_L",
+  "family_size": "llama3.1/8b",
+  "smoke_pass": 14,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.1:8b-instruct-q3_K_M",
+  "family_size": "llama3.1/8b",
+  "smoke_pass": 12,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.1:8b-instruct-q3_K_S",
+  "family_size": "llama3.1/8b",
+  "smoke_pass": 10,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.1:8b-instruct-q4_0",
+  "family_size": "llama3.1/8b",
+  "smoke_pass": 12,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-fp16",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 10,
+  "baseline": 10,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q2_K",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 0,
+  "baseline": 10,
+  "ratio": 0.0,
+  "class": "DEFECTIVE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q3_K_L",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 7,
+  "baseline": 10,
+  "ratio": 0.7,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q3_K_M",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 7,
+  "baseline": 10,
+  "ratio": 0.7,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q3_K_S",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 2,
+  "baseline": 10,
+  "ratio": 0.2,
+  "class": "DEGRADED",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q4_0",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 7,
+  "baseline": 10,
+  "ratio": 0.7,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q4_K_M",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 8,
+  "baseline": 10,
+  "ratio": 0.8,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q4_K_S",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 7,
+  "baseline": 10,
+  "ratio": 0.7,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q5_K_M",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 8,
+  "baseline": 10,
+  "ratio": 0.8,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q5_K_S",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 9,
+  "baseline": 10,
+  "ratio": 0.9,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q6_K",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 10,
+  "baseline": 10,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:1b-instruct-q8_0",
+  "family_size": "llama3.2/1b",
+  "smoke_pass": 10,
+  "baseline": 10,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-fp16",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q2_K",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 6,
+  "baseline": 14,
+  "ratio": 0.429,
+  "class": "DEGRADED",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q3_K_L",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 13,
+  "baseline": 14,
+  "ratio": 0.929,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q3_K_M",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q3_K_S",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 11,
+  "baseline": 14,
+  "ratio": 0.786,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q4_0",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q4_K_M",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 13,
+  "baseline": 14,
+  "ratio": 0.929,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q4_K_S",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q5_K_M",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q5_K_S",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q6_K",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "llama3.2:3b-instruct-q8_0",
+  "family_size": "llama3.2/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-fp16",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q2_K",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 12,
+  "baseline": 14,
+  "ratio": 0.857,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q3_K_L",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 13,
+  "baseline": 14,
+  "ratio": 0.929,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q3_K_M",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q3_K_S",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 12,
+  "baseline": 14,
+  "ratio": 0.857,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q4_0",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 9,
+  "baseline": 14,
+  "ratio": 0.643,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q4_K_M",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 13,
+  "baseline": 14,
+  "ratio": 0.929,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q4_K_S",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 13,
+  "baseline": 14,
+  "ratio": 0.929,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q5_K_M",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q5_K_S",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q6_K",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 13,
+  "baseline": 14,
+  "ratio": 0.929,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:0.5b-instruct-q8_0",
+  "family_size": "qwen2.5-coder/0.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-fp16",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q2_K",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 12,
+  "baseline": 14,
+  "ratio": 0.857,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q3_K_L",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q3_K_M",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q3_K_S",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q4_0",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 12,
+  "baseline": 14,
+  "ratio": 0.857,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q4_K_M",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q4_K_S",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q5_K_M",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q5_K_S",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q6_K",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:1.5b-instruct-q8_0",
+  "family_size": "qwen2.5-coder/1.5b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:14b-instruct-q2_K",
+  "family_size": "qwen2.5-coder/14b",
+  "smoke_pass": 14,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:14b-instruct-q3_K_L",
+  "family_size": "qwen2.5-coder/14b",
+  "smoke_pass": 14,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:14b-instruct-q3_K_M",
+  "family_size": "qwen2.5-coder/14b",
+  "smoke_pass": 14,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:14b-instruct-q3_K_S",
+  "family_size": "qwen2.5-coder/14b",
+  "smoke_pass": 14,
+  "baseline": null,
+  "ratio": null,
+  "class": "NO_BASELINE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-fp16",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q2_K",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 0,
+  "baseline": 14,
+  "ratio": 0.0,
+  "class": "DEFECTIVE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q3_K_L",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 0,
+  "baseline": 14,
+  "ratio": 0.0,
+  "class": "DEFECTIVE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q3_K_M",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 0,
+  "baseline": 14,
+  "ratio": 0.0,
+  "class": "DEFECTIVE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q3_K_S",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 0,
+  "baseline": 14,
+  "ratio": 0.0,
+  "class": "DEFECTIVE",
+  "needs_full_run": true,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q4_0",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q4_K_M",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q4_K_S",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q5_K_M",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q5_K_S",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q6_K",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:3b-instruct-q8_0",
+  "family_size": "qwen2.5-coder/3b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q2_K",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 13,
+  "baseline": 14,
+  "ratio": 0.929,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q3_K_L",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q3_K_M",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q3_K_S",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q4_0",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q4_K_M",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q4_K_S",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q5_K_M",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q5_K_S",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ },
+ {
+  "tag": "qwen2.5-coder:7b-instruct-q6_K",
+  "family_size": "qwen2.5-coder/7b",
+  "smoke_pass": 14,
+  "baseline": 14,
+  "ratio": 1.0,
+  "class": "HEALTHY",
+  "needs_full_run": false,
+  "channel": "ollama-official"
+ }
+]

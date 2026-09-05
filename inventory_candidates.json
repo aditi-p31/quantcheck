@@ -1,0 +1,2949 @@
+{
+ "frozen": false,
+ "generated": "2026-08-10",
+ "artifacts": [
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 0.5,
+   "file_size_gb": 0.339,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q2_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 0.5,
+   "file_size_gb": 0.338,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q3_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 0.5,
+   "file_size_gb": 0.355,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q3_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 0.5,
+   "file_size_gb": 0.369,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q3_K_L",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 0.5,
+   "file_size_gb": 0.352,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q4_0",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 0.5,
+   "file_size_gb": 0.385,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q4_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 0.5,
+   "file_size_gb": 0.398,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q4_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 0.5,
+   "file_size_gb": 0.413,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q5_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 0.5,
+   "file_size_gb": 0.42,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q5_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 0.5,
+   "file_size_gb": 0.506,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q6_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 0.5,
+   "file_size_gb": 0.531,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-q8_0",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 0.5,
+   "file_size_gb": 0.994,
+   "url": "https://ollama.com/library/qwen2.5-coder:0.5b-instruct-fp16",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 1.5,
+   "file_size_gb": 0.676,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q2_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 1.5,
+   "file_size_gb": 0.761,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q3_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 1.5,
+   "file_size_gb": 0.824,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q3_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 1.5,
+   "file_size_gb": 0.88,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q3_K_L",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 1.5,
+   "file_size_gb": 0.935,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q4_0",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 1.5,
+   "file_size_gb": 0.94,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q4_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 1.5,
+   "file_size_gb": 0.986,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q4_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 1.5,
+   "file_size_gb": 1.1,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q5_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 1.5,
+   "file_size_gb": 1.1,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q5_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 1.5,
+   "file_size_gb": 1.3,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q6_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 1.5,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-q8_0",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 1.5,
+   "file_size_gb": 3.1,
+   "url": "https://ollama.com/library/qwen2.5-coder:1.5b-instruct-fp16",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 3,
+   "file_size_gb": 1.3,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q2_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 3,
+   "file_size_gb": 1.5,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q3_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 3,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q3_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 3,
+   "file_size_gb": 1.7,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q3_K_L",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 3,
+   "file_size_gb": 1.8,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q4_0",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 3,
+   "file_size_gb": 1.8,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q4_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 3,
+   "file_size_gb": 1.9,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q4_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 3,
+   "file_size_gb": 2.2,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q5_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 3,
+   "file_size_gb": 2.2,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q5_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 3,
+   "file_size_gb": 2.5,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q6_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 3,
+   "file_size_gb": 3.3,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-q8_0",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 3,
+   "file_size_gb": 6.2,
+   "url": "https://ollama.com/library/qwen2.5-coder:3b-instruct-fp16",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 7,
+   "file_size_gb": 3,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q2_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "file_size_gb": 3.5,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q3_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 7,
+   "file_size_gb": 3.8,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q3_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q3_K_L",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 7,
+   "file_size_gb": 4.4,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q4_0",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 7,
+   "file_size_gb": 4.5,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q4_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q4_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 7,
+   "file_size_gb": 5.3,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q5_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 7,
+   "file_size_gb": 5.4,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q5_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 7,
+   "file_size_gb": 6.3,
+   "url": "https://ollama.com/library/qwen2.5-coder:7b-instruct-q6_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:14b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 14,
+   "file_size_gb": 5.8,
+   "url": "https://ollama.com/library/qwen2.5-coder:14b-instruct-q2_K",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:14b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 14,
+   "file_size_gb": 6.7,
+   "url": "https://ollama.com/library/qwen2.5-coder:14b-instruct-q3_K_S",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:14b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 14,
+   "file_size_gb": 7.3,
+   "url": "https://ollama.com/library/qwen2.5-coder:14b-instruct-q3_K_M",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "qwen2.5-coder:14b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 14,
+   "file_size_gb": 7.9,
+   "url": "https://ollama.com/library/qwen2.5-coder:14b-instruct-q3_K_L",
+   "family": "qwen2.5-coder",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 1,
+   "file_size_gb": 0.581,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q2_K",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 1,
+   "file_size_gb": 0.642,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q3_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 1,
+   "file_size_gb": 0.691,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q3_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 1,
+   "file_size_gb": 0.733,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q3_K_L",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 1,
+   "file_size_gb": 0.771,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q4_0",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 1,
+   "file_size_gb": 0.776,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q4_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 1,
+   "file_size_gb": 0.808,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q4_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 1,
+   "file_size_gb": 0.893,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q5_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 1,
+   "file_size_gb": 0.912,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q5_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 1,
+   "file_size_gb": 1,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q6_K",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 1,
+   "file_size_gb": 1.3,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-q8_0",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 1,
+   "file_size_gb": 2.5,
+   "url": "https://ollama.com/library/llama3.2:1b-instruct-fp16",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 3,
+   "file_size_gb": 1.4,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q2_K",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 3,
+   "file_size_gb": 1.5,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q3_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 3,
+   "file_size_gb": 1.7,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q3_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 3,
+   "file_size_gb": 1.8,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q3_K_L",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 3,
+   "file_size_gb": 1.9,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q4_0",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 3,
+   "file_size_gb": 1.9,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q4_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 3,
+   "file_size_gb": 2,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q4_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 3,
+   "file_size_gb": 2.3,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q5_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 3,
+   "file_size_gb": 2.3,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q5_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 3,
+   "file_size_gb": 2.6,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q6_K",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 3,
+   "file_size_gb": 3.4,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-q8_0",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.2:3b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 3,
+   "file_size_gb": 6.4,
+   "url": "https://ollama.com/library/llama3.2:3b-instruct-fp16",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 8,
+   "file_size_gb": 3.2,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q2_K",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 8,
+   "file_size_gb": 3.7,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q3_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 8,
+   "file_size_gb": 4,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q3_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 8,
+   "file_size_gb": 4.3,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q3_K_L",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 8,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q4_0",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 8,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q4_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 8,
+   "file_size_gb": 4.9,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q4_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 8,
+   "file_size_gb": 5.6,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q5_K_S",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 8,
+   "file_size_gb": 5.7,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q5_K_M",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 8,
+   "file_size_gb": 6.6,
+   "url": "https://ollama.com/library/llama3.1:8b-instruct-q6_K",
+   "family": "llama3.2 and llama3.1",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 2,
+   "file_size_gb": 1.2,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 2,
+   "file_size_gb": 1.4,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 2,
+   "file_size_gb": 1.5,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 2,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 2,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 2,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 2,
+   "file_size_gb": 1.7,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 2,
+   "file_size_gb": 1.9,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 2,
+   "file_size_gb": 1.9,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 2,
+   "file_size_gb": 2.2,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 2,
+   "file_size_gb": 2.8,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:2b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 2,
+   "file_size_gb": 5.2,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 9,
+   "file_size_gb": 3.8,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 9,
+   "file_size_gb": 4.3,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 9,
+   "file_size_gb": 4.8,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 9,
+   "file_size_gb": 5.1,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 9,
+   "file_size_gb": 5.4,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 9,
+   "file_size_gb": 5.5,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 9,
+   "file_size_gb": 5.8,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 9,
+   "file_size_gb": 6.5,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 9,
+   "file_size_gb": 6.6,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma2:9b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 9,
+   "file_size_gb": 7.6,
+   "url": "https://ollama.com/library/gemma2/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma3:270m-it-q8_0",
+   "quant": "q8_0",
+   "params_b": 0.27,
+   "file_size_gb": 0.292,
+   "url": "https://ollama.com/library/gemma3/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma3:270m-it-fp16",
+   "quant": "fp16",
+   "params_b": 0.27,
+   "file_size_gb": 0.543,
+   "url": "https://ollama.com/library/gemma3/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma3:1b-it-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 1,
+   "file_size_gb": 0.815,
+   "url": "https://ollama.com/library/gemma3/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma3:1b-it-q8_0",
+   "quant": "q8_0",
+   "params_b": 1,
+   "file_size_gb": 1.1,
+   "url": "https://ollama.com/library/gemma3/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma3:1b-it-fp16",
+   "quant": "fp16",
+   "params_b": 1,
+   "file_size_gb": 2,
+   "url": "https://ollama.com/library/gemma3/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma3:4b-it-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 4,
+   "file_size_gb": 3.3,
+   "url": "https://ollama.com/library/gemma3/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "gemma3:4b-it-q8_0",
+   "quant": "q8_0",
+   "params_b": 4,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/gemma3/tags",
+   "family": "gemma2 and gemma3",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 3.8,
+   "file_size_gb": 1.4,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 3.8,
+   "file_size_gb": 1.7,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 3.8,
+   "file_size_gb": 2,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 3.8,
+   "file_size_gb": 2.1,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 3.8,
+   "file_size_gb": 2.2,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 3.8,
+   "file_size_gb": 2.2,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 3.8,
+   "file_size_gb": 2.4,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 3.8,
+   "file_size_gb": 2.6,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 3.8,
+   "file_size_gb": 2.8,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 3.8,
+   "file_size_gb": 3.1,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 3.8,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 3.8,
+   "file_size_gb": 7.6,
+   "url": "https://ollama.com/library/phi3.5/tags",
+   "family": "phi3.5 and phi4",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 1.3,
+   "file_size_gb": 0.632,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 1.3,
+   "file_size_gb": 0.659,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 1.3,
+   "file_size_gb": 0.705,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 1.3,
+   "file_size_gb": 0.745,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 1.3,
+   "file_size_gb": 0.776,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 1.3,
+   "file_size_gb": 0.815,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 1.3,
+   "file_size_gb": 0.874,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 1.3,
+   "file_size_gb": 0.953,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 1.3,
+   "file_size_gb": 1,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 1.3,
+   "file_size_gb": 1.2,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 1.3,
+   "file_size_gb": 1.4,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:1.3b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 1.3,
+   "file_size_gb": 2.7,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 6.7,
+   "file_size_gb": 2.8,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 6.7,
+   "file_size_gb": 3,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 6.7,
+   "file_size_gb": 3.3,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 6.7,
+   "file_size_gb": 3.6,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 6.7,
+   "file_size_gb": 3.8,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 6.7,
+   "file_size_gb": 3.9,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 6.7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 6.7,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 6.7,
+   "file_size_gb": 4.8,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 6.7,
+   "file_size_gb": 5.5,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 6.7,
+   "file_size_gb": 7.2,
+   "url": "https://ollama.com/library/deepseek-coder/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder-v2:16b-lite-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 16,
+   "file_size_gb": 6.4,
+   "url": "https://ollama.com/library/deepseek-coder-v2/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "deepseek-coder-v2:16b-lite-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 16,
+   "file_size_gb": 7.5,
+   "url": "https://ollama.com/library/deepseek-coder-v2/tags",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 7,
+   "file_size_gb": 3.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q2_K",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "file_size_gb": 3.2,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q3_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 7,
+   "file_size_gb": 3.5,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q3_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 7,
+   "file_size_gb": 3.8,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q3_K_L",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q4_0",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q4_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "file_size_gb": 4.4,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q4_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 7,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q5_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 7,
+   "file_size_gb": 5.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q5_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 7,
+   "file_size_gb": 5.9,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q6_K",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 7,
+   "file_size_gb": 7.7,
+   "url": "https://ollama.com/library/mistral:7b-instruct-q8_0",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q2_K",
+   "quant": "q2_K",
+   "params_b": 7,
+   "file_size_gb": 3.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q2_K",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "file_size_gb": 3.2,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q3_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 7,
+   "file_size_gb": 3.5,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q3_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 7,
+   "file_size_gb": 3.8,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q3_K_L",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q4_0",
+   "quant": "q4_0",
+   "params_b": 7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q4_0",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q4_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "file_size_gb": 4.4,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q4_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 7,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q5_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 7,
+   "file_size_gb": 5.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q5_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q6_K",
+   "quant": "q6_K",
+   "params_b": 7,
+   "file_size_gb": 5.9,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q6_K",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q8_0",
+   "quant": "q8_0",
+   "params_b": 7,
+   "file_size_gb": 7.7,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.2-q8_0",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q2_K",
+   "quant": "q2_K",
+   "params_b": 7,
+   "file_size_gb": 2.7,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q2_K",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "file_size_gb": 3.2,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q3_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 7,
+   "file_size_gb": 3.5,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q3_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 7,
+   "file_size_gb": 3.8,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q3_K_L",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q4_0",
+   "quant": "q4_0",
+   "params_b": 7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q4_0",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q4_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "file_size_gb": 4.4,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q4_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 7,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q5_K_S",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 7,
+   "file_size_gb": 5.1,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q5_K_M",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q6_K",
+   "quant": "q6_K",
+   "params_b": 7,
+   "file_size_gb": 5.9,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q6_K",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q8_0",
+   "quant": "q8_0",
+   "params_b": 7,
+   "file_size_gb": 7.7,
+   "url": "https://ollama.com/library/mistral:7b-instruct-v0.3-q8_0",
+   "family": "mistral and codestral",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 7,
+   "file_size_gb": 2.8,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q2_K",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "file_size_gb": 2.9,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q3_K_S",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 7,
+   "file_size_gb": 3.3,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q3_K_M",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 7,
+   "file_size_gb": 3.6,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q3_K_L",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 7,
+   "file_size_gb": 3.8,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q4_0",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 7,
+   "file_size_gb": 3.9,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q4_K_S",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "file_size_gb": 4.1,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q4_K_M",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 7,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q5_K_S",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 7,
+   "file_size_gb": 4.8,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q5_K_M",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 7,
+   "file_size_gb": 5.5,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q6_K",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:7b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 7,
+   "file_size_gb": 7.2,
+   "url": "https://ollama.com/library/codellama:7b-instruct-q8_0",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:13b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 13,
+   "file_size_gb": 5.4,
+   "url": "https://ollama.com/library/codellama:13b-instruct-q2_K",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:13b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 13,
+   "file_size_gb": 5.7,
+   "url": "https://ollama.com/library/codellama:13b-instruct-q3_K_S",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:13b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 13,
+   "file_size_gb": 6.3,
+   "url": "https://ollama.com/library/codellama:13b-instruct-q3_K_M",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:13b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 13,
+   "file_size_gb": 6.9,
+   "url": "https://ollama.com/library/codellama:13b-instruct-q3_K_L",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:13b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 13,
+   "file_size_gb": 7.4,
+   "url": "https://ollama.com/library/codellama:13b-instruct-q4_0",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:13b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 13,
+   "file_size_gb": 7.4,
+   "url": "https://ollama.com/library/codellama:13b-instruct-q4_K_S",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codellama:13b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 13,
+   "file_size_gb": 7.9,
+   "url": "https://ollama.com/library/codellama:13b-instruct-q4_K_M",
+   "family": "codellama",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "starcoder2:15b-instruct-v0.1-q2_K",
+   "quant": "q2_K",
+   "params_b": 15,
+   "file_size_gb": 6.2,
+   "url": "https://ollama.com/library/starcoder2:15b-instruct-v0.1-q2_K",
+   "family": "starcoder2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "starcoder2:15b-instruct-v0.1-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 15,
+   "file_size_gb": 7,
+   "url": "https://ollama.com/library/starcoder2:15b-instruct-v0.1-q3_K_S",
+   "family": "starcoder2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "starcoder2:15b-instruct-v0.1-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 15,
+   "file_size_gb": 8,
+   "url": "https://ollama.com/library/starcoder2:15b-instruct-v0.1-q3_K_M",
+   "family": "starcoder2",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 3,
+   "file_size_gb": 1.3,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 3,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 3,
+   "file_size_gb": 1.7,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 3,
+   "file_size_gb": 1.9,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 3,
+   "file_size_gb": 2,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 3,
+   "file_size_gb": 2,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 3,
+   "file_size_gb": 2.1,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 3,
+   "file_size_gb": 2.4,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 3,
+   "file_size_gb": 2.5,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 3,
+   "file_size_gb": 2.9,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 3,
+   "file_size_gb": 3.7,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 3,
+   "file_size_gb": 7,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q2_K",
+   "quant": "q2_K",
+   "params_b": 3,
+   "file_size_gb": 1.3,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 3,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 3,
+   "file_size_gb": 1.7,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 3,
+   "file_size_gb": 1.9,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q4_0",
+   "quant": "q4_0",
+   "params_b": 3,
+   "file_size_gb": 2,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 3,
+   "file_size_gb": 2,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 3,
+   "file_size_gb": 2.1,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 3,
+   "file_size_gb": 2.4,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 3,
+   "file_size_gb": 2.5,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q6_K",
+   "quant": "q6_K",
+   "params_b": 3,
+   "file_size_gb": 2.9,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-q8_0",
+   "quant": "q8_0",
+   "params_b": 3,
+   "file_size_gb": 3.7,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-fp16",
+   "quant": "fp16",
+   "params_b": 3,
+   "file_size_gb": 7,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 8,
+   "file_size_gb": 3.1,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 8,
+   "file_size_gb": 3.5,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 8,
+   "file_size_gb": 3.9,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 8,
+   "file_size_gb": 4.3,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 8,
+   "file_size_gb": 4.6,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-128k-q4_0",
+   "quant": "q4_0",
+   "params_b": 8,
+   "file_size_gb": 4.6,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 8,
+   "file_size_gb": 4.6,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 8,
+   "file_size_gb": 4.9,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 8,
+   "file_size_gb": 5.6,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 8,
+   "file_size_gb": 5.7,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:8b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 8,
+   "file_size_gb": 6.6,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:20b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 20,
+   "file_size_gb": 7.9,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite-code:20b-instruct-8k-q2_K",
+   "quant": "q2_K",
+   "params_b": 20,
+   "file_size_gb": 7.9,
+   "url": "https://ollama.com/library/granite-code/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 2,
+   "file_size_gb": 1,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 2,
+   "file_size_gb": 1.2,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 2,
+   "file_size_gb": 1.3,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 2,
+   "file_size_gb": 1.4,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 2,
+   "file_size_gb": 1.5,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 2,
+   "file_size_gb": 1.5,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 2,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 2,
+   "file_size_gb": 1.8,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 2,
+   "file_size_gb": 1.8,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 2,
+   "file_size_gb": 2.1,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-q8_0",
+   "quant": "q8_0",
+   "params_b": 2,
+   "file_size_gb": 2.7,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:2b-instruct-fp16",
+   "quant": "fp16",
+   "params_b": 2,
+   "file_size_gb": 5.1,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 8,
+   "file_size_gb": 3.2,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 8,
+   "file_size_gb": 3.6,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 8,
+   "file_size_gb": 4,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 8,
+   "file_size_gb": 4.4,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 8,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 8,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 8,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 8,
+   "file_size_gb": 5.7,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 8,
+   "file_size_gb": 5.8,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 8,
+   "file_size_gb": 6.8,
+   "url": "https://ollama.com/library/granite3.1-dense/tags",
+   "family": "granite-code and granite3.1-dense",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q2_K",
+   "quant": "q2_K",
+   "params_b": 1.5,
+   "file_size_gb": 0.635,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q2_K",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 1.5,
+   "file_size_gb": 0.723,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q3_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 1.5,
+   "file_size_gb": 0.786,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q3_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 1.5,
+   "file_size_gb": 0.826,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q3_K_L",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q4_0",
+   "quant": "q4_0",
+   "params_b": 1.5,
+   "file_size_gb": 0.866,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q4_0",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 1.5,
+   "file_size_gb": 0.904,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q4_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 1.5,
+   "file_size_gb": 0.964,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q4_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 1.5,
+   "file_size_gb": 1.1,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q5_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 1.5,
+   "file_size_gb": 1.1,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q5_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q6_K",
+   "quant": "q6_K",
+   "params_b": 1.5,
+   "file_size_gb": 1.3,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q6_K",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q8_0",
+   "quant": "q8_0",
+   "params_b": 1.5,
+   "file_size_gb": 1.6,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-q8_0",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-fp16",
+   "quant": "fp16",
+   "params_b": 1.5,
+   "file_size_gb": 3,
+   "url": "https://ollama.com/library/yi-coder:1.5b-chat-fp16",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q2_K",
+   "quant": "q2_K",
+   "params_b": 9,
+   "file_size_gb": 3.4,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q2_K",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 9,
+   "file_size_gb": 3.9,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q3_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 9,
+   "file_size_gb": 4.3,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q3_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 9,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q3_K_L",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q4_0",
+   "quant": "q4_0",
+   "params_b": 9,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q4_0",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 9,
+   "file_size_gb": 5.1,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q4_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 9,
+   "file_size_gb": 5.3,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q4_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 9,
+   "file_size_gb": 6.1,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q5_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 9,
+   "file_size_gb": 6.3,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q5_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "yi-coder:9b-chat-q6_K",
+   "quant": "q6_K",
+   "params_b": 9,
+   "file_size_gb": 7.2,
+   "url": "https://ollama.com/library/yi-coder:9b-chat-q6_K",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q2_K",
+   "quant": "q2_K",
+   "params_b": 7,
+   "file_size_gb": 3.5,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q2_K",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "file_size_gb": 4,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q3_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 7,
+   "file_size_gb": 4.4,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q3_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 7,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q3_K_L",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q4_0",
+   "quant": "q4_0",
+   "params_b": 7,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q4_0",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 7,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q4_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "file_size_gb": 5.3,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q4_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 7,
+   "file_size_gb": 6,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q5_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 7,
+   "file_size_gb": 6.1,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q5_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-q6_K",
+   "quant": "q6_K",
+   "params_b": 7,
+   "file_size_gb": 7,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-q6_K",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q2_K",
+   "quant": "q2_K",
+   "params_b": 7,
+   "file_size_gb": 3.5,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q2_K",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q3_K_S",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "file_size_gb": 4,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q3_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q3_K_M",
+   "quant": "q3_K_M",
+   "params_b": 7,
+   "file_size_gb": 4.4,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q3_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q3_K_L",
+   "quant": "q3_K_L",
+   "params_b": 7,
+   "file_size_gb": 4.7,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q3_K_L",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q4_0",
+   "quant": "q4_0",
+   "params_b": 7,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q4_0",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q4_K_S",
+   "quant": "q4_K_S",
+   "params_b": 7,
+   "file_size_gb": 5,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q4_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q4_K_M",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "file_size_gb": 5.3,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q4_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q5_K_S",
+   "quant": "q5_K_S",
+   "params_b": 7,
+   "file_size_gb": 6,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q5_K_S",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q5_K_M",
+   "quant": "q5_K_M",
+   "params_b": 7,
+   "file_size_gb": 6.1,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q5_K_M",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q6_K",
+   "quant": "q6_K",
+   "params_b": 7,
+   "file_size_gb": 7,
+   "url": "https://ollama.com/library/codegemma:7b-instruct-v1.1-q6_K",
+   "family": "yi-coder and codegemma",
+   "channel": "ollama-official"
+  },
+  {
+   "tag": "hf:bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 4.92,
+   "params_b": 8,
+   "url": "https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/resolve/main/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/Meta-Llama-3.1-8B-Instruct-Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 4.02,
+   "params_b": 8,
+   "url": "https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/resolve/main/Meta-Llama-3.1-8B-Instruct-Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 4.68,
+   "params_b": 7.6,
+   "url": "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 3.81,
+   "params_b": 7.6,
+   "url": "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:lmstudio-community/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 2.02,
+   "params_b": 3.2,
+   "url": "https://huggingface.co/lmstudio-community/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:lmstudio-community/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-Q3_K_L.gguf",
+   "quant": "Q3_K_L",
+   "file_size_gb": 1.82,
+   "params_b": 3.2,
+   "url": "https://huggingface.co/lmstudio-community/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q3_K_L.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Phi-3.5-mini-instruct-GGUF/Phi-3.5-mini-instruct-Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 2.39,
+   "params_b": 3.8,
+   "url": "https://huggingface.co/bartowski/Phi-3.5-mini-instruct-GGUF/resolve/main/Phi-3.5-mini-instruct-Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Phi-3.5-mini-instruct-GGUF/Phi-3.5-mini-instruct-Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 1.96,
+   "params_b": 3.8,
+   "url": "https://huggingface.co/bartowski/Phi-3.5-mini-instruct-GGUF/resolve/main/Phi-3.5-mini-instruct-Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/google_gemma-3-4b-it-GGUF/google_gemma-3-4b-it-Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 2.49,
+   "params_b": 4.3,
+   "url": "https://huggingface.co/bartowski/google_gemma-3-4b-it-GGUF/resolve/main/google_gemma-3-4b-it-Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/google_gemma-3-4b-it-GGUF/google_gemma-3-4b-it-Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 2.1,
+   "params_b": 4.3,
+   "url": "https://huggingface.co/bartowski/google_gemma-3-4b-it-GGUF/resolve/main/google_gemma-3-4b-it-Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/gemma-2-9b-it-GGUF/gemma-2-9b-it-Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 5.76,
+   "params_b": 9.2,
+   "url": "https://huggingface.co/bartowski/gemma-2-9b-it-GGUF/resolve/main/gemma-2-9b-it-Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/gemma-2-9b-it-GGUF/gemma-2-9b-it-Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 4.76,
+   "params_b": 9.2,
+   "url": "https://huggingface.co/bartowski/gemma-2-9b-it-GGUF/resolve/main/gemma-2-9b-it-Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Qwen2.5-14B-Instruct-GGUF/Qwen2.5-14B-Instruct-Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 7.34,
+   "params_b": 14.8,
+   "url": "https://huggingface.co/bartowski/Qwen2.5-14B-Instruct-GGUF/resolve/main/Qwen2.5-14B-Instruct-Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Qwen2.5-14B-Instruct-GGUF/Qwen2.5-14B-Instruct-Q2_K.gguf",
+   "quant": "Q2_K",
+   "file_size_gb": 5.77,
+   "params_b": 14.8,
+   "url": "https://huggingface.co/bartowski/Qwen2.5-14B-Instruct-GGUF/resolve/main/Qwen2.5-14B-Instruct-Q2_K.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:lmstudio-community/Qwen2.5-Coder-14B-Instruct-GGUF/Qwen2.5-Coder-14B-Instruct-Q3_K_L.gguf",
+   "quant": "Q3_K_L",
+   "file_size_gb": 7.92,
+   "params_b": 14.8,
+   "url": "https://huggingface.co/lmstudio-community/Qwen2.5-Coder-14B-Instruct-GGUF/resolve/main/Qwen2.5-Coder-14B-Instruct-Q3_K_L.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Qwen2.5-Coder-7B-Instruct-GGUF/Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 4.68,
+   "params_b": 7.6,
+   "url": "https://huggingface.co/bartowski/Qwen2.5-Coder-7B-Instruct-GGUF/resolve/main/Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/Qwen2.5-Coder-7B-Instruct-GGUF/Qwen2.5-Coder-7B-Instruct-Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 3.81,
+   "params_b": 7.6,
+   "url": "https://huggingface.co/bartowski/Qwen2.5-Coder-7B-Instruct-GGUF/resolve/main/Qwen2.5-Coder-7B-Instruct-Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF/DeepSeek-Coder-V2-Lite-Instruct-Q2_K.gguf",
+   "quant": "Q2_K",
+   "file_size_gb": 6.43,
+   "params_b": 15.7,
+   "url": "https://huggingface.co/bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF/resolve/main/DeepSeek-Coder-V2-Lite-Instruct-Q2_K.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 4.08,
+   "params_b": 6.7,
+   "url": "https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/resolve/main/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 3.3,
+   "params_b": 6.7,
+   "url": "https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/resolve/main/deepseek-coder-6.7b-instruct.Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/microsoft_Phi-4-mini-instruct-GGUF/microsoft_Phi-4-mini-instruct-Q4_K_M.gguf",
+   "quant": "Q4_K_M",
+   "file_size_gb": 2.49,
+   "params_b": 3.8,
+   "url": "https://huggingface.co/bartowski/microsoft_Phi-4-mini-instruct-GGUF/resolve/main/microsoft_Phi-4-mini-instruct-Q4_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  },
+  {
+   "tag": "hf:bartowski/microsoft_Phi-4-mini-instruct-GGUF/microsoft_Phi-4-mini-instruct-Q3_K_M.gguf",
+   "quant": "Q3_K_M",
+   "file_size_gb": 2.12,
+   "params_b": 3.8,
+   "url": "https://huggingface.co/bartowski/microsoft_Phi-4-mini-instruct-GGUF/resolve/main/microsoft_Phi-4-mini-instruct-Q3_K_M.gguf",
+   "family": "mixed (per-repo family in notes)",
+   "channel": "hf-community"
+  }
+ ]
+}

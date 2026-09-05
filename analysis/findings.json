@@ -1,0 +1,111 @@
+{
+ "n_official": 305,
+ "n_community": 22,
+ "n_families": 13,
+ "class_distribution": {
+  "HEALTHY": 271,
+  "DEFECT_SUSPECT": 7,
+  "NO_BASELINE": 18,
+  "DEGRADED": 3,
+  "COLLAPSED": 6
+ },
+ "confirmed_defects": [
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q2_K",
+   "smoke": 0,
+   "full164": 0,
+   "referee_smoke": 14,
+   "referee_quant": "q2_k",
+   "family_baseline": 14,
+   "verdict": "DEFECTIVE",
+   "metal_smoke": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_S",
+   "smoke": 0,
+   "full164": 0,
+   "referee_smoke": 8,
+   "referee_quant": "q3_k_m",
+   "family_baseline": 14,
+   "verdict": "DEFECTIVE",
+   "metal_smoke": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_M",
+   "smoke": 0,
+   "full164": 0,
+   "referee_smoke": 8,
+   "referee_quant": "q3_k_m",
+   "family_baseline": 14,
+   "verdict": "DEFECTIVE",
+   "metal_smoke": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_L",
+   "smoke": 0,
+   "full164": 0,
+   "referee_smoke": 8,
+   "referee_quant": "q3_k_m",
+   "family_baseline": 14,
+   "verdict": "DEFECTIVE",
+   "metal_smoke": 0
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q2_K",
+   "smoke": 0,
+   "full164": 0,
+   "referee_smoke": 6,
+   "referee_quant": "q2_k",
+   "family_baseline": 13,
+   "verdict": "DEFECTIVE",
+   "metal_smoke": 0
+  }
+ ],
+ "cleared_as_capability": [
+  {
+   "tag": "llama3.2:1b-instruct-q2_K",
+   "smoke": 0,
+   "full164": 0,
+   "referee_smoke": 0,
+   "referee_quant": "q2_k",
+   "family_baseline": 10,
+   "verdict": "CAPABILITY_COLLAPSE"
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q3_K_S",
+   "smoke": 2,
+   "full164": 6,
+   "referee_smoke": 3,
+   "referee_quant": "q3_k_s",
+   "family_baseline": 10,
+   "verdict": "CAPABILITY_COLLAPSE"
+  }
+ ],
+ "defect_prevalence": {
+  "count": 5,
+  "rate": 0.0164,
+  "ci95": [
+   0.007,
+   0.0378
+  ]
+ },
+ "community_defects": [],
+ "backend_dependent": [
+  {
+   "tag": "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
+   "cuda_smoke": 6,
+   "metal_smoke": 15,
+   "ollama_same_quant": 13,
+   "verdict": "BACKEND_DEPENDENT"
+  },
+  {
+   "tag": "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q3_K_M.gguf",
+   "cuda_smoke": 5,
+   "metal_smoke": 13,
+   "ollama_same_quant": 13,
+   "verdict": "BACKEND_DEPENDENT"
+  }
+ ],
+ "community_healthy": 20,
+ "community_min_score": 5
+}

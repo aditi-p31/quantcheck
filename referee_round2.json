@@ -1,0 +1,25 @@
+{
+ "artifacts": [
+  {
+   "tag": "hf:unsloth/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q2_K.gguf",
+   "family": "llama3.2",
+   "quant": "q2_K",
+   "params_b": 1.0,
+   "channel": "hf-adjudication"
+  },
+  {
+   "tag": "hf:unsloth/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q3_K_S.gguf",
+   "family": "llama3.2",
+   "quant": "q3_K_S",
+   "params_b": 1.0,
+   "channel": "hf-adjudication"
+  },
+  {
+   "tag": "hf:bartowski/Phi-3.5-mini-instruct-GGUF/Phi-3.5-mini-instruct-Q2_K.gguf",
+   "family": "phi3.5",
+   "quant": "q2_K",
+   "params_b": 3.8,
+   "channel": "hf-adjudication"
+  }
+ ]
+}

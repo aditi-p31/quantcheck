@@ -1,0 +1,25 @@
+{
+ "suite_tasks": [
+  "HumanEval/107",
+  "HumanEval/11",
+  "HumanEval/12",
+  "HumanEval/15",
+  "HumanEval/152",
+  "HumanEval/156",
+  "HumanEval/157",
+  "HumanEval/162",
+  "HumanEval/18",
+  "HumanEval/2",
+  "HumanEval/21",
+  "HumanEval/23",
+  "HumanEval/28",
+  "HumanEval/29",
+  "HumanEval/3"
+ ],
+ "criterion": "flag if pass < 60% on suite",
+ "calibration": {
+  "healthy_min_rate_on_suite": 1.0,
+  "broken_rate_on_suite": 0.0,
+  "n_healthy_configs": 23
+ }
+}
