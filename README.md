@@ -4,8 +4,9 @@ Functional acceptance testing for quantized LLM artifacts, and the full audit
 dataset behind the paper:
 
 > **Broken on Arrival: Silently Defective LLM Artifacts in Public Model
-> Registries and How to Catch Them.** Aditi Patodiya, 2026. Under review.
-> arXiv link will be added on announcement.
+> Registries and How to Catch Them.** Aditi Patodiya, 2026.
+> [arXiv:2609.05881](https://arxiv.org/abs/2609.05881) — under review at
+> IEEE BigData 2026.
 
 A quantized model file can download cleanly, load cleanly, and stream fluent
 text at normal speed while being completely unable to do its job. Nothing in
@@ -86,5 +87,18 @@ under CC BY 4.0.
 
 ## Citing
 
-See `CITATION.cff`, or cite the paper above. If quantcheck catches a broken
-artifact for you, an issue report here is always welcome.
+```bibtex
+@article{patodiya2026brokenonarrival,
+  title   = {Broken on Arrival: Silently Defective LLM Artifacts in Public
+             Model Registries and How to Catch Them},
+  author  = {Patodiya, Aditi},
+  journal = {arXiv preprint arXiv:2609.05881},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2609.05881},
+  url     = {https://arxiv.org/abs/2609.05881}
+}
+```
+
+GitHub's "Cite this repository" button (from `CITATION.cff`) emits the same
+citation in BibTeX and APA. If quantcheck catches a broken artifact for you,
+an issue report here is always welcome.
