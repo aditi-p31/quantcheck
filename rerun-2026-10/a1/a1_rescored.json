@@ -1,0 +1,2697 @@
+{
+ "analysis": "A1 part 1 (census suite-size curve) on corrected census scores (census_rescore.jsonl)",
+ "meta": {
+  "seed": 20261021,
+  "enum_max": 3003,
+  "n_draws": 2000,
+  "sampling": "for each k = 3..15: all C(15,k) subsets if C(15,k) <= 3003 (k = 3,4,5,10..15), otherwise 2000 distinct subsets drawn uniformly without replacement (k = 6..9); one random.Random(20261021) instance consumed in order of k",
+  "rules": "a1_analysis.stage_one_flag / stage_two (scaled: flag s < 0.6k; suspect 15s <= 2k and 15b >= 8k; healthy s/b >= 0.6), analyze.py grouping and HIGH baseline siblings",
+  "per_task_source": "census_rescore.jsonl per_task for the 15 suite tasks, 305 ollama-official tags; all other row fields from results/audit_scored.jsonl",
+  "reference": "full 15-task suite on corrected scores: 43 flags, 7 suspects",
+  "rebuilt_5": [
+   "qwen2.5-coder:3b-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q3_K_S",
+   "qwen2.5-coder:3b-instruct-q3_K_M",
+   "qwen2.5-coder:3b-instruct-q3_K_L",
+   "phi3.5:3.8b-mini-instruct-q2_K"
+  ],
+  "llama_suspects": [
+   "llama3.2:1b-instruct-q2_K",
+   "llama3.2:1b-instruct-q3_K_S"
+  ],
+  "reused_from": "<QUANTCHECK_ROOT>/rerun-2026-10/a1/a1_analysis.py",
+  "python": "3.9.6",
+  "inputs_sha256": {
+   "<QUANTCHECK_ROOT>/rerun-2026-10/a1/a1_analysis.py": "58f87bb2f08d94260ae888af571ab3ae29727dce91a614abf660c6a2ed48f872",
+   "<QUANTCHECK_ROOT>/results/audit_scored.jsonl": "1175eea1d425c406c4f51c50be132690d57d44138c57df123b841ae66cc8276a",
+   "<QUANTCHECK_ROOT>/rerun-2026-10/census_rescore.jsonl": "fd448d2d6f94e877a09e5b8b444e0d148d7ffa984b8680c7ac383bfefd208349",
+   "<QUANTCHECK_ROOT>/smoke_suite_v1.json": "0f50c6f29e2dfd2afe6153a60d9e806d7b8292bbebe23fe6276340a2180abf96",
+   "<QUANTCHECK_ROOT>/analysis/analyze.py": "1f01d1491c23fffda7a4152688d53dae8489373760179dd3f731e4e06829675c",
+   "<QUANTCHECK_ROOT>/rerun-2026-10/analysis/numbers_v3.json": "ece240f8c764b47ee97145cdb139995b388f28ab049dfab417283999dd0906a2"
+  }
+ },
+ "validation_reproduces_released_a1": {
+  "settings": "original audit_scored.jsonl per_task, enumerate if C(15,k) <= 1000 else 1000 draws, seed 20261021",
+  "flags_k15": 50,
+  "suspects_k15": 7,
+  "per_k_metrics_compared": 325,
+  "per_k_mismatches": [],
+  "k14_leave_one_out_identical": true,
+  "stability_thresholds_identical": true,
+  "reproduces_released_a1_exactly": true
+ },
+ "verification_k15_corrected": {
+  "smoke_pass_equals_rescore_n_pass": true,
+  "stage_one_flags_full_suite": 43,
+  "matches_numbers_v3_stage1_flags_rescored": true,
+  "suspects_full_suite": [
+   "llama3.2:1b-instruct-q2_K",
+   "llama3.2:1b-instruct-q3_K_S",
+   "phi3.5:3.8b-mini-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q3_K_L",
+   "qwen2.5-coder:3b-instruct-q3_K_M",
+   "qwen2.5-coder:3b-instruct-q3_K_S"
+  ],
+  "matches_numbers_v3_suspects_rescored": true,
+  "class_distribution_all_305": {
+   "HEALTHY": 271,
+   "SUSPECT": 7,
+   "NO_BASELINE": 18,
+   "DEGRADED": 3,
+   "COLLAPSED": 6
+  },
+  "class_distribution_literal_analyze_py": {
+   "HEALTHY": 271,
+   "SUSPECT": 7,
+   "NO_BASELINE": 18,
+   "DEGRADED": 3,
+   "COLLAPSED": 6
+  },
+  "matches_numbers_v3_classes_rescored": true,
+  "artifacts_changed_by_rescore": 135,
+  "task_flips_fail_to_pass": {
+   "HumanEval/15": 134,
+   "HumanEval/23": 1
+  },
+  "any_pass_to_fail_flip": false,
+  "flags_original_not_rescored": [
+   "gemma2:2b-instruct-q4_K_S",
+   "granite-code:20b-instruct-q2_K",
+   "llama3.2:1b-instruct-q5_K_M",
+   "mistral:7b-instruct-q3_K_M",
+   "mistral:7b-instruct-v0.2-q4_K_M",
+   "mistral:7b-instruct-v0.3-q2_K",
+   "starcoder2:15b-instruct-v0.1-q2_K"
+  ],
+  "flags_rescored_not_original": [],
+  "tasks_passed_by_no_artifact": [],
+  "rebuilt_5_full_suite_scores": {
+   "qwen2.5-coder:3b-instruct-q2_K": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_S": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+   "phi3.5:3.8b-mini-instruct-q2_K": 0
+  },
+  "llama_full_suite_scores_and_baselines": {
+   "llama3.2:1b-instruct-q2_K": {
+    "s": 0,
+    "b": 11
+   },
+   "llama3.2:1b-instruct-q3_K_S": {
+    "s": 2,
+    "b": 11
+   }
+  }
+ },
+ "full_suite_reference": {
+  "flags": [
+   "deepseek-coder-v2:16b-lite-instruct-q2_K",
+   "deepseek-coder:1.3b-instruct-fp16",
+   "deepseek-coder:1.3b-instruct-q2_K",
+   "deepseek-coder:1.3b-instruct-q3_K_L",
+   "deepseek-coder:1.3b-instruct-q3_K_M",
+   "deepseek-coder:1.3b-instruct-q3_K_S",
+   "deepseek-coder:1.3b-instruct-q4_0",
+   "deepseek-coder:1.3b-instruct-q4_K_M",
+   "deepseek-coder:1.3b-instruct-q4_K_S",
+   "deepseek-coder:1.3b-instruct-q5_K_M",
+   "deepseek-coder:1.3b-instruct-q5_K_S",
+   "deepseek-coder:1.3b-instruct-q6_K",
+   "deepseek-coder:1.3b-instruct-q8_0",
+   "gemma2:2b-instruct-q2_K",
+   "gemma3:1b-it-fp16",
+   "gemma3:1b-it-q4_K_M",
+   "gemma3:1b-it-q8_0",
+   "gemma3:270m-it-fp16",
+   "gemma3:270m-it-q8_0",
+   "granite3.1-dense:2b-instruct-q2_K",
+   "llama3.2:1b-instruct-q2_K",
+   "llama3.2:1b-instruct-q3_K_L",
+   "llama3.2:1b-instruct-q3_K_M",
+   "llama3.2:1b-instruct-q3_K_S",
+   "llama3.2:1b-instruct-q4_0",
+   "llama3.2:1b-instruct-q4_K_M",
+   "llama3.2:1b-instruct-q4_K_S",
+   "llama3.2:3b-instruct-q2_K",
+   "mistral:7b-instruct-q3_K_L",
+   "mistral:7b-instruct-q4_0",
+   "mistral:7b-instruct-v0.2-q3_K_L",
+   "mistral:7b-instruct-v0.2-q4_K_S",
+   "mistral:7b-instruct-v0.2-q5_K_M",
+   "mistral:7b-instruct-v0.2-q5_K_S",
+   "mistral:7b-instruct-v0.2-q6_K",
+   "mistral:7b-instruct-v0.2-q8_0",
+   "phi3.5:3.8b-mini-instruct-q2_K",
+   "phi3.5:3.8b-mini-instruct-q3_K_S",
+   "qwen2.5-coder:3b-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q3_K_L",
+   "qwen2.5-coder:3b-instruct-q3_K_M",
+   "qwen2.5-coder:3b-instruct-q3_K_S",
+   "yi-coder:1.5b-chat-q2_K"
+  ],
+  "suspects": [
+   "llama3.2:1b-instruct-q2_K",
+   "llama3.2:1b-instruct-q3_K_S",
+   "phi3.5:3.8b-mini-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q3_K_L",
+   "qwen2.5-coder:3b-instruct-q3_K_M",
+   "qwen2.5-coder:3b-instruct-q3_K_S"
+  ],
+  "stage_two_classes_of_flagged": {
+   "COLLAPSED": 6,
+   "HEALTHY": 26,
+   "DEGRADED": 3,
+   "NO_BASELINE": 1,
+   "DEFECT_SUSPECT": 7
+  }
+ },
+ "headline": {
+  "mean_jaccard_flags": {
+   "3": 0.53,
+   "4": 0.527,
+   "5": 0.614,
+   "6": 0.631,
+   "7": 0.603,
+   "8": 0.705,
+   "9": 0.693,
+   "10": 0.771,
+   "11": 0.774,
+   "12": 0.736,
+   "13": 0.859,
+   "14": 0.824,
+   "15": 1.0
+  },
+  "mean_jaccard_suspects": {
+   "3": 0.695,
+   "4": 0.787,
+   "5": 0.849,
+   "6": 0.855,
+   "7": 0.879,
+   "8": 0.901,
+   "9": 0.925,
+   "10": 0.929,
+   "11": 0.921,
+   "12": 0.909,
+   "13": 0.894,
+   "14": 0.876,
+   "15": 1.0
+  },
+  "frac_all_5_rebuilt_suspects": {
+   "3": 0.9978,
+   "4": 0.9912,
+   "5": 1.0,
+   "6": 1.0,
+   "7": 1.0,
+   "8": 1.0,
+   "9": 1.0,
+   "10": 1.0,
+   "11": 1.0,
+   "12": 1.0,
+   "13": 1.0,
+   "14": 1.0,
+   "15": 1.0
+  },
+  "min_k_all_5_rebuilt_kept_in_every_subset_from_then_on": 5,
+  "phi35_q2K_dropout_by_k": {
+   "3": 0.0022,
+   "4": 0.0088
+  },
+  "llama_q3_K_S_dropout_range_k3_14": [
+   0.3195,
+   0.8667
+  ],
+  "llama_q3_K_S_dropout_nonzero_k": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "llama_q2_K_dropout_max": 0.2505,
+  "llama_q2_K_dropout_nonzero_k": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ "per_k": [
+  {
+   "k": 3,
+   "n_subsets": 455,
+   "n_possible": 455,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 1.8; unflagged needs s >= 2 (66.7% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6667,
+   "suspect_rule": "s <= 0.400 and b >= 1.600",
+   "n_flags": {
+    "mean": 49.97,
+    "p5": 24.7,
+    "p50": 44.0,
+    "p95": 93.3,
+    "min": 18,
+    "max": 130
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.53,
+    "p5": 0.382,
+    "p50": 0.531,
+    "p95": 0.68,
+    "min": 0.3007518796992481,
+    "max": 0.7727272727272727
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.731,
+    "p5": 0.535,
+    "p50": 0.744,
+    "p95": 0.907,
+    "min": 0.4186046511627907,
+    "max": 0.9534883720930233
+   },
+   "flags_not_in_full_set": {
+    "mean": 18.56,
+    "p5": 1.0,
+    "p50": 12.0,
+    "p95": 55.3,
+    "min": 0,
+    "max": 90
+   },
+   "n_suspects": {
+    "mean": 9.25,
+    "p5": 6.0,
+    "p50": 8.0,
+    "p95": 15.0,
+    "min": 5,
+    "max": 22
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.695,
+    "p5": 0.429,
+    "p50": 0.7,
+    "p95": 1.0,
+    "min": 0.2777777777777778,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.1209,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 0.9978,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.9978
+   },
+   "mean_suspects_not_in_full_set": 2.844,
+   "mean_full_suspects_lost": 0.589,
+   "mean_suspects_not_confirmed_4def": 5.255,
+   "mean_suspects_not_confirmed_5def": 4.257,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.3626
+    ],
+    [
+     "llama3.2:3b-instruct-q2_K",
+     0.1846
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q3_K_L",
+     0.1582
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q5_K_M",
+     0.1209
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q8_0",
+     0.1209
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q6_K",
+     0.1099
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.4725
+    ],
+    [
+     "llama3.2:1b-instruct-q2_K",
+     0.1143
+    ],
+    [
+     "phi3.5:3.8b-mini-instruct-q2_K",
+     0.0022
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 9.793,
+    "DEFECT_SUSPECT": 9.255,
+    "DEGRADED": 17.668,
+    "HEALTHY": 11.268,
+    "NO_BASELINE": 1.987
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.1143,
+    "llama3.2:1b-instruct-q3_K_S": 0.4725,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0022,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 52,
+    "llama3.2:1b-instruct-q3_K_S": 215,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 4,
+   "n_subsets": 1365,
+   "n_possible": 1365,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 2.4; unflagged needs s >= 3 (75.0% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.75,
+   "suspect_rule": "s <= 0.533 and b >= 2.133",
+   "n_flags": {
+    "mean": 69.37,
+    "p5": 35.0,
+    "p50": 65.0,
+    "p95": 115.0,
+    "min": 26,
+    "max": 159
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.527,
+    "p5": 0.344,
+    "p50": 0.533,
+    "p95": 0.717,
+    "min": 0.2546583850931677,
+    "max": 0.8260869565217391
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.864,
+    "p5": 0.698,
+    "p50": 0.884,
+    "p95": 0.977,
+    "min": 0.5581395348837209,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 32.22,
+    "p5": 4.0,
+    "p50": 27.0,
+    "p95": 75.0,
+    "min": 0,
+    "max": 118
+   },
+   "n_suspects": {
+    "mean": 6.98,
+    "p5": 5.0,
+    "p50": 7.0,
+    "p95": 10.0,
+    "min": 4,
+    "max": 14
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.787,
+    "p5": 0.545,
+    "p50": 0.778,
+    "p95": 1.0,
+    "min": 0.35714285714285715,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.1714,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 0.9912,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.9912
+   },
+   "mean_suspects_not_in_full_set": 0.9,
+   "mean_full_suspects_lost": 0.916,
+   "mean_suspects_not_confirmed_4def": 2.984,
+   "mean_suspects_not_confirmed_5def": 1.993,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.2418
+    ],
+    [
+     "llama3.2:3b-instruct-q2_K",
+     0.0923
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q3_K_L",
+     0.0777
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q5_K_M",
+     0.0549
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q8_0",
+     0.0549
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q6_K",
+     0.0403
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.6571
+    ],
+    [
+     "llama3.2:1b-instruct-q2_K",
+     0.2505
+    ],
+    [
+     "phi3.5:3.8b-mini-instruct-q2_K",
+     0.0088
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 11.452,
+    "DEFECT_SUSPECT": 6.984,
+    "DEGRADED": 15.755,
+    "HEALTHY": 32.015,
+    "NO_BASELINE": 3.163
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.2505,
+    "llama3.2:1b-instruct-q3_K_S": 0.6571,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0088,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 342,
+    "llama3.2:1b-instruct-q3_K_S": 897,
+    "phi3.5:3.8b-mini-instruct-q2_K": 12,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 5,
+   "n_subsets": 3003,
+   "n_possible": 3003,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 3; unflagged needs s >= 3 (60.0% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6,
+   "suspect_rule": "s <= 0.667 and b >= 2.667",
+   "n_flags": {
+    "mean": 42.86,
+    "p5": 26.0,
+    "p50": 40.0,
+    "p95": 72.0,
+    "min": 18,
+    "max": 108
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.614,
+    "p5": 0.482,
+    "p50": 0.617,
+    "p95": 0.739,
+    "min": 0.3482142857142857,
+    "max": 0.8297872340425532
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.753,
+    "p5": 0.581,
+    "p50": 0.767,
+    "p95": 0.907,
+    "min": 0.4186046511627907,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 10.49,
+    "p5": 0.0,
+    "p50": 7.0,
+    "p95": 34.0,
+    "min": 0,
+    "max": 69
+   },
+   "n_suspects": {
+    "mean": 6.84,
+    "p5": 6.0,
+    "p50": 7.0,
+    "p95": 9.0,
+    "min": 5,
+    "max": 13
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.849,
+    "p5": 0.636,
+    "p50": 0.857,
+    "p95": 1.0,
+    "min": 0.46153846153846156,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.2428,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.525,
+   "mean_full_suspects_lost": 0.686,
+   "mean_suspects_not_confirmed_4def": 2.839,
+   "mean_suspects_not_confirmed_5def": 1.839,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.1538
+    ],
+    [
+     "llama3.2:3b-instruct-q2_K",
+     0.042
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q3_K_L",
+     0.0386
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q3_K_L",
+     0.0353
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q4_0",
+     0.0353
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q5_K_M",
+     0.027
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.6204
+    ],
+    [
+     "llama3.2:1b-instruct-q2_K",
+     0.0659
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 7.933,
+    "DEFECT_SUSPECT": 6.839,
+    "DEGRADED": 11.942,
+    "HEALTHY": 14.586,
+    "NO_BASELINE": 1.557
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0659,
+    "llama3.2:1b-instruct-q3_K_S": 0.6204,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 198,
+    "llama3.2:1b-instruct-q3_K_S": 1863,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 6,
+   "n_subsets": 2000,
+   "n_possible": 5005,
+   "enumerated": false,
+   "stage_one_rule": "flag iff s < 3.6; unflagged needs s >= 4 (66.7% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6667,
+   "suspect_rule": "s <= 0.800 and b >= 3.200",
+   "n_flags": {
+    "mean": 54.61,
+    "p5": 33.0,
+    "p50": 52.0,
+    "p95": 85.0,
+    "min": 24,
+    "max": 122
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.631,
+    "p5": 0.461,
+    "p50": 0.639,
+    "p95": 0.776,
+    "min": 0.33064516129032256,
+    "max": 0.8636363636363636
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.862,
+    "p5": 0.721,
+    "p50": 0.884,
+    "p95": 0.977,
+    "min": 0.5116279069767442,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 17.55,
+    "p5": 2.0,
+    "p50": 14.0,
+    "p95": 44.0,
+    "min": 0,
+    "max": 81
+   },
+   "n_suspects": {
+    "mean": 6.3,
+    "p5": 5.0,
+    "p50": 6.0,
+    "p95": 7.0,
+    "min": 5,
+    "max": 12
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.855,
+    "p5": 0.714,
+    "p50": 0.857,
+    "p95": 1.0,
+    "min": 0.5555555555555556,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.2165,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.183,
+   "mean_full_suspects_lost": 0.879,
+   "mean_suspects_not_confirmed_4def": 2.304,
+   "mean_suspects_not_confirmed_5def": 1.304,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.091
+    ],
+    [
+     "llama3.2:3b-instruct-q2_K",
+     0.0185
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q3_K_L",
+     0.0175
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q5_K_M",
+     0.0115
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q8_0",
+     0.0115
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q6_K",
+     0.005
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.74
+    ],
+    [
+     "llama3.2:1b-instruct-q2_K",
+     0.139
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 7.232,
+    "DEFECT_SUSPECT": 6.304,
+    "DEGRADED": 10.905,
+    "HEALTHY": 27.812,
+    "NO_BASELINE": 2.356
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.139,
+    "llama3.2:1b-instruct-q3_K_S": 0.74,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 278,
+    "llama3.2:1b-instruct-q3_K_S": 1480,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 7,
+   "n_subsets": 2000,
+   "n_possible": 6435,
+   "enumerated": false,
+   "stage_one_rule": "flag iff s < 4.2; unflagged needs s >= 5 (71.4% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.7143,
+   "suspect_rule": "s <= 0.933 and b >= 3.733",
+   "n_flags": {
+    "mean": 66.83,
+    "p5": 41.0,
+    "p50": 65.0,
+    "p95": 99.0,
+    "min": 34,
+    "max": 127
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.603,
+    "p5": 0.421,
+    "p50": 0.603,
+    "p95": 0.792,
+    "min": 0.3178294573643411,
+    "max": 0.8936170212765957
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.935,
+    "p5": 0.837,
+    "p50": 0.953,
+    "p95": 1.0,
+    "min": 0.7441860465116279,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 26.64,
+    "p5": 5.0,
+    "p50": 24.0,
+    "p95": 57.0,
+    "min": 1,
+    "max": 86
+   },
+   "n_suspects": {
+    "mean": 6.32,
+    "p5": 6.0,
+    "p50": 6.0,
+    "p95": 7.0,
+    "min": 5,
+    "max": 11
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.879,
+    "p5": 0.75,
+    "p50": 0.857,
+    "p95": 1.0,
+    "min": 0.625,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.223,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.093,
+   "mean_full_suspects_lost": 0.773,
+   "mean_suspects_not_confirmed_4def": 2.32,
+   "mean_suspects_not_confirmed_5def": 1.32,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.0445
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q4_0",
+     0.01
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q3_K_L",
+     0.0085
+    ],
+    [
+     "llama3.2:3b-instruct-q2_K",
+     0.0075
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q3_K_L",
+     0.006
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q5_K_M",
+     0.0055
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.751
+    ],
+    [
+     "llama3.2:1b-instruct-q2_K",
+     0.022
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 6.558,
+    "DEFECT_SUSPECT": 6.32,
+    "DEGRADED": 11.371,
+    "HEALTHY": 39.364,
+    "NO_BASELINE": 3.22
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.022,
+    "llama3.2:1b-instruct-q3_K_S": 0.751,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 44,
+    "llama3.2:1b-instruct-q3_K_S": 1502,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 8,
+   "n_subsets": 2000,
+   "n_possible": 6435,
+   "enumerated": false,
+   "stage_one_rule": "flag iff s < 4.8; unflagged needs s >= 5 (62.5% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.625,
+   "suspect_rule": "s <= 1.067 and b >= 4.267",
+   "n_flags": {
+    "mean": 48.2,
+    "p5": 33.0,
+    "p50": 46.0,
+    "p95": 69.0,
+    "min": 26,
+    "max": 86
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.705,
+    "p5": 0.563,
+    "p50": 0.709,
+    "p95": 0.83,
+    "min": 0.449438202247191,
+    "max": 0.9111111111111111
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.869,
+    "p5": 0.721,
+    "p50": 0.884,
+    "p95": 0.977,
+    "min": 0.6046511627906976,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 10.82,
+    "p5": 1.0,
+    "p50": 8.0,
+    "p95": 28.0,
+    "min": 0,
+    "max": 46
+   },
+   "n_suspects": {
+    "mean": 7.02,
+    "p5": 6.0,
+    "p50": 7.0,
+    "p95": 9.0,
+    "min": 5,
+    "max": 12
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.901,
+    "p5": 0.7,
+    "p50": 0.875,
+    "p95": 1.0,
+    "min": 0.5555555555555556,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.4505,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.399,
+   "mean_full_suspects_lost": 0.38,
+   "mean_suspects_not_confirmed_4def": 3.019,
+   "mean_suspects_not_confirmed_5def": 2.019,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.2185
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q5_K_M",
+     0.0335
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q8_0",
+     0.0335
+    ],
+    [
+     "llama3.2:3b-instruct-q2_K",
+     0.0315
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q3_K_L",
+     0.031
+    ],
+    [
+     "llama3.2:1b-instruct-q4_K_S",
+     0.01
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.3195
+    ],
+    [
+     "llama3.2:1b-instruct-q2_K",
+     0.0605
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 6.453,
+    "DEFECT_SUSPECT": 7.019,
+    "DEGRADED": 9.024,
+    "HEALTHY": 23.739,
+    "NO_BASELINE": 1.966
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0605,
+    "llama3.2:1b-instruct-q3_K_S": 0.3195,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 121,
+    "llama3.2:1b-instruct-q3_K_S": 639,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 9,
+   "n_subsets": 2000,
+   "n_possible": 5005,
+   "enumerated": false,
+   "stage_one_rule": "flag iff s < 5.4; unflagged needs s >= 6 (66.7% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6667,
+   "suspect_rule": "s <= 1.200 and b >= 4.800",
+   "n_flags": {
+    "mean": 56.82,
+    "p5": 40.0,
+    "p50": 55.0,
+    "p95": 78.0,
+    "min": 34,
+    "max": 96
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.693,
+    "p5": 0.528,
+    "p50": 0.7,
+    "p95": 0.841,
+    "min": 0.43617021276595747,
+    "max": 0.9333333333333333
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.937,
+    "p5": 0.837,
+    "p50": 0.953,
+    "p95": 1.0,
+    "min": 0.7441860465116279,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 16.53,
+    "p5": 3.0,
+    "p50": 15.0,
+    "p95": 36.0,
+    "min": 0,
+    "max": 53
+   },
+   "n_suspects": {
+    "mean": 6.85,
+    "p5": 6.0,
+    "p50": 7.0,
+    "p95": 8.0,
+    "min": 6,
+    "max": 11
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.925,
+    "p5": 0.853,
+    "p50": 0.875,
+    "p95": 1.0,
+    "min": 0.6363636363636364,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.498,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.206,
+   "mean_full_suspects_lost": 0.352,
+   "mean_suspects_not_confirmed_4def": 2.853,
+   "mean_suspects_not_confirmed_5def": 1.853,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.147
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q3_K_L",
+     0.0145
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q5_K_M",
+     0.012
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q8_0",
+     0.012
+    ],
+    [
+     "llama3.2:3b-instruct-q2_K",
+     0.01
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q6_K",
+     0.0025
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.3525
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 5.946,
+    "DEFECT_SUSPECT": 6.854,
+    "DEGRADED": 8.816,
+    "HEALTHY": 32.52,
+    "NO_BASELINE": 2.68
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.3525,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 0,
+    "llama3.2:1b-instruct-q3_K_S": 705,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 10,
+   "n_subsets": 3003,
+   "n_possible": 3003,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 6; unflagged needs s >= 6 (60.0% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6,
+   "suspect_rule": "s <= 1.333 and b >= 5.333",
+   "n_flags": {
+    "mean": 44.03,
+    "p5": 34.0,
+    "p50": 43.0,
+    "p95": 59.0,
+    "min": 28,
+    "max": 72
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.771,
+    "p5": 0.651,
+    "p50": 0.778,
+    "p95": 0.867,
+    "min": 0.5555555555555556,
+    "max": 0.9333333333333333
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.878,
+    "p5": 0.767,
+    "p50": 0.884,
+    "p95": 0.977,
+    "min": 0.6511627906976745,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 6.29,
+    "p5": 0.0,
+    "p50": 5.0,
+    "p95": 18.0,
+    "min": 0,
+    "max": 30
+   },
+   "n_suspects": {
+    "mean": 6.66,
+    "p5": 6.0,
+    "p50": 7.0,
+    "p95": 8.0,
+    "min": 6,
+    "max": 10
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.929,
+    "p5": 0.857,
+    "p50": 1.0,
+    "p95": 1.0,
+    "min": 0.7,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.5045,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.085,
+   "mean_full_suspects_lost": 0.429,
+   "mean_suspects_not_confirmed_4def": 2.656,
+   "mean_suspects_not_confirmed_5def": 1.656,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.0769
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q3_K_L",
+     0.002
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q5_K_M",
+     0.002
+    ],
+    [
+     "mistral:7b-instruct-v0.2-q8_0",
+     0.002
+    ],
+    [
+     "llama3.2:3b-instruct-q2_K",
+     0.002
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.4286
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 5.819,
+    "DEFECT_SUSPECT": 6.656,
+    "DEGRADED": 8.634,
+    "HEALTHY": 21.353,
+    "NO_BASELINE": 1.573
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.4286,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 0,
+    "llama3.2:1b-instruct-q3_K_S": 1287,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 11,
+   "n_subsets": 1365,
+   "n_possible": 1365,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 6.6; unflagged needs s >= 7 (63.6% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6364,
+   "suspect_rule": "s <= 1.467 and b >= 5.867",
+   "n_flags": {
+    "mean": 51.0,
+    "p5": 39.0,
+    "p50": 50.0,
+    "p95": 66.0,
+    "min": 34,
+    "max": 76
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.774,
+    "p5": 0.625,
+    "p50": 0.782,
+    "p95": 0.891,
+    "min": 0.5454545454545454,
+    "max": 0.9555555555555556
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.946,
+    "p5": 0.86,
+    "p50": 0.953,
+    "p95": 1.0,
+    "min": 0.7906976744186046,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 10.31,
+    "p5": 1.0,
+    "p50": 9.0,
+    "p95": 24.0,
+    "min": 0,
+    "max": 34
+   },
+   "n_suspects": {
+    "mean": 6.51,
+    "p5": 6.0,
+    "p50": 6.0,
+    "p95": 7.0,
+    "min": 6,
+    "max": 8
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.921,
+    "p5": 0.857,
+    "p50": 0.857,
+    "p95": 1.0,
+    "min": 0.75,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.4505,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.033,
+   "mean_full_suspects_lost": 0.524,
+   "mean_suspects_not_confirmed_4def": 2.509,
+   "mean_suspects_not_confirmed_5def": 1.509,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.033
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.5238
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 5.774,
+    "DEFECT_SUSPECT": 6.509,
+    "DEGRADED": 7.518,
+    "HEALTHY": 29.02,
+    "NO_BASELINE": 2.179
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.5238,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 0,
+    "llama3.2:1b-instruct-q3_K_S": 715,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 12,
+   "n_subsets": 455,
+   "n_possible": 455,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 7.2; unflagged needs s >= 8 (66.7% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6667,
+   "suspect_rule": "s <= 1.600 and b >= 6.400",
+   "n_flags": {
+    "mean": 57.95,
+    "p5": 45.0,
+    "p50": 57.0,
+    "p95": 72.0,
+    "min": 40,
+    "max": 78
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.736,
+    "p5": 0.589,
+    "p50": 0.741,
+    "p95": 0.896,
+    "min": 0.5454545454545454,
+    "max": 0.9555555555555556
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.986,
+    "p5": 0.93,
+    "p50": 1.0,
+    "p95": 1.0,
+    "min": 0.9069767441860465,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 15.56,
+    "p5": 3.0,
+    "p50": 15.0,
+    "p95": 29.3,
+    "min": 1,
+    "max": 35
+   },
+   "n_suspects": {
+    "mean": 6.38,
+    "p5": 6.0,
+    "p50": 6.0,
+    "p95": 7.0,
+    "min": 6,
+    "max": 8
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.909,
+    "p5": 0.857,
+    "p50": 0.857,
+    "p95": 1.0,
+    "min": 0.75,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.3648,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.009,
+   "mean_full_suspects_lost": 0.629,
+   "mean_suspects_not_confirmed_4def": 2.38,
+   "mean_suspects_not_confirmed_5def": 1.38,
+   "top_extra_suspects": [
+    [
+     "granite3.1-dense:2b-instruct-q2_K",
+     0.0088
+    ]
+   ],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.6286
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 5.743,
+    "DEFECT_SUSPECT": 6.38,
+    "DEGRADED": 7.738,
+    "HEALTHY": 35.237,
+    "NO_BASELINE": 2.846
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.6286,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 0,
+    "llama3.2:1b-instruct-q3_K_S": 286,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 13,
+   "n_subsets": 105,
+   "n_possible": 105,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 7.8; unflagged needs s >= 8 (61.5% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6154,
+   "suspect_rule": "s <= 1.733 and b >= 6.933",
+   "n_flags": {
+    "mean": 46.89,
+    "p5": 39.2,
+    "p50": 48.0,
+    "p95": 55.0,
+    "min": 37,
+    "max": 57
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.859,
+    "p5": 0.764,
+    "p50": 0.857,
+    "p95": 0.955,
+    "min": 0.7368421052631579,
+    "max": 0.9772727272727273
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 0.963,
+    "p5": 0.907,
+    "p50": 0.977,
+    "p95": 1.0,
+    "min": 0.8604651162790697,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 5.49,
+    "p5": 0.0,
+    "p50": 6.0,
+    "p95": 12.0,
+    "min": 0,
+    "max": 14
+   },
+   "n_suspects": {
+    "mean": 6.26,
+    "p5": 6.0,
+    "p50": 6.0,
+    "p95": 7.0,
+    "min": 6,
+    "max": 7
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.894,
+    "p5": 0.857,
+    "p50": 0.857,
+    "p95": 1.0,
+    "min": 0.8571428571428571,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.2571,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.0,
+   "mean_full_suspects_lost": 0.743,
+   "mean_suspects_not_confirmed_4def": 2.257,
+   "mean_suspects_not_confirmed_5def": 1.257,
+   "top_extra_suspects": [],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.7429
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 5.743,
+    "DEFECT_SUSPECT": 6.257,
+    "DEGRADED": 7.886,
+    "HEALTHY": 25.314,
+    "NO_BASELINE": 1.686
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.7429,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 0,
+    "llama3.2:1b-instruct-q3_K_S": 78,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 14,
+   "n_subsets": 15,
+   "n_possible": 15,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 8.4; unflagged needs s >= 9 (64.3% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6429,
+   "suspect_rule": "s <= 1.867 and b >= 7.467",
+   "n_flags": {
+    "mean": 52.6,
+    "p5": 44.7,
+    "p50": 54.0,
+    "p95": 58.0,
+    "min": 44,
+    "max": 58
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 0.824,
+    "p5": 0.741,
+    "p50": 0.796,
+    "p95": 0.962,
+    "min": 0.7413793103448276,
+    "max": 0.9772727272727273
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 1.0,
+    "p5": 1.0,
+    "p50": 1.0,
+    "p95": 1.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 9.6,
+    "p5": 1.7,
+    "p50": 11.0,
+    "p95": 15.0,
+    "min": 1,
+    "max": 15
+   },
+   "n_suspects": {
+    "mean": 6.13,
+    "p5": 6.0,
+    "p50": 6.0,
+    "p95": 7.0,
+    "min": 6,
+    "max": 7
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 0.876,
+    "p5": 0.857,
+    "p50": 0.857,
+    "p95": 1.0,
+    "min": 0.8571428571428571,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 0.1333,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.0,
+   "mean_full_suspects_lost": 0.867,
+   "mean_suspects_not_confirmed_4def": 2.133,
+   "mean_suspects_not_confirmed_5def": 1.133,
+   "top_extra_suspects": [],
+   "lost_full_suspects": [
+    [
+     "llama3.2:1b-instruct-q3_K_S",
+     0.8667
+    ]
+   ],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 5.8,
+    "DEFECT_SUSPECT": 6.133,
+    "DEGRADED": 5.333,
+    "HEALTHY": 33.133,
+    "NO_BASELINE": 2.2
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.8667,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 0,
+    "llama3.2:1b-instruct-q3_K_S": 13,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  },
+  {
+   "k": 15,
+   "n_subsets": 1,
+   "n_possible": 1,
+   "enumerated": true,
+   "stage_one_rule": "flag iff s < 9; unflagged needs s >= 9 (60.0% of k)",
+   "effective_pass_fraction_to_stay_unflagged": 0.6,
+   "suspect_rule": "s <= 2.000 and b >= 8.000",
+   "n_flags": {
+    "mean": 43.0,
+    "p5": 43.0,
+    "p50": 43.0,
+    "p95": 43.0,
+    "min": 43,
+    "max": 43
+   },
+   "jaccard_flags_vs_full": {
+    "mean": 1.0,
+    "p5": 1.0,
+    "p50": 1.0,
+    "p95": 1.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "recall_of_full_suite_flags": {
+    "mean": 1.0,
+    "p5": 1.0,
+    "p50": 1.0,
+    "p95": 1.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flags_not_in_full_set": {
+    "mean": 0.0,
+    "p5": 0.0,
+    "p50": 0.0,
+    "p95": 0.0,
+    "min": 0,
+    "max": 0
+   },
+   "n_suspects": {
+    "mean": 7.0,
+    "p5": 7.0,
+    "p50": 7.0,
+    "p95": 7.0,
+    "min": 7,
+    "max": 7
+   },
+   "jaccard_suspects_vs_full": {
+    "mean": 1.0,
+    "p5": 1.0,
+    "p50": 1.0,
+    "p95": 1.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "frac_suspect_set_identical_to_full": 1.0,
+   "frac_all_4_confirmed_are_suspects": 1.0,
+   "frac_all_5_confirmed_incl_phi35_are_suspects": 1.0,
+   "frac_all_5_confirmed_flagged_stage_one": 1.0,
+   "per_defect_suspect_rate": {
+    "qwen2.5-coder:3b-instruct-q2_K": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 1.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 1.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 1.0
+   },
+   "mean_suspects_not_in_full_set": 0.0,
+   "mean_full_suspects_lost": 0.0,
+   "mean_suspects_not_confirmed_4def": 3.0,
+   "mean_suspects_not_confirmed_5def": 2.0,
+   "top_extra_suspects": [],
+   "lost_full_suspects": [],
+   "mean_stage_two_classes_of_flagged": {
+    "COLLAPSED": 6.0,
+    "DEFECT_SUSPECT": 7.0,
+    "DEGRADED": 3.0,
+    "HEALTHY": 26.0,
+    "NO_BASELINE": 1.0
+   },
+   "suspect_dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   },
+   "suspect_dropout_count": {
+    "llama3.2:1b-instruct-q2_K": 0,
+    "llama3.2:1b-instruct-q3_K_S": 0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0
+   }
+  }
+ ],
+ "k14_leave_one_out": [
+  {
+   "dropped_tasks": [
+    "HumanEval/3"
+   ],
+   "n_flags": 53,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "gemma2:2b-instruct-q5_K_M",
+    "granite-code:20b-instruct-q2_K",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "mistral:7b-instruct-v0.3-q5_K_S",
+    "qwen2.5-coder:0.5b-instruct-q4_0",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/29"
+   ],
+   "n_flags": 56,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "gemma2:2b-instruct-q5_K_M",
+    "granite-code:20b-instruct-q2_K",
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:2b-instruct-q3_K_M",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "llama3.2:1b-instruct-q5_K_M",
+    "mistral:7b-instruct-q3_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "mistral:7b-instruct-v0.3-q5_K_S",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/28"
+   ],
+   "n_flags": 56,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "gemma2:2b-instruct-q5_K_M",
+    "granite-code:20b-instruct-q2_K",
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:2b-instruct-q3_K_M",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "llama3.2:1b-instruct-q5_K_M",
+    "mistral:7b-instruct-q3_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "mistral:7b-instruct-v0.3-q5_K_S",
+    "qwen2.5-coder:0.5b-instruct-q4_0",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/23"
+   ],
+   "n_flags": 58,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "gemma2:2b-instruct-q5_K_M",
+    "granite-code:20b-instruct-q2_K",
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:2b-instruct-q3_K_M",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "llama3.2:1b-instruct-q5_K_M",
+    "mistral:7b-instruct-q3_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "mistral:7b-instruct-v0.3-q5_K_S",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "llama3.2:1b-instruct-q3_K_S",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": true
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/21"
+   ],
+   "n_flags": 52,
+   "flags_added": [
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "mistral:7b-instruct-q3_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "mistral:7b-instruct-v0.3-q5_K_S",
+    "qwen2.5-coder:0.5b-instruct-q4_0"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/2"
+   ],
+   "n_flags": 57,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "gemma2:2b-instruct-q5_K_M",
+    "granite-code:20b-instruct-q2_K",
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:2b-instruct-q3_K_M",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "mistral:7b-instruct-q3_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "mistral:7b-instruct-v0.3-q5_K_S",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/18"
+   ],
+   "n_flags": 45,
+   "flags_added": [
+    "mistral:7b-instruct-q3_K_M",
+    "qwen2.5-coder:0.5b-instruct-q4_0"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/162"
+   ],
+   "n_flags": 55,
+   "flags_added": [
+    "gemma2:2b-instruct-q5_K_M",
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:2b-instruct-q3_K_M",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "llama3.2:1b-instruct-q5_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "mistral:7b-instruct-v0.3-q5_K_S",
+    "qwen2.5-coder:0.5b-instruct-q4_0",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/157"
+   ],
+   "n_flags": 45,
+   "flags_added": [
+    "llama3.2:1b-instruct-q5_K_M",
+    "qwen2.5-coder:0.5b-instruct-q4_0"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/156"
+   ],
+   "n_flags": 44,
+   "flags_added": [
+    "granite3.1-dense:2b-instruct-q3_K_M"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/152"
+   ],
+   "n_flags": 58,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "gemma2:2b-instruct-q5_K_M",
+    "granite-code:20b-instruct-q2_K",
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:2b-instruct-q3_K_M",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "llama3.2:1b-instruct-q5_K_M",
+    "mistral:7b-instruct-q3_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "qwen2.5-coder:0.5b-instruct-q4_0",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/15"
+   ],
+   "n_flags": 50,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "granite-code:20b-instruct-q2_K",
+    "llama3.2:1b-instruct-q5_K_M",
+    "mistral:7b-instruct-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/12"
+   ],
+   "n_flags": 55,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "gemma2:2b-instruct-q5_K_M",
+    "granite-code:20b-instruct-q2_K",
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:2b-instruct-q3_K_M",
+    "llama3.2:1b-instruct-q5_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "qwen2.5-coder:0.5b-instruct-q4_0",
+    "starcoder2:15b-instruct-v0.1-q2_K"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "llama3.2:1b-instruct-q3_K_S",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": true
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/11"
+   ],
+   "n_flags": 51,
+   "flags_added": [
+    "granite3.1-dense:2b-instruct-q3_K_M",
+    "llama3.2:1b-instruct-q5_K_M",
+    "mistral:7b-instruct-q3_K_M",
+    "mistral:7b-instruct-q5_K_M",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "mistral:7b-instruct-v0.3-q5_K_S"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  },
+  {
+   "dropped_tasks": [
+    "HumanEval/107"
+   ],
+   "n_flags": 54,
+   "flags_added": [
+    "gemma2:2b-instruct-q4_K_S",
+    "gemma2:2b-instruct-q5_K_M",
+    "granite-code:20b-instruct-q2_K",
+    "granite3.1-dense:2b-instruct-q3_K_L",
+    "granite3.1-dense:8b-instruct-q2_K",
+    "mistral:7b-instruct-v0.2-q2_K",
+    "mistral:7b-instruct-v0.2-q3_K_M",
+    "mistral:7b-instruct-v0.2-q4_K_M",
+    "mistral:7b-instruct-v0.3-q2_K",
+    "mistral:7b-instruct-v0.3-q5_K_S",
+    "qwen2.5-coder:0.5b-instruct-q4_0"
+   ],
+   "flags_removed": [],
+   "suspects": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "suspect_set_unchanged": false
+  }
+ ],
+ "phi35_q2K_dropouts": {
+  "subsets": [
+   {
+    "k": 3,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/2"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 1,
+    "cap_b": 1.6
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/11",
+     "HumanEval/15",
+     "HumanEval/2"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/12",
+     "HumanEval/15",
+     "HumanEval/2"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/152",
+     "HumanEval/2"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/156",
+     "HumanEval/2"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/157",
+     "HumanEval/2"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/162",
+     "HumanEval/2"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/18",
+     "HumanEval/2"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/2",
+     "HumanEval/21"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/2",
+     "HumanEval/23"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/2",
+     "HumanEval/28"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/2",
+     "HumanEval/29"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   },
+   {
+    "k": 4,
+    "tasks": [
+     "HumanEval/107",
+     "HumanEval/15",
+     "HumanEval/2",
+     "HumanEval/3"
+    ],
+    "class": "COLLAPSED",
+    "s": 0,
+    "b": 2,
+    "cap_b": 2.1333333333333333
+   }
+  ],
+  "high_precision_siblings_failed_tasks": {
+   "phi3.5:3.8b-mini-instruct-q6_K": [
+    "HumanEval/107"
+   ],
+   "phi3.5:3.8b-mini-instruct-q8_0": [
+    "HumanEval/107",
+    "HumanEval/15"
+   ],
+   "phi3.5:3.8b-mini-instruct-fp16": [
+    "HumanEval/107",
+    "HumanEval/2"
+   ]
+  },
+  "note": "phi3.5 q2_K scores 0; it leaves the suspect class only when the median of its q6_K/q8_0/fp16 siblings on the subset falls below 8k/15"
+ },
+ "stability_thresholds": {
+  "min_k_mean_jaccard_flags_ge_0.90": 15,
+  "min_k_mean_recall_full_flags_ge_0.90": 11,
+  "min_k_mean_jaccard_suspects_ge_0.90": 15,
+  "min_k_all4_retained_ge_0.95": 3,
+  "min_k_all5_retained_ge_0.95": 3,
+  "min_k_all5_retained_eq_1.00": 5,
+  "min_k_suspect_set_identical_ge_0.95": 15,
+  "note": "smallest k such that the criterion holds at that k and every larger k"
+ },
+ "cross_check_corrected_with_released_settings_1000": [
+  {
+   "k": 3,
+   "n_subsets": 455,
+   "mean_jaccard_flags": 0.53,
+   "mean_jaccard_suspects": 0.695,
+   "frac_all_5_rebuilt_suspects": 0.9978,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.1143,
+    "llama3.2:1b-instruct-q3_K_S": 0.4725,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0022,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 4,
+   "n_subsets": 1000,
+   "mean_jaccard_flags": 0.527,
+   "mean_jaccard_suspects": 0.785,
+   "frac_all_5_rebuilt_suspects": 0.991,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.263,
+    "llama3.2:1b-instruct-q3_K_S": 0.659,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.009,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 5,
+   "n_subsets": 1000,
+   "mean_jaccard_flags": 0.616,
+   "mean_jaccard_suspects": 0.846,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.067,
+    "llama3.2:1b-instruct-q3_K_S": 0.631,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 6,
+   "n_subsets": 1000,
+   "mean_jaccard_flags": 0.631,
+   "mean_jaccard_suspects": 0.852,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.142,
+    "llama3.2:1b-instruct-q3_K_S": 0.756,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 7,
+   "n_subsets": 1000,
+   "mean_jaccard_flags": 0.605,
+   "mean_jaccard_suspects": 0.878,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.026,
+    "llama3.2:1b-instruct-q3_K_S": 0.759,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 8,
+   "n_subsets": 1000,
+   "mean_jaccard_flags": 0.706,
+   "mean_jaccard_suspects": 0.906,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.062,
+    "llama3.2:1b-instruct-q3_K_S": 0.321,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 9,
+   "n_subsets": 1000,
+   "mean_jaccard_flags": 0.693,
+   "mean_jaccard_suspects": 0.929,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.343,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 10,
+   "n_subsets": 1000,
+   "mean_jaccard_flags": 0.773,
+   "mean_jaccard_suspects": 0.929,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.422,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 11,
+   "n_subsets": 1000,
+   "mean_jaccard_flags": 0.772,
+   "mean_jaccard_suspects": 0.922,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.519,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 12,
+   "n_subsets": 455,
+   "mean_jaccard_flags": 0.736,
+   "mean_jaccard_suspects": 0.909,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.6286,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 13,
+   "n_subsets": 105,
+   "mean_jaccard_flags": 0.859,
+   "mean_jaccard_suspects": 0.894,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.7429,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 14,
+   "n_subsets": 15,
+   "mean_jaccard_flags": 0.824,
+   "mean_jaccard_suspects": 0.876,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.8667,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  },
+  {
+   "k": 15,
+   "n_subsets": 1,
+   "mean_jaccard_flags": 1.0,
+   "mean_jaccard_suspects": 1.0,
+   "frac_all_5_rebuilt_suspects": 1.0,
+   "dropout_rate": {
+    "llama3.2:1b-instruct-q2_K": 0.0,
+    "llama3.2:1b-instruct-q3_K_S": 0.0,
+    "phi3.5:3.8b-mini-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q2_K": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_S": 0.0
+   }
+  }
+ ],
+ "calibration_94pct_check": {
+  "figure": "share of 1000 random 15-of-164 HumanEval+ suites in which the 60% bar flags >= 1 healthy calibration config (P1 data, 23 healthy Qwen2.5-Coder configs)",
+  "census_used": false,
+  "frac_suites_flagging_ge1_healthy": 0.943,
+  "wilson95": [
+   0.9269,
+   0.9557
+  ],
+  "part2_identical_to_released": true,
+  "part3_mbpp_identical_to_released": true,
+  "p1_eval_files_sha256_unchanged": true,
+  "census_vs_calibration_overlap_summary_corrected": {
+   "n_in_census": 23,
+   "n_identical_per_task": 7,
+   "n_healthy_scoring_below_15_in_census": 16,
+   "min_census_smoke_healthy": 13,
+   "any_healthy_flagged_in_census": false,
+   "task_disagreement_counts": {
+    "HumanEval/15": 16,
+    "HumanEval/152": 2,
+    "HumanEval/156": 1
+   }
+  },
+  "census_vs_calibration_overlap_summary_released": {
+   "n_in_census": 23,
+   "n_identical_per_task": 1,
+   "n_healthy_scoring_below_15_in_census": 22,
+   "min_census_smoke_healthy": 13,
+   "any_healthy_flagged_in_census": false,
+   "task_disagreement_counts": {
+    "HumanEval/15": 22,
+    "HumanEval/152": 2,
+    "HumanEval/156": 1
+   }
+  },
+  "note": "part2 reads only the P1 calibration eval files and its own RNG; the census rows are passed to part2_3 only for the supplementary census-vs-calibration overlap, which does change"
+ }
+}

@@ -1,0 +1,1 @@
+6707892fa3788b5ab9ed78ab5ff37d9fe825f6011a2ad4fcd6a6d467f0e7da57  /root/calib/wiki.train.raw

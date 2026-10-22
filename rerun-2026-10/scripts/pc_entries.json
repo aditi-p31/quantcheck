@@ -1,0 +1,6 @@
+[
+ {"id": "plain-qwen3b-F16",    "role": "plain-control", "kind": "gguf", "path": "/root/f16/qwen3b-f16.gguf",     "donor": "qwen2.5-coder:3b-instruct-q4_K_M"},
+ {"id": "plain-qwen3b-Q8_0",   "role": "plain-control", "kind": "gguf", "path": "/root/quants/qwen3b-Q8_0.gguf",   "donor": "qwen2.5-coder:3b-instruct-q4_K_M"},
+ {"id": "plain-qwen3b-Q6_K",   "role": "plain-control", "kind": "gguf", "path": "/root/quants/qwen3b-Q6_K.gguf",   "donor": "qwen2.5-coder:3b-instruct-q4_K_M"},
+ {"id": "plain-qwen3b-Q4_K_M", "role": "plain-control", "kind": "gguf", "path": "/root/quants/qwen3b-Q4_K_M.gguf", "donor": "qwen2.5-coder:3b-instruct-q4_K_M"}
+]

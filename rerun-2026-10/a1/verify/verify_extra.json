@@ -1,0 +1,282 @@
+{
+ "census_vs_p1": {
+  "n_in_census": 23,
+  "scores_p1_census": {
+   "qwen2.5-coder_0.5b-instruct-fp16": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_0.5b-instruct-q3_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_0.5b-instruct-q4_K_M": [
+    15,
+    13
+   ],
+   "qwen2.5-coder_0.5b-instruct-q5_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_0.5b-instruct-q6_K": [
+    15,
+    13
+   ],
+   "qwen2.5-coder_0.5b-instruct-q8_0": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_1.5b-instruct-fp16": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_1.5b-instruct-q3_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_1.5b-instruct-q4_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_1.5b-instruct-q5_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_1.5b-instruct-q6_K": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_1.5b-instruct-q8_0": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_3b-instruct-fp16": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_3b-instruct-q3_K_M": [
+    0,
+    0
+   ],
+   "qwen2.5-coder_3b-instruct-q4_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_3b-instruct-q5_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_3b-instruct-q6_K": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_3b-instruct-q8_0": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_7b-instruct-q2_K": [
+    15,
+    13
+   ],
+   "qwen2.5-coder_7b-instruct-q3_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_7b-instruct-q4_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_7b-instruct-q5_K_M": [
+    15,
+    14
+   ],
+   "qwen2.5-coder_7b-instruct-q6_K": [
+    15,
+    14
+   ]
+  },
+  "task_disagreements": {
+   "HumanEval/15": 22,
+   "HumanEval/152": 2,
+   "HumanEval/156": 1
+  }
+ },
+ "classify_py_rule_on_official": {
+  "classes": {
+   "DEFECTIVE": 6,
+   "DEGRADED": 10,
+   "HEALTHY": 271,
+   "NO_BASELINE": 18
+  },
+  "defective": [
+   "llama3.2:1b-instruct-q2_K",
+   "phi3.5:3.8b-mini-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q3_K_L",
+   "qwen2.5-coder:3b-instruct-q3_K_M",
+   "qwen2.5-coder:3b-instruct-q3_K_S"
+  ]
+ },
+ "he15_text_check": {
+  "files": {
+   "full164": 27,
+   "plain": 307,
+   "smoke": 27
+  },
+  "he15_generations": {
+   "canonical": 307,
+   "other": 27
+  }
+ },
+ "mbpp_defect": 7,
+ "mbpp_healthy_min_rate": 0.3862,
+ "phi_misses_vs_HE15": {
+  "10": {
+   "misses": 0,
+   "misses_containing_HE15": 0,
+   "n": 3003
+  },
+  "14": {
+   "misses": 0,
+   "misses_containing_HE15": 0,
+   "n": 15
+  },
+  "3": {
+   "misses": 13,
+   "misses_containing_HE15": 13,
+   "n": 455
+  },
+  "4": {
+   "misses": 78,
+   "misses_containing_HE15": 78,
+   "n": 1365
+  },
+  "5": {
+   "misses": 0,
+   "misses_containing_HE15": 0,
+   "n": 3003
+  }
+ },
+ "pool_by_pass_definition": {
+  "base_and_plus": {
+   "first15_lex_equals_suite": true,
+   "n": 39
+  },
+  "base_only": {
+   "first15_lex_equals_suite": false,
+   "n": 43
+  },
+  "plus_only": {
+   "first15_lex_equals_suite": true,
+   "n": 40
+  }
+ },
+ "spearman_he_mbpp_healthy": 0.9727,
+ "suspect_scaling_sensitivity": {
+  "k=10 cap_ceil": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 0.682,
+   "mean_jaccard_suspects": 0.9006,
+   "mean_suspects_not_conf4": 3.505
+  },
+  "k=10 cap_round_base_floor": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 0.089,
+   "mean_jaccard_suspects": 0.9281,
+   "mean_suspects_not_conf4": 2.66
+  },
+  "k=10 exact_rational(A1)": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 0.088,
+   "mean_jaccard_suspects": 0.906,
+   "mean_suspects_not_conf4": 2.499
+  },
+  "k=14 cap_ceil": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 0.0,
+   "mean_jaccard_suspects": 1.0,
+   "mean_suspects_not_conf4": 3.0
+  },
+  "k=14 cap_round_base_floor": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 0.0,
+   "mean_jaccard_suspects": 1.0,
+   "mean_suspects_not_conf4": 3.0
+  },
+  "k=14 exact_rational(A1)": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 0.0,
+   "mean_jaccard_suspects": 0.8762,
+   "mean_suspects_not_conf4": 2.133
+  },
+  "k=3 cap_ceil": {
+   "all4": 1.0,
+   "all5": 0.9714,
+   "mean_extra_suspects": 20.719,
+   "mean_jaccard_suspects": 0.277,
+   "mean_suspects_not_conf4": 23.301
+  },
+  "k=3 cap_round_base_floor": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 6.941,
+   "mean_jaccard_suspects": 0.5315,
+   "mean_suspects_not_conf4": 9.552
+  },
+  "k=3 exact_rational(A1)": {
+   "all4": 1.0,
+   "all5": 0.9714,
+   "mean_extra_suspects": 2.833,
+   "mean_jaccard_suspects": 0.6809,
+   "mean_suspects_not_conf4": 5.099
+  },
+  "k=4 cap_ceil": {
+   "all4": 1.0,
+   "all5": 0.9429,
+   "mean_extra_suspects": 6.38,
+   "mean_jaccard_suspects": 0.5063,
+   "mean_suspects_not_conf4": 8.574
+  },
+  "k=4 cap_round_base_floor": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 12.31,
+   "mean_jaccard_suspects": 0.4078,
+   "mean_suspects_not_conf4": 15.16
+  },
+  "k=4 exact_rational(A1)": {
+   "all4": 1.0,
+   "all5": 0.9429,
+   "mean_extra_suspects": 0.795,
+   "mean_jaccard_suspects": 0.7692,
+   "mean_suspects_not_conf4": 2.673
+  },
+  "k=5 cap_ceil": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 4.107,
+   "mean_jaccard_suspects": 0.6449,
+   "mean_suspects_not_conf4": 6.759
+  },
+  "k=5 cap_round_base_floor": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 8.055,
+   "mean_jaccard_suspects": 0.5155,
+   "mean_suspects_not_conf4": 10.944
+  },
+  "k=5 exact_rational(A1)": {
+   "all4": 1.0,
+   "all5": 1.0,
+   "mean_extra_suspects": 0.553,
+   "mean_jaccard_suspects": 0.8344,
+   "mean_suspects_not_conf4": 2.766
+  }
+ }
+}

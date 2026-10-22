@@ -1,0 +1,242 @@
+[
+ {
+  "task": "HumanEval/107",
+  "cond": "ollama",
+  "logged": 344,
+  "correct_pretok": 335,
+  "default_pretok": 344,
+  "positions_differing": 19
+ },
+ {
+  "task": "HumanEval/107",
+  "cond": "thebloke",
+  "logged": 285,
+  "correct_pretok": 278,
+  "default_pretok": 287,
+  "positions_differing": 19
+ },
+ {
+  "task": "HumanEval/11",
+  "cond": "ollama",
+  "logged": 192,
+  "correct_pretok": 190,
+  "default_pretok": 192,
+  "positions_differing": 10
+ },
+ {
+  "task": "HumanEval/11",
+  "cond": "thebloke",
+  "logged": 133,
+  "correct_pretok": 133,
+  "default_pretok": 135,
+  "positions_differing": 10
+ },
+ {
+  "task": "HumanEval/12",
+  "cond": "ollama",
+  "logged": 215,
+  "correct_pretok": 210,
+  "default_pretok": 215,
+  "positions_differing": 18
+ },
+ {
+  "task": "HumanEval/12",
+  "cond": "thebloke",
+  "logged": 156,
+  "correct_pretok": 153,
+  "default_pretok": 158,
+  "positions_differing": 18
+ },
+ {
+  "task": "HumanEval/15",
+  "cond": "ollama",
+  "logged": 178,
+  "correct_pretok": 177,
+  "default_pretok": 178,
+  "positions_differing": 10
+ },
+ {
+  "task": "HumanEval/15",
+  "cond": "thebloke",
+  "logged": 119,
+  "correct_pretok": 120,
+  "default_pretok": 121,
+  "positions_differing": 10
+ },
+ {
+  "task": "HumanEval/152",
+  "cond": "ollama",
+  "logged": 352,
+  "correct_pretok": 348,
+  "default_pretok": 352,
+  "positions_differing": 12
+ },
+ {
+  "task": "HumanEval/152",
+  "cond": "thebloke",
+  "logged": 293,
+  "correct_pretok": 291,
+  "default_pretok": 295,
+  "positions_differing": 12
+ },
+ {
+  "task": "HumanEval/156",
+  "cond": "ollama",
+  "logged": 242,
+  "correct_pretok": 231,
+  "default_pretok": 242,
+  "positions_differing": 23
+ },
+ {
+  "task": "HumanEval/156",
+  "cond": "thebloke",
+  "logged": 183,
+  "correct_pretok": 174,
+  "default_pretok": 185,
+  "positions_differing": 23
+ },
+ {
+  "task": "HumanEval/157",
+  "cond": "ollama",
+  "logged": 220,
+  "correct_pretok": 215,
+  "default_pretok": 220,
+  "positions_differing": 12
+ },
+ {
+  "task": "HumanEval/157",
+  "cond": "thebloke",
+  "logged": 161,
+  "correct_pretok": 158,
+  "default_pretok": 163,
+  "positions_differing": 12
+ },
+ {
+  "task": "HumanEval/162",
+  "cond": "ollama",
+  "logged": 195,
+  "correct_pretok": 191,
+  "default_pretok": 195,
+  "positions_differing": 12
+ },
+ {
+  "task": "HumanEval/162",
+  "cond": "thebloke",
+  "logged": 136,
+  "correct_pretok": 134,
+  "default_pretok": 138,
+  "positions_differing": 12
+ },
+ {
+  "task": "HumanEval/18",
+  "cond": "ollama",
+  "logged": 206,
+  "correct_pretok": 199,
+  "default_pretok": 206,
+  "positions_differing": 18
+ },
+ {
+  "task": "HumanEval/18",
+  "cond": "thebloke",
+  "logged": 147,
+  "correct_pretok": 142,
+  "default_pretok": 149,
+  "positions_differing": 18
+ },
+ {
+  "task": "HumanEval/2",
+  "cond": "ollama",
+  "logged": 196,
+  "correct_pretok": 193,
+  "default_pretok": 196,
+  "positions_differing": 12
+ },
+ {
+  "task": "HumanEval/2",
+  "cond": "thebloke",
+  "logged": 137,
+  "correct_pretok": 136,
+  "default_pretok": 139,
+  "positions_differing": 12
+ },
+ {
+  "task": "HumanEval/21",
+  "cond": "ollama",
+  "logged": 235,
+  "correct_pretok": 233,
+  "default_pretok": 235,
+  "positions_differing": 10
+ },
+ {
+  "task": "HumanEval/21",
+  "cond": "thebloke",
+  "logged": 176,
+  "correct_pretok": 176,
+  "default_pretok": 178,
+  "positions_differing": 10
+ },
+ {
+  "task": "HumanEval/23",
+  "cond": "ollama",
+  "logged": 148,
+  "correct_pretok": 145,
+  "default_pretok": 148,
+  "positions_differing": 10
+ },
+ {
+  "task": "HumanEval/23",
+  "cond": "thebloke",
+  "logged": 89,
+  "correct_pretok": 88,
+  "default_pretok": 91,
+  "positions_differing": 10
+ },
+ {
+  "task": "HumanEval/28",
+  "cond": "ollama",
+  "logged": 170,
+  "correct_pretok": 167,
+  "default_pretok": 170,
+  "positions_differing": 14
+ },
+ {
+  "task": "HumanEval/28",
+  "cond": "thebloke",
+  "logged": 111,
+  "correct_pretok": 110,
+  "default_pretok": 113,
+  "positions_differing": 14
+ },
+ {
+  "task": "HumanEval/29",
+  "cond": "ollama",
+  "logged": 207,
+  "correct_pretok": 200,
+  "default_pretok": 207,
+  "positions_differing": 22
+ },
+ {
+  "task": "HumanEval/29",
+  "cond": "thebloke",
+  "logged": 148,
+  "correct_pretok": 143,
+  "default_pretok": 150,
+  "positions_differing": 22
+ },
+ {
+  "task": "HumanEval/3",
+  "cond": "ollama",
+  "logged": 228,
+  "correct_pretok": 226,
+  "default_pretok": 228,
+  "positions_differing": 8
+ },
+ {
+  "task": "HumanEval/3",
+  "cond": "thebloke",
+  "logged": 169,
+  "correct_pretok": 169,
+  "default_pretok": 171,
+  "positions_differing": 8
+ }
+]

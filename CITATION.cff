@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use quantcheck or the audit dataset, please cite the paper below."
 title: "quantcheck: functional acceptance testing for quantized LLM artifacts"
+version: "3.0"
 authors:
   - family-names: Patodiya
     given-names: Aditi
@@ -9,7 +10,7 @@ repository-code: "https://github.com/aditi-p31/quantcheck"
 license: MIT
 preferred-citation:
   type: article
-  title: "Broken on Arrival: Silently Defective LLM Artifacts in Public Model Registries and How to Catch Them"
+  title: "Broken on Arrival: Non-Functional Quantized LLM Artifacts in Public Model Registries and How to Catch Them"
   authors:
     - family-names: Patodiya
       given-names: Aditi
@@ -24,4 +25,4 @@ preferred-citation:
     - type: doi
       value: "10.48550/arXiv.2609.05881"
       description: "arXiv DOI"
-  notes: "Preprint, arXiv:2609.05881 [cs.SE]. Under review at IEEE BigData 2026."
+  notes: "Preprint, arXiv:2609.05881 [cs.SE]. Version 2 revises version 1, whose defect claims are withdrawn."

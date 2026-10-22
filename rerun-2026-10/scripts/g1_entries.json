@@ -1,0 +1,162 @@
+[
+ {
+  "id": "g1lib-qwen0.5b-q2_K",
+  "role": "library",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:0.5b-instruct-q2_K"
+ },
+ {
+  "id": "g1plain-qwen0.5b-q2_K",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen0.5b-plain-q2_K.gguf",
+  "donor": "qwen2.5-coder:0.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1imat-qwen0.5b-q2_K",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen0.5b-imat-q2_K.gguf",
+  "donor": "qwen2.5-coder:0.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1lib-qwen0.5b-q3_K_S",
+  "role": "library",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:0.5b-instruct-q3_K_S"
+ },
+ {
+  "id": "g1plain-qwen0.5b-q3_K_S",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen0.5b-plain-q3_K_S.gguf",
+  "donor": "qwen2.5-coder:0.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1imat-qwen0.5b-q3_K_S",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen0.5b-imat-q3_K_S.gguf",
+  "donor": "qwen2.5-coder:0.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1lib-qwen0.5b-q3_K_M",
+  "role": "library",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:0.5b-instruct-q3_K_M"
+ },
+ {
+  "id": "g1plain-qwen0.5b-q3_K_M",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen0.5b-plain-q3_K_M.gguf",
+  "donor": "qwen2.5-coder:0.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1imat-qwen0.5b-q3_K_M",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen0.5b-imat-q3_K_M.gguf",
+  "donor": "qwen2.5-coder:0.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1lib-qwen0.5b-q3_K_L",
+  "role": "library",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:0.5b-instruct-q3_K_L"
+ },
+ {
+  "id": "g1plain-qwen0.5b-q3_K_L",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen0.5b-plain-q3_K_L.gguf",
+  "donor": "qwen2.5-coder:0.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1imat-qwen0.5b-q3_K_L",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen0.5b-imat-q3_K_L.gguf",
+  "donor": "qwen2.5-coder:0.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1lib-qwen1.5b-q2_K",
+  "role": "library",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:1.5b-instruct-q2_K"
+ },
+ {
+  "id": "g1plain-qwen1.5b-q2_K",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen1.5b-plain-q2_K.gguf",
+  "donor": "qwen2.5-coder:1.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1imat-qwen1.5b-q2_K",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen1.5b-imat-q2_K.gguf",
+  "donor": "qwen2.5-coder:1.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1lib-qwen1.5b-q3_K_S",
+  "role": "library",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:1.5b-instruct-q3_K_S"
+ },
+ {
+  "id": "g1plain-qwen1.5b-q3_K_S",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen1.5b-plain-q3_K_S.gguf",
+  "donor": "qwen2.5-coder:1.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1imat-qwen1.5b-q3_K_S",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen1.5b-imat-q3_K_S.gguf",
+  "donor": "qwen2.5-coder:1.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1lib-qwen1.5b-q3_K_M",
+  "role": "library",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:1.5b-instruct-q3_K_M"
+ },
+ {
+  "id": "g1plain-qwen1.5b-q3_K_M",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen1.5b-plain-q3_K_M.gguf",
+  "donor": "qwen2.5-coder:1.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1imat-qwen1.5b-q3_K_M",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen1.5b-imat-q3_K_M.gguf",
+  "donor": "qwen2.5-coder:1.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1lib-qwen1.5b-q3_K_L",
+  "role": "library",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:1.5b-instruct-q3_K_L"
+ },
+ {
+  "id": "g1plain-qwen1.5b-q3_K_L",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen1.5b-plain-q3_K_L.gguf",
+  "donor": "qwen2.5-coder:1.5b-instruct-q4_K_M"
+ },
+ {
+  "id": "g1imat-qwen1.5b-q3_K_L",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-g1/qwen1.5b-imat-q3_K_L.gguf",
+  "donor": "qwen2.5-coder:1.5b-instruct-q4_K_M"
+ }
+]

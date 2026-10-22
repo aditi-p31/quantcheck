@@ -1,0 +1,29 @@
+{
+ "note": "Ids of the 24 Qwen2.5-Coder screen-tuning configurations (names only; their per-task results belong to a separate study and are not released here).",
+ "ids": [
+  "qwen2.5-coder_0.5b-instruct-fp16",
+  "qwen2.5-coder_0.5b-instruct-q3_K_M",
+  "qwen2.5-coder_0.5b-instruct-q4_K_M",
+  "qwen2.5-coder_0.5b-instruct-q5_K_M",
+  "qwen2.5-coder_0.5b-instruct-q6_K",
+  "qwen2.5-coder_0.5b-instruct-q8_0",
+  "qwen2.5-coder_1.5b-instruct-fp16",
+  "qwen2.5-coder_1.5b-instruct-q3_K_M",
+  "qwen2.5-coder_1.5b-instruct-q4_K_M",
+  "qwen2.5-coder_1.5b-instruct-q5_K_M",
+  "qwen2.5-coder_1.5b-instruct-q6_K",
+  "qwen2.5-coder_1.5b-instruct-q8_0",
+  "qwen2.5-coder_3b-instruct-fp16",
+  "qwen2.5-coder_3b-instruct-q3_K_M",
+  "qwen2.5-coder_3b-instruct-q4_K_M",
+  "qwen2.5-coder_3b-instruct-q5_K_M",
+  "qwen2.5-coder_3b-instruct-q6_K",
+  "qwen2.5-coder_3b-instruct-q8_0",
+  "qwen2.5-coder_7b-instruct-q2_K",
+  "qwen2.5-coder_7b-instruct-q3_K_M",
+  "qwen2.5-coder_7b-instruct-q4_K_M",
+  "qwen2.5-coder_7b-instruct-q5_K_M",
+  "qwen2.5-coder_7b-instruct-q6_K",
+  "qwen2.5-coder_7b-instruct-q8_0"
+ ]
+}

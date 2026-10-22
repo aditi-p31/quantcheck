@@ -1,0 +1,75 @@
+[
+ {
+  "id": "lib-qwen3b-q2_K",
+  "role": "suspect",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:3b-instruct-q2_K",
+  "keep": true
+ },
+ {
+  "id": "lib-qwen3b-q3_K_S",
+  "role": "suspect",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:3b-instruct-q3_K_S",
+  "keep": true
+ },
+ {
+  "id": "lib-qwen3b-q3_K_M",
+  "role": "suspect",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:3b-instruct-q3_K_M",
+  "keep": true
+ },
+ {
+  "id": "lib-qwen3b-q3_K_L",
+  "role": "suspect",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:3b-instruct-q3_K_L",
+  "keep": true
+ },
+ {
+  "id": "lib-phi35-q2_K",
+  "role": "suspect",
+  "kind": "ollama",
+  "tag": "phi3.5:3.8b-mini-instruct-q2_K",
+  "keep": true
+ },
+ {
+  "id": "lib-qwen3b-q4_K_M",
+  "role": "sibling",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:3b-instruct-q4_K_M",
+  "keep": true
+ },
+ {
+  "id": "lib-phi35-q4_K_M",
+  "role": "sibling",
+  "kind": "ollama",
+  "tag": "phi3.5:3.8b-mini-instruct-q4_K_M",
+  "keep": true
+ },
+ {
+  "id": "plain-qwen3b-Q2_K",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/root/quants/qwen3b-Q2_K.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M",
+  "keep": true
+ },
+ {
+  "id": "plain-qwen3b-Q3_K_M",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/root/quants/qwen3b-Q3_K_M.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M",
+  "keep": true
+ },
+ {
+  "id": "plain-phi35-Q2_K",
+  "role": "plain",
+  "kind": "gguf",
+  "path": "/root/quants/phi35-Q2_K.gguf",
+  "donor": "phi3.5:3.8b-mini-instruct-q4_K_M",
+  "keep": true
+ }
+]

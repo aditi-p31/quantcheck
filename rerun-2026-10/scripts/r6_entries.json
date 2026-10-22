@@ -1,0 +1,68 @@
+[
+ {
+  "id": "cal-qwen3b-Q2_K",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/qwen3b-imat-Q2_K.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-qwen3b-Q3_K_S",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/qwen3b-imat-Q3_K_S.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-qwen3b-Q3_K_M",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/qwen3b-imat-Q3_K_M.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-qwen3b-Q3_K_L",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/qwen3b-imat-Q3_K_L.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "imat-qwen3b-Q2_K",
+  "role": "imatrix",
+  "kind": "hf",
+  "repo": "bartowski/Qwen2.5-Coder-3B-Instruct-GGUF",
+  "file": "Qwen2.5-Coder-3B-Instruct-Q2_K.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "awq-qwen3b-q2_k",
+  "role": "awq",
+  "kind": "hf",
+  "repo": "Qwen/Qwen2.5-Coder-3B-Instruct-GGUF",
+  "file": "qwen2.5-coder-3b-instruct-q2_k.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "awq-qwen3b-q3_k_m",
+  "role": "awq",
+  "kind": "hf",
+  "repo": "Qwen/Qwen2.5-Coder-3B-Instruct-GGUF",
+  "file": "qwen2.5-coder-3b-instruct-q3_k_m.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "plain-qwen3b-Q4_K_M",
+  "role": "plain-control",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants/qwen3b-Q4_K_M.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "lib-qwen3b-q4_K_M",
+  "role": "sibling",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:3b-instruct-q4_K_M",
+  "keep": true
+ }
+]

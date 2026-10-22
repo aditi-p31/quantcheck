@@ -1,0 +1,51 @@
+[
+ {
+  "id": "cal-qwen3b-Q2_K",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/qwen3b-imat-Q2_K.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-qwen3b-Q3_K_S",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/qwen3b-imat-Q3_K_S.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-qwen3b-Q3_K_M",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/qwen3b-imat-Q3_K_M.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-qwen3b-Q3_K_L",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/qwen3b-imat-Q3_K_L.gguf",
+  "donor": "qwen2.5-coder:3b-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-phi35-Q2_K",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/phi35-imat-Q2_K.gguf",
+  "donor": "phi3.5:3.8b-mini-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-phi35-Q3_K_S",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/phi35-imat-Q3_K_S.gguf",
+  "donor": "phi3.5:3.8b-mini-instruct-q4_K_M"
+ },
+ {
+  "id": "cal-phi35-Q3_K_M",
+  "role": "own-imatrix",
+  "kind": "gguf",
+  "path": "/workspace/p2rerun/quants-imat/phi35-imat-Q3_K_M.gguf",
+  "donor": "phi3.5:3.8b-mini-instruct-q4_K_M"
+ }
+]

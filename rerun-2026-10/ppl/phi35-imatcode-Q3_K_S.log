@@ -1,0 +1,12 @@
+0.00.208.774 W load_arch_hparams: Phi SWA is currently disabled - results might be suboptimal for some models (see https://github.com/ggml-org/llama.cpp/pull/13676)
+0.00.215.161 W load: control-looking token:      2 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.930.221 I cmn          init: llama threadpool init, n_threads = 12
+0.01.990.948 I 
+0.01.991.046 I system_info: n_threads = 12 (n_threads_batch = 12) / 32 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VBMI = 1 | AVX512_VNNI = 1 | AVX512_BF16 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.01.991.060 I perplexity: tokenizing the input ..
+0.02.642.610 I perplexity: tokenization took 651.543 ms
+0.02.642.679 I perplexity: calculating perplexity over 20 chunks, n_ctx=512, batch_size=2048, n_seq=4
+0.07.299.945 I perplexity: 4.66 seconds per pass - ETA 0.38 minutes
+[1]7.0540,[2]7.9691,[3]8.3535,[4]9.1714,[5]8.9637,[6]8.4115,[7]8.5094,[8]8.5796,[9]9.0681,[10]9.2764,[11]9.3584,[12]9.3801,[13]9.3081,[14]9.4605,[15]9.8338,[16]9.3933,[17]9.2364,[18]9.2561,[19]8.7843,[20]8.8218,
+0.25.888.420 I Final estimate: PPL = 8.8218 +/- 0.32519
+

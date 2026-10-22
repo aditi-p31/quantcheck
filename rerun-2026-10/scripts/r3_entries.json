@@ -1,0 +1,205 @@
+[
+ {
+  "id": "fn-codellama_7b-instruct-q8_0",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "codellama:7b-instruct-q8_0",
+  "family": "codellama"
+ },
+ {
+  "id": "fn-codellama_7b-instruct-q4_K_M",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "codellama:7b-instruct-q4_K_M",
+  "family": "codellama"
+ },
+ {
+  "id": "fn-codellama_13b-instruct-q2_K",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "codellama:13b-instruct-q2_K",
+  "family": "codellama"
+ },
+ {
+  "id": "fn-deepseek-coder_6.7b-instruct-q4_K_M",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "deepseek-coder:6.7b-instruct-q4_K_M",
+  "family": "deepseek-coder and deepseek-coder-v2"
+ },
+ {
+  "id": "fn-deepseek-coder_6.7b-instruct-q8_0",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "deepseek-coder:6.7b-instruct-q8_0",
+  "family": "deepseek-coder and deepseek-coder-v2"
+ },
+ {
+  "id": "fn-deepseek-coder_6.7b-instruct-q4_0",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "deepseek-coder:6.7b-instruct-q4_0",
+  "family": "deepseek-coder and deepseek-coder-v2"
+ },
+ {
+  "id": "fn-gemma3_4b-it-q8_0",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "gemma3:4b-it-q8_0",
+  "family": "gemma2 and gemma3"
+ },
+ {
+  "id": "fn-gemma2_2b-instruct-q6_K",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "gemma2:2b-instruct-q6_K",
+  "family": "gemma2 and gemma3"
+ },
+ {
+  "id": "fn-gemma2_9b-instruct-q4_K_S",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "gemma2:9b-instruct-q4_K_S",
+  "family": "gemma2 and gemma3"
+ },
+ {
+  "id": "fn-granite-code_8b-instruct-q3_K_L",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "granite-code:8b-instruct-q3_K_L",
+  "family": "granite-code and granite3.1-dense"
+ },
+ {
+  "id": "fn-granite-code_20b-instruct-8k-q2_K",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "granite-code:20b-instruct-8k-q2_K",
+  "family": "granite-code and granite3.1-dense"
+ },
+ {
+  "id": "fn-granite-code_3b-instruct-q3_K_L",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "granite-code:3b-instruct-q3_K_L",
+  "family": "granite-code and granite3.1-dense"
+ },
+ {
+  "id": "fn-llama3.1_8b-instruct-q2_K",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "llama3.1:8b-instruct-q2_K",
+  "family": "llama3.2 and llama3.1"
+ },
+ {
+  "id": "fn-llama3.1_8b-instruct-q3_K_L",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "llama3.1:8b-instruct-q3_K_L",
+  "family": "llama3.2 and llama3.1"
+ },
+ {
+  "id": "fn-llama3.2_3b-instruct-q6_K",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "llama3.2:3b-instruct-q6_K",
+  "family": "llama3.2 and llama3.1"
+ },
+ {
+  "id": "fn-mistral_7b-instruct-v0.3-q6_K",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "mistral:7b-instruct-v0.3-q6_K",
+  "family": "mistral and codestral"
+ },
+ {
+  "id": "fn-mistral_7b-instruct-v0.3-q5_K_S",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "mistral:7b-instruct-v0.3-q5_K_S",
+  "family": "mistral and codestral"
+ },
+ {
+  "id": "fn-mistral_7b-instruct-q4_K_M",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "mistral:7b-instruct-q4_K_M",
+  "family": "mistral and codestral"
+ },
+ {
+  "id": "fn-phi3.5_3.8b-mini-instruct-q3_K_L",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "phi3.5:3.8b-mini-instruct-q3_K_L",
+  "family": "phi3.5 and phi4"
+ },
+ {
+  "id": "fn-phi3.5_3.8b-mini-instruct-q6_K",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "phi3.5:3.8b-mini-instruct-q6_K",
+  "family": "phi3.5 and phi4"
+ },
+ {
+  "id": "fn-phi3.5_3.8b-mini-instruct-q4_0",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "phi3.5:3.8b-mini-instruct-q4_0",
+  "family": "phi3.5 and phi4"
+ },
+ {
+  "id": "fn-qwen2.5-coder_0.5b-instruct-q3_K_S",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:0.5b-instruct-q3_K_S",
+  "family": "qwen2.5-coder"
+ },
+ {
+  "id": "fn-qwen2.5-coder_0.5b-instruct-q4_0",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:0.5b-instruct-q4_0",
+  "family": "qwen2.5-coder"
+ },
+ {
+  "id": "fn-qwen2.5-coder_1.5b-instruct-q4_0",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "qwen2.5-coder:1.5b-instruct-q4_0",
+  "family": "qwen2.5-coder"
+ },
+ {
+  "id": "fn-starcoder2_15b-instruct-v0.1-q3_K_S",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "starcoder2:15b-instruct-v0.1-q3_K_S",
+  "family": "starcoder2"
+ },
+ {
+  "id": "fn-starcoder2_15b-instruct-v0.1-q3_K_M",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "starcoder2:15b-instruct-v0.1-q3_K_M",
+  "family": "starcoder2"
+ },
+ {
+  "id": "fn-codegemma_7b-instruct-q6_K",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "codegemma:7b-instruct-q6_K",
+  "family": "yi-coder and codegemma"
+ },
+ {
+  "id": "fn-codegemma_7b-instruct-q5_K_M",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "codegemma:7b-instruct-q5_K_M",
+  "family": "yi-coder and codegemma"
+ },
+ {
+  "id": "fn-codegemma_7b-instruct-q3_K_S",
+  "role": "fn-sample",
+  "kind": "ollama",
+  "tag": "codegemma:7b-instruct-q3_K_S",
+  "family": "yi-coder and codegemma"
+ }
+]

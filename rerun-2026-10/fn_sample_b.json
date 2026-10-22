@@ -1,0 +1,198 @@
+{
+ "seed": 20261022,
+ "frame": "as fn_sample_30.json, also excluding the 29 artifacts drawn there",
+ "frame_size": 194,
+ "per_family": 3,
+ "tasks": "heldout_49.json",
+ "artifacts": [
+  {
+   "tag": "codellama:7b-instruct-q4_0",
+   "family": "codellama",
+   "quant": "q4_0",
+   "params_b": 7,
+   "smoke_pass": 10
+  },
+  {
+   "tag": "codellama:13b-instruct-q4_K_S",
+   "family": "codellama",
+   "quant": "q4_K_S",
+   "params_b": 13,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "codellama:7b-instruct-q3_K_S",
+   "family": "codellama",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q3_K_S",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "quant": "q3_K_S",
+   "params_b": 6.7,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q5_K_S",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "quant": "q5_K_S",
+   "params_b": 6.7,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q2_K",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "quant": "q2_K",
+   "params_b": 6.7,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "gemma2:2b-instruct-q3_K_M",
+   "family": "gemma2 and gemma3",
+   "quant": "q3_K_M",
+   "params_b": 2,
+   "smoke_pass": 10
+  },
+  {
+   "tag": "gemma2:2b-instruct-q8_0",
+   "family": "gemma2 and gemma3",
+   "quant": "q8_0",
+   "params_b": 2,
+   "smoke_pass": 10
+  },
+  {
+   "tag": "gemma2:9b-instruct-q6_K",
+   "family": "gemma2 and gemma3",
+   "quant": "q6_K",
+   "params_b": 9,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "granite-code:3b-instruct-q4_K_M",
+   "family": "granite-code and granite3.1-dense",
+   "quant": "q4_K_M",
+   "params_b": 3,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "granite-code:3b-instruct-128k-fp16",
+   "family": "granite-code and granite3.1-dense",
+   "quant": "fp16",
+   "params_b": 3,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "granite3.1-dense:8b-instruct-q4_0",
+   "family": "granite-code and granite3.1-dense",
+   "quant": "q4_0",
+   "params_b": 8,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q5_K_M",
+   "family": "llama3.2 and llama3.1",
+   "quant": "q5_K_M",
+   "params_b": 3,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q4_K_S",
+   "family": "llama3.2 and llama3.1",
+   "quant": "q4_K_S",
+   "params_b": 8,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q3_K_S",
+   "family": "llama3.2 and llama3.1",
+   "quant": "q3_K_S",
+   "params_b": 8,
+   "smoke_pass": 10
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q2_K",
+   "family": "mistral and codestral",
+   "quant": "q2_K",
+   "params_b": 7,
+   "smoke_pass": 9
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q8_0",
+   "family": "mistral and codestral",
+   "quant": "q8_0",
+   "params_b": 7,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.2-q4_0",
+   "family": "mistral and codestral",
+   "quant": "q4_0",
+   "params_b": 7,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q8_0",
+   "family": "phi3.5 and phi4",
+   "quant": "q8_0",
+   "params_b": 3.8,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q5_K_M",
+   "family": "phi3.5 and phi4",
+   "quant": "q5_K_M",
+   "params_b": 3.8,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-fp16",
+   "family": "phi3.5 and phi4",
+   "quant": "fp16",
+   "params_b": 3.8,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q3_K_S",
+   "family": "qwen2.5-coder",
+   "quant": "q3_K_S",
+   "params_b": 1.5,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q2_K",
+   "family": "qwen2.5-coder",
+   "quant": "q2_K",
+   "params_b": 1.5,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "qwen2.5-coder:7b-instruct-q3_K_L",
+   "family": "qwen2.5-coder",
+   "quant": "q3_K_L",
+   "params_b": 7,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q2_K",
+   "family": "yi-coder and codegemma",
+   "quant": "q2_K",
+   "params_b": 7,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "codegemma:7b-instruct-v1.1-q4_K_S",
+   "family": "yi-coder and codegemma",
+   "quant": "q4_K_S",
+   "params_b": 7,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "yi-coder:9b-chat-q3_K_L",
+   "family": "yi-coder and codegemma",
+   "quant": "q3_K_L",
+   "params_b": 9,
+   "smoke_pass": 13
+  }
+ ]
+}

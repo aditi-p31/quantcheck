@@ -1,0 +1,1657 @@
+{
+ "census": {
+  "official": 305,
+  "community": 22,
+  "official_fp16": 14,
+  "lines": 15,
+  "family_groups": null,
+  "official_quantized": 291,
+  "model_size_groups": 29
+ },
+ "classes_original": {
+  "HEALTHY": 271,
+  "SUSPECT": 7,
+  "NO_BASELINE": 18,
+  "DEGRADED": 3,
+  "COLLAPSED": 6
+ },
+ "stage1_flags_original": 50,
+ "suspects_original": [
+  "llama3.2:1b-instruct-q2_K",
+  "llama3.2:1b-instruct-q3_K_S",
+  "phi3.5:3.8b-mini-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q3_K_L",
+  "qwen2.5-coder:3b-instruct-q3_K_M",
+  "qwen2.5-coder:3b-instruct-q3_K_S"
+ ],
+ "classes_rescored": {
+  "HEALTHY": 271,
+  "SUSPECT": 7,
+  "NO_BASELINE": 18,
+  "DEGRADED": 3,
+  "COLLAPSED": 6
+ },
+ "stage1_flags_rescored": 39,
+ "suspects_rescored": [
+  "llama3.2:1b-instruct-q2_K",
+  "llama3.2:1b-instruct-q3_K_S",
+  "phi3.5:3.8b-mini-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q3_K_L",
+  "qwen2.5-coder:3b-instruct-q3_K_M",
+  "qwen2.5-coder:3b-instruct-q3_K_S"
+ ],
+ "classes_pod_rescore_v3": {
+  "HEALTHY": 271,
+  "SUSPECT": 7,
+  "NO_BASELINE": 18,
+  "DEGRADED": 3,
+  "COLLAPSED": 6
+ },
+ "stage1_flags_pod_rescore_v3": 43,
+ "suspects_pod_rescore_v3": [
+  "llama3.2:1b-instruct-q2_K",
+  "llama3.2:1b-instruct-q3_K_S",
+  "phi3.5:3.8b-mini-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q3_K_L",
+  "qwen2.5-coder:3b-instruct-q3_K_M",
+  "qwen2.5-coder:3b-instruct-q3_K_S"
+ ],
+ "he15_pass_rescored": 275,
+ "artifacts_changed_by_rescore": 275,
+ "suspects": [
+  {
+   "tag": "llama3.2:1b-instruct-q2_K",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q3_K_S",
+   "smoke_rescored": 2,
+   "full164": 6
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q2_K",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q2_K",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_L",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_M",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_S",
+   "smoke_rescored": 0,
+   "full164": 0
+  }
+ ],
+ "nonfunctional": {
+  "k": 7,
+  "n": 305,
+  "rate": 0.023,
+  "lo": 0.0112,
+  "hi": 0.0466
+ },
+ "nonfunctional_groups": {
+  "k": 3,
+  "n": 29,
+  "rate": 0.1034,
+  "lo": 0.0358,
+  "hi": 0.2639
+ },
+ "nonfunctional_incidents": [
+  "llama3.2/1b",
+  "phi3.5/3.8b",
+  "qwen2.5-coder/3b"
+ ],
+ "lowbit_le4b": {
+  "artifacts": 48,
+  "nonfunctional": 7
+ },
+ "screen_seconds": {
+  "median": 30.2,
+  "min": 12.1,
+  "max": 104.6,
+  "n": 305
+ },
+ "community_healthy_cuda": 20,
+ "R1": {
+  "lib-qwen3b-q2_K": 0,
+  "lib-qwen3b-q3_K_S": 0,
+  "lib-qwen3b-q3_K_M": 0,
+  "lib-qwen3b-q3_K_L": 0,
+  "lib-phi35-q2_K": 0,
+  "lib-qwen3b-q4_K_M": 15,
+  "lib-phi35-q4_K_M": 11,
+  "plain-qwen3b-Q2_K": 0,
+  "plain-qwen3b-Q3_K_S": 0,
+  "plain-qwen3b-Q3_K_M": 0,
+  "plain-qwen3b-Q3_K_L": 0,
+  "plain-phi35-Q2_K": 4,
+  "plain-phi35-Q3_K_S": 9,
+  "plain-phi35-Q3_K_M": 10,
+  "imat-qwen3b-Q2_K": 15,
+  "imat-qwen3b-Q3_K_S": 4,
+  "imat-qwen3b-Q3_K_M": 10,
+  "imat-qwen3b-Q3_K_L": 9,
+  "imat-phi35-Q2_K": 7,
+  "awq-qwen3b-q2_k": 14,
+  "awq-qwen3b-q3_k_m": 15,
+  "plain-qwen3b-Q6_K": 15,
+  "plain-qwen3b-Q4_K_M": 15
+ },
+ "R2": {
+  "lib-qwen3b-q2_K|ctx4096": 0,
+  "lib-qwen3b-q3_K_S|ctx4096": 0,
+  "lib-qwen3b-q3_K_M|ctx4096": 0,
+  "lib-qwen3b-q3_K_L|ctx4096": 0,
+  "lib-phi35-q2_K|ctx4096": 0,
+  "lib-qwen3b-q4_K_M|ctx4096": 15,
+  "lib-phi35-q4_K_M|ctx4096": 11,
+  "plain-qwen3b-Q2_K|ctx4096": 0,
+  "plain-qwen3b-Q3_K_M|ctx4096": 0,
+  "plain-phi35-Q2_K|ctx4096": 4,
+  "lib-qwen3b-q2_K|ctx8192": 0,
+  "lib-qwen3b-q3_K_S|ctx8192": 0,
+  "lib-qwen3b-q3_K_M|ctx8192": 0,
+  "lib-qwen3b-q3_K_L|ctx8192": 0,
+  "lib-phi35-q2_K|ctx8192": 0,
+  "lib-qwen3b-q4_K_M|ctx8192": 15,
+  "lib-phi35-q4_K_M|ctx8192": 11,
+  "plain-qwen3b-Q2_K|ctx8192": 0,
+  "plain-qwen3b-Q3_K_M|ctx8192": 0,
+  "plain-phi35-Q2_K|ctx8192": 0,
+  "lib-qwen3b-q2_K|pred2048": 0,
+  "lib-qwen3b-q3_K_S|pred2048": 0,
+  "lib-qwen3b-q3_K_M|pred2048": 0,
+  "lib-qwen3b-q3_K_L|pred2048": 0,
+  "lib-phi35-q2_K|pred2048": 0,
+  "lib-qwen3b-q4_K_M|pred2048": 15,
+  "lib-phi35-q4_K_M|pred2048": 9,
+  "plain-qwen3b-Q2_K|pred2048": 0,
+  "plain-qwen3b-Q3_K_M|pred2048": 0,
+  "plain-phi35-Q2_K|pred2048": 2,
+  "lib-qwen3b-q2_K|t02s1": 0,
+  "lib-qwen3b-q3_K_S|t02s1": 0,
+  "lib-qwen3b-q3_K_M|t02s1": 0,
+  "lib-qwen3b-q3_K_L|t02s1": 0,
+  "lib-phi35-q2_K|t02s1": 0,
+  "lib-qwen3b-q4_K_M|t02s1": 15,
+  "lib-phi35-q4_K_M|t02s1": 11,
+  "plain-qwen3b-Q2_K|t02s1": 0,
+  "plain-qwen3b-Q3_K_M|t02s1": 0,
+  "plain-phi35-Q2_K|t02s1": 3,
+  "lib-qwen3b-q4_K_M|t02s2": 15,
+  "lib-phi35-q2_K|t02s2": 0,
+  "lib-qwen3b-q3_K_M|t02s2": 0,
+  "lib-qwen3b-q3_K_L|t02s2": 0,
+  "lib-qwen3b-q3_K_S|t02s2": 0,
+  "lib-qwen3b-q2_K|t02s2": 0,
+  "lib-phi35-q4_K_M|t02s2": 11,
+  "plain-qwen3b-Q2_K|t02s2": 0,
+  "plain-qwen3b-Q3_K_M|t02s2": 0,
+  "plain-phi35-Q2_K|t02s2": 4,
+  "lib-qwen3b-q3_K_S|t02s3": 0,
+  "lib-qwen3b-q3_K_M|t02s3": 0,
+  "lib-qwen3b-q2_K|t02s3": 0,
+  "lib-phi35-q2_K|t02s3": 0,
+  "lib-qwen3b-q3_K_L|t02s3": 0,
+  "lib-qwen3b-q4_K_M|t02s3": 15,
+  "lib-phi35-q4_K_M|t02s3": 11,
+  "plain-qwen3b-Q3_K_M|t02s3": 0,
+  "plain-phi35-Q2_K|t02s3": 3,
+  "plain-qwen3b-Q2_K|t02s3": 0
+ },
+ "R5": {
+  "cal-qwen3b-Q2_K": 15,
+  "cal-qwen3b-Q3_K_S": 2,
+  "cal-qwen3b-Q3_K_M": 9,
+  "cal-qwen3b-Q3_K_L": 7,
+  "cal-phi35-Q2_K": 9,
+  "cal-phi35-Q3_K_S": 11,
+  "cal-phi35-Q3_K_M": 9
+ },
+ "R6": {
+  "cal-qwen3b-Q2_K": 106,
+  "cal-qwen3b-Q3_K_S": 13,
+  "cal-qwen3b-Q3_K_M": 76,
+  "cal-qwen3b-Q3_K_L": 80,
+  "imat-qwen3b-Q2_K": 104,
+  "awq-qwen3b-q2_k": 102,
+  "awq-qwen3b-q3_k_m": 125,
+  "plain-qwen3b-Q4_K_M": 129,
+  "lib-qwen3b-q4_K_M": 132
+ },
+ "P0_smoke": {
+  "codeimat-qwen3b-Q3_K_S": 4,
+  "codeimat-qwen3b-Q2_K": 15,
+  "libmix-phi35-Q2_K": 0,
+  "codeimat-qwen3b-Q3_K_L": 8,
+  "codeimat-qwen3b-Q3_K_M": 8,
+  "codeimat-phi35-Q3_K_M": 10,
+  "codeimat-phi35-Q3_K_S": 11,
+  "codeimat-phi35-Q2_K": 8
+ },
+ "P0c": {
+  "plain-phi35-Q2_K": 21,
+  "plain-phi35-Q3_K_S": 35,
+  "plain-phi35-Q3_K_M": 61,
+  "cal-phi35-Q2_K": 37,
+  "cal-phi35-Q3_K_S": 46,
+  "cal-phi35-Q3_K_M": 76,
+  "libmix-phi35-Q2_K": 0,
+  "lib-phi35-q4_K_M": 74,
+  "imat-phi35-Q2_K": 34,
+  "imat-qwen3b-Q3_K_S": 30,
+  "imat-qwen3b-Q3_K_M": 81,
+  "imat-qwen3b-Q3_K_L": 77,
+  "codeimat-qwen3b-Q2_K": 113,
+  "codeimat-qwen3b-Q3_K_S": 25,
+  "codeimat-qwen3b-Q3_K_M": 89,
+  "codeimat-qwen3b-Q3_K_L": 86
+ },
+ "G1": {
+  "g1plain-qwen0.5b-q2_K": 10,
+  "g1imat-qwen0.5b-q2_K": 12,
+  "g1imat-qwen0.5b-q3_K_S": 12,
+  "g1lib-qwen0.5b-q2_K": 13,
+  "g1plain-qwen0.5b-q3_K_S": 12,
+  "g1lib-qwen0.5b-q3_K_S": 13,
+  "g1imat-qwen0.5b-q3_K_M": 15,
+  "g1plain-qwen0.5b-q3_K_M": 15,
+  "g1plain-qwen0.5b-q3_K_L": 12,
+  "g1imat-qwen0.5b-q3_K_L": 13,
+  "g1lib-qwen0.5b-q3_K_M": 15,
+  "g1lib-qwen0.5b-q3_K_L": 14,
+  "g1lib-qwen1.5b-q3_K_S": 15,
+  "g1plain-qwen1.5b-q3_K_S": 15,
+  "g1plain-qwen1.5b-q2_K": 13,
+  "g1imat-qwen1.5b-q3_K_S": 14,
+  "g1lib-qwen1.5b-q2_K": 13,
+  "g1imat-qwen1.5b-q2_K": 12,
+  "g1plain-qwen1.5b-q3_K_L": 15,
+  "g1lib-qwen1.5b-q3_K_M": 15,
+  "g1lib-qwen1.5b-q3_K_L": 15,
+  "g1imat-qwen1.5b-q3_K_L": 14,
+  "g1plain-qwen1.5b-q3_K_M": 15,
+  "g1imat-qwen1.5b-q3_K_M": 15
+ },
+ "fn_audit": {
+  "new": 56,
+  "v1": 10,
+  "total": 66,
+  "min": 8,
+  "max": 41,
+  "median": 21.0,
+  "misses": 0,
+  "wilson": {
+   "k": 0,
+   "n": 66,
+   "rate": 0.0,
+   "lo": 0,
+   "hi": 0.055
+  }
+ },
+ "fn_audit_v1_wilson": {
+  "k": 0,
+  "n": 10,
+  "rate": 0.0,
+  "lo": 0,
+  "hi": 0.2775
+ },
+ "ppl": {
+  "phi35-F16": 6.9059,
+  "phi35-imatcode-Q2_K": 10.5215,
+  "phi35-imatcode-Q3_K_M": 7.6971,
+  "phi35-imatcode-Q3_K_S": 8.8218,
+  "phi35-imatwiki-Q2_K": 10.3949,
+  "phi35-imatwiki-Q3_K_M": 7.7482,
+  "phi35-imatwiki-Q3_K_S": 8.8835,
+  "phi35-lib-q2_K": 184.133,
+  "phi35-lib-q4_K_M": 7.199,
+  "phi35-libmix-Q2_K": 184.133,
+  "phi35-plain-Q2_K": 12.3041,
+  "phi35-plain-Q3_K_M": 8.1531,
+  "phi35-plain-Q3_K_S": 9.4397,
+  "qwen3b-F16": 11.5495,
+  "qwen3b-imatcode-Q2_K": 14.8784,
+  "qwen3b-imatcode-Q3_K_L": 72.3888,
+  "qwen3b-imatcode-Q3_K_M": 70.8187,
+  "qwen3b-imatcode-Q3_K_S": 217.1979,
+  "qwen3b-imatwiki-Q2_K": 14.4224,
+  "qwen3b-imatwiki-Q3_K_L": 73.2451,
+  "qwen3b-imatwiki-Q3_K_M": 72.6866,
+  "qwen3b-imatwiki-Q3_K_S": 214.4258,
+  "qwen3b-lib-q2_K": 66391.4767,
+  "qwen3b-lib-q3_K_L": 372.8368,
+  "qwen3b-lib-q3_K_M": 332.7036,
+  "qwen3b-lib-q3_K_S": 920.3513,
+  "qwen3b-lib-q4_K_M": 12.138,
+  "qwen3b-plain-Q4_K_M": 12.1073,
+  "qwen3b-plain-Q6_K": 11.8023,
+  "qwen3b-plain-Q8_0": 11.5963
+ },
+ "tensor_identity": [
+  {
+   "a": "lib-q2_K",
+   "b": "plain-Q2_K",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 434,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-q3_K_S",
+   "b": "plain-Q3_K_S",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 434,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-q3_K_M",
+   "b": "plain-Q3_K_M",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 434,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-q3_K_L",
+   "b": "plain-Q3_K_L",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 434,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-q4_K_M",
+   "b": "plain-Q4_K_M",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 404,
+   "type_differs": 30,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-phi-q2_K",
+   "b": "plain-phi-Q2_K",
+   "n_tensors": [
+    197,
+    197
+   ],
+   "identical_tensors": 165,
+   "type_differs": 32,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-phi-q2_K",
+   "b": "libmix-phi-Q2_K",
+   "n_tensors": [
+    197,
+    197
+   ],
+   "identical_tensors": 197,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen0.5b-q2_K",
+   "b": "plain-qwen0.5b-q2_K",
+   "n_tensors": [
+    290,
+    290
+   ],
+   "identical_tensors": 170,
+   "type_differs": 120,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen0.5b-q3_K_S",
+   "b": "plain-qwen0.5b-q3_K_S",
+   "n_tensors": [
+    290,
+    290
+   ],
+   "identical_tensors": 146,
+   "type_differs": 144,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen0.5b-q3_K_M",
+   "b": "plain-qwen0.5b-q3_K_M",
+   "n_tensors": [
+    290,
+    290
+   ],
+   "identical_tensors": 194,
+   "type_differs": 96,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen0.5b-q3_K_L",
+   "b": "plain-qwen0.5b-q3_K_L",
+   "n_tensors": [
+    290,
+    290
+   ],
+   "identical_tensors": 194,
+   "type_differs": 96,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen1.5b-q2_K",
+   "b": "plain-qwen1.5b-q2_K",
+   "n_tensors": [
+    338,
+    338
+   ],
+   "identical_tensors": 338,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen1.5b-q3_K_S",
+   "b": "plain-qwen1.5b-q3_K_S",
+   "n_tensors": [
+    338,
+    338
+   ],
+   "identical_tensors": 338,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen1.5b-q3_K_M",
+   "b": "plain-qwen1.5b-q3_K_M",
+   "n_tensors": [
+    338,
+    338
+   ],
+   "identical_tensors": 338,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen1.5b-q3_K_L",
+   "b": "plain-qwen1.5b-q3_K_L",
+   "n_tensors": [
+    338,
+    338
+   ],
+   "identical_tensors": 338,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  }
+ ],
+ "A1_keys": [
+  "analysis",
+  "meta",
+  "part1_census_suite_size",
+  "part2",
+  "part3_mbpp_cross_check",
+  "supp_census_vs_calibration_same_artifacts",
+  "supp_humaneval_15_dead_task_check"
+ ],
+ "stage1_flags_serial": {
+  "n": 39,
+  "numbers_v3": 43,
+  "original": 50,
+  "flags": [
+   "deepseek-coder-v2:16b-lite-instruct-q2_K",
+   "deepseek-coder:1.3b-instruct-fp16",
+   "deepseek-coder:1.3b-instruct-q2_K",
+   "deepseek-coder:1.3b-instruct-q3_K_L",
+   "deepseek-coder:1.3b-instruct-q3_K_M",
+   "deepseek-coder:1.3b-instruct-q3_K_S",
+   "deepseek-coder:1.3b-instruct-q4_0",
+   "deepseek-coder:1.3b-instruct-q4_K_M",
+   "deepseek-coder:1.3b-instruct-q4_K_S",
+   "deepseek-coder:1.3b-instruct-q5_K_M",
+   "deepseek-coder:1.3b-instruct-q5_K_S",
+   "deepseek-coder:1.3b-instruct-q6_K",
+   "deepseek-coder:1.3b-instruct-q8_0",
+   "gemma2:2b-instruct-q2_K",
+   "gemma3:1b-it-fp16",
+   "gemma3:1b-it-q4_K_M",
+   "gemma3:1b-it-q8_0",
+   "gemma3:270m-it-fp16",
+   "gemma3:270m-it-q8_0",
+   "granite3.1-dense:2b-instruct-q2_K",
+   "llama3.2:1b-instruct-q2_K",
+   "llama3.2:1b-instruct-q3_K_L",
+   "llama3.2:1b-instruct-q3_K_M",
+   "llama3.2:1b-instruct-q3_K_S",
+   "llama3.2:1b-instruct-q4_0",
+   "llama3.2:1b-instruct-q4_K_S",
+   "llama3.2:3b-instruct-q2_K",
+   "mistral:7b-instruct-q3_K_L",
+   "mistral:7b-instruct-v0.2-q3_K_L",
+   "mistral:7b-instruct-v0.2-q4_K_S",
+   "mistral:7b-instruct-v0.2-q5_K_M",
+   "mistral:7b-instruct-v0.2-q5_K_S",
+   "mistral:7b-instruct-v0.2-q6_K",
+   "mistral:7b-instruct-v0.2-q8_0",
+   "phi3.5:3.8b-mini-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q3_K_L",
+   "qwen2.5-coder:3b-instruct-q3_K_M",
+   "qwen2.5-coder:3b-instruct-q3_K_S"
+  ],
+  "left_vs_numbers_v3": [
+   "llama3.2:1b-instruct-q4_K_M",
+   "mistral:7b-instruct-q4_0",
+   "phi3.5:3.8b-mini-instruct-q3_K_S",
+   "yi-coder:1.5b-chat-q2_K"
+  ],
+  "new_vs_numbers_v3": [],
+  "left_vs_original": [
+   "gemma2:2b-instruct-q4_K_S",
+   "granite-code:20b-instruct-q2_K",
+   "llama3.2:1b-instruct-q4_K_M",
+   "llama3.2:1b-instruct-q5_K_M",
+   "mistral:7b-instruct-q3_K_M",
+   "mistral:7b-instruct-q4_0",
+   "mistral:7b-instruct-v0.2-q4_K_M",
+   "mistral:7b-instruct-v0.3-q2_K",
+   "phi3.5:3.8b-mini-instruct-q3_K_S",
+   "starcoder2:15b-instruct-v0.1-q2_K",
+   "yi-coder:1.5b-chat-q2_K"
+  ],
+  "unflagged": 266
+ },
+ "classes_serial": {
+  "counts": {
+   "HEALTHY": 271,
+   "SUSPECT": 7,
+   "NO_BASELINE": 18,
+   "DEGRADED": 3,
+   "COLLAPSED": 6
+  },
+  "counts_numbers_v3": {
+   "HEALTHY": 271,
+   "SUSPECT": 7,
+   "NO_BASELINE": 18,
+   "DEGRADED": 3,
+   "COLLAPSED": 6
+  },
+  "counts_unchanged": true,
+  "suspects": [
+   "llama3.2:1b-instruct-q2_K",
+   "llama3.2:1b-instruct-q3_K_S",
+   "phi3.5:3.8b-mini-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q2_K",
+   "qwen2.5-coder:3b-instruct-q3_K_L",
+   "qwen2.5-coder:3b-instruct-q3_K_M",
+   "qwen2.5-coder:3b-instruct-q3_K_S"
+  ],
+  "suspects_unchanged": true,
+  "per_class": {
+   "COLLAPSED": [
+    "deepseek-coder:1.3b-instruct-fp16",
+    "deepseek-coder:1.3b-instruct-q2_K",
+    "deepseek-coder:1.3b-instruct-q3_K_L",
+    "deepseek-coder:1.3b-instruct-q3_K_M",
+    "deepseek-coder:1.3b-instruct-q4_0",
+    "deepseek-coder:1.3b-instruct-q4_K_M"
+   ],
+   "DEGRADED": [
+    "granite3.1-dense:2b-instruct-q2_K",
+    "llama3.2:3b-instruct-q2_K",
+    "mistral:7b-instruct-v0.2-q8_0"
+   ],
+   "NO_BASELINE": [
+    "codellama:13b-instruct-q2_K",
+    "codellama:13b-instruct-q3_K_L",
+    "codellama:13b-instruct-q3_K_M",
+    "codellama:13b-instruct-q3_K_S",
+    "codellama:13b-instruct-q4_0",
+    "codellama:13b-instruct-q4_K_M",
+    "codellama:13b-instruct-q4_K_S",
+    "deepseek-coder-v2:16b-lite-instruct-q2_K",
+    "deepseek-coder-v2:16b-lite-instruct-q3_K_S",
+    "granite-code:20b-instruct-8k-q2_K",
+    "granite-code:20b-instruct-q2_K",
+    "qwen2.5-coder:14b-instruct-q2_K",
+    "qwen2.5-coder:14b-instruct-q3_K_L",
+    "qwen2.5-coder:14b-instruct-q3_K_M",
+    "qwen2.5-coder:14b-instruct-q3_K_S",
+    "starcoder2:15b-instruct-v0.1-q2_K",
+    "starcoder2:15b-instruct-v0.1-q3_K_M",
+    "starcoder2:15b-instruct-v0.1-q3_K_S"
+   ],
+   "SUSPECT": [
+    "llama3.2:1b-instruct-q2_K",
+    "llama3.2:1b-instruct-q3_K_S",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ]
+  }
+ },
+ "class_changes_vs_numbers_v3": [
+  {
+   "tag": "mistral:7b-instruct-v0.2-q8_0",
+   "class_before": "HEALTHY",
+   "class_serial": "DEGRADED",
+   "score_before": 6,
+   "score_serial": 6,
+   "baseline_before": 10.0,
+   "baseline_serial": 10.5,
+   "ratio_serial": 0.5714
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q2_K",
+   "class_before": "DEGRADED",
+   "class_serial": "HEALTHY",
+   "score_before": 8,
+   "score_serial": 9,
+   "baseline_before": 14,
+   "baseline_serial": 15,
+   "ratio_serial": 0.6
+  }
+ ],
+ "class_changes_vs_original_census": [
+  {
+   "tag": "mistral:7b-instruct-v0.2-q8_0",
+   "class_before": "HEALTHY",
+   "class_serial": "DEGRADED",
+   "score_before": 6,
+   "score_serial": 6,
+   "baseline_before": 9.5,
+   "baseline_serial": 10.5,
+   "ratio_serial": 0.5714
+  },
+  {
+   "tag": "yi-coder:1.5b-chat-q2_K",
+   "class_before": "DEGRADED",
+   "class_serial": "HEALTHY",
+   "score_before": 8,
+   "score_serial": 9,
+   "baseline_before": 14,
+   "baseline_serial": 15,
+   "ratio_serial": 0.6
+  }
+ ],
+ "baselines_changed_vs_numbers_v3": {
+  "qwen2.5-coder/0.5": [
+   14,
+   15
+  ],
+  "qwen2.5-coder/3": [
+   14,
+   15
+  ],
+  "qwen2.5-coder/7": [
+   14,
+   15
+  ],
+  "llama3.1/8": [
+   14,
+   15
+  ],
+  "phi3.5/3.8": [
+   13,
+   14
+  ],
+  "deepseek-coder/6.7": [
+   13.5,
+   14.0
+  ],
+  "mistral/7": [
+   10.0,
+   10.5
+  ],
+  "codellama/7": [
+   12.0,
+   12.5
+  ],
+  "granite/8": [
+   13.5,
+   14.0
+  ],
+  "yi-coder/1.5": [
+   14,
+   15
+  ],
+  "yi-coder/9": [
+   13,
+   14
+  ],
+  "codegemma/7": [
+   13.5,
+   14.5
+  ]
+ },
+ "he15_pass_official": {
+  "serial": 275,
+  "numbers_v3": 134,
+  "original": 0,
+  "of": 305
+ },
+ "artifacts_changed_vs_original_census": {
+  "n": 275,
+  "numbers_v3": 135,
+  "by_net_tasks_gained": {
+   "1": 274,
+   "2": 1
+  },
+  "tasks_gained": {
+   "HumanEval/15": 275,
+   "HumanEval/23": 1
+  },
+  "tasks_lost": {},
+  "any_loss": false,
+  "gaining_more_than_one": [
+   "deepseek-coder-v2:16b-lite-instruct-q3_K_S"
+  ],
+  "gaining_without_he15": []
+ },
+ "artifacts_changed_vs_numbers_v3": {
+  "n": 141,
+  "tasks_gained": {
+   "HumanEval/15": 141
+  },
+  "tasks_lost": {}
+ },
+ "rq3_output_rules": {
+  "trunc_ge_0.2": {
+   "hits": 3,
+   "of": 7,
+   "hit_tags": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K"
+   ],
+   "false_positives": 10,
+   "fp_of": 298,
+   "fp_share": 0.0336,
+   "fp_classes": {
+    "NO_BASELINE": 3,
+    "COLLAPSED": 5,
+    "HEALTHY": 2
+   },
+   "fp_classes_numbers_v3": {
+    "NO_BASELINE": 3,
+    "COLLAPSED": 5,
+    "HEALTHY": 2
+   },
+   "fp_tags": [
+    [
+     "deepseek-coder-v2:16b-lite-instruct-q2_K",
+     "NO_BASELINE"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-fp16",
+     "COLLAPSED"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q2_K",
+     "COLLAPSED"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q3_K_L",
+     "COLLAPSED"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q3_K_M",
+     "COLLAPSED"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q4_K_M",
+     "COLLAPSED"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q5_K_S",
+     "HEALTHY"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q8_0",
+     "HEALTHY"
+    ],
+    [
+     "starcoder2:15b-instruct-v0.1-q2_K",
+     "NO_BASELINE"
+    ],
+    [
+     "starcoder2:15b-instruct-v0.1-q3_K_S",
+     "NO_BASELINE"
+    ]
+   ]
+  },
+  "rep6_ge_0.2": {
+   "hits": 3,
+   "of": 7,
+   "hit_tags": [
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "false_positives": 4,
+   "fp_of": 298,
+   "fp_share": 0.0134,
+   "fp_classes": {
+    "NO_BASELINE": 2,
+    "HEALTHY": 2
+   },
+   "fp_classes_numbers_v3": {
+    "NO_BASELINE": 2,
+    "HEALTHY": 2
+   },
+   "fp_tags": [
+    [
+     "codellama:13b-instruct-q4_0",
+     "NO_BASELINE"
+    ],
+    [
+     "deepseek-coder-v2:16b-lite-instruct-q2_K",
+     "NO_BASELINE"
+    ],
+    [
+     "granite-code:3b-instruct-128k-q2_K",
+     "HEALTHY"
+    ],
+    [
+     "granite-code:3b-instruct-128k-q3_K_M",
+     "HEALTHY"
+    ]
+   ]
+  },
+  "either_ge_0.3": {
+   "hits": 4,
+   "of": 7,
+   "hit_tags": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "false_positives": 6,
+   "fp_of": 298,
+   "fp_share": 0.0201,
+   "fp_classes": {
+    "NO_BASELINE": 2,
+    "COLLAPSED": 4
+   },
+   "fp_classes_numbers_v3": {
+    "NO_BASELINE": 2,
+    "COLLAPSED": 4
+   },
+   "fp_tags": [
+    [
+     "deepseek-coder-v2:16b-lite-instruct-q2_K",
+     "NO_BASELINE"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-fp16",
+     "COLLAPSED"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q2_K",
+     "COLLAPSED"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q3_K_L",
+     "COLLAPSED"
+    ],
+    [
+     "deepseek-coder:1.3b-instruct-q4_K_M",
+     "COLLAPSED"
+    ],
+    [
+     "starcoder2:15b-instruct-v0.1-q3_K_S",
+     "NO_BASELINE"
+    ]
+   ]
+  },
+  "missed_by_either_ge_0.3": {
+   "tags": [
+    "llama3.2:1b-instruct-q3_K_S",
+    "qwen2.5-coder:3b-instruct-q3_K_L",
+    "qwen2.5-coder:3b-instruct-q3_K_M"
+   ],
+   "trunc_frac": {
+    "llama3.2:1b-instruct-q3_K_S": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.0,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.0
+   },
+   "rep6_share_mean": {
+    "llama3.2:1b-instruct-q3_K_S": 0.057,
+    "qwen2.5-coder:3b-instruct-q3_K_L": 0.167,
+    "qwen2.5-coder:3b-instruct-q3_K_M": 0.179
+   },
+   "never_hit_token_cap": true,
+   "healthy_firing_at_threshold_catching_at_least_one": {
+    "threshold": 0.179,
+    "n": 12,
+    "of": 271,
+    "share": 0.0443,
+    "numbers_v3_classes": {
+     "n": 12,
+     "of": 271,
+     "share": 0.0443
+    }
+   },
+   "healthy_firing_at_threshold_catching_all_three": {
+    "threshold": 0.057,
+    "n": 196,
+    "of": 271,
+    "share": 0.7232,
+    "numbers_v3_classes": {
+     "n": 196,
+     "of": 271,
+     "share": 0.7232
+    }
+   },
+   "per_missed_tag": {
+    "llama3.2:1b-instruct-q3_K_S": {
+     "threshold": 0.057,
+     "n": 196,
+     "of": 271,
+     "share": 0.7232
+    },
+    "qwen2.5-coder:3b-instruct-q3_K_L": {
+     "threshold": 0.167,
+     "n": 12,
+     "of": 271,
+     "share": 0.0443
+    },
+    "qwen2.5-coder:3b-instruct-q3_K_M": {
+     "threshold": 0.179,
+     "n": 12,
+     "of": 271,
+     "share": 0.0443
+    }
+   },
+   "note": "the paper's 'at least 4.4% of healthy artifacts' is the lowest repetition bar that catches any of the three (their largest rep6 share)"
+  }
+ },
+ "fn_audit_serial": {
+  "new": 56,
+  "v1": 10,
+  "total": 66,
+  "min": 8,
+  "max": 41,
+  "median": 21.0,
+  "misses": 0,
+  "wilson": {
+   "k": 0,
+   "n": 66,
+   "rate": 0.0,
+   "lo": 0,
+   "hi": 0.055
+  },
+  "numbers_v3": {
+   "new": 56,
+   "v1": 10,
+   "total": 66,
+   "min": 8,
+   "max": 41,
+   "median": 21.0,
+   "misses": 0,
+   "wilson": {
+    "k": 0,
+    "n": 66,
+    "rate": 0.0,
+    "lo": 0,
+    "hi": 0.055
+   }
+  },
+  "changed_runs": {
+   "fn-deepseek-coder_6.7b-instruct-q4_0": [
+    29,
+    30
+   ]
+  }
+ },
+ "fn_audit_v1_sample_serial": {
+  "n": 10,
+  "min": 11,
+  "max": 29,
+  "scores": {
+   "deepseek-coder_6.7b-instruct-q4_K_S": 29,
+   "gemma2_2b-instruct-q3_K_L": 21,
+   "granite-code_3b-instruct-128k-q6_K": 23,
+   "granite-code_3b-instruct-q3_K_M": 12,
+   "granite3.1-dense_2b-instruct-q4_K_S": 22,
+   "llama3.2_3b-instruct-q3_K_L": 19,
+   "llama3.2_3b-instruct-q4_K_S": 26,
+   "mistral_7b-instruct-q3_K_S": 11,
+   "phi3.5_3.8b-mini-instruct-q5_K_S": 21,
+   "yi-coder_1.5b-chat-q4_K_S": 22
+  },
+  "changed": []
+ },
+ "heldout_1p5b": {
+  "qwen2.5-coder:1.5b q2_K": 10,
+  "qwen2.5-coder:1.5b q3_K_S": 23,
+  "qwen2.5-coder:1.5b q4_0": 28,
+  "of": 49
+ },
+ "miss_audit_frame": {
+  "tuning_configs_in_census": 23,
+  "frame_original_unflagged_minus_tuning": 233,
+  "serial_unflagged_minus_tuning": 244,
+  "numbers_v3_unflagged_minus_tuning": 240,
+  "bound_5.5pct_times_frame": 12.8,
+  "bound_5.5pct_times_serial_unflagged": 13.4
+ },
+ "full164": {
+  "suspects": {
+   "llama3.2:1b-instruct-q2_K": 0,
+   "llama3.2:1b-instruct-q3_K_S": 6,
+   "phi3.5:3.8b-mini-instruct-q2_K": 0,
+   "qwen2.5-coder:3b-instruct-q2_K": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_S": 0
+  },
+  "own_imatrix_wikitext": {
+   "Q2_K": 106,
+   "Q3_K_S": 13,
+   "Q3_K_M": 76,
+   "Q3_K_L": 80
+  },
+  "own_imatrix_code": {
+   "Q2_K": 113,
+   "Q3_K_S": 25,
+   "Q3_K_M": 89,
+   "Q3_K_L": 86
+  },
+  "bartowski_qwen": {
+   "Q2_K": 104,
+   "Q3_K_S": 30,
+   "Q3_K_M": 81,
+   "Q3_K_L": 77
+  },
+  "awq_qwen": {
+   "q2_K": 102,
+   "q3_K_M": 125
+  },
+  "phi35": {
+   "library_mix_rebuild_libmix": 0,
+   "plain_current_mix": 21,
+   "wikitext_imatrix_cal": 37,
+   "bartowski": 34,
+   "registry_q4_K_M": 74,
+   "plain_Q3_K_S": 35,
+   "plain_Q3_K_M": 61,
+   "cal_Q3_K_S": 46,
+   "cal_Q3_K_M": 76
+  },
+  "plain_qwen_Q4_K_M_control": 129,
+  "registry_4bit": {
+   "qwen2.5-coder:3b q4_K_M": 132,
+   "phi3.5 q4_K_M": 74
+  },
+  "deepseek_coder_1.3b_tags": {
+   "deepseek-coder:1.3b-instruct-q2_K": 2,
+   "deepseek-coder:1.3b-instruct-q3_K_M": 5,
+   "deepseek-coder:1.3b-instruct-q3_K_L": 10,
+   "deepseek-coder:1.3b-instruct-q4_0": 10,
+   "deepseek-coder:1.3b-instruct-q4_K_M": 7,
+   "deepseek-coder:1.3b-instruct-fp16": 16,
+   "deepseek-coder:1.3b-instruct-q3_K_S": 7
+  },
+  "llama3.2_1b_q3_K_S": 6,
+  "census_full164_all": {
+   "qwen2.5-coder:3b-instruct-q2_K": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_S": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_L": 0,
+   "llama3.2:1b-instruct-q2_K": 0,
+   "llama3.2:1b-instruct-q3_K_S": 6,
+   "phi3.5:3.8b-mini-instruct-q2_K": 0,
+   "deepseek-coder:1.3b-instruct-q2_K": 2,
+   "deepseek-coder:1.3b-instruct-q3_K_M": 5,
+   "deepseek-coder:1.3b-instruct-q3_K_L": 10,
+   "deepseek-coder:1.3b-instruct-q4_0": 10,
+   "deepseek-coder:1.3b-instruct-q4_K_M": 7,
+   "deepseek-coder:1.3b-instruct-fp16": 16,
+   "llama3.2:1b-instruct-q3_K_M": 42,
+   "llama3.2:3b-instruct-q2_K": 30,
+   "gemma2:2b-instruct-q2_K": 25,
+   "gemma3:270m-it-q8_0": 16,
+   "gemma3:270m-it-fp16": 20,
+   "gemma3:1b-it-q4_K_M": 37,
+   "phi3.5:3.8b-mini-instruct-q3_K_S": 42,
+   "deepseek-coder:1.3b-instruct-q3_K_S": 7,
+   "deepseek-coder-v2:16b-lite-instruct-q2_K": 25,
+   "mistral:7b-instruct-v0.2-q3_K_L": 44,
+   "starcoder2:15b-instruct-v0.1-q2_K": 65,
+   "granite-code:20b-instruct-q2_K": 46,
+   "granite3.1-dense:2b-instruct-q2_K": 17,
+   "yi-coder:1.5b-chat-q2_K": 48
+  },
+  "census_full164_changed": {
+   "llama3.2:1b-instruct-q3_K_M": [
+    41,
+    42
+   ],
+   "llama3.2:3b-instruct-q2_K": [
+    29,
+    30
+   ],
+   "phi3.5:3.8b-mini-instruct-q3_K_S": [
+    41,
+    42
+   ],
+   "deepseek-coder:1.3b-instruct-q3_K_S": [
+    6,
+    7
+   ],
+   "deepseek-coder-v2:16b-lite-instruct-q2_K": [
+    24,
+    25
+   ],
+   "mistral:7b-instruct-v0.2-q3_K_L": [
+    43,
+    44
+   ],
+   "starcoder2:15b-instruct-v0.1-q2_K": [
+    64,
+    65
+   ],
+   "granite-code:20b-instruct-q2_K": [
+    45,
+    46
+   ],
+   "granite3.1-dense:2b-instruct-q2_K": [
+    16,
+    17
+   ],
+   "yi-coder:1.5b-chat-q2_K": [
+    47,
+    48
+   ]
+  },
+  "native_deepseek_6.7b": {
+   "deepseek-coder-6.7b-instruct.Q3_K_M.native": {
+    "full164": 22,
+    "smoke15_subset": 6
+   },
+   "deepseek-coder-6.7b-instruct.Q4_K_M.native": {
+    "full164": 16,
+    "smoke15_subset": 4
+   }
+  },
+  "derived": {
+   "own_imatrix_three_rescued_range": [
+    76,
+    113
+   ],
+   "own_imatrix_three_rescued_pct": [
+    46.3,
+    68.9
+   ],
+   "Q2_K_own_range": [
+    106,
+    113
+   ],
+   "Q3_K_M_own_range": [
+    76,
+    89
+   ],
+   "Q3_K_L_own_range": [
+    80,
+    86
+   ],
+   "Q3_K_S_all_calibrations_range": [
+    13,
+    30
+   ],
+   "registry_qwen_4bit_pct": 80.5,
+   "best_q2_K_pct": 68.9,
+   "suspects_max": 6,
+   "nonfunctional_under_10pct": true
+  }
+ },
+ "table_IV_attribution": {
+  "qwen2.5-coder:3b-instruct-q2_K": {
+   "library": 0,
+   "library_164": 0,
+   "plain": 0,
+   "own_imatrix": "15, 15",
+   "third_party": 15,
+   "qwen_awq": 14,
+   "best_cal_164": 113
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_S": {
+   "library": 0,
+   "library_164": 0,
+   "plain": 0,
+   "own_imatrix": "2, 4",
+   "third_party": 4,
+   "qwen_awq": "--",
+   "best_cal_164": 30
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_M": {
+   "library": 0,
+   "library_164": 0,
+   "plain": 0,
+   "own_imatrix": "9, 8",
+   "third_party": 10,
+   "qwen_awq": 15,
+   "best_cal_164": 125
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_L": {
+   "library": 0,
+   "library_164": 0,
+   "plain": 0,
+   "own_imatrix": "7, 8",
+   "third_party": 9,
+   "qwen_awq": "--",
+   "best_cal_164": 86
+  },
+  "phi3.5:3.8b-mini-instruct-q2_K": {
+   "library": 0,
+   "library_164": 0,
+   "plain": "0 (4)",
+   "own_imatrix": "9, 8",
+   "third_party": 7,
+   "qwen_awq": "--",
+   "best_cal_164": 37
+  },
+  "llama3.2:1b-instruct-q2_K": {
+   "library": 0,
+   "library_164": 0,
+   "plain": "--",
+   "own_imatrix": "--",
+   "third_party": "(1)",
+   "qwen_awq": "--",
+   "best_cal_164": "--"
+  },
+  "llama3.2:1b-instruct-q3_K_S": {
+   "library": 2,
+   "library_164": 6,
+   "plain": "--",
+   "own_imatrix": "--",
+   "third_party": "(4)",
+   "qwen_awq": "--",
+   "best_cal_164": "--"
+  }
+ },
+ "table_IV_caption": {
+  "phi35_plain_current_mix_164": 21,
+  "phi35_own_imatrix_15": [
+   9,
+   8
+  ],
+  "phi35_plain_current_mix_15": 4,
+  "phi35_bartowski_15": 7,
+  "phi35_library_mix_rebuild_15": 0
+ },
+ "table_VI_sizes": {
+  "q2_K": {
+   "1.5B": [
+    13,
+    13,
+    12
+   ],
+   "3B": [
+    0,
+    0,
+    15
+   ],
+   "1.5B_census_tag": 13
+  },
+  "q3_K_S": {
+   "1.5B": [
+    15,
+    15,
+    14
+   ],
+   "3B": [
+    0,
+    0,
+    2
+   ],
+   "1.5B_census_tag": 15
+  },
+  "q3_K_M": {
+   "1.5B": [
+    15,
+    15,
+    15
+   ],
+   "3B": [
+    0,
+    0,
+    9
+   ],
+   "1.5B_census_tag": 15
+  },
+  "q3_K_L": {
+   "1.5B": [
+    15,
+    15,
+    14
+   ],
+   "3B": [
+    0,
+    0,
+    7
+   ],
+   "1.5B_census_tag": 15
+  }
+ },
+ "table_VI_text": {
+  "1.5B_library_and_plain_range": [
+   13,
+   15
+  ],
+  "1.5B_all_cells_range": [
+   12,
+   15
+  ],
+  "0.5B_G1": {
+   "g1plain-qwen0.5b-q2_K": 10,
+   "g1imat-qwen0.5b-q2_K": 12,
+   "g1imat-qwen0.5b-q3_K_S": 12,
+   "g1lib-qwen0.5b-q2_K": 13,
+   "g1plain-qwen0.5b-q3_K_S": 12,
+   "g1lib-qwen0.5b-q3_K_S": 13,
+   "g1imat-qwen0.5b-q3_K_M": 15,
+   "g1plain-qwen0.5b-q3_K_M": 15,
+   "g1plain-qwen0.5b-q3_K_L": 12,
+   "g1imat-qwen0.5b-q3_K_L": 13,
+   "g1lib-qwen0.5b-q3_K_M": 15,
+   "g1lib-qwen0.5b-q3_K_L": 14
+  },
+  "qwen3b_q4_0_tag_15": 15
+ },
+ "table_VIII_settings": {
+  "Lib. Qwen-3B q2_K--q3_K_L": {
+   "Base": 0,
+   "Ctx 4k": 0,
+   "Ctx 8k": 0,
+   "Cap 2k": 0,
+   "T0.2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "Lib. phi3.5 q2_K": {
+   "Base": 0,
+   "Ctx 4k": 0,
+   "Ctx 8k": 0,
+   "Cap 2k": 0,
+   "T0.2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "Plain Qwen-3B Q2_K, Q3_K_M": {
+   "Base": 0,
+   "Ctx 4k": 0,
+   "Ctx 8k": 0,
+   "Cap 2k": 0,
+   "T0.2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "Plain phi3.5 Q2_K (current mix)": {
+   "Base": 4,
+   "Ctx 4k": 4,
+   "Ctx 8k": 0,
+   "Cap 2k": 2,
+   "T0.2": [
+    3,
+    4,
+    3
+   ]
+  },
+  "Lib. Qwen-3B q4_K_M": {
+   "Base": 15,
+   "Ctx 4k": 15,
+   "Ctx 8k": 15,
+   "Cap 2k": 15,
+   "T0.2": [
+    15,
+    15,
+    15
+   ]
+  },
+  "Lib. phi3.5 q4_K_M": {
+   "Base": 11,
+   "Ctx 4k": 11,
+   "Ctx 8k": 11,
+   "Cap 2k": 9,
+   "T0.2": [
+    11,
+    11,
+    11
+   ]
+  }
+ },
+ "table_VIII_note": "cells hold the maximum over the row's builds (all are 0 for multi-build rows)",
+ "mcnemar_phi35_plain_vs_wikitext": {
+  "a": "plain-phi35-Q2_K",
+  "b": "cal-phi35-Q2_K",
+  "a_pass": 21,
+  "b_pass": 37,
+  "a_only": 8,
+  "b_only": 24,
+  "p_exact_two_sided": 0.007
+ },
+ "mcnemar_phi35_libmix_vs_bartowski": {
+  "a": "libmix-phi35-Q2_K",
+  "b": "imat-phi35-Q2_K",
+  "a_pass": 0,
+  "b_pass": 34,
+  "a_only": 0,
+  "b_only": 34,
+  "p_exact_two_sided": 1.164e-10
+ },
+ "deepseek_coder_1.3b": {
+  "smoke_range": [
+   1,
+   6
+  ],
+  "n_tags": 12,
+  "classes": {
+   "COLLAPSED": 6,
+   "HEALTHY": 6
+  },
+  "healthy_scores": [
+   3,
+   3,
+   4,
+   4,
+   5,
+   6
+  ],
+  "all_low_baseline_are_ds13": true,
+  "fp16_full164": 16
+ },
+ "community_serial": {
+  "healthy_ge9": 20,
+  "of": 22,
+  "failing": {
+   "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q4_K_M.gguf": 6,
+   "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q3_K_M.gguf": 5
+  },
+  "ollama_deepseek_6.7b_q3_K_M_q4_K_M": [
+   14,
+   14
+  ],
+  "hf_adjudication": {
+   "hf:bartowski/Qwen2.5-Coder-3B-Instruct-GGUF/Qwen2.5-Coder-3B-Instruct-Q3_K_M.gguf": 9,
+   "hf:bartowski/Qwen2.5-Coder-3B-Instruct-GGUF/Qwen2.5-Coder-3B-Instruct-Q2_K.gguf": 15,
+   "hf:TheBloke/deepseek-coder-1.3b-instruct-GGUF/deepseek-coder-1.3b-instruct.Q4_K_M.gguf": 2,
+   "hf:bartowski/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q3_K_L.gguf": 9,
+   "hf:bartowski/Phi-3.5-mini-instruct-GGUF/Phi-3.5-mini-instruct-Q2_K.gguf": 7,
+   "hf:unsloth/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q2_K.gguf": 1,
+   "hf:unsloth/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q3_K_S.gguf": 4
+  }
+ },
+ "metal_serial": {
+  "metalrep": {
+   "qwen2.5-coder:3b-instruct-q3_K_M": 0,
+   "phi3.5:3.8b-mini-instruct-q2_K": 0,
+   "deepseek-coder-6.7b-instruct.Q3_K_M.metal-smoke": 13,
+   "deepseek-coder-6.7b-instruct.Q4_K_M.metal-smoke": 15
+  },
+  "mac": {
+   "qwen2.5-coder:3b-instruct-q2_K": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_S": 0,
+   "qwen2.5-coder:3b-instruct-q3_K_L": 0
+  },
+  "five_rebuilt_suspects_zero_on_metal": true
+ },
+ "pretokenizer_other_14": {
+  "n": 14,
+  "classes": {
+   "HEALTHY": 11,
+   "NO_BASELINE": 3
+  },
+  "min_smoke": 9
+ },
+ "tuning_serial": {
+  "n_configs": 24,
+  "n_healthy": 23,
+  "pool_solved_by_all_healthy": 39,
+  "suite_is_first_15_lexicographic": true,
+  "healthy_suite_all_15": true,
+  "defective_suite": 0,
+  "defective_humaneval_plus": 0,
+  "mbpp_n": 378,
+  "mbpp_healthy_rate_min_pct": 38.6,
+  "mbpp_healthy_rate_max_pct": 70.1,
+  "mbpp_defective": 7,
+  "humaneval_changed_vs_pool": [],
+  "mbpp_changed_vs_pool": {
+   "qwen2.5-coder_0.5b-instruct-q5_K_M": [
+    153,
+    154
+   ],
+   "qwen2.5-coder_1.5b-instruct-fp16": [
+    212,
+    213
+   ],
+   "qwen2.5-coder_1.5b-instruct-q3_K_M": [
+    203,
+    205
+   ],
+   "qwen2.5-coder_1.5b-instruct-q8_0": [
+    210,
+    211
+   ],
+   "qwen2.5-coder_3b-instruct-fp16": [
+    229,
+    230
+   ],
+   "qwen2.5-coder_3b-instruct-q4_K_M": [
+    231,
+    232
+   ],
+   "qwen2.5-coder_3b-instruct-q6_K": [
+    230,
+    231
+   ],
+   "qwen2.5-coder_3b-instruct-q8_0": [
+    231,
+    232
+   ]
+  }
+ },
+ "_meta": {
+  "scores": "serial (serial_rescore.py): one evaluation at a time, default EvalPlus time limits",
+  "keys_from_numbers_v3": [
+   "A1_keys",
+   "G1",
+   "P0_smoke",
+   "P0c",
+   "R1",
+   "R2",
+   "R5",
+   "R6",
+   "artifacts_changed_by_rescore",
+   "census",
+   "classes_original",
+   "classes_rescored",
+   "community_healthy_cuda",
+   "fn_audit",
+   "fn_audit_v1_wilson",
+   "he15_pass_rescored",
+   "lowbit_le4b",
+   "nonfunctional",
+   "nonfunctional_groups",
+   "nonfunctional_incidents",
+   "ppl",
+   "screen_seconds",
+   "stage1_flags_original",
+   "stage1_flags_rescored",
+   "suspects",
+   "suspects_original",
+   "suspects_rescored",
+   "tensor_identity"
+  ],
+  "added_keys": [
+   "classes_pod_rescore_v3",
+   "stage1_flags_pod_rescore_v3",
+   "suspects_pod_rescore_v3",
+   "stage1_flags_serial",
+   "classes_serial",
+   "class_changes_vs_numbers_v3",
+   "class_changes_vs_original_census",
+   "baselines_changed_vs_numbers_v3",
+   "he15_pass_official",
+   "artifacts_changed_vs_original_census",
+   "artifacts_changed_vs_numbers_v3",
+   "rq3_output_rules",
+   "fn_audit_serial",
+   "fn_audit_v1_sample_serial",
+   "heldout_1p5b",
+   "miss_audit_frame",
+   "full164",
+   "table_IV_attribution",
+   "table_IV_caption",
+   "table_VI_sizes",
+   "table_VI_text",
+   "table_VIII_settings",
+   "table_VIII_note",
+   "mcnemar_phi35_plain_vs_wikitext",
+   "mcnemar_phi35_libmix_vs_bartowski",
+   "deepseek_coder_1.3b",
+   "community_serial",
+   "metal_serial",
+   "pretokenizer_other_14",
+   "tuning_serial"
+  ],
+  "note": "keys ending in _rescored hold the serial values; *_pod_rescore_v3 reproduce numbers_v3.json"
+ }
+}

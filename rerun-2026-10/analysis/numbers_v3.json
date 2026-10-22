@@ -1,0 +1,506 @@
+{
+ "census": {
+  "official": 305,
+  "community": 22,
+  "official_fp16": 14,
+  "lines": 15,
+  "family_groups": null,
+  "official_quantized": 291,
+  "model_size_groups": 29
+ },
+ "classes_original": {
+  "HEALTHY": 271,
+  "SUSPECT": 7,
+  "NO_BASELINE": 18,
+  "DEGRADED": 3,
+  "COLLAPSED": 6
+ },
+ "stage1_flags_original": 50,
+ "suspects_original": [
+  "llama3.2:1b-instruct-q2_K",
+  "llama3.2:1b-instruct-q3_K_S",
+  "phi3.5:3.8b-mini-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q3_K_L",
+  "qwen2.5-coder:3b-instruct-q3_K_M",
+  "qwen2.5-coder:3b-instruct-q3_K_S"
+ ],
+ "classes_rescored": {
+  "HEALTHY": 271,
+  "SUSPECT": 7,
+  "NO_BASELINE": 18,
+  "DEGRADED": 3,
+  "COLLAPSED": 6
+ },
+ "stage1_flags_rescored": 43,
+ "suspects_rescored": [
+  "llama3.2:1b-instruct-q2_K",
+  "llama3.2:1b-instruct-q3_K_S",
+  "phi3.5:3.8b-mini-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q2_K",
+  "qwen2.5-coder:3b-instruct-q3_K_L",
+  "qwen2.5-coder:3b-instruct-q3_K_M",
+  "qwen2.5-coder:3b-instruct-q3_K_S"
+ ],
+ "he15_pass_rescored": 134,
+ "artifacts_changed_by_rescore": 135,
+ "suspects": [
+  {
+   "tag": "llama3.2:1b-instruct-q2_K",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "llama3.2:1b-instruct-q3_K_S",
+   "smoke_rescored": 2,
+   "full164": 6
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q2_K",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q2_K",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_L",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_M",
+   "smoke_rescored": 0,
+   "full164": 0
+  },
+  {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_S",
+   "smoke_rescored": 0,
+   "full164": 0
+  }
+ ],
+ "nonfunctional": {
+  "k": 7,
+  "n": 305,
+  "rate": 0.023,
+  "lo": 0.0112,
+  "hi": 0.0466
+ },
+ "nonfunctional_groups": {
+  "k": 3,
+  "n": 29,
+  "rate": 0.1034,
+  "lo": 0.0358,
+  "hi": 0.2639
+ },
+ "nonfunctional_incidents": [
+  "llama3.2/1b",
+  "phi3.5/3.8b",
+  "qwen2.5-coder/3b"
+ ],
+ "lowbit_le4b": {
+  "artifacts": 48,
+  "nonfunctional": 7
+ },
+ "screen_seconds": {
+  "median": 30.2,
+  "min": 12.1,
+  "max": 104.6,
+  "n": 305
+ },
+ "community_healthy_cuda": 20,
+ "R1": {
+  "lib-qwen3b-q2_K": 0,
+  "lib-qwen3b-q3_K_S": 0,
+  "lib-qwen3b-q3_K_M": 0,
+  "lib-qwen3b-q3_K_L": 0,
+  "lib-phi35-q2_K": 0,
+  "lib-qwen3b-q4_K_M": 15,
+  "lib-phi35-q4_K_M": 11,
+  "plain-qwen3b-Q2_K": 0,
+  "plain-qwen3b-Q3_K_S": 0,
+  "plain-qwen3b-Q3_K_M": 0,
+  "plain-qwen3b-Q3_K_L": 0,
+  "plain-phi35-Q2_K": 4,
+  "plain-phi35-Q3_K_S": 9,
+  "plain-phi35-Q3_K_M": 10,
+  "imat-qwen3b-Q2_K": 15,
+  "imat-qwen3b-Q3_K_S": 4,
+  "imat-qwen3b-Q3_K_M": 10,
+  "imat-qwen3b-Q3_K_L": 9,
+  "imat-phi35-Q2_K": 7,
+  "awq-qwen3b-q2_k": 14,
+  "awq-qwen3b-q3_k_m": 15,
+  "plain-qwen3b-Q6_K": 15,
+  "plain-qwen3b-Q4_K_M": 15
+ },
+ "R2": {
+  "lib-qwen3b-q2_K|ctx4096": 0,
+  "lib-qwen3b-q3_K_S|ctx4096": 0,
+  "lib-qwen3b-q3_K_M|ctx4096": 0,
+  "lib-qwen3b-q3_K_L|ctx4096": 0,
+  "lib-phi35-q2_K|ctx4096": 0,
+  "lib-qwen3b-q4_K_M|ctx4096": 15,
+  "lib-phi35-q4_K_M|ctx4096": 11,
+  "plain-qwen3b-Q2_K|ctx4096": 0,
+  "plain-qwen3b-Q3_K_M|ctx4096": 0,
+  "plain-phi35-Q2_K|ctx4096": 4,
+  "lib-qwen3b-q2_K|ctx8192": 0,
+  "lib-qwen3b-q3_K_S|ctx8192": 0,
+  "lib-qwen3b-q3_K_M|ctx8192": 0,
+  "lib-qwen3b-q3_K_L|ctx8192": 0,
+  "lib-phi35-q2_K|ctx8192": 0,
+  "lib-qwen3b-q4_K_M|ctx8192": 15,
+  "lib-phi35-q4_K_M|ctx8192": 11,
+  "plain-qwen3b-Q2_K|ctx8192": 0,
+  "plain-qwen3b-Q3_K_M|ctx8192": 0,
+  "plain-phi35-Q2_K|ctx8192": 0,
+  "lib-qwen3b-q2_K|pred2048": 0,
+  "lib-qwen3b-q3_K_S|pred2048": 0,
+  "lib-qwen3b-q3_K_M|pred2048": 0,
+  "lib-qwen3b-q3_K_L|pred2048": 0,
+  "lib-phi35-q2_K|pred2048": 0,
+  "lib-qwen3b-q4_K_M|pred2048": 15,
+  "lib-phi35-q4_K_M|pred2048": 9,
+  "plain-qwen3b-Q2_K|pred2048": 0,
+  "plain-qwen3b-Q3_K_M|pred2048": 0,
+  "plain-phi35-Q2_K|pred2048": 2,
+  "lib-qwen3b-q2_K|t02s1": 0,
+  "lib-qwen3b-q3_K_S|t02s1": 0,
+  "lib-qwen3b-q3_K_M|t02s1": 0,
+  "lib-qwen3b-q3_K_L|t02s1": 0,
+  "lib-phi35-q2_K|t02s1": 0,
+  "lib-qwen3b-q4_K_M|t02s1": 15,
+  "lib-phi35-q4_K_M|t02s1": 11,
+  "plain-qwen3b-Q2_K|t02s1": 0,
+  "plain-qwen3b-Q3_K_M|t02s1": 0,
+  "plain-phi35-Q2_K|t02s1": 3,
+  "lib-qwen3b-q4_K_M|t02s2": 15,
+  "lib-phi35-q2_K|t02s2": 0,
+  "lib-qwen3b-q3_K_M|t02s2": 0,
+  "lib-qwen3b-q3_K_L|t02s2": 0,
+  "lib-qwen3b-q3_K_S|t02s2": 0,
+  "lib-qwen3b-q2_K|t02s2": 0,
+  "lib-phi35-q4_K_M|t02s2": 11,
+  "plain-qwen3b-Q2_K|t02s2": 0,
+  "plain-qwen3b-Q3_K_M|t02s2": 0,
+  "plain-phi35-Q2_K|t02s2": 4,
+  "lib-qwen3b-q3_K_S|t02s3": 0,
+  "lib-qwen3b-q3_K_M|t02s3": 0,
+  "lib-qwen3b-q2_K|t02s3": 0,
+  "lib-phi35-q2_K|t02s3": 0,
+  "lib-qwen3b-q3_K_L|t02s3": 0,
+  "lib-qwen3b-q4_K_M|t02s3": 15,
+  "lib-phi35-q4_K_M|t02s3": 11,
+  "plain-qwen3b-Q3_K_M|t02s3": 0,
+  "plain-phi35-Q2_K|t02s3": 3,
+  "plain-qwen3b-Q2_K|t02s3": 0
+ },
+ "R5": {
+  "cal-qwen3b-Q2_K": 15,
+  "cal-qwen3b-Q3_K_S": 2,
+  "cal-qwen3b-Q3_K_M": 9,
+  "cal-qwen3b-Q3_K_L": 7,
+  "cal-phi35-Q2_K": 9,
+  "cal-phi35-Q3_K_S": 11,
+  "cal-phi35-Q3_K_M": 9
+ },
+ "R6": {
+  "cal-qwen3b-Q2_K": 106,
+  "cal-qwen3b-Q3_K_S": 13,
+  "cal-qwen3b-Q3_K_M": 76,
+  "cal-qwen3b-Q3_K_L": 80,
+  "imat-qwen3b-Q2_K": 104,
+  "awq-qwen3b-q2_k": 102,
+  "awq-qwen3b-q3_k_m": 125,
+  "plain-qwen3b-Q4_K_M": 129,
+  "lib-qwen3b-q4_K_M": 132
+ },
+ "P0_smoke": {
+  "codeimat-qwen3b-Q3_K_S": 4,
+  "codeimat-qwen3b-Q2_K": 15,
+  "libmix-phi35-Q2_K": 0,
+  "codeimat-qwen3b-Q3_K_L": 8,
+  "codeimat-qwen3b-Q3_K_M": 8,
+  "codeimat-phi35-Q3_K_M": 10,
+  "codeimat-phi35-Q3_K_S": 11,
+  "codeimat-phi35-Q2_K": 8
+ },
+ "P0c": {
+  "plain-phi35-Q2_K": 21,
+  "plain-phi35-Q3_K_S": 35,
+  "plain-phi35-Q3_K_M": 61,
+  "cal-phi35-Q2_K": 37,
+  "cal-phi35-Q3_K_S": 46,
+  "cal-phi35-Q3_K_M": 76,
+  "libmix-phi35-Q2_K": 0,
+  "lib-phi35-q4_K_M": 74,
+  "imat-phi35-Q2_K": 34,
+  "imat-qwen3b-Q3_K_S": 30,
+  "imat-qwen3b-Q3_K_M": 81,
+  "imat-qwen3b-Q3_K_L": 77,
+  "codeimat-qwen3b-Q2_K": 113,
+  "codeimat-qwen3b-Q3_K_S": 25,
+  "codeimat-qwen3b-Q3_K_M": 89,
+  "codeimat-qwen3b-Q3_K_L": 86
+ },
+ "G1": {
+  "g1plain-qwen0.5b-q2_K": 9,
+  "g1imat-qwen0.5b-q2_K": 11,
+  "g1imat-qwen0.5b-q3_K_S": 11,
+  "g1lib-qwen0.5b-q2_K": 12,
+  "g1plain-qwen0.5b-q3_K_S": 11,
+  "g1lib-qwen0.5b-q3_K_S": 12,
+  "g1imat-qwen0.5b-q3_K_M": 14,
+  "g1plain-qwen0.5b-q3_K_M": 15,
+  "g1plain-qwen0.5b-q3_K_L": 11,
+  "g1imat-qwen0.5b-q3_K_L": 12,
+  "g1lib-qwen0.5b-q3_K_M": 14,
+  "g1lib-qwen0.5b-q3_K_L": 13,
+  "g1lib-qwen1.5b-q3_K_S": 14,
+  "g1plain-qwen1.5b-q3_K_S": 14,
+  "g1plain-qwen1.5b-q2_K": 12,
+  "g1imat-qwen1.5b-q3_K_S": 13,
+  "g1lib-qwen1.5b-q2_K": 12,
+  "g1imat-qwen1.5b-q2_K": 11,
+  "g1plain-qwen1.5b-q3_K_L": 14,
+  "g1lib-qwen1.5b-q3_K_M": 14,
+  "g1lib-qwen1.5b-q3_K_L": 14,
+  "g1imat-qwen1.5b-q3_K_L": 13,
+  "g1plain-qwen1.5b-q3_K_M": 14,
+  "g1imat-qwen1.5b-q3_K_M": 14
+ },
+ "fn_audit": {
+  "new": 56,
+  "v1": 10,
+  "total": 66,
+  "min": 8,
+  "max": 41,
+  "median": 21.0,
+  "misses": 0,
+  "wilson": {
+   "k": 0,
+   "n": 66,
+   "rate": 0.0,
+   "lo": 0,
+   "hi": 0.055
+  }
+ },
+ "fn_audit_v1_wilson": {
+  "k": 0,
+  "n": 10,
+  "rate": 0.0,
+  "lo": 0,
+  "hi": 0.2775
+ },
+ "ppl": {
+  "phi35-F16": 6.9059,
+  "phi35-imatcode-Q2_K": 10.5215,
+  "phi35-imatcode-Q3_K_M": 7.6971,
+  "phi35-imatcode-Q3_K_S": 8.8218,
+  "phi35-imatwiki-Q2_K": 10.3949,
+  "phi35-imatwiki-Q3_K_M": 7.7482,
+  "phi35-imatwiki-Q3_K_S": 8.8835,
+  "phi35-lib-q2_K": 184.133,
+  "phi35-lib-q4_K_M": 7.199,
+  "phi35-libmix-Q2_K": 184.133,
+  "phi35-plain-Q2_K": 12.3041,
+  "phi35-plain-Q3_K_M": 8.1531,
+  "phi35-plain-Q3_K_S": 9.4397,
+  "qwen3b-F16": 11.5495,
+  "qwen3b-imatcode-Q2_K": 14.8784,
+  "qwen3b-imatcode-Q3_K_L": 72.3888,
+  "qwen3b-imatcode-Q3_K_M": 70.8187,
+  "qwen3b-imatcode-Q3_K_S": 217.1979,
+  "qwen3b-imatwiki-Q2_K": 14.4224,
+  "qwen3b-imatwiki-Q3_K_L": 73.2451,
+  "qwen3b-imatwiki-Q3_K_M": 72.6866,
+  "qwen3b-imatwiki-Q3_K_S": 214.4258,
+  "qwen3b-lib-q2_K": 66391.4767,
+  "qwen3b-lib-q3_K_L": 372.8368,
+  "qwen3b-lib-q3_K_M": 332.7036,
+  "qwen3b-lib-q3_K_S": 920.3513,
+  "qwen3b-lib-q4_K_M": 12.138,
+  "qwen3b-plain-Q4_K_M": 12.1073,
+  "qwen3b-plain-Q6_K": 11.8023,
+  "qwen3b-plain-Q8_0": 11.5963
+ },
+ "tensor_identity": [
+  {
+   "a": "lib-q2_K",
+   "b": "plain-Q2_K",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 434,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-q3_K_S",
+   "b": "plain-Q3_K_S",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 434,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-q3_K_M",
+   "b": "plain-Q3_K_M",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 434,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-q3_K_L",
+   "b": "plain-Q3_K_L",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 434,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-q4_K_M",
+   "b": "plain-Q4_K_M",
+   "n_tensors": [
+    434,
+    434
+   ],
+   "identical_tensors": 404,
+   "type_differs": 30,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-phi-q2_K",
+   "b": "plain-phi-Q2_K",
+   "n_tensors": [
+    197,
+    197
+   ],
+   "identical_tensors": 165,
+   "type_differs": 32,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-phi-q2_K",
+   "b": "libmix-phi-Q2_K",
+   "n_tensors": [
+    197,
+    197
+   ],
+   "identical_tensors": 197,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen0.5b-q2_K",
+   "b": "plain-qwen0.5b-q2_K",
+   "n_tensors": [
+    290,
+    290
+   ],
+   "identical_tensors": 170,
+   "type_differs": 120,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen0.5b-q3_K_S",
+   "b": "plain-qwen0.5b-q3_K_S",
+   "n_tensors": [
+    290,
+    290
+   ],
+   "identical_tensors": 146,
+   "type_differs": 144,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen0.5b-q3_K_M",
+   "b": "plain-qwen0.5b-q3_K_M",
+   "n_tensors": [
+    290,
+    290
+   ],
+   "identical_tensors": 194,
+   "type_differs": 96,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen0.5b-q3_K_L",
+   "b": "plain-qwen0.5b-q3_K_L",
+   "n_tensors": [
+    290,
+    290
+   ],
+   "identical_tensors": 194,
+   "type_differs": 96,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen1.5b-q2_K",
+   "b": "plain-qwen1.5b-q2_K",
+   "n_tensors": [
+    338,
+    338
+   ],
+   "identical_tensors": 338,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen1.5b-q3_K_S",
+   "b": "plain-qwen1.5b-q3_K_S",
+   "n_tensors": [
+    338,
+    338
+   ],
+   "identical_tensors": 338,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen1.5b-q3_K_M",
+   "b": "plain-qwen1.5b-q3_K_M",
+   "n_tensors": [
+    338,
+    338
+   ],
+   "identical_tensors": 338,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  },
+  {
+   "a": "lib-qwen1.5b-q3_K_L",
+   "b": "plain-qwen1.5b-q3_K_L",
+   "n_tensors": [
+    338,
+    338
+   ],
+   "identical_tensors": 338,
+   "type_differs": 0,
+   "same_type_bytes_differ": 0
+  }
+ ],
+ "A1_keys": [
+  "analysis",
+  "meta",
+  "part1_census_suite_size",
+  "part2",
+  "part3_mbpp_cross_check",
+  "supp_census_vs_calibration_same_artifacts",
+  "supp_humaneval_15_dead_task_check"
+ ]
+}

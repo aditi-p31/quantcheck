@@ -1,0 +1,212 @@
+{
+ "seed": 20261021,
+ "frame": "census official, verdict healthy (unflagged), excluding P1 calibration configs and the 10 artifacts already audited in v1",
+ "frame_size": 223,
+ "per_family": 3,
+ "tasks": "heldout_49.json (same 49 held-out tasks as v1)",
+ "artifacts": [
+  {
+   "tag": "codellama:7b-instruct-q8_0",
+   "family": "codellama",
+   "quant": "q8_0",
+   "params_b": 7,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "codellama:7b-instruct-q4_K_M",
+   "family": "codellama",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "codellama:13b-instruct-q2_K",
+   "family": "codellama",
+   "quant": "q2_K",
+   "params_b": 13,
+   "smoke_pass": 9
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q4_K_M",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "quant": "q4_K_M",
+   "params_b": 6.7,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q8_0",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "quant": "q8_0",
+   "params_b": 6.7,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "deepseek-coder:6.7b-instruct-q4_0",
+   "family": "deepseek-coder and deepseek-coder-v2",
+   "quant": "q4_0",
+   "params_b": 6.7,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "gemma3:4b-it-q8_0",
+   "family": "gemma2 and gemma3",
+   "quant": "q8_0",
+   "params_b": 4,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "gemma2:2b-instruct-q6_K",
+   "family": "gemma2 and gemma3",
+   "quant": "q6_K",
+   "params_b": 2,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "gemma2:9b-instruct-q4_K_S",
+   "family": "gemma2 and gemma3",
+   "quant": "q4_K_S",
+   "params_b": 9,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "granite-code:8b-instruct-q3_K_L",
+   "family": "granite-code and granite3.1-dense",
+   "quant": "q3_K_L",
+   "params_b": 8,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "granite-code:20b-instruct-8k-q2_K",
+   "family": "granite-code and granite3.1-dense",
+   "quant": "q2_K",
+   "params_b": 20,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "granite-code:3b-instruct-q3_K_L",
+   "family": "granite-code and granite3.1-dense",
+   "quant": "q3_K_L",
+   "params_b": 3,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q2_K",
+   "family": "llama3.2 and llama3.1",
+   "quant": "q2_K",
+   "params_b": 8,
+   "smoke_pass": 10
+  },
+  {
+   "tag": "llama3.1:8b-instruct-q3_K_L",
+   "family": "llama3.2 and llama3.1",
+   "quant": "q3_K_L",
+   "params_b": 8,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "llama3.2:3b-instruct-q6_K",
+   "family": "llama3.2 and llama3.1",
+   "quant": "q6_K",
+   "params_b": 3,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q6_K",
+   "family": "mistral and codestral",
+   "quant": "q6_K",
+   "params_b": 7,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "mistral:7b-instruct-v0.3-q5_K_S",
+   "family": "mistral and codestral",
+   "quant": "q5_K_S",
+   "params_b": 7,
+   "smoke_pass": 9
+  },
+  {
+   "tag": "mistral:7b-instruct-q4_K_M",
+   "family": "mistral and codestral",
+   "quant": "q4_K_M",
+   "params_b": 7,
+   "smoke_pass": 10
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q3_K_L",
+   "family": "phi3.5 and phi4",
+   "quant": "q3_K_L",
+   "params_b": 3.8,
+   "smoke_pass": 11
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q6_K",
+   "family": "phi3.5 and phi4",
+   "quant": "q6_K",
+   "params_b": 3.8,
+   "smoke_pass": 13
+  },
+  {
+   "tag": "phi3.5:3.8b-mini-instruct-q4_0",
+   "family": "phi3.5 and phi4",
+   "quant": "q4_0",
+   "params_b": 3.8,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q3_K_S",
+   "family": "qwen2.5-coder",
+   "quant": "q3_K_S",
+   "params_b": 0.5,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "qwen2.5-coder:0.5b-instruct-q4_0",
+   "family": "qwen2.5-coder",
+   "quant": "q4_0",
+   "params_b": 0.5,
+   "smoke_pass": 9
+  },
+  {
+   "tag": "qwen2.5-coder:1.5b-instruct-q4_0",
+   "family": "qwen2.5-coder",
+   "quant": "q4_0",
+   "params_b": 1.5,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "starcoder2:15b-instruct-v0.1-q3_K_S",
+   "family": "starcoder2",
+   "quant": "q3_K_S",
+   "params_b": 15,
+   "smoke_pass": 10
+  },
+  {
+   "tag": "starcoder2:15b-instruct-v0.1-q3_K_M",
+   "family": "starcoder2",
+   "quant": "q3_K_M",
+   "params_b": 15,
+   "smoke_pass": 12
+  },
+  {
+   "tag": "codegemma:7b-instruct-q6_K",
+   "family": "yi-coder and codegemma",
+   "quant": "q6_K",
+   "params_b": 7,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "codegemma:7b-instruct-q5_K_M",
+   "family": "yi-coder and codegemma",
+   "quant": "q5_K_M",
+   "params_b": 7,
+   "smoke_pass": 14
+  },
+  {
+   "tag": "codegemma:7b-instruct-q3_K_S",
+   "family": "yi-coder and codegemma",
+   "quant": "q3_K_S",
+   "params_b": 7,
+   "smoke_pass": 13
+  }
+ ]
+}
