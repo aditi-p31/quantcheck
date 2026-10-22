@@ -70,7 +70,7 @@ follow ggml: 10 = Q2_K, 11 = Q3_K, 2 = Q4_0, 20 = IQ4_NL.
 
 | Statement | Record | Kind |
 |---|---|---|
-| The Qwen q2_K and q3_K_M files re-downloaded in October 2026 are byte-identical to the census copies | `rerun-2026-10/results/runs.jsonl`, `lib-qwen3b-q2_K` and `lib-qwen3b-q3_K_M`: `hash.file_sha256` `14c4247b` and `9bb5d28b`, equal to `census_digests.json` `artifacts["qwen2.5-coder:3b-instruct-q2_K"]` and `["...-q3_K_M"]` `blob_sha256` | raw (October); derived (census) |
+| All four Qwen files and the phi3.5 file re-downloaded in October 2026 are byte-identical to the census copies | `rerun-2026-10/results/runs.jsonl`, setting `base`, `lib-qwen3b-q2_K`, `-q3_K_S`, `-q3_K_M`, `-q3_K_L` and `lib-phi35-q2_K`: `hash.file_sha256` and `blob` `14c4247b`, `81d167af`, `9bb5d28b`, `7a88dc11` and `54d47caa`, equal to the `blob_sha256` of the five tags in `census_digests.json`. Each file was pulled once and reused by the six R2 settings (`results-r2/runs.jsonl`, same `blob`); the October `logs/serve.log` in `rerun-2026-10/logs.tar.xz` loads each blob 7 times. Per-tag check: `rerun-2026-10/gate/facts_b.json` `persistence` (`FACTS_B.md` section 3) | raw (October); derived (census) |
 | The registry served the failing tags unchanged from August to October 2026 | For the five rebuilt suspects, the October `blob` in `rerun-2026-10/results/runs.jsonl` equals the census digest in `census_digests.json`. Across all October runs of census tags (`results*/runs.jsonl`, `kind` `ollama`), only `gemma3:4b-it-q8_0` loaded a different file (`b3ec6779` in August, `b46dd6d6` in October; see its row in `rerun-2026-10/miss_audit/certificates.csv`). The llama3.2-1B tags were not pulled again in October | raw; derived |
 | An outside reader reproduced the q3_K_M failure on a CPU machine with Ollama 0.33.3 | The reader's public report cited in the paper | external |
 
@@ -119,12 +119,23 @@ in this release; anyone can repeat it with
 
 | Statement | Record | Kind |
 |---|---|---|
-| Unflagged artifacts were sampled at random, up to three per stratum, before the audit | `rerun-2026-10/fn_sample_30.json` (seed 20261021, frame 223) and `fn_sample_b.json` (seed 20261022, frame 194); first-version sample in `sensitivity_sample.json`; dated entries in `rerun-2026-10/RUN_PLAN.md` | raw |
+| The 56 October audit tags were drawn at random before the audit, in two rounds of up to three per family stratum | The two seeded manifests: `rerun-2026-10/fn_sample_30.json` (seed 20261021, frame 223, 29 tags) and `fn_sample_b.json` (seed 20261022, frame 194, 27 tags), each with its seed, frame size, per-family count and tag list; dated entries in `rerun-2026-10/RUN_PLAN.md`. `rerun-2026-10/miss_audit/bounds.py` regenerates both lists, in order, from the seeds (`bounds.json` `seeded_draws_reproduced`, `seeded_draw_procedure`) | raw; derived |
+| The draw of the 10 first-version audit tags is unrecorded | `sensitivity_sample.json` shows which 10 tags were picked, not how: no seed, script, frame or allocation rule was recorded. A seed search over 48 frame variants and about 300,000 seeds does not recover the draw (`rerun-2026-10/miss_audit/v1_seed_search.py`, `v1_seed_search.log`). All 10 files are at most 3.9 GB while 110 of the 233 frame tags are larger, so the sample looks restricted to files of at most 3.9 GB (`bounds.json` `v1_randomization_diagnostic`, a post hoc diagnostic; `miss_audit/BOUNDS.md` section 1) | raw; derived |
 | The 49 audit tasks were fixed before the audit and do not overlap the suite | `heldout_49.json`; `certificates.json` `summary.tasks` (no shared task id, 64 distinct tasks) | raw; derived |
 | All 66 audited tags are certified as not non-functional: 50 on the 49-task audit alone, 14 by screen plus audit on the same file digest, GPU model and Ollama release, 2 by full 164-task reruns on the census file | `rerun-2026-10/miss_audit/certificates.json` `summary.closure.status_counts_after_closure`; per row, the `status` column (pre-rerun) and the `closure` column of `certificates.csv` and `.json` (added after the rerun) | derived |
 | `granite-code:3b-instruct-q3_K_M` and `mistral:7b-instruct-q3_K_S`, whose v1 audit run recorded no backend or digest, solve 65 and 44 of 164 on the census files (CUDA), scored serially | File: `blob` of `rerun-2026-10/results-v1cases/runs.jsonl` (`sha256-9c66e1aa`, `sha256-067ecc27`), equal to `rerun-2026-10/serial/census_digests.json` `artifacts[tag].blob_sha256`; the loads are lines 36 and 24790 of `results-v1cases/serve_v1cases.log.xz`. Pod: `results-v1cases/env_v1cases.txt` (RTX 4090, Ollama 0.32.6, 2026-10-22) and the same log. Scores: `results-v1cases/scored_serial.jsonl` (`n_pass` 65 and 44, `n` 164; `rerun-2026-10/scripts/score_v1cases_serial.py`, one EvalPlus worker). Summary: `rerun-2026-10/miss_audit/closure_v1cases.json`. Run script: `rerun-2026-10/scripts/v1cases.sh` | raw; derived |
 | None of the 66 scores 2 of 49 or less; per-artifact evidence | `rerun-2026-10/miss_audit/certificates.csv` and `.json` (see the README, Miss-audit certificates); serial scores in `serial/rerun_r3_serial.jsonl`, `rerun_r3b_serial.jsonl`, `sensitivity_serial.jsonl` | derived |
-| The audit frame holds 233 tags | `certificates.json` `summary.frame.frame_original_unflagged_non_tuning`; `numbers_regroup.json` `miss_audit_frame` | derived |
+| The audit frame holds 233 tags | `certificates.json` `summary.frame.frame_original_unflagged_non_tuning`; `numbers_regroup.json` `miss_audit_frame`; rebuilt with its ten strata in `bounds.json` `frame`, `strata` | derived |
+| For the 223 tags outside the first-version sample, the 56 seeded draws give an exact stratified 95% bound of 22 non-functional census files (9.9%), counting the re-published `gemma3:4b-it-q8_0` August file as failed; tighter bounds need further assumptions | `rerun-2026-10/miss_audit/bounds.csv` and `bounds.json`, row 4; all rows (1 to 5 and 4b, 15 to 30 tags, each with its assumptions) in the table of `miss_audit/BOUNDS.md` section 4. Script `bounds.py` (exact test inversion over the strata); rows 1 to 4 repeated in exact fractions by `bounds_check.py` | derived |
+
+## Output statistics and the proposed gate
+
+| Statement | Record | Kind |
+|---|---|---|
+| The repetition statistic is a 6-gram repetition score: six times the count of the most frequent word 6-gram over the word count; it can exceed 1 | `harness/audit.py` lines 40 to 51 (`degeneration_features`, field `rep6_share`), averaged over the 15 generations at line 117 (`rep6_share_mean`). Values above 1 (up to 5.348 per generation, 2.049 per artifact): `rerun-2026-10/gate/facts_b.json` `rep6` | raw (code); derived |
+| Truncation at or above 0.2 flags 10 non-suspect tags, five of which solve at most 16 of 164; either statistic at 0.3 or above flags 6, four of them deepseek-coder-1.3B tags solving 2 to 16 of 164 | `facts_b.json` `rq3` (`extra_rows`, `status_counts`), with full-run scores from `rerun-2026-10/serial/census_full164_serial.jsonl`; `gate/FACTS_B.md` section 1 | derived |
+| On the census, the proposed gate would publish 8 of the 16 flagged non-suspect tags that have a full 164-task run and withhold 8 (seven deepseek-coder-1.3B tags and `gemma3:270m-it-q8_0`); 16 more have no full run | `facts_b.json` `gate.routing_rule_on_census` (rule text in `gate.routing_rule_text`); `gate/FACTS_B.md` section 2 | derived |
+| The census full 164-task runs were chosen by a fixed rule, not at random | `harness/fullrun.py` lines 59 to 72: every official tag at most 2 of 15 (original scorer) plus the lowest-scoring tag at 3 to 8 of 15 per model and size key; 27 runs in `results/fullrun_scores.jsonl`, serial scores in `census_full164_serial.jsonl` | raw |
 
 ## Not in this release
 
@@ -136,4 +147,6 @@ in this release; anyone can repeat it with
 - The Mac server logs behind the Metal-side digests and server version in
   `certificates.json`.
 - The calibration texts (hashes above).
-- The per-task results of the 24 screen-tuning configurations.
+- The per-task results of the 24 screen-tuning configurations (a summary of
+  their full 164-task runs, counts and range, is in
+  `rerun-2026-10/gate/facts_b.json`, marked `from_committed_file`).

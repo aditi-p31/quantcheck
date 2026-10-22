@@ -7,16 +7,20 @@ through Ollama), and the full audit dataset behind the paper:
 > Registries and How to Catch Them.** Aditi Patodiya, 2026.
 > [arXiv:2609.05881](https://arxiv.org/abs/2609.05881)
 
-Release `v3.1` of this repository accompanies the revised paper, which
+Release `v3.2` of this repository accompanies the revised paper, which
 replaces version 1 of the preprint as arXiv version 2. Version 1 had a
 different title ("Broken on Arrival: Silently Defective LLM Artifacts in
 Public Model Registries and How to Catch Them") and a defect diagnosis that
 the revision corrects; see the corrections under [Findings](#findings).
 
-Release `v3.1` keeps the v3.0 data and changes the analysis in one respect:
+Release `v3.2` keeps the data and analysis of v3.1 and adds the population
+bounds of the miss audit, the evaluation of the proposed acceptance gate on
+the census, and corrected descriptions of the first-version audit sample and
+of the repetition statistic (see [`RELEASE_NOTES_v3.2.md`](RELEASE_NOTES_v3.2.md)).
+Release `v3.1` kept the v3.0 data and changed the analysis in one respect:
 stage-two baselines are grouped by model variant (the registry tag without
 its quantization suffix) instead of by an alias-normalized model and size.
-It also adds miss-audit certificates, the per-artifact file digests of the
+It also added miss-audit certificates, the per-artifact file digests of the
 census, a provenance map ([`PROVENANCE.md`](PROVENANCE.md)), and analysis
 scripts that run from a clean checkout. See
 [Reproduce the paper's numbers](#reproduce-the-papers-numbers).
@@ -131,7 +135,7 @@ scripts that run from a clean checkout. See
 | `results-native/` | Native-template control runs for two community files |
 | `results-sensitivity/` | Threshold sensitivity runs (v1) |
 | `analysis/` | v1 analysis code and outputs (superseded; see [Findings](#findings)) |
-| `metal_replication.json`, `referee_round2.json`, `sensitivity_sample.json` | v1 adjudication and robustness inputs |
+| `metal_replication.json`, `referee_round2.json`, `sensitivity_sample.json` | v1 adjudication and robustness inputs; `sensitivity_sample.json` lists the 10 first-version miss-audit tags (how they were drawn is not recorded; see [Miss-audit population bound](#miss-audit-population-bound)) |
 | `muse_case_study.json`, `muse-glimmer-tracking/` | Day-zero case study of community conversions of a newly released model (v1) |
 | `rerun-2026-10/` | The October 2026 rerun behind the v3 findings: rebuilds, calibration, tensor comparisons, perplexity, robustness and miss-audit runs, the dated run plan, logs, and the v3 analysis scripts (below) |
 | `disclosure/DISCLOSURES.md` | Upstream report log |
@@ -176,10 +180,11 @@ it; `scripts/v1cases.sh` states its purpose and the digests it had to load.
 | `scripts/` | The pod scripts and run-entry files (see "Rebuild, calibrate and compare"), including `v1cases.sh` (the miss-audit closure run) and `score_v1cases_serial.py` (its serial scoring, one EvalPlus worker) |
 | `a1/` | Suite-size analysis: `a1_analysis.py` and `a1_results.json` on the original scores, `A1_REPORT.md`, an independent check in `verify/`, and `a1_rescored.py`/`.json` on the corrected scores |
 | `analysis/` | `numbers_v3.py`, `numbers_v3.json` and `figures_v3.py` on the earlier parallel rescore |
-| `serial/` | The serial re-scoring the paper reports: `serial_rescore.py`, per-set `*_serial.jsonl` scores, `flips.jsonl`, `instances.jsonl` (one line per serial evaluation, with EvalPlus reasons and timings), `numbers_regroup.py`/`.json` (every number in the paper, model-variant baselines; v3.1), `a1_regroup.py`/`.json` (suite-size analysis, model-variant baselines; v3.1), `figures_serial.py`, `census_digests.py`/`.json` (per-artifact file digests of the census, extracted from the census server log; v3.1), `tuning_configs.json` (names of the 24 screen-tuning configurations), the v3.0 versions `numbers_serial.py`/`.json` and `a1_serial.py`/`.json` (older baseline groups), and the reports `SERIAL_REPORT.md`, `PAPER_DIFF.md`, `VERIFY_REPORT.md` |
-| `miss_audit/` | `certificates.csv`, `certificates.json`: per-artifact evidence for the 66 artifacts of the miss audit (v3.1; see "Miss-audit certificates") |
+| `serial/` | The serial re-scoring the paper reports: `serial_rescore.py`, per-set `*_serial.jsonl` scores, `flips.jsonl`, `instances.jsonl` (one line per serial evaluation, with EvalPlus reasons and timings), `numbers_regroup.py`/`.json` (the paper's numbers apart from the population bound and the gate evaluation, model-variant baselines; v3.1), `a1_regroup.py`/`.json` (suite-size analysis, model-variant baselines; v3.1), `figures_serial.py`, `census_digests.py`/`.json` (per-artifact file digests of the census, extracted from the census server log; v3.1), `tuning_configs.json` (names of the 24 screen-tuning configurations), the v3.0 versions `numbers_serial.py`/`.json` and `a1_serial.py`/`.json` (older baseline groups), and the reports `SERIAL_REPORT.md`, `PAPER_DIFF.md`, `VERIFY_REPORT.md` |
+| `miss_audit/` | `certificates.csv`, `certificates.json`: per-artifact evidence for the 66 artifacts of the miss audit (v3.1; see "Miss-audit certificates"). `bounds.py`, `bounds.csv`, `bounds.json`, `BOUNDS.md`: population bounds with their assumptions, and `bounds_check.py`, an exact-fraction check; `v1_seed_search.py`/`.log`: the seed search for the first-version draw (v3.2; see "Miss-audit population bound") |
 | `miss_audit/closure_v1cases.json` | Closure record of the two first-version audit tags: census digest, digest match, and 164-task serial score of each (65 and 44 of 164) |
 | `ds13/` | deepseek-coder-1.3B diagnosis scripts and outputs |
+| `gate/` | `facts_b.py`, `facts_b.json`, `FACTS_B.md`: the tags each output-statistic rule flags and their full-run status, the proposed acceptance gate applied to the census, persistence of the suspects' files, the repetition score, and every non-suspect tag with a full 164-task run (v3.2; see [Flags, gate and full runs](#flags-gate-and-full-runs)) |
 
 Every results directory has `runs.jsonl` (one record per run: the entry, the
 Ollama options, per-task output statistics and, for rebuilds and downloaded
@@ -215,9 +220,11 @@ library; the figures also need matplotlib and numpy. From the repository
 root:
 
 ```
-python3 rerun-2026-10/serial/numbers_regroup.py   # every number in the paper
+python3 rerun-2026-10/serial/numbers_regroup.py   # the paper's numbers (classes, flags, attribution, settings, ...)
 python3 rerun-2026-10/serial/a1_regroup.py        # suite-size analysis (RQ4, "Suite choice")
 python3 rerun-2026-10/serial/figures_serial.py    # census and calibration figures
+python3 rerun-2026-10/miss_audit/bounds.py        # miss-audit population bounds (RQ4, "Population")
+python3 rerun-2026-10/gate/facts_b.py             # RQ3 flag status, gate on the census, persistence, full runs
 ```
 
 - `numbers_regroup.py` reads the serial scores (`rerun-2026-10/serial/*_serial.jsonl`),
@@ -242,6 +249,15 @@ python3 rerun-2026-10/serial/figures_serial.py    # census and calibration figur
   that do not depend on the baseline groups (census counts, flags, suspects,
   164-task runs) from `numbers_serial.json`, and checks the layout of each
   figure after drawing it.
+- `bounds.py` (v3.2) rebuilds the audit frame, its ten strata and the three
+  samples from the census scores, the inventory and the sampling manifests,
+  regenerates both seeded draws from their seeds, and rewrites
+  `rerun-2026-10/miss_audit/bounds.csv` and `bounds.json`.
+  `bounds_check.py` repeats rows 1 to 4 in exact fractions, and
+  `v1_seed_search.py` (about 16 minutes) repeats the seed search in
+  `v1_seed_search.log`.
+- `facts_b.py` (v3.2) recomputes the output statistics from the
+  per-generation metrics and rewrites `rerun-2026-10/gate/facts_b.json`.
 
 **Values a clean checkout cannot recompute.**
 
@@ -265,12 +281,20 @@ python3 rerun-2026-10/serial/figures_serial.py    # census and calibration figur
   the file it ran on and the log line it comes from. `numbers_regroup.py`
   takes its file-identity check from it, or from the log itself when
   `QUANTCHECK_CENSUS_SERVELOG` points at the log, in which case it also
-  asserts that the two agree.
+  asserts that the two agree. `gate/facts_b.py` does the same.
+- *Screen-tuning full runs.* `gate/facts_b.json` keeps only a summary of the
+  tuning configurations' full 164-task runs (counts and range,
+  `fullrun_table.tuning_full164_separate_study`). Without the withheld file
+  `facts_b.py` copies that block from the committed output and marks it
+  `"from_committed_file": true`, as it is committed; with
+  `QUANTCHECK_TUNING_DIR` it recomputes it.
 
 After a clean run, `git diff` shows only the two `from_committed_file` flags
 and, in `a1_regroup.json`, the recorded SHA-256 of `numbers_regroup.json`,
 which changes with its flag (and `meta.python` if your Python version
-differs). With matplotlib 3.9.4 and numpy 2.0.2 the figures match the
+differs). `bounds.py` and `facts_b.py` reproduce their committed outputs
+byte for byte; `v1_seed_search.py` reproduces its log except for the
+elapsed seconds. With matplotlib 3.9.4 and numpy 2.0.2 the figures match the
 paper's: the PNG files byte for byte, the PDF files except for their
 creation date.
 
@@ -318,15 +342,15 @@ Hugging Face cache are tool locations.
 
 | Variable | Default | Used by |
 |---|---|---|
-| `QUANTCHECK_ROOT` | repository root | `numbers_regroup.py`, `a1_regroup.py`, `numbers_serial.py`, `figures_serial.py`, `serial_rescore.py`, `a1_analysis.py`, `a1/verify/*.py` |
-| `QUANTCHECK_RERUN_DIR` | `rerun-2026-10/` | `numbers_regroup.py`, `numbers_serial.py`, `numbers_v3.py`, `figures_v3.py`, `a1_rescored.py`, `serial_rescore.py` |
+| `QUANTCHECK_ROOT` | repository root | `numbers_regroup.py`, `a1_regroup.py`, `numbers_serial.py`, `figures_serial.py`, `serial_rescore.py`, `a1_analysis.py`, `a1/verify/*.py`, `bounds.py`, `v1_seed_search.py`, `facts_b.py` |
+| `QUANTCHECK_RERUN_DIR` | `rerun-2026-10/` | `numbers_regroup.py`, `numbers_serial.py`, `numbers_v3.py`, `figures_v3.py`, `a1_rescored.py`, `serial_rescore.py`, `bounds.py`, `facts_b.py` |
 | `QUANTCHECK_ANALYSIS_DIR` | `rerun-2026-10/analysis/` | `numbers_regroup.py`, `numbers_serial.py` |
-| `QUANTCHECK_SERIAL_DIR` | `rerun-2026-10/serial/` | `numbers_regroup.py`, `a1_regroup.py` |
+| `QUANTCHECK_SERIAL_DIR` | `rerun-2026-10/serial/` | `numbers_regroup.py`, `a1_regroup.py`, `bounds.py`, `facts_b.py` |
 | `QUANTCHECK_A1_DIR` | `rerun-2026-10/a1/` | `numbers_regroup.py`, `a1_regroup.py`, `numbers_serial.py`, `a1_serial.py`, `numbers_v3.py`, `a1_rescored.py` |
-| `QUANTCHECK_OUT_DIR` | next to the script | `numbers_regroup.py`, `a1_regroup.py`, `ds13/*.py` (except `ds13_census_parse.py`, which only prints) |
-| `QUANTCHECK_TUNING_DIR` | `rerun-2026-10/serial/` (files withheld) | `numbers_regroup.py`, `a1_regroup.py` |
+| `QUANTCHECK_OUT_DIR` | next to the script | `numbers_regroup.py`, `a1_regroup.py`, `ds13/*.py` (except `ds13_census_parse.py`, which only prints), `bounds.py`, `facts_b.py` |
+| `QUANTCHECK_TUNING_DIR` | `rerun-2026-10/serial/` (files withheld) | `numbers_regroup.py`, `a1_regroup.py`, `facts_b.py` |
 | `QUANTCHECK_P1_RESULTS` | none in this repository | `a1_regroup.py`, `a1_analysis.py`, `a1_rescored.py`, `a1/verify/*.py`, `serial_rescore.py` |
-| `QUANTCHECK_CENSUS_SERVELOG` | not in this repository | `numbers_regroup.py`, `ds13_servelog.py` |
+| `QUANTCHECK_CENSUS_SERVELOG` | not in this repository | `numbers_regroup.py`, `ds13_servelog.py`, `facts_b.py` |
 | `QUANTCHECK_CENSUS_TRANSCRIPTS` | `results/transcripts/` | `ds13_census_parse.py` |
 | `QUANTCHECK_DS13_DIR`, `QUANTCHECK_DS13_TOKENIZER` | see above | `ds13_outputs.py`, `ds13_tokcheck.py` |
 | `QUANTCHECK_NUMBERS_JSON` | `rerun-2026-10/analysis/numbers_v3.json` | `a1_rescored.py` |
@@ -344,8 +368,8 @@ transcripts are in `results/transcripts/`).
 ## Miss-audit certificates
 
 The paper's miss audit ran 66 artifacts that the screen passed (10 from the
-first version in `results-sensitivity/`, 56 in `rerun-2026-10/results-r3/`
-and `results-r3b/`) on 49 held-out tasks. `rerun-2026-10/miss_audit/certificates.csv`
+first version in `results-sensitivity/`, 56 drawn with recorded seeds in
+`rerun-2026-10/results-r3/` and `results-r3b/`) on 49 held-out tasks. `rerun-2026-10/miss_audit/certificates.csv`
 lists, for each of them, the evidence that it is not non-functional, that
 is, that it solves at least 17 of the 164 HumanEval+ tasks: the distinct
 successful task ids, the backend and the file digest of every run, and the
@@ -390,6 +414,117 @@ come from the `blob` field of `results-v1cases/runs.jsonl` and
 reads those unreleased logs and is not included; the source labels in the
 table name the released files where they exist.
 
+## Miss-audit population bound
+
+The 56 October tags were drawn at random within ten model-family strata, in
+two rounds with recorded seeds (`rerun-2026-10/fn_sample_30.json`, seed
+20261021, frame 223; `fn_sample_b.json`, seed 20261022, frame 194);
+`rerun-2026-10/miss_audit/bounds.py` regenerates both lists from the seeds.
+How the 10 first-version tags were drawn is not recorded: no seed, script or
+frame exists, a seed search does not recover the draw
+(`v1_seed_search.py`, `.log`), and all 10 files are at most 3.9 GB, which
+suggests a draw restricted to small files. The bound the paper prints
+therefore covers only the 223 tags outside the first-version sample:
+
+| Population | Draws used | August file of the re-published `gemma3:4b-it-q8_0` | Exact stratified 95% upper bound |
+|---|---|---|---:|
+| 223 unflagged official tags outside the tuning set and the first-version sample, as census files | 56 seeded draws, 0 non-functional | counted as failed | 22 (9.9%) |
+
+"Non-functional" means the tag's August census file solves at most 16 of the
+164 HumanEval+ tasks. The bound inverts the product of per-stratum
+hypergeometric probabilities and assumes only simple random sampling within
+each stratum. The full table in
+[`rerun-2026-10/miss_audit/BOUNDS.md`](rerun-2026-10/miss_audit/BOUNDS.md)
+(section 4; per row in `bounds.csv`) adds tighter bounds under further
+assumptions (15 to 20 tags when the first-version 10 are treated as random
+draws or the October gemma file stands in for the August one) and a variant
+over all 233 tags that makes no assumption about the first-version 10 (30,
+12.9%).
+
+## Flags, gate and full runs
+
+`rerun-2026-10/gate/facts_b.py` recomputes the facts below from the raw
+records; the values are in `facts_b.json` and explained in `FACTS_B.md`.
+
+### Output-statistic flags
+
+The output-statistic rules of RQ3 also flag tags that are not suspects. These
+extra flags are not labelled false positives: several of the flagged tags
+solve at most 16 of the 164 tasks in a full run. Truncation at or above 0.2 flags 10 of
+the 298 non-suspect tags: 5 solve at most 16 of 164 (five deepseek-coder-1.3B
+tags), 2 solve more, and 3 have no full run. Either statistic at or above 0.3
+flags 6: four deepseek-coder-1.3B tags solving 2 to 16 of 164,
+`deepseek-coder-v2:16b-lite-instruct-q2_K` (25 of 164), and
+`starcoder2:15b-instruct-v0.1-q3_K_S` (no full run). The repetition score at
+or above 0.2 flags 4, one verified above 16 and three with no full run.
+`numbers_regroup.json` (`rq3_output_rules`) keeps the older field name
+`false_positives` for the same counts, and the v3.0 reports
+`serial/PAPER_DIFF.md` and `serial/VERIFY_REPORT.md` keep their original
+wording.
+
+### Proposed gate on the census
+
+The paper's proposed gate publishes a tag that solves at least 9 of the 15
+screen tasks. Any other flagged tag that is not a suspect, whatever its
+class, is published only if a full 164-task run on the same file and backend
+reaches 17 distinct solved tasks (the run can stop there); suspects go to
+attribution instead. On the census, 39 tags are flagged; 7 are suspects, and
+the 32 others split as follows:
+
+| Outcome | Tags |
+|---|---:|
+| Full run exists, 17 or more solved: published | 8 |
+| Full run exists, at most 16 solved: withheld (seven deepseek-coder-1.3B tags and `gemma3:270m-it-q8_0`) | 8 |
+| No full run yet: pending | 16 |
+
+So of the 16 such tags with a full run, 8 would be published and 8 withheld.
+The tags are listed in `facts_b.json` (`gate.routing_rule_on_census`).
+
+### Full 164-task runs of non-suspect tags
+
+Every non-suspect official tag with any full 164-task run on its census file,
+with its serial scores (class from the serial 15-task scores and model-variant
+baselines). The census full runs were not drawn at random: `harness/fullrun.py`
+(lines 59 to 72) chose every official tag at most 2 of 15 on the original
+scorer plus the lowest-scoring tag at 3 to 8 of 15 per model and size key,
+so the runs lean toward weak tags. 16 tags are verified above 16 of 164 and
+8 at or below 16.
+
+| Tag | Class | Screen (of 15) | Full (of 164) | Run |
+|---|---|---:|---:|---|
+| `qwen2.5-coder:3b-instruct-q4_K_M` | healthy | 15 | 132 | October re-download (R6) |
+| `phi3.5:3.8b-mini-instruct-q4_K_M` | healthy | 11 | 74 | October re-download (P0-c) |
+| `granite-code:3b-instruct-q3_K_M` | healthy | 14 | 65 | miss-audit closure |
+| `starcoder2:15b-instruct-v0.1-q2_K` | no baseline | 9 | 65 | census |
+| `yi-coder:1.5b-chat-q2_K` | healthy | 9 | 48 | census |
+| `granite-code:20b-instruct-q2_K` | no baseline | 9 | 46 | census |
+| `mistral:7b-instruct-q3_K_S` | healthy | 10 | 44 | miss-audit closure |
+| `mistral:7b-instruct-v0.2-q3_K_L` | healthy | 7 | 44 | census |
+| `llama3.2:1b-instruct-q3_K_M` | healthy | 8 | 42 | census |
+| `phi3.5:3.8b-mini-instruct-q3_K_S` | healthy | 9 | 42 | census |
+| `gemma3:1b-it-q4_K_M` | healthy | 7 | 37 | census |
+| `llama3.2:3b-instruct-q2_K` | degraded | 7 | 30 | census |
+| `deepseek-coder-v2:16b-lite-instruct-q2_K` | no baseline | 7 | 25 | census |
+| `gemma2:2b-instruct-q2_K` | healthy | 7 | 25 | census |
+| `gemma3:270m-it-fp16` | healthy | 5 | 20 | census |
+| `granite3.1-dense:2b-instruct-q2_K` | degraded | 5 | 17 | census |
+| `gemma3:270m-it-q8_0` | healthy | 5 | 16 | census |
+| `deepseek-coder:1.3b-instruct-fp16` | low baseline | 2 | 16 | census |
+| `deepseek-coder:1.3b-instruct-q3_K_L` | low baseline | 1 | 10 | census |
+| `deepseek-coder:1.3b-instruct-q4_0` | low baseline | 1 | 10 | census |
+| `deepseek-coder:1.3b-instruct-q3_K_S` | healthy | 3 | 7 | census |
+| `deepseek-coder:1.3b-instruct-q4_K_M` | low baseline | 1 | 7 | census |
+| `deepseek-coder:1.3b-instruct-q3_K_M` | low baseline | 1 | 5 | census |
+| `deepseek-coder:1.3b-instruct-q2_K` | low baseline | 2 | 2 | census |
+
+Census runs: `rerun-2026-10/serial/census_full164_serial.jsonl` (the
+original scores are in `results/fullrun_scores.jsonl`). Closure runs:
+`rerun-2026-10/results-v1cases/scored_serial.jsonl`. October re-downloads:
+`serial/rerun_r6_serial.jsonl` and `serial/rerun_p0c_serial.jsonl`, on files
+equal to the census digests. The screen-tuning configurations of a separate
+study also have full runs; their results are not released and they are left
+out of this table.
+
 ## Smoke-test an artifact yourself
 
 Requirements: Python 3.9+, [Ollama](https://ollama.com) serving locally (the
@@ -407,10 +542,13 @@ python3 -m venv .venv && .venv/bin/pip install evalplus==0.3.1
 sends the 15 suite tasks to Ollama's `/api/chat` (temperature 0, seed 42,
 context 2,048, at most 768 new tokens), and writes the generations to
 `<results-dir>/transcripts/` and one record per artifact, with the per-task
-output statistics (repeated 6-gram share, prompt echo, whether generation hit
+output statistics (6-gram repetition score, prompt echo, whether generation hit
 the token cap, presence of a function definition), to
-`<results-dir>/audit_results.jsonl`. It then stops and removes the model
-(`--keep-model` keeps it). Notes:
+`<results-dir>/audit_results.jsonl`. The repetition score (`rep6_share`,
+averaged as `rep6_share_mean`) is six times the count of the most frequent
+word 6-gram divided by the word count (`harness/audit.py` lines 40 to 51);
+despite the field name it is not a share and can exceed 1. The script then
+stops and removes the model (`--keep-model` keeps it). Notes:
 
 - `--only` selects a tag from `inventory_candidates.json`. To test another
   tag, pass `--inventory FILE` with `{"artifacts": [{"tag": "..."}]}`.

@@ -1,0 +1,1465 @@
+{
+ "classes": {
+  "HEALTHY": 271,
+  "NO_BASELINE": 19,
+  "LOW_BASELINE": 6,
+  "DEGRADED": 2,
+  "SUSPECT": 7
+ },
+ "rq3": {
+  "trunc_ge_0.2": {
+   "suspects_caught": 3,
+   "suspects_caught_tags": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K"
+   ],
+   "extra_flags": 10,
+   "extra_of": 298,
+   "extra_rows": [
+    {
+     "tag": "deepseek-coder-v2:16b-lite-instruct-q2_K",
+     "class": "NO_BASELINE",
+     "group_baseline": null,
+     "serial15": 7,
+     "trunc": 0.2,
+     "rep6_mean": 0.329,
+     "full164_serial": 25,
+     "full164_old_pod_score": 24,
+     "status": "verified above 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-fp16",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 2,
+     "trunc": 0.4,
+     "rep6_mean": 0.057,
+     "full164_serial": 16,
+     "full164_old_pod_score": 16,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q2_K",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 2,
+     "trunc": 0.4,
+     "rep6_mean": 0.071,
+     "full164_serial": 2,
+     "full164_old_pod_score": 2,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q3_K_L",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 1,
+     "trunc": 0.533,
+     "rep6_mean": 0.059,
+     "full164_serial": 10,
+     "full164_old_pod_score": 10,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q3_K_M",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 1,
+     "trunc": 0.267,
+     "rep6_mean": 0.055,
+     "full164_serial": 5,
+     "full164_old_pod_score": 5,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q4_K_M",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 1,
+     "trunc": 0.333,
+     "rep6_mean": 0.048,
+     "full164_serial": 7,
+     "full164_old_pod_score": 7,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q5_K_S",
+     "class": "HEALTHY",
+     "group_baseline": 4,
+     "serial15": 4,
+     "trunc": 0.2,
+     "rep6_mean": 0.044,
+     "full164_serial": null,
+     "full164_old_pod_score": null,
+     "status": "no full run"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q8_0",
+     "class": "HEALTHY",
+     "group_baseline": 4,
+     "serial15": 4,
+     "trunc": 0.2,
+     "rep6_mean": 0.051,
+     "full164_serial": null,
+     "full164_old_pod_score": null,
+     "status": "no full run"
+    },
+    {
+     "tag": "starcoder2:15b-instruct-v0.1-q2_K",
+     "class": "NO_BASELINE",
+     "group_baseline": null,
+     "serial15": 9,
+     "trunc": 0.2,
+     "rep6_mean": 0.094,
+     "full164_serial": 65,
+     "full164_old_pod_score": 64,
+     "status": "verified above 16 of 164"
+    },
+    {
+     "tag": "starcoder2:15b-instruct-v0.1-q3_K_S",
+     "class": "NO_BASELINE",
+     "group_baseline": null,
+     "serial15": 11,
+     "trunc": 0.6,
+     "rep6_mean": 0.073,
+     "full164_serial": null,
+     "full164_old_pod_score": null,
+     "status": "no full run"
+    }
+   ],
+   "status_counts": {
+    "verified above 16 of 164": 2,
+    "verified at most 16 of 164": 5,
+    "no full run": 3
+   },
+   "class_counts": {
+    "NO_BASELINE": 3,
+    "LOW_BASELINE": 5,
+    "HEALTHY": 2
+   }
+  },
+  "rep6_ge_0.2": {
+   "suspects_caught": 3,
+   "suspects_caught_tags": [
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "extra_flags": 4,
+   "extra_of": 298,
+   "extra_rows": [
+    {
+     "tag": "codellama:13b-instruct-q4_0",
+     "class": "NO_BASELINE",
+     "group_baseline": null,
+     "serial15": 12,
+     "trunc": 0.0,
+     "rep6_mean": 0.219,
+     "full164_serial": null,
+     "full164_old_pod_score": null,
+     "status": "no full run"
+    },
+    {
+     "tag": "deepseek-coder-v2:16b-lite-instruct-q2_K",
+     "class": "NO_BASELINE",
+     "group_baseline": null,
+     "serial15": 7,
+     "trunc": 0.2,
+     "rep6_mean": 0.329,
+     "full164_serial": 25,
+     "full164_old_pod_score": 24,
+     "status": "verified above 16 of 164"
+    },
+    {
+     "tag": "granite-code:3b-instruct-128k-q2_K",
+     "class": "HEALTHY",
+     "group_baseline": 15,
+     "serial15": 13,
+     "trunc": 0.0,
+     "rep6_mean": 0.202,
+     "full164_serial": null,
+     "full164_old_pod_score": null,
+     "status": "no full run"
+    },
+    {
+     "tag": "granite-code:3b-instruct-128k-q3_K_M",
+     "class": "HEALTHY",
+     "group_baseline": 15,
+     "serial15": 14,
+     "trunc": 0.0,
+     "rep6_mean": 0.201,
+     "full164_serial": null,
+     "full164_old_pod_score": null,
+     "status": "no full run"
+    }
+   ],
+   "status_counts": {
+    "no full run": 3,
+    "verified above 16 of 164": 1
+   },
+   "class_counts": {
+    "NO_BASELINE": 2,
+    "HEALTHY": 2
+   }
+  },
+  "either_ge_0.3": {
+   "suspects_caught": 4,
+   "suspects_caught_tags": [
+    "llama3.2:1b-instruct-q2_K",
+    "phi3.5:3.8b-mini-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q2_K",
+    "qwen2.5-coder:3b-instruct-q3_K_S"
+   ],
+   "extra_flags": 6,
+   "extra_of": 298,
+   "extra_rows": [
+    {
+     "tag": "deepseek-coder-v2:16b-lite-instruct-q2_K",
+     "class": "NO_BASELINE",
+     "group_baseline": null,
+     "serial15": 7,
+     "trunc": 0.2,
+     "rep6_mean": 0.329,
+     "full164_serial": 25,
+     "full164_old_pod_score": 24,
+     "status": "verified above 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-fp16",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 2,
+     "trunc": 0.4,
+     "rep6_mean": 0.057,
+     "full164_serial": 16,
+     "full164_old_pod_score": 16,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q2_K",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 2,
+     "trunc": 0.4,
+     "rep6_mean": 0.071,
+     "full164_serial": 2,
+     "full164_old_pod_score": 2,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q3_K_L",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 1,
+     "trunc": 0.533,
+     "rep6_mean": 0.059,
+     "full164_serial": 10,
+     "full164_old_pod_score": 10,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "deepseek-coder:1.3b-instruct-q4_K_M",
+     "class": "LOW_BASELINE",
+     "group_baseline": 4,
+     "serial15": 1,
+     "trunc": 0.333,
+     "rep6_mean": 0.048,
+     "full164_serial": 7,
+     "full164_old_pod_score": 7,
+     "status": "verified at most 16 of 164"
+    },
+    {
+     "tag": "starcoder2:15b-instruct-v0.1-q3_K_S",
+     "class": "NO_BASELINE",
+     "group_baseline": null,
+     "serial15": 11,
+     "trunc": 0.6,
+     "rep6_mean": 0.073,
+     "full164_serial": null,
+     "full164_old_pod_score": null,
+     "status": "no full run"
+    }
+   ],
+   "status_counts": {
+    "verified above 16 of 164": 1,
+    "verified at most 16 of 164": 4,
+    "no full run": 1
+   },
+   "class_counts": {
+    "NO_BASELINE": 2,
+    "LOW_BASELINE": 4
+   }
+  }
+ },
+ "gate": {
+  "stage1_pass": 266,
+  "stage1_flagged": 39,
+  "of": 305,
+  "flagged_by_class": {
+   "NO_BASELINE": 1,
+   "LOW_BASELINE": 6,
+   "HEALTHY": 23,
+   "DEGRADED": 2,
+   "SUSPECT": 7
+  },
+  "flagged_original_scorer": 50,
+  "newly_unflagged": [
+   {
+    "tag": "gemma2:2b-instruct-q4_K_S",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": null
+   },
+   {
+    "tag": "granite-code:20b-instruct-q2_K",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "NO_BASELINE",
+    "full164_serial": 46
+   },
+   {
+    "tag": "llama3.2:1b-instruct-q4_K_M",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": null
+   },
+   {
+    "tag": "llama3.2:1b-instruct-q5_K_M",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": null
+   },
+   {
+    "tag": "mistral:7b-instruct-q3_K_M",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": null
+   },
+   {
+    "tag": "mistral:7b-instruct-q4_0",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": null
+   },
+   {
+    "tag": "mistral:7b-instruct-v0.2-q4_K_M",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": null
+   },
+   {
+    "tag": "mistral:7b-instruct-v0.3-q2_K",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": null
+   },
+   {
+    "tag": "phi3.5:3.8b-mini-instruct-q3_K_S",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": 42
+   },
+   {
+    "tag": "starcoder2:15b-instruct-v0.1-q2_K",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "NO_BASELINE",
+    "full164_serial": 65
+   },
+   {
+    "tag": "yi-coder:1.5b-chat-q2_K",
+    "orig15": 8,
+    "serial15": 9,
+    "class": "HEALTHY",
+    "full164_serial": 48
+   }
+  ],
+  "newly_flagged": [],
+  "unflagged_by_class": {
+   "HEALTHY": 248,
+   "NO_BASELINE": 18
+  },
+  "nonsuspect_flagged_groups": [
+   {
+    "group": "deepseek-coder-v2:16b-lite-instruct",
+    "baseline": null,
+    "n_tags_in_group": 2,
+    "n_flagged": 1,
+    "tags": [
+     {
+      "quant": "q2_K",
+      "class": "NO_BASELINE",
+      "serial15": 7,
+      "full164_serial": 25,
+      "status": "verified above 16 of 164"
+     }
+    ]
+   },
+   {
+    "group": "deepseek-coder:1.3b-instruct",
+    "baseline": 4,
+    "n_tags_in_group": 12,
+    "n_flagged": 12,
+    "tags": [
+     {
+      "quant": "q2_K",
+      "class": "LOW_BASELINE",
+      "serial15": 2,
+      "full164_serial": 2,
+      "status": "verified at most 16 of 164"
+     },
+     {
+      "quant": "q3_K_S",
+      "class": "HEALTHY",
+      "serial15": 3,
+      "full164_serial": 7,
+      "status": "verified at most 16 of 164"
+     },
+     {
+      "quant": "q3_K_M",
+      "class": "LOW_BASELINE",
+      "serial15": 1,
+      "full164_serial": 5,
+      "status": "verified at most 16 of 164"
+     },
+     {
+      "quant": "q3_K_L",
+      "class": "LOW_BASELINE",
+      "serial15": 1,
+      "full164_serial": 10,
+      "status": "verified at most 16 of 164"
+     },
+     {
+      "quant": "q4_0",
+      "class": "LOW_BASELINE",
+      "serial15": 1,
+      "full164_serial": 10,
+      "status": "verified at most 16 of 164"
+     },
+     {
+      "quant": "q4_K_S",
+      "class": "HEALTHY",
+      "serial15": 3,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q4_K_M",
+      "class": "LOW_BASELINE",
+      "serial15": 1,
+      "full164_serial": 7,
+      "status": "verified at most 16 of 164"
+     },
+     {
+      "quant": "q5_K_S",
+      "class": "HEALTHY",
+      "serial15": 4,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q5_K_M",
+      "class": "HEALTHY",
+      "serial15": 5,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q6_K",
+      "class": "HEALTHY",
+      "serial15": 6,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q8_0",
+      "class": "HEALTHY",
+      "serial15": 4,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "fp16",
+      "class": "LOW_BASELINE",
+      "serial15": 2,
+      "full164_serial": 16,
+      "status": "verified at most 16 of 164"
+     }
+    ]
+   },
+   {
+    "group": "gemma2:2b-instruct",
+    "baseline": 11,
+    "n_tags_in_group": 12,
+    "n_flagged": 1,
+    "tags": [
+     {
+      "quant": "q2_K",
+      "class": "HEALTHY",
+      "serial15": 7,
+      "full164_serial": 25,
+      "status": "verified above 16 of 164"
+     }
+    ]
+   },
+   {
+    "group": "gemma3:1b-it",
+    "baseline": 8.0,
+    "n_tags_in_group": 3,
+    "n_flagged": 3,
+    "tags": [
+     {
+      "quant": "q4_K_M",
+      "class": "HEALTHY",
+      "serial15": 7,
+      "full164_serial": 37,
+      "status": "verified above 16 of 164"
+     },
+     {
+      "quant": "q8_0",
+      "class": "HEALTHY",
+      "serial15": 8,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "fp16",
+      "class": "HEALTHY",
+      "serial15": 8,
+      "full164_serial": null,
+      "status": "no full run"
+     }
+    ]
+   },
+   {
+    "group": "gemma3:270m-it",
+    "baseline": 5.0,
+    "n_tags_in_group": 2,
+    "n_flagged": 2,
+    "tags": [
+     {
+      "quant": "q8_0",
+      "class": "HEALTHY",
+      "serial15": 5,
+      "full164_serial": 16,
+      "status": "verified at most 16 of 164"
+     },
+     {
+      "quant": "fp16",
+      "class": "HEALTHY",
+      "serial15": 5,
+      "full164_serial": 20,
+      "status": "verified above 16 of 164"
+     }
+    ]
+   },
+   {
+    "group": "granite3.1-dense:2b-instruct",
+    "baseline": 14,
+    "n_tags_in_group": 12,
+    "n_flagged": 1,
+    "tags": [
+     {
+      "quant": "q2_K",
+      "class": "DEGRADED",
+      "serial15": 5,
+      "full164_serial": 17,
+      "status": "verified above 16 of 164"
+     }
+    ]
+   },
+   {
+    "group": "llama3.2:1b-instruct",
+    "baseline": 11,
+    "n_tags_in_group": 12,
+    "n_flagged": 4,
+    "tags": [
+     {
+      "quant": "q3_K_M",
+      "class": "HEALTHY",
+      "serial15": 8,
+      "full164_serial": 42,
+      "status": "verified above 16 of 164"
+     },
+     {
+      "quant": "q3_K_L",
+      "class": "HEALTHY",
+      "serial15": 8,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q4_0",
+      "class": "HEALTHY",
+      "serial15": 8,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q4_K_S",
+      "class": "HEALTHY",
+      "serial15": 8,
+      "full164_serial": null,
+      "status": "no full run"
+     }
+    ]
+   },
+   {
+    "group": "llama3.2:3b-instruct",
+    "baseline": 15,
+    "n_tags_in_group": 12,
+    "n_flagged": 1,
+    "tags": [
+     {
+      "quant": "q2_K",
+      "class": "DEGRADED",
+      "serial15": 7,
+      "full164_serial": 30,
+      "status": "verified above 16 of 164"
+     }
+    ]
+   },
+   {
+    "group": "mistral:7b-instruct",
+    "baseline": 10.5,
+    "n_tags_in_group": 11,
+    "n_flagged": 1,
+    "tags": [
+     {
+      "quant": "q3_K_L",
+      "class": "HEALTHY",
+      "serial15": 8,
+      "full164_serial": null,
+      "status": "no full run"
+     }
+    ]
+   },
+   {
+    "group": "mistral:7b-instruct-v0.2",
+    "baseline": 6.5,
+    "n_tags_in_group": 11,
+    "n_flagged": 6,
+    "tags": [
+     {
+      "quant": "q3_K_L",
+      "class": "HEALTHY",
+      "serial15": 7,
+      "full164_serial": 44,
+      "status": "verified above 16 of 164"
+     },
+     {
+      "quant": "q4_K_S",
+      "class": "HEALTHY",
+      "serial15": 8,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q5_K_S",
+      "class": "HEALTHY",
+      "serial15": 7,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q5_K_M",
+      "class": "HEALTHY",
+      "serial15": 7,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q6_K",
+      "class": "HEALTHY",
+      "serial15": 7,
+      "full164_serial": null,
+      "status": "no full run"
+     },
+     {
+      "quant": "q8_0",
+      "class": "HEALTHY",
+      "serial15": 6,
+      "full164_serial": null,
+      "status": "no full run"
+     }
+    ]
+   }
+  ],
+  "nonsuspect_flagged": 32,
+  "nonsuspect_flagged_status": {
+   "verified above 16 of 164": 8,
+   "verified at most 16 of 164": 8,
+   "no full run": 16
+  },
+  "nonsuspect_flagged_status_by_class": {
+   "DEGRADED": {
+    "verified above 16 of 164": 2
+   },
+   "HEALTHY": {
+    "verified at most 16 of 164": 2,
+    "no full run": 16,
+    "verified above 16 of 164": 5
+   },
+   "LOW_BASELINE": {
+    "verified at most 16 of 164": 6
+   },
+   "NO_BASELINE": {
+    "verified above 16 of 164": 1
+   }
+  },
+  "routing_rule_text": "A flagged tag that is not a suspect, whatever its class, goes to a full 164-task run on the same file and backend and is published only if it solves at least 17 tasks (the run can stop once 17 distinct tasks pass); otherwise it is withheld.",
+  "narrow_variant_no_or_low_baseline_only": {
+   "routed": 7,
+   "publish": [
+    "deepseek-coder-v2:16b-lite-instruct-q2_K"
+   ],
+   "withhold": [
+    "deepseek-coder:1.3b-instruct-fp16",
+    "deepseek-coder:1.3b-instruct-q2_K",
+    "deepseek-coder:1.3b-instruct-q3_K_L",
+    "deepseek-coder:1.3b-instruct-q3_K_M",
+    "deepseek-coder:1.3b-instruct-q4_0",
+    "deepseek-coder:1.3b-instruct-q4_K_M"
+   ],
+   "published_by_class_although_verified_le16": [
+    "deepseek-coder:1.3b-instruct-q3_K_S (HEALTHY, 7/164)",
+    "gemma3:270m-it-q8_0 (HEALTHY, 16/164)"
+   ]
+  },
+  "routing_rule_on_census": {
+   "publish (>=17 of 164)": {
+    "n": 8,
+    "tags": [
+     "deepseek-coder-v2:16b-lite-instruct-q2_K (7/15, 25/164)",
+     "gemma2:2b-instruct-q2_K (7/15, 25/164)",
+     "gemma3:1b-it-q4_K_M (7/15, 37/164)",
+     "gemma3:270m-it-fp16 (5/15, 20/164)",
+     "granite3.1-dense:2b-instruct-q2_K (5/15, 17/164)",
+     "llama3.2:1b-instruct-q3_K_M (8/15, 42/164)",
+     "llama3.2:3b-instruct-q2_K (7/15, 30/164)",
+     "mistral:7b-instruct-v0.2-q3_K_L (7/15, 44/164)"
+    ]
+   },
+   "withhold (<=16 of 164)": {
+    "n": 8,
+    "tags": [
+     "deepseek-coder:1.3b-instruct-fp16 (2/15, 16/164)",
+     "deepseek-coder:1.3b-instruct-q2_K (2/15, 2/164)",
+     "deepseek-coder:1.3b-instruct-q3_K_L (1/15, 10/164)",
+     "deepseek-coder:1.3b-instruct-q3_K_M (1/15, 5/164)",
+     "deepseek-coder:1.3b-instruct-q3_K_S (3/15, 7/164)",
+     "deepseek-coder:1.3b-instruct-q4_0 (1/15, 10/164)",
+     "deepseek-coder:1.3b-instruct-q4_K_M (1/15, 7/164)",
+     "gemma3:270m-it-q8_0 (5/15, 16/164)"
+    ]
+   },
+   "pending (full run needed)": {
+    "n": 16,
+    "tags": [
+     "deepseek-coder:1.3b-instruct-q4_K_S (3/15)",
+     "deepseek-coder:1.3b-instruct-q5_K_M (5/15)",
+     "deepseek-coder:1.3b-instruct-q5_K_S (4/15)",
+     "deepseek-coder:1.3b-instruct-q6_K (6/15)",
+     "deepseek-coder:1.3b-instruct-q8_0 (4/15)",
+     "gemma3:1b-it-fp16 (8/15)",
+     "gemma3:1b-it-q8_0 (8/15)",
+     "llama3.2:1b-instruct-q3_K_L (8/15)",
+     "llama3.2:1b-instruct-q4_0 (8/15)",
+     "llama3.2:1b-instruct-q4_K_S (8/15)",
+     "mistral:7b-instruct-q3_K_L (8/15)",
+     "mistral:7b-instruct-v0.2-q4_K_S (8/15)",
+     "mistral:7b-instruct-v0.2-q5_K_M (7/15)",
+     "mistral:7b-instruct-v0.2-q5_K_S (7/15)",
+     "mistral:7b-instruct-v0.2-q6_K (7/15)",
+     "mistral:7b-instruct-v0.2-q8_0 (6/15)"
+    ]
+   }
+  },
+  "calibrated_builds_vs_screen": [
+   {
+    "build": "own WikiText imatrix Qwen-3B Q2_K",
+    "s15": 15,
+    "f164": 106,
+    "clears_screen_ge9": true
+   },
+   {
+    "build": "own code imatrix Qwen-3B Q2_K",
+    "s15": 15,
+    "f164": 113,
+    "clears_screen_ge9": true
+   },
+   {
+    "build": "bartowski imatrix Qwen-3B Q2_K",
+    "s15": 15,
+    "f164": 104,
+    "clears_screen_ge9": true
+   },
+   {
+    "build": "own WikiText imatrix Qwen-3B Q3_K_S",
+    "s15": 2,
+    "f164": 13,
+    "clears_screen_ge9": false
+   },
+   {
+    "build": "own code imatrix Qwen-3B Q3_K_S",
+    "s15": 4,
+    "f164": 25,
+    "clears_screen_ge9": false
+   },
+   {
+    "build": "bartowski imatrix Qwen-3B Q3_K_S",
+    "s15": 4,
+    "f164": 30,
+    "clears_screen_ge9": false
+   },
+   {
+    "build": "own WikiText imatrix Qwen-3B Q3_K_M",
+    "s15": 9,
+    "f164": 76,
+    "clears_screen_ge9": true
+   },
+   {
+    "build": "own code imatrix Qwen-3B Q3_K_M",
+    "s15": 8,
+    "f164": 89,
+    "clears_screen_ge9": false
+   },
+   {
+    "build": "bartowski imatrix Qwen-3B Q3_K_M",
+    "s15": 10,
+    "f164": 81,
+    "clears_screen_ge9": true
+   },
+   {
+    "build": "own WikiText imatrix Qwen-3B Q3_K_L",
+    "s15": 7,
+    "f164": 80,
+    "clears_screen_ge9": false
+   },
+   {
+    "build": "own code imatrix Qwen-3B Q3_K_L",
+    "s15": 8,
+    "f164": 86,
+    "clears_screen_ge9": false
+   },
+   {
+    "build": "bartowski imatrix Qwen-3B Q3_K_L",
+    "s15": 9,
+    "f164": 77,
+    "clears_screen_ge9": true
+   },
+   {
+    "build": "own WikiText imatrix phi3.5 Q2_K (current mix)",
+    "s15": 9,
+    "f164": 37,
+    "clears_screen_ge9": true
+   },
+   {
+    "build": "own code imatrix phi3.5 Q2_K (current mix)",
+    "s15": 8,
+    "f164": null,
+    "clears_screen_ge9": false
+   },
+   {
+    "build": "bartowski imatrix phi3.5 Q2_K",
+    "s15": 7,
+    "f164": 34,
+    "clears_screen_ge9": false
+   },
+   {
+    "build": "Qwen AWQ GGUF q2_k",
+    "s15": 14,
+    "f164": 102,
+    "clears_screen_ge9": true
+   },
+   {
+    "build": "Qwen AWQ GGUF q3_k_m",
+    "s15": 15,
+    "f164": 125,
+    "clears_screen_ge9": true
+   }
+  ]
+ },
+ "persistence": {
+  "llama3.2:1b-instruct-q2_K": {
+   "census_digest": "d1ede02a2111e30c0585383c5702933a07f1d6d7cb9e5727ae41d48e3885d1f3",
+   "october_runs": 0,
+   "october_pulls_recorded": 0,
+   "october_distinct_blobs": [],
+   "october_file_sha256_computed": [],
+   "all_blobs_equal_census": false,
+   "file_hash_equals_census": false,
+   "dirs": {}
+  },
+  "llama3.2:1b-instruct-q3_K_S": {
+   "census_digest": "81881dcc12ece016e1aca828677376b0a772cd296aff2b6dd3a8505b5bd9cb31",
+   "october_runs": 0,
+   "october_pulls_recorded": 0,
+   "october_distinct_blobs": [],
+   "october_file_sha256_computed": [],
+   "all_blobs_equal_census": false,
+   "file_hash_equals_census": false,
+   "dirs": {}
+  },
+  "phi3.5:3.8b-mini-instruct-q2_K": {
+   "census_digest": "54d47caa8bf30afce66f6945667b03df2df4deb94711c21d854706481c9c4c4b",
+   "october_runs": 7,
+   "october_pulls_recorded": 1,
+   "october_distinct_blobs": [
+    "54d47caa8bf30afce66f6945667b03df2df4deb94711c21d854706481c9c4c4b"
+   ],
+   "october_file_sha256_computed": [
+    "54d47caa8bf30afce66f6945667b03df2df4deb94711c21d854706481c9c4c4b"
+   ],
+   "all_blobs_equal_census": true,
+   "file_hash_equals_census": true,
+   "dirs": {
+    "results-r2": 6,
+    "results": 1
+   }
+  },
+  "qwen2.5-coder:3b-instruct-q2_K": {
+   "census_digest": "14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e",
+   "october_runs": 7,
+   "october_pulls_recorded": 1,
+   "october_distinct_blobs": [
+    "14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e"
+   ],
+   "october_file_sha256_computed": [
+    "14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e"
+   ],
+   "all_blobs_equal_census": true,
+   "file_hash_equals_census": true,
+   "dirs": {
+    "results-r2": 6,
+    "results": 1
+   }
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_L": {
+   "census_digest": "7a88dc11faae61e335bc9993f57f056a63eeb9d82b76ea6a8021f5657365d7c2",
+   "october_runs": 7,
+   "october_pulls_recorded": 1,
+   "october_distinct_blobs": [
+    "7a88dc11faae61e335bc9993f57f056a63eeb9d82b76ea6a8021f5657365d7c2"
+   ],
+   "october_file_sha256_computed": [
+    "7a88dc11faae61e335bc9993f57f056a63eeb9d82b76ea6a8021f5657365d7c2"
+   ],
+   "all_blobs_equal_census": true,
+   "file_hash_equals_census": true,
+   "dirs": {
+    "results-r2": 6,
+    "results": 1
+   }
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_M": {
+   "census_digest": "9bb5d28b842a91987a4d0c9a0616a69a3f031bcf535817c1f901639d1949a2ab",
+   "october_runs": 7,
+   "october_pulls_recorded": 1,
+   "october_distinct_blobs": [
+    "9bb5d28b842a91987a4d0c9a0616a69a3f031bcf535817c1f901639d1949a2ab"
+   ],
+   "october_file_sha256_computed": [
+    "9bb5d28b842a91987a4d0c9a0616a69a3f031bcf535817c1f901639d1949a2ab"
+   ],
+   "all_blobs_equal_census": true,
+   "file_hash_equals_census": true,
+   "dirs": {
+    "results-r2": 6,
+    "results": 1
+   }
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_S": {
+   "census_digest": "81d167af7fa3dc4e7eb361fc6df220638eb0f0783c49d317f5c4a3f8f94380d9",
+   "october_runs": 7,
+   "october_pulls_recorded": 1,
+   "october_distinct_blobs": [
+    "81d167af7fa3dc4e7eb361fc6df220638eb0f0783c49d317f5c4a3f8f94380d9"
+   ],
+   "october_file_sha256_computed": [
+    "81d167af7fa3dc4e7eb361fc6df220638eb0f0783c49d317f5c4a3f8f94380d9"
+   ],
+   "all_blobs_equal_census": true,
+   "file_hash_equals_census": true,
+   "dirs": {
+    "results-r2": 6,
+    "results": 1
+   }
+  }
+ },
+ "october_official_tags": {
+  "n_tags": 70,
+  "n_equal": 69,
+  "not_equal": {
+   "gemma3:4b-it-q8_0": {
+    "n_runs": 1,
+    "equal": false,
+    "blobs": [
+     "b46dd6d60d63"
+    ],
+    "census": "b3ec67796e03"
+   }
+  }
+ },
+ "rep6": {
+  "formula": "toks = output.split(); if len(toks) >= 12: rep6_share = round(6 * max_count(overlapping word 6-grams) / len(toks), 3) else 0.0; artifact statistic = mean over the 15 generations (rep6_share_mean)",
+  "upper_bound": "6 * (n - 5) / n < 6 (one word repeated n times); a period-p loop with p <= 6 gives about 6/p",
+  "official_generations": 4575,
+  "max_generation": {
+   "tag": "qwen2.5-coder:3b-instruct-q3_K_S",
+   "task": "HumanEval/107",
+   "rep6_share": 5.348,
+   "out_words": 46
+  },
+  "generations_gt_1": 23,
+  "artifacts_with_any_generation_gt_1": {
+   "deepseek-coder-v2:16b-lite-instruct-q2_K": 1,
+   "phi3.5:3.8b-mini-instruct-q2_K": 3,
+   "qwen2.5-coder:3b-instruct-q2_K": 15,
+   "qwen2.5-coder:3b-instruct-q3_K_S": 4
+  },
+  "max_artifact_mean": [
+   2.049,
+   "qwen2.5-coder:3b-instruct-q2_K"
+  ],
+  "artifacts_mean_gt_1": [
+   [
+    "qwen2.5-coder:3b-instruct-q2_K",
+    2.049
+   ],
+   [
+    "qwen2.5-coder:3b-instruct-q3_K_S",
+    1.384
+   ]
+  ],
+  "max_generation_all_census_rows": 5.348,
+  "suspect_means": {
+   "llama3.2:1b-instruct-q2_K": 0.089,
+   "llama3.2:1b-instruct-q3_K_S": 0.057,
+   "phi3.5:3.8b-mini-instruct-q2_K": 0.458,
+   "qwen2.5-coder:3b-instruct-q2_K": 2.049,
+   "qwen2.5-coder:3b-instruct-q3_K_L": 0.167,
+   "qwen2.5-coder:3b-instruct-q3_K_M": 0.179,
+   "qwen2.5-coder:3b-instruct-q3_K_S": 1.384
+  },
+  "healthy_median_mean": 0.07
+ },
+ "fullrun_table": {
+  "census_full164_rows": 27,
+  "census_full164_nonsuspect": 20,
+  "census_nonsuspect_above_16": [
+   [
+    "deepseek-coder-v2:16b-lite-instruct-q2_K",
+    25
+   ],
+   [
+    "gemma2:2b-instruct-q2_K",
+    25
+   ],
+   [
+    "gemma3:1b-it-q4_K_M",
+    37
+   ],
+   [
+    "gemma3:270m-it-fp16",
+    20
+   ],
+   [
+    "granite-code:20b-instruct-q2_K",
+    46
+   ],
+   [
+    "granite3.1-dense:2b-instruct-q2_K",
+    17
+   ],
+   [
+    "llama3.2:1b-instruct-q3_K_M",
+    42
+   ],
+   [
+    "llama3.2:3b-instruct-q2_K",
+    30
+   ],
+   [
+    "mistral:7b-instruct-v0.2-q3_K_L",
+    44
+   ],
+   [
+    "phi3.5:3.8b-mini-instruct-q3_K_S",
+    42
+   ],
+   [
+    "starcoder2:15b-instruct-v0.1-q2_K",
+    65
+   ],
+   [
+    "yi-coder:1.5b-chat-q2_K",
+    48
+   ]
+  ],
+  "census_nonsuspect_at_most_16": [
+   [
+    "deepseek-coder:1.3b-instruct-fp16",
+    16
+   ],
+   [
+    "deepseek-coder:1.3b-instruct-q2_K",
+    2
+   ],
+   [
+    "deepseek-coder:1.3b-instruct-q3_K_L",
+    10
+   ],
+   [
+    "deepseek-coder:1.3b-instruct-q3_K_M",
+    5
+   ],
+   [
+    "deepseek-coder:1.3b-instruct-q3_K_S",
+    7
+   ],
+   [
+    "deepseek-coder:1.3b-instruct-q4_0",
+    10
+   ],
+   [
+    "deepseek-coder:1.3b-instruct-q4_K_M",
+    7
+   ],
+   [
+    "gemma3:270m-it-q8_0",
+    16
+   ]
+  ],
+  "other_full_runs_nonsuspect": [
+   {
+    "tag": "granite-code:3b-instruct-q3_K_M",
+    "class": "HEALTHY",
+    "serial15": 14,
+    "orig15": 13,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": false,
+    "full164_serial": 65,
+    "source": "results-v1cases scored_serial (Oct 2026, census file, closure run)"
+   },
+   {
+    "tag": "mistral:7b-instruct-q3_K_S",
+    "class": "HEALTHY",
+    "serial15": 10,
+    "orig15": 9,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": false,
+    "full164_serial": 44,
+    "source": "results-v1cases scored_serial (Oct 2026, census file, closure run)"
+   },
+   {
+    "tag": "phi3.5:3.8b-mini-instruct-q4_K_M",
+    "class": "HEALTHY",
+    "serial15": 11,
+    "orig15": 10,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": false,
+    "full164_serial": 74,
+    "source": "P0c October library re-download (lib-phi35-q4_K_M)"
+   },
+   {
+    "tag": "qwen2.5-coder:3b-instruct-q4_K_M",
+    "class": "HEALTHY",
+    "serial15": 15,
+    "orig15": 14,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": false,
+    "full164_serial": 132,
+    "source": "R6 October library re-download (lib-qwen3b-q4_K_M)"
+   }
+  ],
+  "rows": [
+   {
+    "tag": "deepseek-coder-v2:16b-lite-instruct-q2_K",
+    "class": "NO_BASELINE",
+    "serial15": 7,
+    "orig15": 6,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 25,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "deepseek-coder:1.3b-instruct-fp16",
+    "class": "LOW_BASELINE",
+    "serial15": 2,
+    "orig15": 2,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 16,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "deepseek-coder:1.3b-instruct-q2_K",
+    "class": "LOW_BASELINE",
+    "serial15": 2,
+    "orig15": 2,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 2,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "deepseek-coder:1.3b-instruct-q3_K_L",
+    "class": "LOW_BASELINE",
+    "serial15": 1,
+    "orig15": 1,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 10,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "deepseek-coder:1.3b-instruct-q3_K_M",
+    "class": "LOW_BASELINE",
+    "serial15": 1,
+    "orig15": 1,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 5,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "deepseek-coder:1.3b-instruct-q3_K_S",
+    "class": "HEALTHY",
+    "serial15": 3,
+    "orig15": 3,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 7,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "deepseek-coder:1.3b-instruct-q4_0",
+    "class": "LOW_BASELINE",
+    "serial15": 1,
+    "orig15": 1,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 10,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "deepseek-coder:1.3b-instruct-q4_K_M",
+    "class": "LOW_BASELINE",
+    "serial15": 1,
+    "orig15": 1,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 7,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "gemma2:2b-instruct-q2_K",
+    "class": "HEALTHY",
+    "serial15": 7,
+    "orig15": 7,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 25,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "gemma3:1b-it-q4_K_M",
+    "class": "HEALTHY",
+    "serial15": 7,
+    "orig15": 7,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 37,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "gemma3:270m-it-fp16",
+    "class": "HEALTHY",
+    "serial15": 5,
+    "orig15": 5,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 20,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "gemma3:270m-it-q8_0",
+    "class": "HEALTHY",
+    "serial15": 5,
+    "orig15": 5,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 16,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "granite-code:20b-instruct-q2_K",
+    "class": "NO_BASELINE",
+    "serial15": 9,
+    "orig15": 8,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": true,
+    "full164_serial": 46,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "granite-code:3b-instruct-q3_K_M",
+    "class": "HEALTHY",
+    "serial15": 14,
+    "orig15": 13,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": false,
+    "full164_serial": 65,
+    "source": "results-v1cases scored_serial (Oct 2026, census file, closure run)"
+   },
+   {
+    "tag": "granite3.1-dense:2b-instruct-q2_K",
+    "class": "DEGRADED",
+    "serial15": 5,
+    "orig15": 4,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 17,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "llama3.2:1b-instruct-q3_K_M",
+    "class": "HEALTHY",
+    "serial15": 8,
+    "orig15": 7,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 42,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "llama3.2:3b-instruct-q2_K",
+    "class": "DEGRADED",
+    "serial15": 7,
+    "orig15": 6,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 30,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "mistral:7b-instruct-q3_K_S",
+    "class": "HEALTHY",
+    "serial15": 10,
+    "orig15": 9,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": false,
+    "full164_serial": 44,
+    "source": "results-v1cases scored_serial (Oct 2026, census file, closure run)"
+   },
+   {
+    "tag": "mistral:7b-instruct-v0.2-q3_K_L",
+    "class": "HEALTHY",
+    "serial15": 7,
+    "orig15": 6,
+    "stage1_flag_serial": true,
+    "stage1_flag_original": true,
+    "full164_serial": 44,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "phi3.5:3.8b-mini-instruct-q3_K_S",
+    "class": "HEALTHY",
+    "serial15": 9,
+    "orig15": 8,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": true,
+    "full164_serial": 42,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "phi3.5:3.8b-mini-instruct-q4_K_M",
+    "class": "HEALTHY",
+    "serial15": 11,
+    "orig15": 10,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": false,
+    "full164_serial": 74,
+    "source": "P0c October library re-download (lib-phi35-q4_K_M)"
+   },
+   {
+    "tag": "qwen2.5-coder:3b-instruct-q4_K_M",
+    "class": "HEALTHY",
+    "serial15": 15,
+    "orig15": 14,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": false,
+    "full164_serial": 132,
+    "source": "R6 October library re-download (lib-qwen3b-q4_K_M)"
+   },
+   {
+    "tag": "starcoder2:15b-instruct-v0.1-q2_K",
+    "class": "NO_BASELINE",
+    "serial15": 9,
+    "orig15": 8,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": true,
+    "full164_serial": 65,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   },
+   {
+    "tag": "yi-coder:1.5b-chat-q2_K",
+    "class": "HEALTHY",
+    "serial15": 9,
+    "orig15": 8,
+    "stage1_flag_serial": false,
+    "stage1_flag_original": true,
+    "full164_serial": 48,
+    "source": "census_full164_serial (Aug 2026 census pod, census file)"
+   }
+  ],
+  "tuning_full164_separate_study": {
+   "n": 24,
+   "not_in_census": [
+    "qwen2.5-coder:7b-instruct-q8_0"
+   ],
+   "n_nonsuspect_in_census": 22,
+   "nonsuspect_in_census_full164_range": [
+    74,
+    139
+   ],
+   "n_suspect_in_census": 1,
+   "note": "full 164-task runs of the 24 screen-tuning configurations, from a separate study; file identity with the census not recorded; per-configuration and per-task results are not released",
+   "from_committed_file": true
+  },
+  "census_selection_rule": "harness/fullrun.py: every official tag with original smoke_pass <= 2 and verdict DEFECTIVE (13), plus the lowest-scoring tag with original smoke_pass 3..8 per (model, size) key (14; the gemma3 270m tags fail the size regex, so each is its own key); rule-based, not random",
+  "census_nonsuspect_above_16_range": [
+   17,
+   65
+  ],
+  "newly_unflagged_with_full_run": [
+   [
+    "granite-code:20b-instruct-q2_K",
+    46
+   ],
+   [
+    "phi3.5:3.8b-mini-instruct-q3_K_S",
+    42
+   ],
+   [
+    "starcoder2:15b-instruct-v0.1-q2_K",
+    65
+   ],
+   [
+    "yi-coder:1.5b-chat-q2_K",
+    48
+   ]
+  ]
+ }
+}

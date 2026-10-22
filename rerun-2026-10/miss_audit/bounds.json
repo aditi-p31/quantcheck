@@ -1,0 +1,278 @@
+{
+ "inputs": {
+  "census_scores": "results/audit_scored.jsonl",
+  "inventory": "inventory_candidates.json",
+  "tuning": "rerun-2026-10/serial/tuning_configs.json",
+  "v1_sample": "sensitivity_sample.json",
+  "round_samples": [
+   "rerun-2026-10/fn_sample_30.json",
+   "rerun-2026-10/fn_sample_b.json"
+  ],
+  "audit_scores": [
+   "rerun-2026-10/serial/sensitivity_serial.jsonl",
+   "rerun-2026-10/serial/rerun_r3_serial.jsonl",
+   "rerun-2026-10/serial/rerun_r3b_serial.jsonl"
+  ],
+  "closure": "rerun-2026-10/results-v1cases/scored_serial.jsonl",
+  "digests": [
+   "rerun-2026-10/serial/census_digests.json",
+   "rerun-2026-10/results-r3/runs.jsonl",
+   "rerun-2026-10/results-r3b/runs.jsonl"
+  ],
+  "screen_serial": "rerun-2026-10/serial/census_smoke_serial.jsonl"
+ },
+ "frame": {
+  "official": 305,
+  "frame_233": 233,
+  "frame_223": 223,
+  "frame_194": 194
+ },
+ "strata": {
+  "codellama": {
+   "N_233": 18,
+   "n_66": 6,
+   "n_v1": 0,
+   "N_223": 18,
+   "n_56": 6
+  },
+  "deepseek-coder and deepseek-coder-v2": {
+   "N_233": 12,
+   "n_66": 7,
+   "n_v1": 1,
+   "N_223": 11,
+   "n_56": 6
+  },
+  "gemma2 and gemma3": {
+   "N_233": 22,
+   "n_66": 7,
+   "n_v1": 1,
+   "N_223": 21,
+   "n_56": 6
+  },
+  "granite-code and granite3.1-dense": {
+   "N_233": 57,
+   "n_66": 9,
+   "n_v1": 3,
+   "N_223": 54,
+   "n_56": 6
+  },
+  "llama3.2 and llama3.1": {
+   "N_233": 25,
+   "n_66": 8,
+   "n_v1": 2,
+   "N_223": 23,
+   "n_56": 6
+  },
+  "mistral and codestral": {
+   "N_233": 22,
+   "n_66": 7,
+   "n_v1": 1,
+   "N_223": 21,
+   "n_56": 6
+  },
+  "phi3.5 and phi4": {
+   "N_233": 10,
+   "n_66": 7,
+   "n_v1": 1,
+   "N_223": 9,
+   "n_56": 6
+  },
+  "qwen2.5-coder": {
+   "N_233": 24,
+   "n_66": 6,
+   "n_v1": 0,
+   "N_223": 24,
+   "n_56": 6
+  },
+  "starcoder2": {
+   "N_233": 2,
+   "n_66": 2,
+   "n_v1": 0,
+   "N_223": 2,
+   "n_56": 2
+  },
+  "yi-coder and codegemma": {
+   "N_233": 41,
+   "n_66": 7,
+   "n_v1": 1,
+   "N_223": 40,
+   "n_56": 6
+  }
+ },
+ "seeded_draws_reproduced": {
+  "fn_sample_30": true,
+  "fn_sample_b": true
+ },
+ "seeded_draw_procedure": "random.Random(seed); for each family group in sorted order, rng.sample(sorted(frame tags in that group), min(3, size)); frame = official tags with original 15-task score >= 9, minus the 23 tuning configs in the census, minus the first-version 10 (and, for round two, minus round one)",
+ "outcomes": {
+  "audit_min_of_49": 8,
+  "audit_max_of_49": 41,
+  "audit_at_or_below_2": 0,
+  "closure_full164_on_census_digest": {
+   "granite-code:3b-instruct-q3_K_M": [
+    65,
+    164,
+    true
+   ],
+   "mistral:7b-instruct-q3_K_S": [
+    44,
+    164,
+    true
+   ]
+  },
+  "first_version_without_file_record": [
+   "gemma2:2b-instruct-q3_K_L",
+   "granite-code:3b-instruct-128k-q6_K",
+   "granite3.1-dense:2b-instruct-q4_K_S",
+   "phi3.5:3.8b-mini-instruct-q5_K_S",
+   "llama3.2:3b-instruct-q4_K_S",
+   "llama3.2:3b-instruct-q3_K_L",
+   "deepseek-coder:6.7b-instruct-q4_K_S",
+   "yi-coder:1.5b-chat-q4_K_S"
+  ],
+  "october_digest_differs_from_census": [
+   "gemma3:4b-it-q8_0"
+  ],
+  "gemma_digests": {
+   "census": "b3ec67796e032db2b124e3b57ac83dadeed7cd55d62a673f6cecd9f4e1a611be",
+   "october": "b46dd6d60d63905f8736cfc41f4c1e4acac3268f0b9ec56a13d6193eb05099cb",
+   "october_49": 34,
+   "census_screen_15_original_scorer": 14,
+   "census_screen_15_serial": 15
+  }
+ },
+ "v1_randomization_diagnostic": {
+  "v1_max_file_gb": 3.9,
+  "frame_tags_at_or_below": 123,
+  "p_all_10_at_or_below_given_within_stratum_srs_with_v1_allocation": 0.0028262553177945877,
+  "p_all_10_at_or_below_given_srs_10_of_233": 0.0014040681435345374,
+  "v1_allocation": {
+   "codellama": 0,
+   "deepseek-coder and deepseek-coder-v2": 1,
+   "gemma2 and gemma3": 1,
+   "granite-code and granite3.1-dense": 3,
+   "llama3.2 and llama3.1": 2,
+   "mistral and codestral": 1,
+   "phi3.5 and phi4": 1,
+   "qwen2.5-coder": 0,
+   "starcoder2": 0,
+   "yi-coder and codegemma": 1
+  },
+  "caveat": "size cut-off read off the sample (post hoc); a diagnostic, not a pre-planned test"
+ },
+ "rows": [
+  {
+   "row": "1",
+   "population": "233 unflagged official tags outside the tuning set, as scored and served at the August census",
+   "population_size": 233,
+   "event": "census file non-functional (solves at most 16 of the 164 HumanEval+ tasks)",
+   "sample_used_for_inference": "66 draws (10 first-version + 56 seeded)",
+   "assumptions": "all 66 are simple random within strata from the 233, including the first-version 10, whose draw procedure is unrecorded and whose file sizes (all <= 3.9 GB) are unlikely under that design (p = 0.003, post hoc); the 8 first-version audit-alone runs loaded the census files (run digest and backend unrecorded); the October gemma3:4b-it-q8_0 file (34/49) stands in for the August census file",
+   "upper_count": 15,
+   "upper_share_pct": 6.4,
+   "stratified_part": 15,
+   "deterministic_worst_case_added": 0,
+   "worst_allocation": "{\"granite-code and granite3.1-dense\": 10, \"yi-coder and codegemma\": 5}",
+   "non_rejection_prob_at_bound": 0.05624,
+   "max_prob_at_bound_plus_1": 0.045471,
+   "review_value": "15/233",
+   "matches_review": true,
+   "note": ""
+  },
+  {
+   "row": "2",
+   "population": "233 unflagged official tags outside the tuning set, as scored and served at the August census",
+   "population_size": 233,
+   "event": "census file non-functional (solves at most 16 of the 164 HumanEval+ tasks)",
+   "sample_used_for_inference": "66 draws",
+   "assumptions": "all 66 are simple random within strata from the 233, including the first-version 10, whose draw procedure is unrecorded and whose file sizes (all <= 3.9 GB) are unlikely under that design (p = 0.003, post hoc); the 8 first-version audit-alone runs loaded the census files (run digest and backend unrecorded); August gemma3:4b-it-q8_0 file allowed to have failed (stratum factor P(X<=1))",
+   "upper_count": 17,
+   "upper_share_pct": 7.3,
+   "stratified_part": 17,
+   "deterministic_worst_case_added": 0,
+   "worst_allocation": "{\"gemma2 and gemma3\": 3, \"granite-code and granite3.1-dense\": 10, \"yi-coder and codegemma\": 4}",
+   "non_rejection_prob_at_bound": 0.053598,
+   "max_prob_at_bound_plus_1": 0.043458,
+   "review_value": "17/233",
+   "matches_review": true,
+   "note": ""
+  },
+  {
+   "row": "3",
+   "population": "223 of those 233 not in the first-version sample of 10",
+   "population_size": 223,
+   "event": "census file non-functional (solves at most 16 of the 164 HumanEval+ tasks)",
+   "sample_used_for_inference": "56 seeded draws",
+   "assumptions": "two later rounds are simple random within strata from the 223 (seeds 20261021/20261022; both draws reproduced exactly from the seeds); the October gemma3:4b-it-q8_0 file (34/49) stands in for the August census file",
+   "upper_count": 20,
+   "upper_share_pct": 9.0,
+   "stratified_part": 20,
+   "deterministic_worst_case_added": 0,
+   "worst_allocation": "{\"granite-code and granite3.1-dense\": 17, \"yi-coder and codegemma\": 3}",
+   "non_rejection_prob_at_bound": 0.054518,
+   "max_prob_at_bound_plus_1": 0.045677,
+   "review_value": "20/223",
+   "matches_review": true,
+   "note": ""
+  },
+  {
+   "row": "4",
+   "population": "223 of those 233 not in the first-version sample of 10",
+   "population_size": 223,
+   "event": "census file non-functional (solves at most 16 of the 164 HumanEval+ tasks)",
+   "sample_used_for_inference": "56 seeded draws",
+   "assumptions": "two later rounds are simple random within strata from the 223 (seeds 20261021/20261022; both draws reproduced exactly from the seeds); August gemma3:4b-it-q8_0 file allowed to have failed (stratum factor P(X<=1))",
+   "upper_count": 22,
+   "upper_share_pct": 9.9,
+   "stratified_part": 22,
+   "deterministic_worst_case_added": 0,
+   "worst_allocation": "{\"gemma2 and gemma3\": 3, \"granite-code and granite3.1-dense\": 16, \"yi-coder and codegemma\": 3}",
+   "non_rejection_prob_at_bound": 0.052814,
+   "max_prob_at_bound_plus_1": 0.044475,
+   "review_value": "22/223",
+   "matches_review": true,
+   "note": "the bound the paper prints"
+  },
+  {
+   "row": "5",
+   "population": "233 unflagged official tags outside the tuning set, as scored and served at the August census",
+   "population_size": 233,
+   "event": "census file non-functional (solves at most 16 of the 164 HumanEval+ tasks)",
+   "sample_used_for_inference": "56 seeded draws; first-version 10 handled deterministically",
+   "assumptions": "two later rounds are simple random within strata from the 223 (seeds 20261021/20261022; both draws reproduced exactly from the seeds); August gemma3:4b-it-q8_0 file allowed to have failed (stratum factor P(X<=1)); no assumption about the first-version 10: the 8 without a file record count as possible failures; the 2 rerun on all 164 tasks on the census digest (65 and 44 of 164) count as observed passes",
+   "upper_count": 30,
+   "upper_share_pct": 12.9,
+   "stratified_part": 22,
+   "deterministic_worst_case_added": 8,
+   "worst_allocation": "{\"gemma2 and gemma3\": 3, \"granite-code and granite3.1-dense\": 16, \"yi-coder and codegemma\": 3}",
+   "non_rejection_prob_at_bound": 0.052814,
+   "max_prob_at_bound_plus_1": 0.044475,
+   "review_value": "30/233",
+   "matches_review": true,
+   "note": "assumption-free about the first-version sample"
+  },
+  {
+   "row": "4b",
+   "population": "233 unflagged official tags outside the tuning set, as scored and served at the August census",
+   "population_size": 233,
+   "event": "census file non-functional (solves at most 16 of the 164 HumanEval+ tasks)",
+   "sample_used_for_inference": "56 seeded draws; first-version 10 taken as observed passes, not as random draws",
+   "assumptions": "two later rounds are simple random within strata from the 223 (seeds 20261021/20261022; both draws reproduced exactly from the seeds); August gemma3:4b-it-q8_0 file allowed to have failed (stratum factor P(X<=1)); the 8 first-version audit-alone runs loaded the census files (run digest and backend unrecorded)",
+   "upper_count": 22,
+   "upper_share_pct": 9.4,
+   "stratified_part": 22,
+   "deterministic_worst_case_added": 0,
+   "worst_allocation": "{\"gemma2 and gemma3\": 3, \"granite-code and granite3.1-dense\": 16, \"yi-coder and codegemma\": 3}",
+   "non_rejection_prob_at_bound": 0.052814,
+   "max_prob_at_bound_plus_1": 0.044475,
+   "review_value": null,
+   "matches_review": null,
+   "note": "supplementary: identity assumption for 8 legacy runs, no randomness assumption"
+  }
+ ],
+ "supplementary": {
+  "wilson_upper_0_of_66_pct": 5.5,
+  "wilson_upper_0_of_56_pct": 6.42,
+  "srs_hypergeometric_0_of_66_in_233": 8
+ }
+}
