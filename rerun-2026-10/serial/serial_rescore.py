@@ -35,12 +35,13 @@ Usage (python3 -E keeps the user site-packages where EvalPlus 0.3.1 is installed
   python3 -E serial_rescore.py run [SET ...]        # evaluate serially (resumable checkpoint)
   python3 -E serial_rescore.py report               # write <set>_serial.jsonl, flips.jsonl, SERIAL_REPORT.md
 
-Environment (all optional; defaults follow the project layout relative to this file):
-  P2_ROOT             paper-2 project root (default: three levels above this file)
-  RERUN_RESULTS       rerun-2026-10/pod-results directory
-  CENSUS_TRANSCRIPTS  census transcripts (results/pod_archive/results/transcripts; byte-identical to
-                      results/audit_data_full.tgz:results/transcripts)
-  P1_RESULTS          paper-1 results directory (tuning configurations)
+Environment (all optional; defaults follow the repository layout relative to this file):
+  QUANTCHECK_ROOT     repository root (alias P2_ROOT; default: two levels above this file)
+  QUANTCHECK_RERUN_DIR  rerun-2026-10/ (alias RERUN_RESULTS; the pod-results folder of the run)
+  CENSUS_TRANSCRIPTS  census transcripts (default results/transcripts; the run read the pod copy, which
+                      differs only in the one email-redacted census transcript listed in the README)
+  QUANTCHECK_P1_RESULTS  results directory of the screen-tuning configurations (alias P1_RESULTS; not
+                      in this release, so the tuning sets are empty without it)
   EVALPLUS_BIN        directory holding evalplus.sanitize (default ~/Library/Python/3.9/bin)
   SERIAL_OUT          output directory (default: this file's directory)
   SERIAL_WORK         work directory for sanitized samples and the checkpoint
@@ -59,15 +60,16 @@ import time
 from collections import Counter, OrderedDict, defaultdict
 
 
-def _p(name, default):
-    return os.path.abspath(os.path.expanduser(os.environ.get(name, default)))
+def _p(name, default, alias=None):
+    v = os.environ.get(name) or (os.environ.get(alias) if alias else None) or default
+    return os.path.abspath(os.path.expanduser(v))
 
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-P2 = _p("P2_ROOT", os.path.join(HERE, "..", "..", ".."))
-RERUN = _p("RERUN_RESULTS", os.path.join(P2, "..", "p2-v2-work", "rerun-2026-10", "pod-results"))
-CENSUS_T = _p("CENSUS_TRANSCRIPTS", os.path.join(P2, "results", "pod_archive", "results", "transcripts"))
-P1_RES = _p("P1_RESULTS", os.path.join(P2, "p1-results-not-released"))  # set QUANTCHECK_P1_RESULTS
+P2 = _p("QUANTCHECK_ROOT", os.path.join(HERE, "..", ".."), "P2_ROOT")
+RERUN = _p("QUANTCHECK_RERUN_DIR", os.path.join(P2, "rerun-2026-10"), "RERUN_RESULTS")
+CENSUS_T = _p("CENSUS_TRANSCRIPTS", os.path.join(P2, "results", "transcripts"))
+P1_RES = _p("QUANTCHECK_P1_RESULTS", os.path.join(P2, "p1-results-not-released"), "P1_RESULTS")
 EVALPLUS_BIN = _p("EVALPLUS_BIN", "~/Library/Python/3.9/bin")
 OUT = _p("SERIAL_OUT", HERE)
 WORK = _p("SERIAL_WORK", os.path.join(OUT, "_work"))

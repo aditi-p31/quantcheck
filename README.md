@@ -7,17 +7,25 @@ through Ollama), and the full audit dataset behind the paper:
 > Registries and How to Catch Them.** Aditi Patodiya, 2026.
 > [arXiv:2609.05881](https://arxiv.org/abs/2609.05881)
 
-Release `v3.0` of this repository accompanies the revised paper, which
+Release `v3.1` of this repository accompanies the revised paper, which
 replaces version 1 of the preprint as arXiv version 2. Version 1 had a
 different title ("Broken on Arrival: Silently Defective LLM Artifacts in
 Public Model Registries and How to Catch Them") and a defect diagnosis that
-the revision corrects; see [Corrections from v1](#corrections-from-v1).
+the revision corrects; see the corrections under [Findings](#findings).
+
+Release `v3.1` keeps the v3.0 data and changes the analysis in one respect:
+stage-two baselines are grouped by model variant (the registry tag without
+its quantization suffix) instead of by an alias-normalized model and size.
+It also adds miss-audit certificates, the per-artifact file digests of the
+census, a provenance map ([`PROVENANCE.md`](PROVENANCE.md)), and analysis
+scripts that run from a clean checkout. See
+[Reproduce the paper's numbers](#reproduce-the-papers-numbers).
 
 ## Findings
 
 - **Census.** 327 code-capable artifacts were executed (313 quantized): all
   305 tags at or under 8 GB in 15 model lines of the official Ollama library
-  (291 quantized, 14 fp16, in 29 model-and-size groups), and 22 popular
+  (291 quantized, 14 fp16, of 35 model variants), and 22 popular
   Hugging Face community files. Each artifact ran a 15-task HumanEval+ screen.
 - **Seven non-functional official tags.** Seven tags (2.3%, Wilson 95% CI
   1.1–4.7%) are suspects on the screen and are confirmed on all 164
@@ -46,15 +54,12 @@ the revision corrects; see [Corrections from v1](#corrections-from-v1).
 - **Seven is a lower bound.** All 12 deepseek-coder-1.3B tags, fp16
   included, score 1 to 6 of 15, so a group baseline cannot judge them; the
   group is not attributed.
-- **The screen.** It missed none of 66 sampled unflagged artifacts (95%
-  upper bound 5.5%) and costs about 30 s of generation per tag (median, one
-  RTX 4090). A WikiText-2 perplexity threshold, set after the fact, flags
-  the five failures we measured.
-
-The paper gives the full method, the attribution rule, and its limits.
-
-## Corrections from v1
-
+- **The screen.** None of 66 sampled tags it passed is non-functional: 64 solve at least 17
+  distinct HumanEval+ tasks on one file and backend (49-task audit, plus the 15 screen tasks where the
+  file digest matches), and the other two solve 65 and 44 of 164 in a rerun on the census files
+  (`rerun-2026-10/miss_audit/`, `rerun-2026-10/results-v1cases/`). Screening costs about 30 s of
+  generation per tag (median, one RTX 4090), excluding download and scoring. A WikiText-2 perplexity
+  threshold, set after the fact, flags the five failures we measured.
 - **The v1 defect diagnosis is corrected.** Version 1 reported the four
   Qwen2.5-Coder-3B tags and the phi3.5 q2_K tag as "silently defective"
   conversions. Its referees were chosen by distributor, not by recipe: they
@@ -78,19 +83,38 @@ The paper gives the full method, the attribution rule, and its limits.
   default limits, together with a 3% sample of passes (none changed).
   HumanEval/15 then passes for 275 of the 305 official artifacts, one of which
   also gains HumanEval/23; no pass turns into a fail. Stage-one flags fall from
-  50 to 39; the class counts and the seven suspects are unchanged. The original
-  score files are left as they were. `rerun-2026-10/census_rescore.jsonl` is an
-  earlier parallel rescore; the serial scores the paper reports are in
-  `rerun-2026-10/serial/`.
+  50 to 39 and the seven suspects are unchanged; with the v3.1 baseline groups
+  (below), one non-suspect tag, `yi-coder:1.5b-chat-q2_K`, moves from degraded
+  to healthy (8 to 9 of 15). The original score files are left as they were.
+  `rerun-2026-10/census_rescore.jsonl` is an earlier parallel rescore; the
+  serial scores the paper reports are in `rerun-2026-10/serial/`.
+- **Baseline groups are corrected in v3.1.** Stage two compares a tag with
+  the median score of its group's q6_K, q8_0 and fp16 tags. Up to v3.0 the
+  group was `size_key` in `analysis/analyze.py` (alias-normalized model family
+  and size), and 5 of its 28 groups pooled different registry checkpoints:
+  granite 8B (`granite-code:8b-instruct`, its 128k variant and
+  `granite3.1-dense:8b-instruct`), the granite-code 3B and 20B context
+  variants, codegemma 7B v1.0 and v1.1, and mistral 7B unversioned, v0.2 and
+  v0.3. From v3.1 the group is the model variant, the registry tag without its
+  quantization suffix (35 groups, the columns of the census figure). The
+  classes become 271 healthy, 2 degraded, 6 low baseline, 7 suspect and 19 no
+  baseline (v3.0: 271/3/6/7/18): `mistral:7b-instruct-v0.2-q8_0` moves from
+  degraded to healthy (6 of 15 against its own baseline of 6.5) and
+  `granite-code:8b-instruct-128k-q4_0` from healthy to no baseline. The seven
+  suspects, the 39 stage-one flags and every suite-size (A1) value the paper
+  quotes are unchanged. Three of 35 model variants contain a non-functional
+  tag (8.6%, Wilson 3.0–22.4%); counted by registry model and size it is 3 of
+  29 (10.3%, 3.6–26.4%), as before.
 - **Superseded v1 outputs are kept for the record.** `analysis/findings.json`
   (written by `analysis/analyze.py`) still lists five `confirmed_defects`;
   `analysis/classified.json` (from the older ratio rule in
   `analysis/classify.py`) labels five tags `DEFECTIVE`; and the `verdict`
   field in `results*/audit_scored.jsonl` is `"DEFECTIVE"` for every
   artifact below 9 of 15. That field is the raw stage-one flag, not a
-  finding. The paper's numbers are in `rerun-2026-10/serial/numbers_serial.json`
-  (`rerun-2026-10/analysis/numbers_v3.json` holds the earlier parallel-rescore
-  version).
+  finding. The paper's numbers are in `rerun-2026-10/serial/numbers_regroup.json`
+  (`rerun-2026-10/serial/numbers_serial.json` is the v3.0 version with the
+  older baseline groups, and `rerun-2026-10/analysis/numbers_v3.json` the
+  earlier parallel-rescore version).
 - **Upstream reports.** `disclosure/DISCLOSURES.md` records the original
   report, the withdrawals and their dates.
 
@@ -106,20 +130,24 @@ The paper gives the full method, the attribution rule, and its limits.
 | `results-mac/`, `results-metalrep/` | Metal-backend replication runs |
 | `results-native/` | Native-template control runs for two community files |
 | `results-sensitivity/` | Threshold sensitivity runs (v1) |
-| `analysis/` | v1 analysis code and outputs (see Corrections) |
+| `analysis/` | v1 analysis code and outputs (superseded; see [Findings](#findings)) |
 | `metal_replication.json`, `referee_round2.json`, `sensitivity_sample.json` | v1 adjudication and robustness inputs |
 | `muse_case_study.json`, `muse-glimmer-tracking/` | Day-zero case study of community conversions of a newly released model (v1) |
 | `rerun-2026-10/` | The October 2026 rerun behind the v3 findings: rebuilds, calibration, tensor comparisons, perplexity, robustness and miss-audit runs, the dated run plan, logs, and the v3 analysis scripts (below) |
 | `disclosure/DISCLOSURES.md` | Upstream report log |
+| `PROVENANCE.md` | Every provenance statement of the paper (file identity, tensor identity, re-downloads, storefront copies, checkpoint and referee revisions, runtime and toolchain versions, calibration texts, serial scoring) mapped to the file and record that supports it, or marked as not in this release |
 
 ### The 2026-10 rerun (`rerun-2026-10/`)
 
-The rerun used one RTX 4090 pod with Ollama 0.32.6 (the census version) for
-generation and llama.cpp v0.7.0 (`620d222`) on CPU for conversion,
-quantization, importance matrices and perplexity. `RUN_PLAN.md` is the dated
-local run plan: the decision rule and the first-round runs were written
-before any run, and its log records each later addition and its expected
-reading before it ran.
+The rerun used one RTX 4090 pod (the October pod) with Ollama 0.32.6 (the
+census version) for generation and llama.cpp v0.7.0 (`620d222`) on CPU for
+conversion, quantization, importance matrices and perplexity. A third RTX 4090
+pod, after the census pod and the October pod, ran the miss-audit closure
+(`results-v1cases/`) on 22 October 2026 with the same Ollama release.
+`RUN_PLAN.md` is the dated local run plan: the decision rule and the
+first-round runs were written before any run, and its log records each later
+addition and its expected reading before it ran. The closure run is not in
+it; `scripts/v1cases.sh` states its purpose and the digests it had to load.
 
 | Path | Contents |
 |---|---|
@@ -133,6 +161,7 @@ reading before it ran.
 | `results-p0/` | 15 tasks: phi3.5 rebuilt with the library's tensor mix, and code-imatrix builds |
 | `results-p0c/` | All 164 tasks: phi3.5 builds, the remaining third-party Qwen builds, code-imatrix Qwen builds |
 | `results-g1/` | Qwen2.5-Coder 0.5B and 1.5B at q2_K–q3_K_L: library tag, plain rebuild, own imatrix |
+| `results-v1cases/` | Miss-audit closure (third pod, 22 October 2026): `granite-code:3b-instruct-q3_K_M` and `mistral:7b-instruct-q3_K_S` on all 164 tasks from the census files. `runs.jsonl` (with each run's `blob`), `transcripts/`, `scored_serial.jsonl` (serial scores), the pod's Ollama server log `serve_v1cases.log.xz`, `env_v1cases.txt` (date, GPU and driver, Ollama version), `ollama_tarball_v1cases.sha256` and the run log `v1cases.log` |
 | `census_rescore.jsonl` | Corrected per-task results for the 15 suite tasks of all 334 archived census smoke transcripts |
 | `p0b_tensor_compare.jsonl` | Library tag vs plain rebuild, per tensor: Qwen-3B q2_K–q3_K_L and q4_K_M, phi3.5 q2_K |
 | `p0f_compare.jsonl` | phi3.5 q2_K library tag vs our rebuild with `attn_qkv` at `Q2_K` |
@@ -144,10 +173,12 @@ reading before it ran.
 | `env.txt`, `pip_freeze.txt`, `ollama_tarball.sha256` | Pod environment, Python packages, hash of the Ollama 0.32.6 release archive |
 | `calib_sha256.txt`, `calib_code_sha256.txt` | SHA-256 of the two calibration texts (the texts are not included; see below) |
 | `logs.tar.xz` | Run logs: Ollama server log, conversion, quantization, imatrix and queue logs (84 MB unpacked) |
-| `scripts/` | The pod scripts and run-entry files (see "Rebuild, calibrate and compare") |
+| `scripts/` | The pod scripts and run-entry files (see "Rebuild, calibrate and compare"), including `v1cases.sh` (the miss-audit closure run) and `score_v1cases_serial.py` (its serial scoring, one EvalPlus worker) |
 | `a1/` | Suite-size analysis: `a1_analysis.py` and `a1_results.json` on the original scores, `A1_REPORT.md`, an independent check in `verify/`, and `a1_rescored.py`/`.json` on the corrected scores |
 | `analysis/` | `numbers_v3.py`, `numbers_v3.json` and `figures_v3.py` on the earlier parallel rescore |
-| `serial/` | The serial re-scoring the paper reports: `serial_rescore.py`, per-set `*_serial.jsonl` scores, `flips.jsonl`, `instances.jsonl` (one line per serial evaluation, with EvalPlus reasons and timings), `numbers_serial.py`/`.json` (every number in the revised paper), `a1_serial.py`/`.json`, `figures_serial.py`, and the reports `SERIAL_REPORT.md`, `PAPER_DIFF.md`, `VERIFY_REPORT.md` |
+| `serial/` | The serial re-scoring the paper reports: `serial_rescore.py`, per-set `*_serial.jsonl` scores, `flips.jsonl`, `instances.jsonl` (one line per serial evaluation, with EvalPlus reasons and timings), `numbers_regroup.py`/`.json` (every number in the paper, model-variant baselines; v3.1), `a1_regroup.py`/`.json` (suite-size analysis, model-variant baselines; v3.1), `figures_serial.py`, `census_digests.py`/`.json` (per-artifact file digests of the census, extracted from the census server log; v3.1), `tuning_configs.json` (names of the 24 screen-tuning configurations), the v3.0 versions `numbers_serial.py`/`.json` and `a1_serial.py`/`.json` (older baseline groups), and the reports `SERIAL_REPORT.md`, `PAPER_DIFF.md`, `VERIFY_REPORT.md` |
+| `miss_audit/` | `certificates.csv`, `certificates.json`: per-artifact evidence for the 66 artifacts of the miss audit (v3.1; see "Miss-audit certificates") |
+| `miss_audit/closure_v1cases.json` | Closure record of the two first-version audit tags: census digest, digest match, and 164-task serial score of each (65 and 44 of 164) |
 | `ds13/` | deepseek-coder-1.3B diagnosis scripts and outputs |
 
 Every results directory has `runs.jsonl` (one record per run: the entry, the
@@ -155,7 +186,9 @@ Ollama options, per-task output statistics and, for rebuilds and downloaded
 files, a `hash` record with the whole-file SHA-256, the tensor-payload
 SHA-256, the tensor count, key metadata and any imatrix keys),
 `scored.jsonl` (EvalPlus per-task results; a task passes only when both the
-base and the plus tests pass), and `transcripts/<id>__<setting>.jsonl`. Runs
+base and the plus tests pass), and `transcripts/<id>__<setting>.jsonl`.
+`results-v1cases/` has `scored_serial.jsonl` instead of `scored.jsonl`: it
+was scored only serially, by `scripts/score_v1cases_serial.py`. Runs
 of census tags and already hashed builds were made with `--no-hash`. Some
 `(id, setting)` pairs in `scored.jsonl` were scored twice by overlapping
 scorer passes with identical results; the analysis uses the last row. Two R1
@@ -169,88 +202,193 @@ corresponds to `rerun-2026-10/`, and `/root/p2/run/` to
 `rerun-2026-10/scripts/` together with `harness/`, `smoke_suite_v1.json` and
 `heldout_49.json` at the repository root and the two `fn_sample_*.json` files
 in `rerun-2026-10/`.
+The `transcript` fields of `serial/*_serial.jsonl` are paths in the
+author's working copy; their file names identify the transcripts, which are
+in `results/transcripts/` (census), `rerun-2026-10/results*/transcripts/`
+(rerun) and `results-mac/`, `results-metalrep/`, `results-native/` and
+`results-sensitivity/` (`transcripts/` in each).
 
 ## Reproduce the paper's numbers
 
-The census, attribution, calibration, perplexity, robustness and miss-audit
-numbers in the revised paper come from one script, using only the Python
-standard library and the serial scores:
+Requirements: Python 3.9 or later. The numbers use only the standard
+library; the figures also need matplotlib and numpy. From the repository
+root:
 
 ```
-python3 rerun-2026-10/serial/numbers_serial.py
+python3 rerun-2026-10/serial/numbers_regroup.py   # every number in the paper
+python3 rerun-2026-10/serial/a1_regroup.py        # suite-size analysis (RQ4, "Suite choice")
+python3 rerun-2026-10/serial/figures_serial.py    # census and calibration figures
 ```
 
-It rewrites `rerun-2026-10/serial/numbers_serial.json`. The screen was tuned on
-24 Qwen2.5-Coder configurations from a separate study; their names are in
-`serial/tuning_configs.json`, but their per-task results are not in this
-release, so the script keeps the committed `tuning_serial` values (the MBPP+
-range and the 94% suite figure) and marks them `from_committed_file`. Every
-other value is recomputed. The earlier parallel-rescore version of the numbers
-is reproduced as described below.
+- `numbers_regroup.py` reads the serial scores (`rerun-2026-10/serial/*_serial.jsonl`),
+  the census files at the repository root (`results/audit_scored.jsonl`,
+  `results/audit_results.jsonl`, `smoke_suite_v1.json`, `heldout_49.json`, and
+  `analysis/analyze.py` for its helpers) and the rerun files (`ppl/`, the
+  tensor comparisons, `a1/a1_results.json`), and rewrites
+  `rerun-2026-10/serial/numbers_regroup.json`. It groups baselines by model
+  variant; it also asserts that with the v3.0 grouping it reproduces the
+  class counts, suspects and stage-one flags of `numbers_serial.json` and
+  `analysis/numbers_v3.json`. Every value that does not depend on the
+  grouping (the 164-task runs, the attribution and settings tables,
+  perplexity, tensor identity, the miss audit, the screen cost) equals its
+  value in `numbers_serial.json`.
+- `a1_regroup.py` reads `numbers_regroup.json`, so run it second. It first
+  reproduces every per-k value of the released `a1/a1_results.json` from the
+  original scores, then evaluates all 32,647 subsets of 3 to 15 suite tasks
+  on the serial scores (about 10 s) and compares the result, metric by
+  metric, with `serial/a1_serial.json`. It rewrites
+  `rerun-2026-10/serial/a1_regroup.json`.
+- `figures_serial.py` writes `rerun-2026-10/serial/figs/`. It reads only values
+  that do not depend on the baseline groups (census counts, flags, suspects,
+  164-task runs) from `numbers_serial.json`, and checks the layout of each
+  figure after drawing it.
+
+**Values a clean checkout cannot recompute.**
+
+- *Screen tuning.* The screen was tuned on 24 Qwen2.5-Coder configurations
+  from a separate study. Their names are in `serial/tuning_configs.json`;
+  their per-task results are withheld. Without them the scripts copy the
+  tuning values from the committed output and mark them
+  `"from_committed_file": true`: in `numbers_regroup.json` the `tuning_serial`
+  block (the 39-task pool, the 0 of 15 of the known failure and the MBPP+
+  range of the healthy configurations, 38.6–70.1%), and in `a1_regroup.json`
+  the `calibration_94pct_check` block, which `headline.calibration_94pct`
+  repeats (the "94% of random 15-of-164 suites" figure), together with the two
+  tuning-file hashes in `meta.inputs_sha256`. These values are inherited from
+  the committed outputs and cannot be recomputed from this release. With the
+  data, `QUANTCHECK_TUNING_DIR` (serial tuning files) and
+  `QUANTCHECK_P1_RESULTS` (the original EvalPlus result files) make both
+  scripts recompute them.
+- *Census server log.* The census Ollama `serve.log` (93 MB) is not released.
+  `serial/census_digests.json`, written from it by `serial/census_digests.py`,
+  records the server version and, for every census artifact, the SHA-256 of
+  the file it ran on and the log line it comes from. `numbers_regroup.py`
+  takes its file-identity check from it, or from the log itself when
+  `QUANTCHECK_CENSUS_SERVELOG` points at the log, in which case it also
+  asserts that the two agree.
+
+After a clean run, `git diff` shows only the two `from_committed_file` flags
+and, in `a1_regroup.json`, the recorded SHA-256 of `numbers_regroup.json`,
+which changes with its flag (and `meta.python` if your Python version
+differs). With matplotlib 3.9.4 and numpy 2.0.2 the figures match the
+paper's: the PNG files byte for byte, the PDF files except for their
+creation date.
+
+**Earlier versions of the analysis**, kept for comparison:
 
 ```
-python3 rerun-2026-10/analysis/numbers_v3.py
+python3 rerun-2026-10/serial/numbers_serial.py    # v3.0 numbers, size_key baseline groups
+python3 rerun-2026-10/analysis/numbers_v3.py      # earlier parallel rescore
+python3 rerun-2026-10/analysis/figures_v3.py      # figures on the parallel rescore, writes rerun-2026-10/figs/
+python3 analysis/analyze.py                       # v1 pipeline, withdrawn v1 rule, rewrites analysis/findings.json
 ```
 
-(The deepseek-coder-1.3B diagnosis in the paper's RQ1 section, on
-unparseable outputs and prompt tokenization, is not computed by this script.
-Its scripts and their JSON outputs are in `rerun-2026-10/ds13/`; the census
-Ollama `serve.log` they parse is not released, so the per-load records in
-`servelog_loads.json` are the released form of that evidence.)
+`numbers_v3.py` and `analyze.py` reproduce their committed outputs byte for
+byte; `numbers_serial.py` does too, except that it marks its `tuning_serial`
+block `from_committed_file`, as above. The two earlier suite-size scripts
+need the withheld tuning data for their last step: `a1/a1_rescored.py` stops
+with an `AssertionError` in `part2_3` and writes nothing, and
+`serial/a1_serial.py` stops with a `FileNotFoundError` for
+`tuning_p1_humaneval_serial.jsonl`. Their census parts are covered by
+`a1_regroup.py`, which reproduces `a1_results.json` and compares itself with
+`a1_serial.json`.
 
-It reads the census files at the repository root (`results/audit_scored.jsonl`,
-`results/audit_results.jsonl`, `results/fullrun_scores.jsonl`,
-`smoke_suite_v1.json`, and `analysis/analyze.py`, whose grouping helpers it
-reuses) and the rerun files in `rerun-2026-10/`, and rewrites
-`rerun-2026-10/analysis/numbers_v3.json`. Run on this repository, it
-reproduces the committed `numbers_v3.json` byte for byte.
-
-The suite-size analysis (RQ4, "Suite choice"):
+**The deepseek-coder-1.3B diagnosis** (RQ1, `rerun-2026-10/ds13/`):
 
 ```
-QUANTCHECK_P1_RESULTS=/path/to/p1-eval-results python3 rerun-2026-10/a1/a1_rescored.py
+python3 rerun-2026-10/ds13/ds13_census_parse.py   # unparseable outputs: 59.4% for the group, 2.4% for 286 other tags
 ```
 
-`a1_rescored.py` imports `a1_analysis.py`, first checks that it reproduces
-the released `a1_results.json` from the original scores, then recomputes the
-suite-size curve on the corrected scores and writes `a1_rescored.json`. Its
-last step reruns the calibration-suite check (the "94% of random
-15-of-164 suites" figure), which needs the per-task EvalPlus results of the
-24 Qwen2.5-Coder tuning configurations (48 `*.samples-sanitized_eval_results.json`
-files from an earlier evaluation). Those files are not in this repository.
-Without them, the suite-size part runs but the script stops with an
-`AssertionError` in `part2_3` and writes nothing. The committed
-`a1_rescored.json` was produced with them.
+runs from the release. The other three scripts need inputs that are not in
+it: `ds13_servelog.py` the census `serve.log` (`QUANTCHECK_CENSUS_SERVELOG`;
+its output, `servelog_loads.json`, is the released form of that evidence);
+`ds13_outputs.py` EvalPlus 0.3.1 and the census transcripts it was run on in
+its working layout (`QUANTCHECK_DS13_DIR`; the file names are the keys of
+`outputs_summary.json`, and all are in `results/transcripts/`);
+`ds13_tokcheck.py` EvalPlus, the `tokenizers` package and the
+`tokenizer.json` of deepseek-coder-1.3b-instruct
+(`QUANTCHECK_DS13_TOKENIZER`, default the Hugging Face cache). They write
+next to themselves. Given those inputs, each reproduces its committed JSON
+byte for byte.
 
-The figures need matplotlib and numpy:
-
-```
-python3 rerun-2026-10/analysis/figures_v3.py      # writes rerun-2026-10/figs/
-```
-
-**Paths.** These scripts originally pointed at absolute paths on the
-author's machine. In this release the defaults follow the repository layout,
-and each can be overridden with an environment variable:
+**Paths.** All defaults follow the repository layout, and each can be
+overridden with an environment variable. No script reads an absolute or
+home-relative data path; the EvalPlus executables (`EVALPLUS_BIN`) and the
+Hugging Face cache are tool locations.
 
 | Variable | Default | Used by |
 |---|---|---|
-| `QUANTCHECK_RERUN_DIR` | `rerun-2026-10/` | `numbers_v3.py`, `figures_v3.py`, `a1_rescored.py` |
-| `QUANTCHECK_A1_DIR` | `rerun-2026-10/a1/` | `numbers_v3.py`, `a1_rescored.py` |
+| `QUANTCHECK_ROOT` | repository root | `numbers_regroup.py`, `a1_regroup.py`, `numbers_serial.py`, `figures_serial.py`, `serial_rescore.py`, `a1_analysis.py`, `a1/verify/*.py` |
+| `QUANTCHECK_RERUN_DIR` | `rerun-2026-10/` | `numbers_regroup.py`, `numbers_serial.py`, `numbers_v3.py`, `figures_v3.py`, `a1_rescored.py`, `serial_rescore.py` |
+| `QUANTCHECK_ANALYSIS_DIR` | `rerun-2026-10/analysis/` | `numbers_regroup.py`, `numbers_serial.py` |
+| `QUANTCHECK_SERIAL_DIR` | `rerun-2026-10/serial/` | `numbers_regroup.py`, `a1_regroup.py` |
+| `QUANTCHECK_A1_DIR` | `rerun-2026-10/a1/` | `numbers_regroup.py`, `a1_regroup.py`, `numbers_serial.py`, `a1_serial.py`, `numbers_v3.py`, `a1_rescored.py` |
+| `QUANTCHECK_OUT_DIR` | next to the script | `numbers_regroup.py`, `a1_regroup.py`, `ds13/*.py` (except `ds13_census_parse.py`, which only prints) |
+| `QUANTCHECK_TUNING_DIR` | `rerun-2026-10/serial/` (files withheld) | `numbers_regroup.py`, `a1_regroup.py` |
+| `QUANTCHECK_P1_RESULTS` | none in this repository | `a1_regroup.py`, `a1_analysis.py`, `a1_rescored.py`, `a1/verify/*.py`, `serial_rescore.py` |
+| `QUANTCHECK_CENSUS_SERVELOG` | not in this repository | `numbers_regroup.py`, `ds13_servelog.py` |
+| `QUANTCHECK_CENSUS_TRANSCRIPTS` | `results/transcripts/` | `ds13_census_parse.py` |
+| `QUANTCHECK_DS13_DIR`, `QUANTCHECK_DS13_TOKENIZER` | see above | `ds13_outputs.py`, `ds13_tokcheck.py` |
 | `QUANTCHECK_NUMBERS_JSON` | `rerun-2026-10/analysis/numbers_v3.json` | `a1_rescored.py` |
-| `QUANTCHECK_ROOT` | repository root | `a1_analysis.py`, `a1/verify/*.py` |
-| `QUANTCHECK_P1_RESULTS` | none in this repository | `a1_analysis.py`, `a1_rescored.py`, `a1/verify/*.py` |
 
-Only those path lines were changed, so the SHA-256 of `a1_analysis.py`
-recorded in `a1_rescored.json` refers to the file before this edit. Absolute
-paths recorded inside `a1_results.json` and `a1_rescored.json` were replaced
-by `<QUANTCHECK_ROOT>`; rerunning the scripts records your own paths there.
+The two v3.1 scripts also accept the `QC_*` names of the author's working
+copy. Only path lines were changed in the v3.0 scripts, so the SHA-256 of
+`a1_analysis.py` recorded in `a1_rescored.json` refers to the file before
+that edit. Absolute paths recorded inside `a1_results.json`,
+`a1_rescored.json` and `a1_serial.json` were replaced by placeholders such as
+`<QUANTCHECK_ROOT>`; rerunning those scripts records your own paths there.
 `a1/verify/verify_extra.py` also reads the census archive
 `results/audit_data_full.tgz`, which is not in this repository (the same
 transcripts are in `results/transcripts/`).
 
-The v1 census pipeline still runs as before (`python3 analysis/analyze.py`
-rewrites `analysis/findings.json`), but its adjudication is the withdrawn v1
-rule.
+## Miss-audit certificates
+
+The paper's miss audit ran 66 artifacts that the screen passed (10 from the
+first version in `results-sensitivity/`, 56 in `rerun-2026-10/results-r3/`
+and `results-r3b/`) on 49 held-out tasks. `rerun-2026-10/miss_audit/certificates.csv`
+lists, for each of them, the evidence that it is not non-functional, that
+is, that it solves at least 17 of the 164 HumanEval+ tasks: the distinct
+successful task ids, the backend and the file digest of every run, and the
+record each digest comes from. Successes are combined only within one file
+digest and one backend. `certificates.json` holds the same rows and a
+summary (status counts, the file-identity checks, the sampling frame).
+
+| Status | v1 sample (10) | new sample (56) | All |
+|---|---:|---:|---:|
+| Certified on the audit run alone | 8 | 42 | 50 |
+| Certified by census screen plus audit, same digest and backend | 0 | 14 | 14 |
+| Certified by a full 164-task rerun on the census file (CUDA) | 2 | 0 | 2 |
+
+The last two are the v1-audit tags `granite-code:3b-instruct-q3_K_M` (12 of
+49 in the audit, 14 of 15 on the screen) and `mistral:7b-instruct-q3_K_S`
+(11 of 49, 10 of 15). The v1 audit run recorded neither its backend nor its
+file digest, so its successes cannot be combined with the screen's, and the
+audit alone falls short of 17. Both tags were therefore rerun on all 164
+HumanEval+ tasks on 22 October 2026, on a third RTX 4090 pod with Ollama
+0.32.6 and the census options. Each run loaded the census file (blobs
+`9c66e1aa` and `067ecc27`, equal to the census digests in
+`serial/census_digests.json`), and, scored serially, they solve 65 and 44
+of 164. The runs are in `rerun-2026-10/results-v1cases/` and the closure record
+is `rerun-2026-10/miss_audit/closure_v1cases.json`. The rerun does not repeat
+the census answers byte for byte: run in a different task order on another
+machine, 2 of granite's 15 screen answers and 3 of mistral's differ from the
+census transcripts, and one verdict changes (granite, HumanEval/107, pass to
+fail); their 49 held-out answers match the v1 audit transcripts on 41 and
+40 of 49 tasks. In `certificates.csv` and `certificates.json` the two rows keep their
+pre-rerun `status` (`not certified`), `certificate_basis` and `reason`. The
+`closure` column, added after the rerun, records the rerun result for these
+two rows and is empty for the other 64; `summary.closure` in
+`certificates.json` gives the status counts after the closure. No audited
+artifact scores 2 of 49 or less. `gemma3:4b-it-q8_0` was re-published
+between the census and the audit, so its certificate covers the October
+file only. The census digests come from the census server log (see
+`serial/census_digests.json`), the October digests from the `blob` field of
+`runs.jsonl` and `rerun-2026-10/logs.tar.xz:logs/serve.log`, and the v1 Mac
+pull digests from a Mac server log that is not released. The closure digests
+come from the `blob` field of `results-v1cases/runs.jsonl` and
+`results-v1cases/serve_v1cases.log.xz`. The script that built the table
+reads those unreleased logs and is not included; the source labels in the
+table name the released files where they exist.
 
 ## Smoke-test an artifact yourself
 
@@ -298,10 +436,12 @@ bounds.
 
 Reading the score: on the tuning set every healthy configuration passes 15
 of 15. The screen flags an artifact below 9 of 15 (stage one), then compares
-it with its group baseline, the median score of the same model and size at
-q6_K, q8_0 or fp16 (stage two). A suspect scores at most 2 of 15 in a group
-whose baseline is at least 8; the census baselines are in
-`results/audit_scored.jsonl` (corrected by `rerun-2026-10/census_rescore.jsonl`).
+it with its group baseline, the median score of the same model variant (the
+registry tag without its quantization suffix, for example
+`mistral:7b-instruct-v0.2`) at q6_K, q8_0 or fp16 (stage two). A suspect
+scores at most 2 of 15 in a group whose baseline is at least 8; the census
+baselines, from the serial scores, are in the `regroup.baselines` block of
+`rerun-2026-10/serial/numbers_regroup.json`.
 A low score says an artifact does not work, not why. Attributing a cause
 needs the rebuild comparison below.
 
@@ -352,7 +492,10 @@ R5, R6, R3b, then `gpu_queue_more.sh`: retries, P0 smoke, P0-c) with
 `scorer_loop.sh` scoring alongside; `g1lite.sh`; and `rescore_census.py` for
 the census rescore. `queue_tail.sh` was superseded by `gpu_queue.sh` and its
 log is empty. The library-vs-plain comparison in `p0b_tensor_compare.jsonl` was
-run by calling `compare_tensors.py` directly.
+run by calling `compare_tensors.py` directly. The miss-audit closure ran later
+on a third pod with `v1cases.sh`, which installs Ollama 0.32.6 and EvalPlus
+itself and expects the scripts in `/root/p2/run`; `score_v1cases_serial.py`
+then scored its transcripts serially on a Mac.
 
 ### Calibration texts (not included)
 

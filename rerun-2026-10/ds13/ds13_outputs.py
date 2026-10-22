@@ -1,10 +1,15 @@
-import os
 #!/usr/bin/env python3
 """F05 diagnosis, step 2: what deepseek-coder-1.3b census outputs look like,
 compared with deepseek-coder-6.7b (same Ollama template, system prompt and
 mis-pre-tokenized prompts), the TheBloke 1.3b referee, and two healthy small
 coders. Static analysis only: generated code is parsed, never executed.
-Writes gates/ds13/outputs_summary.json.
+Writes outputs_summary.json next to this script (QUANTCHECK_OUT_DIR overrides).
+Paths (release): inputs and outputs follow the repository layout and can be overridden with
+environment variables; see the README section on rerun-2026-10/ds13/.
+Its inputs are a selection of census transcripts in the run's working layout
+(DS/results/transcripts and DS/compare/results/transcripts, with DS = QUANTCHECK_DS13_DIR);
+the selection is the set of file names listed in the committed outputs_summary.json, all of
+which are in results/transcripts.
 """
 import ast, glob, json, os, re, statistics, sys, warnings
 warnings.filterwarnings("ignore")
@@ -13,7 +18,8 @@ from evalplus.sanitize import sanitize
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 V3 = os.path.dirname(HERE)
-DS = os.path.join(V3, "gates", "ds13")
+DS = os.environ.get("QUANTCHECK_DS13_DIR", os.path.join(V3, "gates", "ds13"))
+OUT_DIR = os.environ.get("QUANTCHECK_OUT_DIR", HERE)
 RESCORE = os.environ.get("QUANTCHECK_RESCORE", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "census_rescore.jsonl"))
 FENCE = re.compile(r"```([A-Za-z0-9_+-]*)[ \t]*\n(.*?)(?:```|\Z)", re.S)
 REFUSAL = re.compile(r"I'm sorry|I am sorry|I cannot|I can't|As an AI|only answer questions related to computer science", re.I)
@@ -97,7 +103,7 @@ def main():
                 pt = (resc.get(base) or resc.get(key)) if kind == "smoke" else None
                 a = analyse(f, pt)
                 result.setdefault(g, {})[base] = a
-    json.dump(result, open(os.path.join(DS, "outputs_summary.json"), "w"), indent=1)
+    json.dump(result, open(os.path.join(OUT_DIR, "outputs_summary.json"), "w"), indent=1)
     # compact print
     agg_keys = ["n", "pass", "fence", "lang_other", "closed_fence", "parse_ok", "indent_err", "syntax_err",
                 "entry_def_raw", "entry_in_sanitized", "odd_indent_outputs", "refusal", "fail_n", "fail_parse_err"]

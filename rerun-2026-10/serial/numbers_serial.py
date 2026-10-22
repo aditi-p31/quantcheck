@@ -219,7 +219,7 @@ N["tensor_identity"] = [ {k: r[k] for k in ("a", "b", "n_tensors", "identical_te
                          for r in jl(os.path.join(RERUN, f))]
 
 # Suite robustness (A1): keys of the released file, as in numbers_v3 (the serial A1 is a1_serial.json)
-a1 = json.load(open(os.path.expanduser("~/Documents/paper/p2-v2-work/rerun-2026-10/a1/a1_results.json")))
+a1 = json.load(open(os.path.join(os.environ.get("QUANTCHECK_A1_DIR", os.path.join(RERUN, "a1")), "a1_results.json")))
 N["A1_keys"] = sorted(a1.keys())[:30]
 
 # =====================================================================================================

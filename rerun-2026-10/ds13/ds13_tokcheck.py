@@ -4,6 +4,10 @@ llama-server (serve.log) for deepseek-coder-1.3b, under (a) the model's own
 deepseek-coder pre-tokenizer (HF tokenizer.json) and (b) an emulation of
 llama.cpp's 'default' BPE pre-tokenizer, which serve.log says was used
 ("missing pre-tokenizer type, using: 'default'"). No model is run.
+Paths (release): inputs and outputs follow the repository layout and can be overridden with
+environment variables; see the README section on rerun-2026-10/ds13/.
+QUANTCHECK_DS13_TOKENIZER gives the path of deepseek-coder-1.3b-instruct's tokenizer.json
+(default: the Hugging Face hub cache); output goes next to this script (QUANTCHECK_OUT_DIR).
 """
 import glob, json, os, sys
 from tokenizers import Tokenizer, pre_tokenizers, Regex
@@ -13,8 +17,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 V3 = os.path.dirname(HERE)
 ROOT = os.path.dirname(V3)
 SUITE = json.load(open(os.path.join(ROOT, "smoke_suite_v1.json")))["suite_tasks"]
-TOKJ = glob.glob(os.path.expanduser(
+TOKJ = os.environ.get("QUANTCHECK_DS13_TOKENIZER") or glob.glob(os.path.expanduser(
     "~/.cache/huggingface/hub/models--deepseek-ai--deepseek-coder-1.3b-instruct/snapshots/*/tokenizer.json"))[0]
+OUT_DIR = os.environ.get("QUANTCHECK_OUT_DIR", HERE)
 INSTRUCTION = ("Please provide a self-contained Python script that solves the following "
                "problem in a markdown code block:")
 SYSTEM = ("You are an AI programming assistant, utilizing the Deepseek Coder model, developed by "
@@ -71,7 +76,7 @@ def main():
               " match correct:", sum(r["logged"] == r["correct_pretok"] for r in rr), "/", len(rr),
               " sum logged", sum(r["logged"] for r in rr), " sum correct", sum(r["correct_pretok"] for r in rr),
               " sum default", sum(r["default_pretok"] for r in rr))
-    json.dump(rows, open(os.path.join(V3, "gates", "ds13", "tokcheck.json"), "w"), indent=1)
+    json.dump(rows, open(os.path.join(OUT_DIR, "tokcheck.json"), "w"), indent=1)
 
 if __name__ == "__main__":
     main()

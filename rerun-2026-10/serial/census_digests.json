@@ -1,0 +1,4328 @@
+{
+ "source": "census Ollama serve.log, CUDA pod, 2026-08-12 (not released; extracted with census_digests.py)",
+ "server": {
+  "ollama_version": "0.32.6",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "library": "CUDA",
+  "driver": "13.0",
+  "llama_cpp_build": "96278e39f"
+ },
+ "n_artifacts": 334,
+ "artifacts": {
+  "qwen2.5-coder:0.5b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496389.5174403,
+    1786496486.41857
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "20693aeb02c63304e263a72453b6ab89e1c700a87c6948cac523ac1e6f7cade0",
+   "serve_log_line": 24
+  },
+  "qwen2.5-coder:0.5b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496597.3352485,
+    1786496643.6664455
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "6b95d20d03ce6922adf79e18db68183a0aa6662cdb231e56bccea2faccf0073f",
+   "serve_log_line": 853
+  },
+  "qwen2.5-coder:0.5b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496643.6731746,
+    1786496675.2466254
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "e3a42de4cfa023691dc37bb803f49ab7ea128567d469d1a54f3519efa5ff375c",
+   "serve_log_line": 1681
+  },
+  "qwen2.5-coder:0.5b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496675.2678342,
+    1786496722.792952
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "130b4472ef7b12a7c9312fe99862e7b63bb451b4ea79219d7fac94807965da9b",
+   "serve_log_line": 2508
+  },
+  "qwen2.5-coder:0.5b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496722.7995079,
+    1786496754.8487885
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "d1034b2e54e2461f4d4fa2819b13379f7fc5afb60ddc476a4d3108a9ad2a045c",
+   "serve_log_line": 3338
+  },
+  "qwen2.5-coder:0.5b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496754.8570187,
+    1786496790.8815436
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "b69f94244daed4c088f3f31e8ad45bd427e5df14df360d23ef6d6b99f678bc18",
+   "serve_log_line": 4166
+  },
+  "qwen2.5-coder:0.5b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496790.8881385,
+    1786496821.596668
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "2d3d77880bd4496170da0be469ef6f664f5554ca5f372decec3915ae87396995",
+   "serve_log_line": 4980
+  },
+  "qwen2.5-coder:0.5b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496821.6149192,
+    1786496852.4056342
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "bba0961c805082120d318ac3f6b70b89fbcc08da23b9297d3e5db192f629a40b",
+   "serve_log_line": 5809
+  },
+  "qwen2.5-coder:0.5b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496852.4173908,
+    1786496883.3293312
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "3392df8b589198824f2db15999530583bda1943ed8c68aecd0d9eb0d0da592f0",
+   "serve_log_line": 6636
+  },
+  "qwen2.5-coder:0.5b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496883.3369691,
+    1786496914.836877
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "e119a9abcbc15328fc13d61e9902aefe8c34cd13ed52dd33091a6f62cb2cf36b",
+   "serve_log_line": 7464
+  },
+  "qwen2.5-coder:0.5b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496914.84433,
+    1786496947.6933658
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "828125e28bf46a219fa4f75b6982cb0c41fd9187467abe91c9b175287945b7ef",
+   "serve_log_line": 8290
+  },
+  "qwen2.5-coder:0.5b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786496947.700203,
+    1786497002.5187547
+   ],
+   "file_type": "F16",
+   "blob_sha256": "f44732b10856f1137245774806a1ba1d762cd4ae6bd559aabe9e6503cad0b466",
+   "serve_log_line": 9115
+  },
+  "qwen2.5-coder:1.5b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497002.5268438,
+    1786497052.489333
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "2ad3bff59cf29da8ee66d325a468d05901c3726891e1ab5830d55de731810cb9",
+   "serve_log_line": 9940
+  },
+  "qwen2.5-coder:1.5b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497052.4967635,
+    1786497091.9417357
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "8daa93edc1cc760b0924c3953afdd5e080397ea29c85736c419880ac825c3a57",
+   "serve_log_line": 10768
+  },
+  "qwen2.5-coder:1.5b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497091.949273,
+    1786497130.3613641
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "57ab67e0bedf81428701ae65db8d8c928657388239aaf096c8be0f9ce31f28cc",
+   "serve_log_line": 11594
+  },
+  "qwen2.5-coder:1.5b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497130.3678222,
+    1786497171.5047278
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "0c0f0929e3d8d2aff5c77d2a3d39ca844b5b529e6ea7a242e67eff13e7a85f4e",
+   "serve_log_line": 12422
+  },
+  "qwen2.5-coder:1.5b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497171.52257,
+    1786497210.5455637
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "47f040d8da18f80490d8c6b33747b195c119cb4567787c21d2177140ba449c8a",
+   "serve_log_line": 13249
+  },
+  "qwen2.5-coder:1.5b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497210.5529923,
+    1786497250.0477974
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "0b8c788c3585fb65595e274cc04a6d2aa2fa489e931a9f8b65edfb1ab52a377e",
+   "serve_log_line": 14075
+  },
+  "qwen2.5-coder:1.5b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497250.0547082,
+    1786497290.1359363
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "29d8c98fa6b098e200069bfb88b9508dc3e85586d20cba59f8dda9a808165104",
+   "serve_log_line": 14902
+  },
+  "qwen2.5-coder:1.5b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497290.1435938,
+    1786497332.5746665
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "fa967541c2f4b7b6720b42e08c88d38537b0e56425b536d2f43bc9074e96b2aa",
+   "serve_log_line": 15728
+  },
+  "qwen2.5-coder:1.5b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497332.582853,
+    1786497375.721038
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "64fffaf8be7f0cdfecfcffd0d8c8d066d1959b367493e5b9d8168da6801578fb",
+   "serve_log_line": 16554
+  },
+  "qwen2.5-coder:1.5b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497375.7278867,
+    1786497420.8608234
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "d2b23e7347196ba409885103177e5bc25ebe048b19c4576a11ff78efeb77af34",
+   "serve_log_line": 17380
+  },
+  "qwen2.5-coder:1.5b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497420.870353,
+    1786497474.5078354
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "58db9b8722fe2dec6918b842b05de814dd56c6a8bc55f35c5e8b66812206398e",
+   "serve_log_line": 18205
+  },
+  "qwen2.5-coder:1.5b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497474.5208914,
+    1786497553.9927862
+   ],
+   "file_type": "F16",
+   "blob_sha256": "298d758b014dffd713cda0e8d23404e81faea39446c45074ce9470f0a135799a",
+   "serve_log_line": 19030
+  },
+  "qwen2.5-coder:3b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497554.0003285,
+    1786497634.8483691
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e",
+   "serve_log_line": 19855
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497634.858475,
+    1786497681.9302769
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "81d167af7fa3dc4e7eb361fc6df220638eb0f0783c49d317f5c4a3f8f94380d9",
+   "serve_log_line": 20699
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497681.9520564,
+    1786497732.1214306
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "9bb5d28b842a91987a4d0c9a0616a69a3f031bcf535817c1f901639d1949a2ab",
+   "serve_log_line": 21494
+  },
+  "qwen2.5-coder:3b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497732.1288598,
+    1786497784.9722595
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "7a88dc11faae61e335bc9993f57f056a63eeb9d82b76ea6a8021f5657365d7c2",
+   "serve_log_line": 22300
+  },
+  "qwen2.5-coder:3b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497784.9802155,
+    1786497842.8253076
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "e717d23e294def714c9fe962b57027388c25632820072609d5fb68071b8a3d41",
+   "serve_log_line": 23105
+  },
+  "qwen2.5-coder:3b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497842.8386204,
+    1786497900.8873136
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "e9235a894a5ed24585ba4d84042680bfaeac9ff6b17f303ef3a4f48e87ab6eb9",
+   "serve_log_line": 23932
+  },
+  "qwen2.5-coder:3b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497900.8951209,
+    1786497960.1645257
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "4a188102020e9c9530b687fd6400f775c45e90a0d7baafe65bd0a36963fbb7ba",
+   "serve_log_line": 24760
+  },
+  "qwen2.5-coder:3b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786497960.1721578,
+    1786498024.0863965
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "8300800474501d382ed2be01f7ae4605da16f9309bd93566471cb4f2593e569a",
+   "serve_log_line": 25587
+  },
+  "qwen2.5-coder:3b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498024.1126344,
+    1786498088.59141
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "9904d1e7ecaa041011a26546d69260d28ced3806b789caf1de49158e9a934edc",
+   "serve_log_line": 26414
+  },
+  "qwen2.5-coder:3b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498088.5985796,
+    1786498158.9316027
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "8ca4331ecf55a22adc66ba21bf55125cd8f5c04fa9dc4a86ad01569e1e6f228d",
+   "serve_log_line": 27241
+  },
+  "qwen2.5-coder:3b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498158.9391515,
+    1786498243.6913502
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "9b07ebf4379547255597cdd67dba9230db2760ab9daca8ce4f9e6f2f4c71f57f",
+   "serve_log_line": 28067
+  },
+  "qwen2.5-coder:3b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498243.69921,
+    1786498379.7920644
+   ],
+   "file_type": "F16",
+   "blob_sha256": "b293d7aa8e6396f427a8ff7b8367c1cab3524dc0c92aeb85b2c9f3f7b7ebfeb9",
+   "serve_log_line": 28895
+  },
+  "qwen2.5-coder:7b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498379.81398,
+    1786498459.4314914
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "1da8a118ae881a5076c3fbf30b3baecce4cfac4936fc6513cc82ae323021c5f6",
+   "serve_log_line": 29725
+  },
+  "qwen2.5-coder:7b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498459.439595,
+    1786498546.3860118
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "979f4d4ba7d830f77bddc008ae8841bcfd6523dd7039101bdc6d00c9352b818e",
+   "serve_log_line": 30553
+  },
+  "qwen2.5-coder:7b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498546.3934479,
+    1786498637.851031
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "05aa5009764dce4f80474103b171e7c42bf5c2041e121443c863f03b23a3d894",
+   "serve_log_line": 31382
+  },
+  "qwen2.5-coder:7b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498637.8584952,
+    1786498737.7935112
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "a11ec032a38beeabbc3ada2b6c60e4140bede9e3ce81e30a9436620411836898",
+   "serve_log_line": 32212
+  },
+  "qwen2.5-coder:7b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498737.8006122,
+    1786498843.7253783
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "e37c9e2996ab00cbe2ea633cc0ca37a872b2df67b7229659874df63775e88c29",
+   "serve_log_line": 33041
+  },
+  "qwen2.5-coder:7b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498843.7321763,
+    1786498948.022328
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "5eff4fa361d86fe6d8553b3ba8addea785537e770d660c675a8b3351948cd378",
+   "serve_log_line": 33869
+  },
+  "qwen2.5-coder:7b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786498948.030071,
+    1786499055.6337194
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463",
+   "serve_log_line": 34698
+  },
+  "qwen2.5-coder:7b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786499055.642241,
+    1786499176.8193684
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "9a3a93100e1ed4ed391075a88cd54c4840180b976798344b5e1be8d935e50bd9",
+   "serve_log_line": 35528
+  },
+  "qwen2.5-coder:7b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786499176.8301985,
+    1786499299.795021
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "52476f59a3cf8b77b96872a0ba56b62c528591af0068c79dde8d23394e88a315",
+   "serve_log_line": 36357
+  },
+  "qwen2.5-coder:7b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786499299.8172154,
+    1786499438.1545062
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "c7ba7615f264a88de19b56663db267ca93af146e89aee704b062e981581015f0",
+   "serve_log_line": 37186
+  },
+  "qwen2.5-coder:14b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786499438.1627724,
+    1786499575.4824657
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "58a5617cac26a73b4bec1110e507630331a0198137c2cef4d44f5fa28d1a336b",
+   "serve_log_line": 38016
+  },
+  "qwen2.5-coder:14b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786499575.489191,
+    1786499737.287871
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "dcc223a447daa89f758ad0f12f5e71e4b92fadee5f5b45607f191d6b15f9ce40",
+   "serve_log_line": 38846
+  },
+  "qwen2.5-coder:14b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786499737.2955556,
+    1786499901.719302
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "a0c47f63879e67d13abda9945f814e70468ebb38288d5991b5fdbe2618039c64",
+   "serve_log_line": 39678
+  },
+  "qwen2.5-coder:14b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786499901.7278254,
+    1786500084.6706078
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "f8ca0ba1d6cf2fac232706e6313684eba634ea6972e6ba399c0380bf4ec59bd4",
+   "serve_log_line": 40513
+  },
+  "llama3.2:1b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500084.6783974,
+    1786500144.862069
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "d1ede02a2111e30c0585383c5702933a07f1d6d7cb9e5727ae41d48e3885d1f3",
+   "serve_log_line": 41348
+  },
+  "llama3.2:1b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500144.8707616,
+    1786500184.6650875
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "81881dcc12ece016e1aca828677376b0a772cd296aff2b6dd3a8505b5bd9cb31",
+   "serve_log_line": 42157
+  },
+  "llama3.2:1b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500184.6732144,
+    1786500227.378751
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "4aad99b45e1ed1c05952eda608b951cd6e28a99aa366f3f6e2324653fa1ba593",
+   "serve_log_line": 42963
+  },
+  "llama3.2:1b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500227.3884008,
+    1786500270.4460864
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "8ee2056d33ee7965a854be299169c0f2e33f7be46a6a5246e676d64b88300928",
+   "serve_log_line": 43771
+  },
+  "llama3.2:1b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500270.4528985,
+    1786500316.1339924
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "b98b382ad8598741921dd8fe72c0dbf59af0f93c1916ce848939d710dfdba81d",
+   "serve_log_line": 44578
+  },
+  "llama3.2:1b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500316.140801,
+    1786500356.0370514
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "9eec99c09bf1919a1ec6ce35ee8bc731dfe01181adf64c1f05b41c35f7743d9a",
+   "serve_log_line": 45384
+  },
+  "llama3.2:1b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500356.0448909,
+    1786500397.8526094
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "84fffd9ce0ecc7e0a36ec7a3c3aa21bb888213f8bf3db9408d5520a26412f06e",
+   "serve_log_line": 46191
+  },
+  "llama3.2:1b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500397.8604228,
+    1786500442.3792589
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "a527707c396019546d772b1f91cc15e93676ad77bb71ea4ff328d8f53c34f7eb",
+   "serve_log_line": 46997
+  },
+  "llama3.2:1b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500442.4008496,
+    1786500486.6679993
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "a1d443469dbae8c1aa29fc52db681e65d58bd521872c00d410a70670f852191b",
+   "serve_log_line": 47803
+  },
+  "llama3.2:1b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500486.6822884,
+    1786500533.0807114
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "ac1e61f30b7e7be438c0b6a6aade8e3a1a1a8d50b5184ab82385c84a7b43a081",
+   "serve_log_line": 48609
+  },
+  "llama3.2:1b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500533.0881984,
+    1786500585.1064913
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "74701a8c35f6c8d9a4b91f3f3497643001d63e0c7a84e085bed452548fa88d45",
+   "serve_log_line": 49414
+  },
+  "llama3.2:1b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500585.117975,
+    1786500662.2398753
+   ],
+   "file_type": "F16",
+   "blob_sha256": "1ec85b6f7ac019cc3b9f025213672fec438881df00df953cc37e92b2cee9a995",
+   "serve_log_line": 50219
+  },
+  "llama3.2:3b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500662.2494192,
+    1786500729.2191012
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "7b9c6394c3eb23ee6dedeb964ba6f86a4196ea63be1809aad6a7184edfd67509",
+   "serve_log_line": 51027
+  },
+  "llama3.2:3b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500729.2253454,
+    1786500789.8394983
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "d3f9b822234e838a31d5b97898b1bb0d7a76cee14739aafcd0b6c3a8fbb249fd",
+   "serve_log_line": 51835
+  },
+  "llama3.2:3b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500789.8475678,
+    1786500853.601709
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "1fe0d0287b086dbee33c53511787b20f3bfdbaf24c2d4c7b10379a30058394ed",
+   "serve_log_line": 52642
+  },
+  "llama3.2:3b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500853.6184337,
+    1786500916.0836682
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "a2cbe2d133cce5e7acc5c40bc89670c0f137559f66928fddee70d2f642a6596e",
+   "serve_log_line": 53451
+  },
+  "llama3.2:3b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500916.0915592,
+    1786500981.6237848
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "9c8a9ab5edab20fcfa0e9ca322f0131c3bfb2f5a2f4ec12425a761f2f12deefa",
+   "serve_log_line": 54259
+  },
+  "llama3.2:3b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786500981.631651,
+    1786501047.8827438
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "d5e517daeee4e5788d92eea5b41b9c5fd534019ea18849d00f25c66cb65109a5",
+   "serve_log_line": 55066
+  },
+  "llama3.2:3b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501047.8912416,
+    1786501115.9828515
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff",
+   "serve_log_line": 55876
+  },
+  "llama3.2:3b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501115.9899554,
+    1786501185.338263
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "338cb28d842b37b4573fe39049fc7bbb576363974a6879c2401e9f423145acf1",
+   "serve_log_line": 56685
+  },
+  "llama3.2:3b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501185.3445916,
+    1786501257.3841407
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "05fc42664a9311c427413f9bf2077bd5ee7d59d6a5a034d54fc738f93976d065",
+   "serve_log_line": 57492
+  },
+  "llama3.2:3b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501257.391686,
+    1786501335.9205506
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "0ba5c285c16ba078b17959f8ee1ad4142d161c99c6e3e8c713aeb7a0316a95a8",
+   "serve_log_line": 58299
+  },
+  "llama3.2:3b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501335.9273553,
+    1786501428.4387586
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "ed5cd7dbde6e2b5fb2d9926857ecf0f73ae3509ac1efd119ee54584d7a724688",
+   "serve_log_line": 59107
+  },
+  "llama3.2:3b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501428.4462144,
+    1786501579.1302269
+   ],
+   "file_type": "F16",
+   "blob_sha256": "e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b",
+   "serve_log_line": 59915
+  },
+  "llama3.1:8b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501579.1371508,
+    1786501671.1218154
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "36cc41839cc170480c8e4fd176b404024e06df4bd7128bcbe199293283b844a9",
+   "serve_log_line": 60725
+  },
+  "llama3.1:8b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501671.1289663,
+    1786501776.501611
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "dd7bd451c8d39a9401fa56a6be1b666f78ced21d957c5b487fe24c290e2a5665",
+   "serve_log_line": 61534
+  },
+  "llama3.1:8b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501776.5178008,
+    1786501885.6355782
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "df08b8a44ba3a31feca67933d850938cb651f74f5aa146c408de674ddb0f7918",
+   "serve_log_line": 62342
+  },
+  "llama3.1:8b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786501885.6434062,
+    1786502002.4713342
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "ac3190703683f1c0d9533f415034f9f694fbae3e243b05f7bf27e2c6cb9b002f",
+   "serve_log_line": 63151
+  },
+  "llama3.1:8b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786502002.4802005,
+    1786502124.8462594
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "8eeb52dfb3bb9aefdf9d1ef24b3bdbcfbe82238798c4b918278320b6fcef18fe",
+   "serve_log_line": 63960
+  },
+  "llama3.1:8b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786502124.8531537,
+    1786502249.842885
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "4d14ff3147f7f99ba6e10643aa8fb75aa97b4aee2dd0567676b962ed844f9c62",
+   "serve_log_line": 64768
+  },
+  "llama3.1:8b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786502249.8508315,
+    1786502384.1837628
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+   "serve_log_line": 65576
+  },
+  "llama3.1:8b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786502384.2115638,
+    1786502533.1200974
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "543968cfcb9b353f55424d9b67368e6b73f6bd52868267bbe5a85d073a15098d",
+   "serve_log_line": 66387
+  },
+  "llama3.1:8b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786502533.1273565,
+    1786502687.4254065
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "1ae48274baafb576c66af17eca484ba3d44759316a0e9cbef252b6235af9ceef",
+   "serve_log_line": 67200
+  },
+  "llama3.1:8b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786502687.4347613,
+    1786502861.3952212
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "2eda6fab632c5584da09426d35d410a7d2b23ed6259d71455b664824c2d17076",
+   "serve_log_line": 68013
+  },
+  "gemma2:2b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786502861.411891,
+    1786502966.686769
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "5801226dd8c15f292142d2152443193bb5cb69d2d4ac62caeaba126415b2dc04",
+   "serve_log_line": 68827
+  },
+  "gemma2:2b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786502966.7114995,
+    1786503049.946723
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "34e1a838262eec4d247a4548f13e8ec213e73a686151d9a04c7ad85854bd4263",
+   "serve_log_line": 69729
+  },
+  "gemma2:2b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503049.9681273,
+    1786503129.9860454
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "19026d829714d8706cda27592e5b913978832e2a666e8f5f24f054b9a97442b1",
+   "serve_log_line": 70630
+  },
+  "gemma2:2b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503129.9943144,
+    1786503214.672977
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "ee7a25fe8a34bcb883016619970f90d2df5b0e807feb40ed983c475ff6b2a35f",
+   "serve_log_line": 71535
+  },
+  "gemma2:2b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503214.7151625,
+    1786503297.0845578
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "7462734796d67c40ecec2ca98eddf970e171dbb6b370e43fd633ee75b69abe1b",
+   "serve_log_line": 72437
+  },
+  "gemma2:2b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503297.092916,
+    1786503380.9458308
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "7c3021706684c615c3d5caf59f2e2f9ccd15e3e779394c4325dc69157709a0c3",
+   "serve_log_line": 73338
+  },
+  "gemma2:2b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503380.9547098,
+    1786503467.52161
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "1e4fc624315d98d43f7ca5599bc5ce0215c96f4b699d9b6a84ce47c7a3664cdf",
+   "serve_log_line": 74237
+  },
+  "gemma2:2b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503467.5296323,
+    1786503558.3945682
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "7145ce0ac8c755a8def4d606962994eb188e1bc2017072743b84c4c2f7cb3ff5",
+   "serve_log_line": 75138
+  },
+  "gemma2:2b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503558.4118488,
+    1786503648.798934
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "b21594fe35023c20333008b4284c00869ec3904d40be091b9d99f1d41f7bd165",
+   "serve_log_line": 76039
+  },
+  "gemma2:2b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503648.8174915,
+    1786503746.6824386
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "0ba7df0925239c02b677883dc7b7b08f579808363e36482ba3bac6580731b699",
+   "serve_log_line": 76941
+  },
+  "gemma2:2b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503746.6901934,
+    1786503854.3441727
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "9a31a1608e139e7ba6ceb61db8c49022eb26886d715363b21a01943f93fbc0d6",
+   "serve_log_line": 77843
+  },
+  "gemma2:2b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786503854.3526018,
+    1786504013.4584632
+   ],
+   "file_type": "F16",
+   "blob_sha256": "a4301a091f097407fffc2769d0e160d6eec570c64fb70ba365c09fbca4fddfa9",
+   "serve_log_line": 78745
+  },
+  "gemma2:9b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786504013.4682558,
+    1786504132.5705013
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "3c811cffef2cd19a7b46352d58d4a3a93328db3a62f27d3d6cced11e5c7aac86",
+   "serve_log_line": 79654
+  },
+  "gemma2:9b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786504132.5919993,
+    1786504258.4354072
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "52ffd1de6cd7c23cdcac36fd24fd8a04748bfe5c1b667d72fd8577cbc3e753f3",
+   "serve_log_line": 80555
+  },
+  "gemma2:9b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786504258.4432945,
+    1786504397.5471416
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "9c58bc7ce0457270116deecd158efb3b46eae902e1d46d6ccc105491425387ef",
+   "serve_log_line": 81452
+  },
+  "gemma2:9b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786504397.557553,
+    1786504551.2710674
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "e7467170c0833f82d5b0cb442ce2ef6a6cba115eaacf1df92364d8df7d3ec9db",
+   "serve_log_line": 82357
+  },
+  "gemma2:9b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786504551.2786129,
+    1786504713.8369236
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "ff1d1fc78170d787ee1201778e2dd65ea211654ca5fb7d69b5a2e7b123a50373",
+   "serve_log_line": 83262
+  },
+  "gemma2:9b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786504713.8590758,
+    1786504875.4216573
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "4833479eb63eb1c6cce72c9a43341d22aaa6e0c421097e560c2a456ac7fe551b",
+   "serve_log_line": 84169
+  },
+  "gemma2:9b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786504875.4297538,
+    1786505043.204333
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "cb654129f57b4f44e372fab3d6540c0d6784c3adc33125d7c38ab47122ee2a54",
+   "serve_log_line": 85073
+  },
+  "gemma2:9b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505043.2207792,
+    1786505223.3293693
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "cada397cadf02690222b32b1c8d33c38bf0b7ab56de92cb0f9935a9f3a258958",
+   "serve_log_line": 85979
+  },
+  "gemma2:9b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505223.3378036,
+    1786505401.2825282
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "d44cd3b3a39e39828c83d7f1d3e953ed7fc34ba508695297a9d751a9e542fcca",
+   "serve_log_line": 86885
+  },
+  "gemma2:9b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505401.290785,
+    1786505596.0305338
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "f26ac421f17171d67bf812c6f8eb3a599628b2834a31c8b1702e29f544cf5b29",
+   "serve_log_line": 87790
+  },
+  "gemma3:270m-it-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505596.038719,
+    1786505638.2654445
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "735af2139dc652bf01112746474883d79a52fa1c19038265d363e3d42556f7a2",
+   "serve_log_line": 88693
+  },
+  "gemma3:270m-it-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505638.2734778,
+    1786505677.1932526
+   ],
+   "file_type": "F16",
+   "blob_sha256": "08399814145c73aa10a18ab0e94587f3afe4fd48cfea18fd04972ffe1ae423bc",
+   "serve_log_line": 89590
+  },
+  "gemma3:1b-it-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505677.199819,
+    1786505730.4494183
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "7cd4618c1faf8b7233c6c906dac1694b6a47684b37b8895d470ac688520b9c01",
+   "serve_log_line": 90487
+  },
+  "gemma3:1b-it-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505730.4589312,
+    1786505790.8006046
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "62901574f2522ef2657cb6f9a35a670efd3942d9a2b4b39c3f0032bdef2dfbc4",
+   "serve_log_line": 91388
+  },
+  "gemma3:1b-it-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505790.8190057,
+    1786505869.1248646
+   ],
+   "file_type": "F16",
+   "blob_sha256": "95686f6f23dfba5f40bfbaf127acc34b554a621649b7d258f1762a5a2ce27f0f",
+   "serve_log_line": 92284
+  },
+  "gemma3:4b-it-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505869.1324413,
+    1786505969.4723914
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "aeda25e63ebd698fab8638ffb778e68bed908b960d39d0becc650fa981609d25",
+   "serve_log_line": 93181
+  },
+  "gemma3:4b-it-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786505969.4794245,
+    1786506158.9894788
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "b3ec67796e032db2b124e3b57ac83dadeed7cd55d62a673f6cecd9f4e1a611be",
+   "serve_log_line": 94128
+  },
+  "phi3.5:3.8b-mini-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506159.0148146,
+    1786506243.9020083
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "54d47caa8bf30afce66f6945667b03df2df4deb94711c21d854706481c9c4c4b",
+   "serve_log_line": 95074
+  },
+  "phi3.5:3.8b-mini-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506243.919337,
+    1786506305.591864
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "81c2147a6c5a94b01185b14ae424a26163543afa2333560c7d2297f000cb31ee",
+   "serve_log_line": 95888
+  },
+  "phi3.5:3.8b-mini-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506305.6142178,
+    1786506373.5391526
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "abcfd2f187d16cb29ba3e5d1fd9b05b860e9a5afdd4d609e40ec0596fdbdc8c8",
+   "serve_log_line": 96703
+  },
+  "phi3.5:3.8b-mini-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506373.5476744,
+    1786506444.902416
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "cda3c938fc13343a80f60881f4987bbbb990a59403aafce7f81d4380b76fd2f1",
+   "serve_log_line": 97520
+  },
+  "phi3.5:3.8b-mini-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506444.917336,
+    1786506517.6679735
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "b5374915da534cb93df39f03bd4f2cd5a0c533df0d5e21957dc9556c260be9eb",
+   "serve_log_line": 98337
+  },
+  "phi3.5:3.8b-mini-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506517.6754801,
+    1786506593.7445238
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "5db3e683309003f16a47246b8e4b610204c16c0d3abe0de86ccf971569493d68",
+   "serve_log_line": 99152
+  },
+  "phi3.5:3.8b-mini-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506593.7528164,
+    1786506675.4614966
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "3ef532675b6684b28e0a1a0dca8b3bf4132673bf2294b7d87b41b1d64bb03bca",
+   "serve_log_line": 99968
+  },
+  "phi3.5:3.8b-mini-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506675.4705105,
+    1786506756.8901634
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "50b8dc3b4ccc9c28778f43df7356709463d96a1bd35e942ed46ee88a34a4b22f",
+   "serve_log_line": 100786
+  },
+  "phi3.5:3.8b-mini-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506756.898087,
+    1786506840.2264178
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "ef57be356e37cdf6045f7ef9149f7f6974e7c18f23b384296608029466c48f01",
+   "serve_log_line": 101601
+  },
+  "phi3.5:3.8b-mini-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506840.2363737,
+    1786506930.3423665
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "86e5e74919d7935fe84e29a2e525feb9f1cce5beb6d550bc8cb2098f0f931410",
+   "serve_log_line": 102416
+  },
+  "phi3.5:3.8b-mini-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786506930.352364,
+    1786507040.3642168
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "81fd0b829a6ff15b3df3cc792de3f3e75a9fb2f1f55c0059af55a698b1173150",
+   "serve_log_line": 103233
+  },
+  "phi3.5:3.8b-mini-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507040.3873918,
+    1786507229.0574582
+   ],
+   "file_type": "F16",
+   "blob_sha256": "04381ade8b69632b564f1dbc473dac52f7819349ceb3cc76d268dee91f762fe2",
+   "serve_log_line": 104051
+  },
+  "deepseek-coder:1.3b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507229.0674148,
+    1786507271.4214866
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "0baec13e604a747485b59fc2ed855a44f7683176be8170ae0e6bd8918bb0ce60",
+   "serve_log_line": 104878
+  },
+  "deepseek-coder:1.3b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507271.4303489,
+    1786507306.679081
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "fe5a110d0a64ce73713a9b0a0d757c11f579bc5c2e14683da293128f3161c225",
+   "serve_log_line": 105675
+  },
+  "deepseek-coder:1.3b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507306.6877108,
+    1786507344.2901628
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "8695ca2daa97efc42ba64cfe847f6a216d89410fd8384576bc186da9a77bdadc",
+   "serve_log_line": 106489
+  },
+  "deepseek-coder:1.3b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507344.2981956,
+    1786507384.9223385
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "9d8833106bb7e48ee967e1d3d5910c21a91fcd2834c1196bf10063db436035a7",
+   "serve_log_line": 107306
+  },
+  "deepseek-coder:1.3b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507384.9328465,
+    1786507422.6772985
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "d040cc18521592f70c199396aeaa44cdc40224079156dc09d4283d745d9dc5fd",
+   "serve_log_line": 108113
+  },
+  "deepseek-coder:1.3b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507422.6855698,
+    1786507459.3821752
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "5b448d0aaef917a82ce71c1f8c82dcfc3ec77d360a728ba043a79223c6714f79",
+   "serve_log_line": 108926
+  },
+  "deepseek-coder:1.3b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507459.389983,
+    1786507498.493563
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "aa970367df1070b793ca8f7a63129407db5fe867cd80068c7725bc062019ef10",
+   "serve_log_line": 109734
+  },
+  "deepseek-coder:1.3b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507498.5120878,
+    1786507539.066982
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "433f894b681fab4697218a9ab18897b91a7e7b31443f766913728e8c0b665f03",
+   "serve_log_line": 110549
+  },
+  "deepseek-coder:1.3b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507539.0746229,
+    1786507581.0663207
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "2c33114a5e4941b2cac2627de041e3d3bc84df5b55786ed03063260715807e0d",
+   "serve_log_line": 111363
+  },
+  "deepseek-coder:1.3b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507581.074852,
+    1786507628.4915383
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "c5f514eee92b899fc0d9e549eb0e80c83edad917fd5bbd53cb5c159823bf8881",
+   "serve_log_line": 112178
+  },
+  "deepseek-coder:1.3b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507628.500452,
+    1786507680.6213343
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "f73bbadf4596338f2a856d4ba76e8cee4de882386d299a6e0be437f6bf6faf6c",
+   "serve_log_line": 112985
+  },
+  "deepseek-coder:1.3b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507680.6295772,
+    1786507763.5438833
+   ],
+   "file_type": "F16",
+   "blob_sha256": "ee7d8f0e5808c78d24e7f23bec6a4f43b6135c7a15cf6e8dbe42e1632194902d",
+   "serve_log_line": 113797
+  },
+  "deepseek-coder:6.7b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507763.5643983,
+    1786507837.2841206
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "f30988691a6d3c64f7152aa9f866c7cb547c68fc7945182e1304880d0fd07683",
+   "serve_log_line": 114602
+  },
+  "deepseek-coder:6.7b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507837.292291,
+    1786507915.0001736
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "4067f035300d55d5e95fe59b75b7212729b2e924113e93277d3445b0bf93c027",
+   "serve_log_line": 115412
+  },
+  "deepseek-coder:6.7b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507915.0229208,
+    1786507996.6247685
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "16eec58f210578937c24792fceb3ec5b6f745aedd2b63efe8bb49e805e77275d",
+   "serve_log_line": 116213
+  },
+  "deepseek-coder:6.7b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786507996.6349635,
+    1786508085.581711
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "0007cc9e14ff63b746ffa9766192313bba71182eba370543fc21bdc64acbda8b",
+   "serve_log_line": 117004
+  },
+  "deepseek-coder:6.7b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786508085.5912406,
+    1786508177.249992
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "59bb50d8116b6a1f9bfbb940d6bb946a05554e591e30c8c2429ed6c854867ecb",
+   "serve_log_line": 117802
+  },
+  "deepseek-coder:6.7b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786508177.2583382,
+    1786508269.6991591
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "1ca7dc91aff7182e0485aa3fb6ce2026a8efc59beb30bbc12e4df474529cf4f9",
+   "serve_log_line": 118599
+  },
+  "deepseek-coder:6.7b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786508269.7175474,
+    1786508369.2285461
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "8de39949f334605a7b8d7167723c9ccc926e506f38405f6d00bdf3df12e8dcf9",
+   "serve_log_line": 119403
+  },
+  "deepseek-coder:6.7b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786508369.2494013,
+    1786508477.9197276
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "2cea35d0d8a8e3b510b75d8c5e095e1b9acfc36026f37837426092cbe5645c4f",
+   "serve_log_line": 120204
+  },
+  "deepseek-coder:6.7b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786508477.92823,
+    1786508592.3033977
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "33d99dbfe4003df0a770d9ceefb633866832b097b27fb09b284fa78f3386b4e6",
+   "serve_log_line": 120999
+  },
+  "deepseek-coder:6.7b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786508592.3212206,
+    1786508722.721616
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "374bdd4ee9532fb69f241e0493d3cd337a74832d71ea67d6648f684ebec8461d",
+   "serve_log_line": 121797
+  },
+  "deepseek-coder:6.7b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786508722.73022,
+    1786508886.519374
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "b6dfda3810bc128d1853df0d627af48c02ca9bbc28376c3f3484ea881208c9b2",
+   "serve_log_line": 122594
+  },
+  "deepseek-coder-v2:16b-lite-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786508886.526808,
+    1786509037.3988469
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "52828c5725f9106c6bdf2d3529c7cf159c84133d575d9d5ee3b292717d8adcd2",
+   "serve_log_line": 123395
+  },
+  "deepseek-coder-v2:16b-lite-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509037.4196155,
+    1786509201.5237968
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "8b8b6827355fbc18c36e5442cccd26119652a97ab7d6bcb29bee16ad025ec06f",
+   "serve_log_line": 124249
+  },
+  "mistral:7b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509201.5326126,
+    1786509283.6050766
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "6547352386940a480d6fa11958bb027b757b628c98266c0ae20886f7fd9068d6",
+   "serve_log_line": 125097
+  },
+  "mistral:7b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509283.619949,
+    1786509364.0579474
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "067ecc276050c06039eee72517e53c5b73fdba46105e0a4df48445c2fe7b04d8",
+   "serve_log_line": 125894
+  },
+  "mistral:7b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509364.0663369,
+    1786509455.1413465
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "0b5c278cdb26628729c96ae1a22415589735b49c933485559548d74d82402b51",
+   "serve_log_line": 126687
+  },
+  "mistral:7b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509455.1490393,
+    1786509552.8852482
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "4948f908f437c0982eecf3113c33a9dfadd19f49f71ef78315926eb91256d66e",
+   "serve_log_line": 127482
+  },
+  "mistral:7b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509552.8938775,
+    1786509653.1528406
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "2a9b718fde09b9237da3edde181fb74d8731f09d5ae5f9478d95af1932feda4b",
+   "serve_log_line": 128279
+  },
+  "mistral:7b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509653.161006,
+    1786509752.3181143
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "956cfea314ca12f600b38bb6d173ae4f9b62db34e0a6cc7e7accca5c4523b7cf",
+   "serve_log_line": 129075
+  },
+  "mistral:7b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509752.3269098,
+    1786509853.800859
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "faf975975644f275f00075e7cf79cd207642412560640cd1930afbab95fea25c",
+   "serve_log_line": 129872
+  },
+  "mistral:7b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509853.8307736,
+    1786509970.4210763
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "7247a2b9058b98b6b83d7ae5fad3a56be827d0df8cf5e6578947c519f539e9f0",
+   "serve_log_line": 130665
+  },
+  "mistral:7b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786509970.4294891,
+    1786510085.7288666
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "1849ef83c4dd8c8c34e5c2fb964db1efe5dc994eb40909bd96c751b1346f8123",
+   "serve_log_line": 131460
+  },
+  "mistral:7b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510085.737588,
+    1786510216.903932
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "02c4f7e34d04dcde88f545a41bd2ea829645794873082a938f79b9badf37075d",
+   "serve_log_line": 132253
+  },
+  "mistral:7b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510216.9171247,
+    1786510376.754905
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "0624ba75c3cebd8c75b53cc7bcc3f344ad5a410ef74bfc68d757a9ac6764495a",
+   "serve_log_line": 133048
+  },
+  "mistral:7b-instruct-v0.2-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510376.7684815,
+    1786510458.0695589
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "df479b25f64df151a6a97bd6e5b4439be39960c9ceb56328ef0a82f85a879f6a",
+   "serve_log_line": 133842
+  },
+  "mistral:7b-instruct-v0.2-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510458.0782053,
+    1786510542.1524966
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "f66f5d5578624dfad7893eb87bef89699136ce8862edc097538cfd77cee1323c",
+   "serve_log_line": 134636
+  },
+  "mistral:7b-instruct-v0.2-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510542.1589305,
+    1786510629.2247899
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "779c6acd97ebaf9334fc4f426b7d1333af23253a5ab6127b4882d18c7ba0122e",
+   "serve_log_line": 135427
+  },
+  "mistral:7b-instruct-v0.2-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510629.2327206,
+    1786510722.8814642
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "cc95eb6a94a0c558e4d1e733d7813637ff977cd69c8f23e50ac87e48c051c924",
+   "serve_log_line": 136224
+  },
+  "mistral:7b-instruct-v0.2-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510722.8889575,
+    1786510825.6936824
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730",
+   "serve_log_line": 137020
+  },
+  "mistral:7b-instruct-v0.2-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510825.716652,
+    1786510923.7824156
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "bd8bda8a045d68f363f542929791f630de023f3cc610b72f90454a6157eed698",
+   "serve_log_line": 137814
+  },
+  "mistral:7b-instruct-v0.2-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786510923.7918458,
+    1786511026.0594401
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "a62468bbef4a991a59c574c04f424c0c2241f33b68b5119403b86935b41977ea",
+   "serve_log_line": 138610
+  },
+  "mistral:7b-instruct-v0.2-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511026.0825613,
+    1786511141.3825843
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "6b14cd7d015138d1e79a982b538c5198166bc31006ea9012792df3bc1043e00c",
+   "serve_log_line": 139405
+  },
+  "mistral:7b-instruct-v0.2-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511141.3913877,
+    1786511261.0212631
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "615027ef578cd90aa3c2efc786f8c83b689ab594622fcd37ad90565cbeb5ea2d",
+   "serve_log_line": 140201
+  },
+  "mistral:7b-instruct-v0.2-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511261.0287263,
+    1786511402.1946855
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "3678b2e574ad0f55d4db20a8d443b024af2dab411f167369357bb2639f239dab",
+   "serve_log_line": 140995
+  },
+  "mistral:7b-instruct-v0.2-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511402.2121925,
+    1786511578.0304942
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "2f4cf9600fb1f1223dec03a4b4286d3f6fed012c5c8e15c8c15f82a9cc10415c",
+   "serve_log_line": 141791
+  },
+  "mistral:7b-instruct-v0.3-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511578.0393686,
+    1786511648.4664066
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "4f9dcf17dbd0097adcb0aac9157ef9ec7ed716713cfcc3d165cd3e4c1ce98f72",
+   "serve_log_line": 142593
+  },
+  "mistral:7b-instruct-v0.3-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511648.474791,
+    1786511727.938174
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "64d246b2b845d60b175d403946c0a5d7e8af0c3713ca81cfcb3270c23e3d42fd",
+   "serve_log_line": 143389
+  },
+  "mistral:7b-instruct-v0.3-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511727.9478357,
+    1786511812.0431156
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "19eac7b807c3c35c64714833b800f10dd311e039ca100802d21b069c60776813",
+   "serve_log_line": 144183
+  },
+  "mistral:7b-instruct-v0.3-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511812.0498338,
+    1786511904.0443656
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "eef5b3aea14da7e8e049aff0d4943b63c254ca12bcff2584ada25833f54ec804",
+   "serve_log_line": 144979
+  },
+  "mistral:7b-instruct-v0.3-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786511904.052855,
+    1786512004.579783
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "ff82381e2bea77d91c1b824c7afb83f6fb73e9f7de9dda631bcdbca564aa5435",
+   "serve_log_line": 145777
+  },
+  "mistral:7b-instruct-v0.3-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512004.587931,
+    1786512103.7213516
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "437a58eed892f130783c24558417ec363dfd442faa96c2caaf21dd64abaa9cfe",
+   "serve_log_line": 146571
+  },
+  "mistral:7b-instruct-v0.3-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512103.7292845,
+    1786512208.6693814
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "f5074b1221da0f5a2910d33b642efa5b9eb58cfdddca1c79e16d7ad28aa2b31f",
+   "serve_log_line": 147368
+  },
+  "mistral:7b-instruct-v0.3-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512208.6784227,
+    1786512326.2485266
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "6c979bfa158202c4fc54a46781ccafaeb35776badf7e7ddd7b9f1a44a93ac0d5",
+   "serve_log_line": 148165
+  },
+  "mistral:7b-instruct-v0.3-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512326.2568192,
+    1786512448.0452292
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "aaf7a285880e93f4628e290d46fda4651330289c83438dd6a5b35eb1c9641071",
+   "serve_log_line": 148961
+  },
+  "mistral:7b-instruct-v0.3-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512448.0530384,
+    1786512585.7284667
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "b33d2cd0c316ef8f0bade3ffdc0253b83050e16e724ef43875f8140599ef6a20",
+   "serve_log_line": 149759
+  },
+  "mistral:7b-instruct-v0.3-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512585.751306,
+    1786512757.4351025
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "6e3f7757a149db5a1acc9d1e8efa55ca5ccb6e0bf402f312369a4eca0ad390a0",
+   "serve_log_line": 150557
+  },
+  "codellama:7b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512757.4418328,
+    1786512839.7229445
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "35eb9ec93039dcffa92f4770fa6b0343df9a59279f36e3cb6cce52bbe78d12c8",
+   "serve_log_line": 151358
+  },
+  "codellama:7b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512839.7297487,
+    1786512923.7002618
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "0307401fa08e6b4739cc24e059c3a8ed85f8c14a0bcf75fc12d8f001352c7276",
+   "serve_log_line": 152172
+  },
+  "codellama:7b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786512923.718392,
+    1786513008.6622288
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "619cd4fdd34f4782fb2944ad6f3a470995aec9e6eb3e3ee536a16a725772ab0e",
+   "serve_log_line": 152983
+  },
+  "codellama:7b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513008.6695397,
+    1786513100.9510403
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "8a34789228ed9f9ec4933a8e1f70b5e8e4e4e84ac680b131a80b67999532e099",
+   "serve_log_line": 153796
+  },
+  "codellama:7b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513100.9590924,
+    1786513198.3050573
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "3a43f93b78ec50f7c4e4dc8bd1cb3fff5a900e7d574c51a6f7495e48486e0dac",
+   "serve_log_line": 154610
+  },
+  "codellama:7b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513198.318321,
+    1786513295.9208841
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "2e4eb787009d9e96e90c691a802ae6a36426ab02a16b391c4c2db1150efb90a8",
+   "serve_log_line": 155424
+  },
+  "codellama:7b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513295.928539,
+    1786513398.4482281
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "937db1460e71b8afc5bc3607bb4a8bcaf1659605b544ba6082ad40e37d8e3a8b",
+   "serve_log_line": 156239
+  },
+  "codellama:7b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513398.4571192,
+    1786513513.581387
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "b397edcaf211321ae71c368fd1739c1280bdd29ae13e8361657ebd7d541ce2d1",
+   "serve_log_line": 157052
+  },
+  "codellama:7b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513513.5897954,
+    1786513634.0615304
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "dd56680910b3eca2c83662e9c523d5ff98f56157005382ed174c53a3da31e1da",
+   "serve_log_line": 157867
+  },
+  "codellama:7b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513634.0703096,
+    1786513766.6451042
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "bb3f5fc1db2b4a265d7588e2c3372ca61f218831201884694c6de5e779170b17",
+   "serve_log_line": 158684
+  },
+  "codellama:7b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513766.6540217,
+    1786513934.160611
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "6104edb4f3e4d3758d266cdbd27723ede41135ebc7099e2c3daf06de31a29a00",
+   "serve_log_line": 159524
+  },
+  "codellama:13b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786513934.1688757,
+    1786514062.279288
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "44fc1a788c6ee9fb43f08c1915191e7b060b354fdeaa869581a1d02d7590fb9d",
+   "serve_log_line": 160340
+  },
+  "codellama:13b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786514062.2863295,
+    1786514174.0387099
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "d67a71d25d9bee5696e05b36ef1eaf7872fcce58614772f7cece5cba4f59c330",
+   "serve_log_line": 161157
+  },
+  "codellama:13b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786514174.0474849,
+    1786514296.4343936
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "96c02be37f3ced55d527814b6adda41d0241ebbf08fe83cb56d26a0707818dc0",
+   "serve_log_line": 161953
+  },
+  "codellama:13b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786514296.4429195,
+    1786514432.3223343
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "a26e726b4f9a3130c2fedb89d524d9b4e133387fd322a0173e39ec173a0e45d5",
+   "serve_log_line": 162758
+  },
+  "codellama:13b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786514432.331541,
+    1786514568.7544434
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "e73cc17c718156e5ad34b119eb363e2c10389a503673f9c36144c42dfde8334c",
+   "serve_log_line": 163560
+  },
+  "codellama:13b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786514568.7643807,
+    1786514712.4201145
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "6720166940014f005e3098490778ae7aa27aadf68ee2919413e7f3e4f4a9c61a",
+   "serve_log_line": 164361
+  },
+  "codellama:13b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786514712.4276352,
+    1786514863.5950902
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "11eec43b3a9a2fc98afe804fd55c375628f1144bd9117501ad6b6a4406c6e314",
+   "serve_log_line": 165165
+  },
+  "starcoder2:15b-instruct-v0.1-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786514863.6138098,
+    1786515025.170046
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "9019f05dbad0972938b43ab7d2b4638dc9f6b6417a5dc977ceea3d7e0c315e50",
+   "serve_log_line": 165967
+  },
+  "starcoder2:15b-instruct-v0.1-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515025.1781006,
+    1786515244.433782
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "f3b2d35227a3242c5f2b19e82ec745a650be7de3807fb06af0c0fc29e8fda376",
+   "serve_log_line": 166775
+  },
+  "starcoder2:15b-instruct-v0.1-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515244.442489,
+    1786515429.4816313
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "9bda0a29ca354331f760aff70c9d5b43694ae9f4192589f5290eb419bb07d58c",
+   "serve_log_line": 167608
+  },
+  "granite-code:3b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515429.4894547,
+    1786515472.2605753
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "dad26156511e5b9e272b69d9e95b565b65b9f2c9c3f94348009bd01a16d63975",
+   "serve_log_line": 168408
+  },
+  "granite-code:3b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515472.2676094,
+    1786515515.3685908
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "2dadbc3c2425ef5949adee49b814fc825842e3395af2807221c477bbc148c82a",
+   "serve_log_line": 169216
+  },
+  "granite-code:3b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515515.376699,
+    1786515564.1565502
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "9c66e1aac6105389b7d3cc47ac70e79f285c3a7fa1595fc53020f118c8893ee5",
+   "serve_log_line": 170023
+  },
+  "granite-code:3b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515564.164777,
+    1786515615.8909414
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "032982e6766fa70a3642e6e613e47e26c2800045650797c2dff9686bba7cad75",
+   "serve_log_line": 170832
+  },
+  "granite-code:3b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515615.9152713,
+    1786515666.9047666
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "02ab8cd2f51476c9a13778448ec83ebbd327ec1f5746c992e3e3453a43ee9aeb",
+   "serve_log_line": 171642
+  },
+  "granite-code:3b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515666.919456,
+    1786515716.2202823
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "3d27781de9015ed3b6ea1ae93ed7ab221de5e03bf2981a98c4983b342b9ad818",
+   "serve_log_line": 172449
+  },
+  "granite-code:3b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515716.2284653,
+    1786515768.5903935
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "7fcdd6d026931c8e5feeb63ca1cdd9d5ba30c67d7288b8aae7c0229d8ba8040b",
+   "serve_log_line": 173257
+  },
+  "granite-code:3b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515768.5975711,
+    1786515826.1752715
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "f2690cf0a416107e95584eae50d998dc4505c69b67ecd13a99c279137135d78c",
+   "serve_log_line": 174064
+  },
+  "granite-code:3b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515826.1830273,
+    1786515884.5325956
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "ee3983d9100143d24ab14076adf852a950f4dfb714f933e4501f0e2d52e33ed8",
+   "serve_log_line": 174871
+  },
+  "granite-code:3b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515884.5408373,
+    1786515951.431015
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "bf584c64e05f8d2818fefcd5ee7c7067abd30df8c1c8b6f0ac3213ec0adc770a",
+   "serve_log_line": 175678
+  },
+  "granite-code:3b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786515951.438921,
+    1786516031.9498158
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "0d30b889a640c85e94b3ac53bb07f673848dbf5e6f632deb8eb6234d47dcfa3e",
+   "serve_log_line": 176486
+  },
+  "granite-code:3b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516031.957345,
+    1786516171.573294
+   ],
+   "file_type": "F16",
+   "blob_sha256": "2953a1d93a2f89c9821a7f7d8ea54c569f7ad69f331e088ebbe962393f3ed3ab",
+   "serve_log_line": 177294
+  },
+  "granite-code:3b-instruct-128k-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516171.582194,
+    1786516208.0569935
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "a55f836131f3e40ff7c678cbf7500baa4c43faa7c45d1a5f56708cbfca439322",
+   "serve_log_line": 178104
+  },
+  "granite-code:3b-instruct-128k-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516208.064165,
+    1786516253.121379
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "80c0242daddd85be03ae774d06116705a4ec9a625d346858b73ab3374f29e9e9",
+   "serve_log_line": 178920
+  },
+  "granite-code:3b-instruct-128k-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516253.1293428,
+    1786516298.4798415
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "9386255dfefa297a286b84402b89cef54223d39bea2fc3da667b287454de9407",
+   "serve_log_line": 179735
+  },
+  "granite-code:3b-instruct-128k-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516298.4870791,
+    1786516344.94953
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "1fe3677ad7c62352530d6452fc980269f0691385f62986a5a755ab475cdb17bd",
+   "serve_log_line": 180552
+  },
+  "granite-code:3b-instruct-128k-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516344.957624,
+    1786516392.97672
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "9699e81546fad30bfcc6a005f9c30316828b444e37ece48ddab1babfb4d634c5",
+   "serve_log_line": 181368
+  },
+  "granite-code:3b-instruct-128k-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516392.9842856,
+    1786516441.9449883
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "24a4784ad5b02086d131aa08ef19a36491bc5559fd7e8e7df414b2184a90873f",
+   "serve_log_line": 182183
+  },
+  "granite-code:3b-instruct-128k-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516441.952267,
+    1786516492.656579
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "34ea0ece100357a65b881fda3ad7f2e473f562ea9db58c24d87bf2bd625e5da6",
+   "serve_log_line": 182999
+  },
+  "granite-code:3b-instruct-128k-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516492.6644857,
+    1786516547.985397
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "d4188ca5027be702dd0410ef3823ff47cdb2d2e7dca7f6664c5ee7e08557b60c",
+   "serve_log_line": 183814
+  },
+  "granite-code:3b-instruct-128k-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516547.9944153,
+    1786516605.1374726
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "686526ae62f69c74409e2ce2c06bbc324a536188a17d08dd79672e64b4e96026",
+   "serve_log_line": 184629
+  },
+  "granite-code:3b-instruct-128k-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516605.1446092,
+    1786516667.104441
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "ba4a100bf5e53d7a287ab6ce892faaeccf7623fead7188d84d9d18600caddc17",
+   "serve_log_line": 185446
+  },
+  "granite-code:3b-instruct-128k-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516667.1207628,
+    1786516745.651332
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "26b3247c4ebb3cdc7d12595826d37142ffa4d9c6183a248932574e8a1a2abf89",
+   "serve_log_line": 186262
+  },
+  "granite-code:3b-instruct-128k-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516745.6589189,
+    1786516877.329598
+   ],
+   "file_type": "F16",
+   "blob_sha256": "a1c270cabae8cde171caabd6d4cc97837920c77fdd195fbf3040b4184c541ecd",
+   "serve_log_line": 187079
+  },
+  "granite-code:8b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516877.3366368,
+    1786516947.8229318
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "6e1484d5d0ff8e5fb7b4b55fb1efbabb6123112863c21278d699ceb7ab16b0a7",
+   "serve_log_line": 187896
+  },
+  "granite-code:8b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786516947.830988,
+    1786517024.7892532
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "e684c403276ea08638a72798a2302e4fe7cb4a6764de36b3807f7f46d17f3866",
+   "serve_log_line": 188708
+  },
+  "granite-code:8b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517024.799647,
+    1786517111.9234562
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "b75f32d0967da77dbe2cb5c3f63966fe103c6deafe9dae6171735e8de2076307",
+   "serve_log_line": 189518
+  },
+  "granite-code:8b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517111.9318078,
+    1786517202.9693851
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "fd6578560e3ce88a86c1ae9e909f058fb74f6a03d5b73fa88229a47555bf04e4",
+   "serve_log_line": 190330
+  },
+  "granite-code:8b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517202.9773545,
+    1786517297.0330222
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "8718ec2805725a8e2cf2ec06c39416342c82f961d2c2a0b778be32365dd827b0",
+   "serve_log_line": 191141
+  },
+  "granite-code:8b-instruct-128k-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517297.041457,
+    1786517392.9256825
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "bf481f838ba0e13524bde2f44cfd57a0eefb1c422da885fb26ca6cf12bea11fa",
+   "serve_log_line": 191951
+  },
+  "granite-code:8b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517392.9332986,
+    1786517491.2334409
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "8ff46a9e1ea07e2228aa5377aa26592d7df3a8cf05e54c19ba4e8f1591d291b4",
+   "serve_log_line": 192768
+  },
+  "granite-code:8b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517491.2412982,
+    1786517591.805608
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "a46b17f302f0f9e2b119097b158bc2a723f53023a9f9f7bbe0262f1db7c7beee",
+   "serve_log_line": 193579
+  },
+  "granite-code:8b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517591.816647,
+    1786517707.6547363
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "d1396fd0e97b545842bb738c965a42df9bf7dfcdd8101d6bd958c56bdea2e543",
+   "serve_log_line": 194389
+  },
+  "granite-code:8b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517707.6614375,
+    1786517846.1230726
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "b5fc6932efed30323bb62d2f7bdf7009033c61e885d829a18995e1471c305fbf",
+   "serve_log_line": 195201
+  },
+  "granite-code:8b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517846.131935,
+    1786517982.002864
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "b60564cd61dc5814406e451d9429e812061f86d6ae084446118d40724c96aa14",
+   "serve_log_line": 196013
+  },
+  "granite-code:20b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786517982.0194054,
+    1786518149.1690416
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "08ab31b73689cd7b9253f88975caa953e47f3a76e5a16f2a9864a4ce6ad65fba",
+   "serve_log_line": 196823
+  },
+  "granite-code:20b-instruct-8k-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518149.1769469,
+    1786518301.5365613
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "cb1bbf4e62f20ebfbf1704435efe2f880d14580f979e57fb84d45657bbb0d5d0",
+   "serve_log_line": 197634
+  },
+  "granite3.1-dense:2b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518301.5435228,
+    1786518339.5885723
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "6e871e685f19d9863f1d8fffb5a30e6d850fe6367ff43bb0f29f1105214e3084",
+   "serve_log_line": 198452
+  },
+  "granite3.1-dense:2b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518339.5975268,
+    1786518384.1222723
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "56c467ceeb9c3c4ab0ffe28d0fb10c0e57685ec71ef7195ffa3ebe131721d343",
+   "serve_log_line": 199280
+  },
+  "granite3.1-dense:2b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518384.1286385,
+    1786518429.418757
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "b96afccbaba011f3fc9baa37f481bd96eb79ece7c32fa92419bfaf3a2a679884",
+   "serve_log_line": 200106
+  },
+  "granite3.1-dense:2b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518429.4279854,
+    1786518477.7567286
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "1d8543b843b44b0a17848f396ee217f188da8918eca5c1714f270b2015999ec7",
+   "serve_log_line": 200934
+  },
+  "granite3.1-dense:2b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518477.7633483,
+    1786518532.3914514
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "b3c0dea4e4413c3bcf467b0cc574f95e379e37d845b1db9e94e8c460e6ea4408",
+   "serve_log_line": 201761
+  },
+  "granite3.1-dense:2b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518532.412637,
+    1786518581.6801689
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "ffe02f2536e57801fae5b018513f384c43dadc644c356074fcc5bff6fa011f9c",
+   "serve_log_line": 202587
+  },
+  "granite3.1-dense:2b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518581.6872954,
+    1786518635.9503946
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "5c56bb0256a2c402e95282a29bb5cb747bb805eda0e14a84b1f6c594a297ec1a",
+   "serve_log_line": 203414
+  },
+  "granite3.1-dense:2b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518635.9577365,
+    1786518694.6472921
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "11662e9ef84ee58730f670b76f2c92571a4fad55314d828fe2eacecbd8389dfb",
+   "serve_log_line": 204241
+  },
+  "granite3.1-dense:2b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518694.6555634,
+    1786518756.0677083
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "c83a4890e52ef07f41a0bffa7977dbff450659a1c681ba6a508ff82de0b99d4a",
+   "serve_log_line": 205067
+  },
+  "granite3.1-dense:2b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518756.0761926,
+    1786518819.782674
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "54880b8d11bf70185c363215a9c575e62305b7a7f8d3137b426747a32d89b4e8",
+   "serve_log_line": 205894
+  },
+  "granite3.1-dense:2b-instruct-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518819.791884,
+    1786518897.3591287
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "5da3ed56a18b4e85c3910c2ab2d0d0e83db84f7acd1e89e792bc465ef8188c6f",
+   "serve_log_line": 206720
+  },
+  "granite3.1-dense:2b-instruct-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786518897.3668783,
+    1786519022.035013
+   ],
+   "file_type": "F16",
+   "blob_sha256": "4cc7c39a9cc7173ef03b3cf3c5e47c3bc4ef20d29270f57f2dc9cdc677c4f232",
+   "serve_log_line": 207547
+  },
+  "granite3.1-dense:8b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519022.042975,
+    1786519101.6210043
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "ac1cada707e46f996daf178fcb93263d4a3f3951013c5855abb0bd88cbd750fd",
+   "serve_log_line": 208376
+  },
+  "granite3.1-dense:8b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519101.641509,
+    1786519193.9052372
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "db62f48d24bddd4dc948396c52e9a18ad030f0222464f156192b5a642a3d6c49",
+   "serve_log_line": 209206
+  },
+  "granite3.1-dense:8b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519193.9167745,
+    1786519292.0683558
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "33fcc80b5a709f53caf474f402a2c39bdf6ba69577eaee4e7ffc8810a7474693",
+   "serve_log_line": 210034
+  },
+  "granite3.1-dense:8b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519292.076988,
+    1786519399.45814
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "e4956cbac210daf89798a96a2525ed9d615ead7b0a0b50a2623cb8226019a8eb",
+   "serve_log_line": 210864
+  },
+  "granite3.1-dense:8b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519399.466142,
+    1786519495.86039
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "59978af1d1c9d4da77637c4b4d3a1d55534f4d45d8116c03e812a89996090641",
+   "serve_log_line": 211695
+  },
+  "granite3.1-dense:8b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519495.8673313,
+    1786519609.0236957
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "07439a26980cba2012dc4dbd54e4ebacb598984c6dc26f9609810d9ab0495804",
+   "serve_log_line": 212497
+  },
+  "granite3.1-dense:8b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519609.0321238,
+    1786519725.9205189
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "44d19d212d76a6f3fc442e8411fdb44ea6b67ceccfb00be4b4345c9a4cf813e8",
+   "serve_log_line": 213314
+  },
+  "granite3.1-dense:8b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519725.9284265,
+    1786519853.7358274
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "a7e934c8b2479030596d99b387bd1f72fdb694ca3a9292fdde97433dfa61a469",
+   "serve_log_line": 214131
+  },
+  "granite3.1-dense:8b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519853.744367,
+    1786519985.0009155
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "032622a5b6f06a9c1868eb3eb7173e0200d997722a9f0dbd96ae3a911bbb97f2",
+   "serve_log_line": 214961
+  },
+  "granite3.1-dense:8b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786519985.022249,
+    1786520140.3415964
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "a693c7b8b5034d013c47f23d6595ca222440494c6e49480c46143da5b1a0826b",
+   "serve_log_line": 215779
+  },
+  "yi-coder:1.5b-chat-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520140.348906,
+    1786520171.3318193
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "50b0b5c00a91292fe0b3fb3e00eb8764ce889043c02b2835bbf0fbcc9fca67eb",
+   "serve_log_line": 216609
+  },
+  "yi-coder:1.5b-chat-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520171.33847,
+    1786520201.2430232
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "3293ddbe7a3b8dc7d5f371c0116976c927510f228ca35494b2721856b5c2a05e",
+   "serve_log_line": 217432
+  },
+  "yi-coder:1.5b-chat-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520201.250679,
+    1786520232.0243528
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "d89dbd94e4bfe8502d6324d329c65530d93690d8e6017c562b8ff81c2aeb20e4",
+   "serve_log_line": 218254
+  },
+  "yi-coder:1.5b-chat-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520232.0454333,
+    1786520263.5350626
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "e92d0cfde78485cc90c60dbaa2dd62fee739c07a92cb9d2a796d637a42c1f3a7",
+   "serve_log_line": 219079
+  },
+  "yi-coder:1.5b-chat-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520263.5429714,
+    1786520294.6498752
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "e09fc6a79fda76ab8381f7ef6a66b8a00daae1151d546b7358ac3197ade79083",
+   "serve_log_line": 219902
+  },
+  "yi-coder:1.5b-chat-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520294.6572485,
+    1786520327.1253629
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "d26412626c8193c06e3186fae80cc082a939396f03ebe04096f5557c53c2feb4",
+   "serve_log_line": 220723
+  },
+  "yi-coder:1.5b-chat-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520327.132412,
+    1786520359.9993231
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "1c4df9bcae6f6db2436948003242c9f4748f12906a53b5394c949046fc138b17",
+   "serve_log_line": 221547
+  },
+  "yi-coder:1.5b-chat-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520360.0188136,
+    1786520401.764675
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "51a0d78af9f230c6820561230760e6dad14cb5b70da800e1a6734c4e7b180428",
+   "serve_log_line": 222370
+  },
+  "yi-coder:1.5b-chat-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520401.7722032,
+    1786520437.2223468
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "7f8b3b19ce62d174b5764a4ebad81b1fa91a2d819bbbd6bf57c80a3bfd6f5781",
+   "serve_log_line": 223192
+  },
+  "yi-coder:1.5b-chat-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520437.2319393,
+    1786520477.3199809
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "02efc4bfa0e4f10b4eb8962d91957ecd2a5a3049081e59164f5b6a55a78710a6",
+   "serve_log_line": 224015
+  },
+  "yi-coder:1.5b-chat-q8_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520477.3272183,
+    1786520523.48907
+   ],
+   "file_type": "Q8_0",
+   "blob_sha256": "e782e7e134d84ec00a0fb10770bb1ae4dddf520d5d968ebde24f25adac052a6e",
+   "serve_log_line": 224836
+  },
+  "yi-coder:1.5b-chat-fp16": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520523.4969735,
+    1786520597.3902285
+   ],
+   "file_type": "F16",
+   "blob_sha256": "57f886e2f1b14c28ee13dcb8f8aaa9667b504f6601931b625040e5d0932db6f8",
+   "serve_log_line": 225656
+  },
+  "yi-coder:9b-chat-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520597.3975468,
+    1786520678.2170331
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "746b5a778f1ba1f15d0ace89556bf88a0b53e975c2f3e207637de70f59a5799c",
+   "serve_log_line": 226478
+  },
+  "yi-coder:9b-chat-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520678.2236774,
+    1786520773.5911565
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "1e324edb711294408f449678c8ae71e246727fa66548c69d039a5d4338ef2ac7",
+   "serve_log_line": 227303
+  },
+  "yi-coder:9b-chat-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520773.5988593,
+    1786520877.5197263
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "ca45ba79d725d952253891f44f8820f11f4003ed0726679e2f0643783cef2740",
+   "serve_log_line": 228126
+  },
+  "yi-coder:9b-chat-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520877.5286148,
+    1786520987.4029112
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "4c760bb6c9a78e893858cd6d49d0ce5b7b7289adb3d96a71cba6232665115bb5",
+   "serve_log_line": 228952
+  },
+  "yi-coder:9b-chat-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786520987.4170294,
+    1786521098.7769318
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "8169bd33ad1351c56755330bd6f1cf5696de6ac297420024fa8aebae5656b0e2",
+   "serve_log_line": 229776
+  },
+  "yi-coder:9b-chat-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786521098.7857409,
+    1786521214.865878
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "642548cc83d0ee2c415ab76aba283302d699a3e758701172c68c1776684a5c06",
+   "serve_log_line": 230599
+  },
+  "yi-coder:9b-chat-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786521214.8730652,
+    1786521335.853152
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "20fadc2ccf47978265e07802e511c3d671f4206076ebef21108bd89702f558ac",
+   "serve_log_line": 231423
+  },
+  "yi-coder:9b-chat-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786521335.8608742,
+    1786521469.7387674
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "d3b30dd75589132b87f49f352db94c5ec436d293073be674db1abaa1a83193ae",
+   "serve_log_line": 232248
+  },
+  "yi-coder:9b-chat-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786521469.7462177,
+    1786521609.926205
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "63bcc8fb8c999ef4125a0db5238e84e13cfbb6b37623de9b9aed8453bd278f99",
+   "serve_log_line": 233072
+  },
+  "yi-coder:9b-chat-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786521609.9340503,
+    1786521772.9457915
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "06791a45d450f775d94ba260532143746a35f73160b4cd6ff736497723da53ff",
+   "serve_log_line": 233897
+  },
+  "codegemma:7b-instruct-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786521772.953719,
+    1786521866.132315
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "2137856a8d4a132d134e60f1296d052afcaaa6c47c9de030cd6c34a06e368a62",
+   "serve_log_line": 234724
+  },
+  "codegemma:7b-instruct-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786521866.1405416,
+    1786521968.400564
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "e5e74ebd025b01d38ee1be546f3ef94d83b7006e7824404d74d246f109241eb4",
+   "serve_log_line": 235551
+  },
+  "codegemma:7b-instruct-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786521968.4168253,
+    1786522076.5198617
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "188832bbe5961c3d6856e416fccdf22fdcfaeadebaae5bd6931fdbac9e0ba26c",
+   "serve_log_line": 236377
+  },
+  "codegemma:7b-instruct-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786522076.5280998,
+    1786522189.122292
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "70dcee64d9aef793e46de737ae8a9e0ccc2163a2e4b157321b1be102d6033d43",
+   "serve_log_line": 237205
+  },
+  "codegemma:7b-instruct-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786522189.1305773,
+    1786522304.5238056
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "7cb8cb805c5353eea303c6020a50cc5722af91c1528e513eee6866175dfb842f",
+   "serve_log_line": 238033
+  },
+  "codegemma:7b-instruct-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786522304.5331488,
+    1786522423.6237402
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "2b3dd77f2c7d2582f581cdc2285009afb5d3e5baf528d68acf9c756f9dce0111",
+   "serve_log_line": 238859
+  },
+  "codegemma:7b-instruct-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786522423.6327326,
+    1786522547.5608747
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "5e90470aa15739c7653da6853723129c403aa38d2b6ced251553badb164e3e29",
+   "serve_log_line": 239689
+  },
+  "codegemma:7b-instruct-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786522547.5689633,
+    1786522680.9729695
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "39cc4029eaefe00b555a232fe25b9f7d03b7a7881ff6775e2949c3419ec2c71d",
+   "serve_log_line": 240517
+  },
+  "codegemma:7b-instruct-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786522680.9830794,
+    1786522822.13325
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "1cb5146aa073d3f200802dc3b8bdfcbd64ce7b3284367d5d2dc0b4d23eb08c15",
+   "serve_log_line": 241349
+  },
+  "codegemma:7b-instruct-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786522822.1424706,
+    1786522975.8647935
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "0b17fdc676ac4fdf308db7fc08a40b2e28909d37133e25f9cd724191e5a26f3b",
+   "serve_log_line": 242178
+  },
+  "codegemma:7b-instruct-v1.1-q2_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786522975.898344,
+    1786523065.3542109
+   ],
+   "file_type": "Q2_K - Medium",
+   "blob_sha256": "ddc84d40e421cf0d7ad80e67bc08940bfe138edb77995a4ef9f76d357b116043",
+   "serve_log_line": 243005
+  },
+  "codegemma:7b-instruct-v1.1-q3_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523065.3639326,
+    1786523161.85462
+   ],
+   "file_type": "Q3_K - Small",
+   "blob_sha256": "0830c875fce845243cd85cb613537001455436045f56eec6c8f6ddd8ef082199",
+   "serve_log_line": 243832
+  },
+  "codegemma:7b-instruct-v1.1-q3_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523161.8632925,
+    1786523271.3037074
+   ],
+   "file_type": "Q3_K - Medium",
+   "blob_sha256": "f372345cf6a572d612bf40cd4caad153676c9a07aba8c730759102373a56c5c5",
+   "serve_log_line": 244658
+  },
+  "codegemma:7b-instruct-v1.1-q3_K_L": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523271.3176484,
+    1786523381.9204643
+   ],
+   "file_type": "Q3_K - Large",
+   "blob_sha256": "36e7f9f6f59257336d5e543130420c8bfaad790647ede22984e18e232b0b4823",
+   "serve_log_line": 245486
+  },
+  "codegemma:7b-instruct-v1.1-q4_0": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523381.9265459,
+    1786523493.6590245
+   ],
+   "file_type": "Q4_0",
+   "blob_sha256": "392f2ba7a9bea371a2e27b547cbed87eb3964ac722b26d847b66fa90e5b8c49e",
+   "serve_log_line": 246313
+  },
+  "codegemma:7b-instruct-v1.1-q4_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523493.667655,
+    1786523605.1853347
+   ],
+   "file_type": "Q4_K - Small",
+   "blob_sha256": "638ab3a5bbdf26aba9754ae1bbe5bea224035e94f81820bd1bd89e332ef8b50e",
+   "serve_log_line": 247139
+  },
+  "codegemma:7b-instruct-v1.1-q4_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523605.1924276,
+    1786523725.2187016
+   ],
+   "file_type": "Q4_K - Medium",
+   "blob_sha256": "4e11661f52773b10298fecdce55339ab3b96d2a5eba873f758c0e1e00fd0ef40",
+   "serve_log_line": 247966
+  },
+  "codegemma:7b-instruct-v1.1-q5_K_S": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523725.2271476,
+    1786523857.9783297
+   ],
+   "file_type": "Q5_K - Small",
+   "blob_sha256": "d10f1251c9fa2622f4bf5bc8cba9219fd93e037b9a572576d6e059ad53436e22",
+   "serve_log_line": 248792
+  },
+  "codegemma:7b-instruct-v1.1-q5_K_M": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523857.9859004,
+    1786523998.988883
+   ],
+   "file_type": "Q5_K - Medium",
+   "blob_sha256": "496622c3b0b62ce4b405f355e89ef808a8e437b340d829a50155ca285f1ba4a4",
+   "serve_log_line": 249619
+  },
+  "codegemma:7b-instruct-v1.1-q6_K": {
+   "channel": "ollama-official",
+   "run_window_utc": [
+    1786523998.996666,
+    1786524151.4586723
+   ],
+   "file_type": "Q6_K",
+   "blob_sha256": "c283b07203ced2d8b7c3abb20918370d8c5b129d0a79db5aca8f4ed4e8b5ab27",
+   "serve_log_line": 250445
+  },
+  "hf:bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786546073.3339956,
+    1786546318.8167677
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "7b064f5842bf9532c91456deda288a1b672397a54fa729aa665952863033557c",
+   "serve_log_line": 261876,
+   "loaded_blob_sha256": "3e5b77ceaf0c3e1f02dade60ecfc6eab7fa1ca3cea1ed3eeb08f388db0043cc5",
+   "loaded_serve_log_line": 262217
+  },
+  "hf:bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/Meta-Llama-3.1-8B-Instruct-Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786546318.8195848,
+    1786546619.4859858
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "6be122b5c8f2a33974953e58e0ffd2be505661acc6f4caf733e4bca130e89fea",
+   "serve_log_line": 263045,
+   "loaded_blob_sha256": "978c37aa5202f06e7e6d442c599b7a4c5b55db0b43ef0b3ea6d1540c33e2b263",
+   "loaded_serve_log_line": 263388
+  },
+  "hf:bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786546619.4885964,
+    1786546927.4528072
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "65b8fcd92af6b4fefa935c625d1ac27ea29dcb6ee14589c55a8f115ceaaa1423",
+   "serve_log_line": 264219,
+   "loaded_blob_sha256": "7ba5258043dd615c1967c62be1208b42719675255dcc47bcab877220fcedff95",
+   "loaded_serve_log_line": 264612
+  },
+  "hf:bartowski/Qwen2.5-7B-Instruct-GGUF/Qwen2.5-7B-Instruct-Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786546927.4571214,
+    1786547207.1551335
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "6738a2d4f9b280c55b2a19a7ab27334a75d2cafc6ef82a11a075f4b5613eb736",
+   "serve_log_line": 265457,
+   "loaded_blob_sha256": "9d0cc171cec25312b45dfe21438d9bd1683a946820e5765a3c2b60f2e2471d92",
+   "loaded_serve_log_line": 265852
+  },
+  "hf:lmstudio-community/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786547207.1584978,
+    1786547461.1134868
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "e4f1a04d927b09ec18eb2f233d85ecd760fc2d35cec97e37f8604d3632210d9a",
+   "serve_log_line": 266697,
+   "loaded_blob_sha256": "81f028ea3b59ef3377ba5381b3ce618f8957677d40312327dd8076f5fd7ff068",
+   "loaded_serve_log_line": 266999
+  },
+  "hf:lmstudio-community/Llama-3.2-3B-Instruct-GGUF/Llama-3.2-3B-Instruct-Q3_K_L.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786547461.1162317,
+    1786547629.8983166
+   ],
+   "file_type": "Q3_K - Large",
+   "file_sha256": "f778dda3fa1dd1c34747038221113b7940b3b26645e50775bbc8b4a8997040c6",
+   "serve_log_line": 267823,
+   "loaded_blob_sha256": "59c94a1a4403d2d429b7c255be039c655ed6fbc08e48cd2e1f0c52c45edb39a8",
+   "loaded_serve_log_line": 268126
+  },
+  "hf:bartowski/Phi-3.5-mini-instruct-GGUF/Phi-3.5-mini-instruct-Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786547629.910458,
+    1786547805.9482455
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "e4165e3a71af97f1b4820da61079826d8752a2088e313af0c7d346796c38eff5",
+   "serve_log_line": 268951,
+   "loaded_blob_sha256": "63683c3a1fa2bf7dc26cb4345fbd76e77f8b0df4a821806a7434f1e7c12b5cbf",
+   "loaded_serve_log_line": 269206
+  },
+  "hf:bartowski/Phi-3.5-mini-instruct-GGUF/Phi-3.5-mini-instruct-Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786547805.9513748,
+    1786548138.2650642
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "5e005a663fc15ee51c9aea089fbd63a557458b020ee799e369d17da273a8b855",
+   "serve_log_line": 270040,
+   "loaded_blob_sha256": "d866d3781d4c0724083468f4d893e05d2c9f5d3447b5ac5ddf14e2f15223edfe",
+   "loaded_serve_log_line": 270296
+  },
+  "hf:bartowski/google_gemma-3-4b-it-GGUF/google_gemma-3-4b-it-Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786548138.2680192,
+    1786548395.60082
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "4996030242583a40aa151ff93f49ed787ac8c25e4120c3ae4588b2e2a7d1ae94",
+   "serve_log_line": 271130,
+   "loaded_blob_sha256": "b3902e5b2c5aa15a89ad893ece5fb126aec00ae14caf23ee078cdd143ab091a8",
+   "loaded_serve_log_line": 271634
+  },
+  "hf:bartowski/google_gemma-3-4b-it-GGUF/google_gemma-3-4b-it-Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786548395.6122274,
+    1786548567.1756985
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "459112810fe05bafcf697d21a8050eb9ce5860688f28e9cb406c19e158637c5f",
+   "serve_log_line": 272538,
+   "loaded_blob_sha256": "55cf8c3071ddf8c726396e1022b1bbe35afbd7d56cd31b974b12b765d3d2e9cc",
+   "loaded_serve_log_line": 273044
+  },
+  "hf:bartowski/gemma-2-9b-it-GGUF/gemma-2-9b-it-Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786548567.1781101,
+    1786548955.1319032
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "13b2a7b4115bbd0900162edcebe476da1ba1fc24e718e8b40d32f6e300f56dfe",
+   "serve_log_line": 273951,
+   "loaded_blob_sha256": "54ea132c2735bc80f41641a72161d292c17b9fe1204fbf1bd86b6c483c80af1a",
+   "loaded_serve_log_line": 274464
+  },
+  "hf:bartowski/gemma-2-9b-it-GGUF/gemma-2-9b-it-Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786548955.1346383,
+    1786549349.8903334
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "3b5cb881500b1f72d456784a70214c8e49b7b3f49dae4fe524ca2c19e650b18b",
+   "serve_log_line": 275370,
+   "loaded_blob_sha256": "f6725ff66f5860ba2dbbc23760e516a5328fc449c952767b7b2fd425f9d81aaf",
+   "loaded_serve_log_line": 275885
+  },
+  "hf:bartowski/Qwen2.5-14B-Instruct-GGUF/Qwen2.5-14B-Instruct-Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786549349.8929033,
+    1786549760.8403847
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "2f68ac3ba018f7de7641229f19adafde5e59d02bbf5651fdbcc510bb9f3facca",
+   "serve_log_line": 276789,
+   "loaded_blob_sha256": "cb1de4c25d55b2e6b8f3c70d8ef75ad6d239cd329447f72adb73d597f1ad79d4",
+   "loaded_serve_log_line": 277424
+  },
+  "hf:bartowski/Qwen2.5-14B-Instruct-GGUF/Qwen2.5-14B-Instruct-Q2_K.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786549760.8435268,
+    1786549998.9894395
+   ],
+   "file_type": "Q2_K - Medium",
+   "file_sha256": "df5b544a4b6f7cc0a891ce3531271e930a9b508969d27f411fedb0170f4931a2",
+   "serve_log_line": 278278,
+   "loaded_blob_sha256": "5fc61b1a47ac297a64fc16e4696d643f5f713d905b057707bb3949b1951f95a9",
+   "loaded_serve_log_line": 278913
+  },
+  "hf:lmstudio-community/Qwen2.5-Coder-14B-Instruct-GGUF/Qwen2.5-Coder-14B-Instruct-Q3_K_L.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786549998.9925928,
+    1786550846.4259396
+   ],
+   "file_type": "Q3_K - Large",
+   "file_sha256": "9c0952af459b8e5d83b9741c8cf46cc1b88d68a9e7869b026d39f0e9fd982027",
+   "serve_log_line": 279763,
+   "loaded_blob_sha256": "181e026fb6107be7ab98d876e8e87291c9c2cfc815e6a2613c552c3d52724913",
+   "loaded_serve_log_line": 280393
+  },
+  "hf:bartowski/Qwen2.5-Coder-7B-Instruct-GGUF/Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786550846.429086,
+    1786551108.743346
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "1664fccab734674a50763490a8c6931b70e3f2f8ec10031b54806d30e5f956b6",
+   "serve_log_line": 281237,
+   "loaded_blob_sha256": "f2f0af677442a2d415fff5aea8d9782d45f231453586f3b8517139b7bd1b44c7",
+   "loaded_serve_log_line": 281630
+  },
+  "hf:bartowski/Qwen2.5-Coder-7B-Instruct-GGUF/Qwen2.5-Coder-7B-Instruct-Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786551108.7466302,
+    1786551257.8933084
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "be81e2dafa06d02825dd3a20142c14af0e89087de1b7ce15fbc56f0d8dc8f6b6",
+   "serve_log_line": 282473,
+   "loaded_blob_sha256": "86049a0c3737076ebd16813f385b16608a50c0c110660025aa9cbe34a63ccb9c",
+   "loaded_serve_log_line": 282868
+  },
+  "hf:bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF/DeepSeek-Coder-V2-Lite-Instruct-Q2_K.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786551257.896759,
+    1786551509.2711277
+   ],
+   "file_type": "Q2_K - Medium",
+   "file_sha256": "5e2ac4b3477aa11ff460739ec326040ad07a3fc1c42da8e15b0465054879b5d3",
+   "serve_log_line": 283713,
+   "loaded_blob_sha256": "e2b848fea8b2e1643a81b5c6ee2f07fca1b3264cd6a353add97b93afb200414f",
+   "loaded_serve_log_line": 284150
+  },
+  "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786551509.2745583,
+    1786552921.3629644
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "92da6238854f2fa902d8b2ad79d548536af1d3ab06821f323bd5bbcea2013276",
+   "serve_log_line": 284982,
+   "loaded_blob_sha256": "8f5a69d234b6c15d7241ec8d2ea7a9b74cfe906bb1001dfe032dd0ced87b108c",
+   "loaded_serve_log_line": 285313
+  },
+  "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786552921.3662775,
+    1786553352.1321375
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "6c841fde94b9103c92e875c9ab0ebeeb624b0709b2410c3bd942c80cd635117f",
+   "serve_log_line": 286181,
+   "loaded_blob_sha256": "65d4bffb9cfa772d939a6b248dc1ee0816e034b6979b751d5707315aa2ee413f",
+   "loaded_serve_log_line": 286514
+  },
+  "hf:bartowski/microsoft_Phi-4-mini-instruct-GGUF/microsoft_Phi-4-mini-instruct-Q4_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786553352.1340659,
+    1786553520.8381565
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "01999f17c39cc3074afae5e9c539bc82d45f2dd7faa3917c66cbef76fce8c0c2",
+   "serve_log_line": 287383,
+   "loaded_blob_sha256": "4a770663d4551fb217658be33bbd71426ec9efa91233b0e6ab5d48fdcfb593ed",
+   "loaded_serve_log_line": 287638
+  },
+  "hf:bartowski/microsoft_Phi-4-mini-instruct-GGUF/microsoft_Phi-4-mini-instruct-Q3_K_M.gguf": {
+   "channel": "hf-community",
+   "run_window_utc": [
+    1786553520.8405735,
+    1786553709.9607503
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "514a111e3b847b1698b253bf8e8ada7c1bb81dc10dc4bccab590edaff5aec06c",
+   "serve_log_line": 288458,
+   "loaded_blob_sha256": "0e7810ff217315b1fec30c0ff216467c6c3ccd22ae020e72f560d3d347984959",
+   "loaded_serve_log_line": 288714
+  },
+  "hf:bartowski/Qwen2.5-Coder-3B-Instruct-GGUF/Qwen2.5-Coder-3B-Instruct-Q3_K_M.gguf": {
+   "channel": "hf-adjudication",
+   "run_window_utc": [
+    1786553709.962753,
+    1786553908.5941188
+   ],
+   "file_type": "Q3_K - Medium",
+   "file_sha256": "27ffec3ed4c1482eeaee279f56ea5eb937921c550a528842d071ea80729d08f4",
+   "serve_log_line": 289540,
+   "loaded_blob_sha256": "5213dbd1a398d940eee1083a435a8f2370ec595c068e70fc6b683249e6590c59",
+   "loaded_serve_log_line": 290032
+  },
+  "hf:bartowski/Qwen2.5-Coder-3B-Instruct-GGUF/Qwen2.5-Coder-3B-Instruct-Q2_K.gguf": {
+   "channel": "hf-adjudication",
+   "run_window_utc": [
+    1786553908.5984442,
+    1786554087.9049423
+   ],
+   "file_type": "Q2_K - Medium",
+   "file_sha256": "2e66080a6615da04f1b37446a580bc0d1a75ef5e49bf19d0bed3216baca7d7a1",
+   "serve_log_line": 290867,
+   "loaded_blob_sha256": "134231bc7c51563a3b063a8fce79b8d1d656e55ae206707fc06b17beca040871",
+   "loaded_serve_log_line": 291359
+  },
+  "hf:TheBloke/deepseek-coder-1.3b-instruct-GGUF/deepseek-coder-1.3b-instruct.Q4_K_M.gguf": {
+   "channel": "hf-adjudication",
+   "run_window_utc": [
+    1786554087.9100702,
+    1786554420.935367
+   ],
+   "file_type": "Q4_K - Medium",
+   "file_sha256": "04cebb6fafa40ae628cf6bfeb76032ec792852f54020c559ad0a56b9f2839118",
+   "serve_log_line": 292194,
+   "loaded_blob_sha256": "5a53492c55f03fce36ff7e26039139afb8994374d9a6f6e2fc0854f2b47565fb",
+   "loaded_serve_log_line": 292453
+  },
+  "hf:bartowski/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q3_K_L.gguf": {
+   "channel": "hf-adjudication",
+   "run_window_utc": [
+    1786554420.9375806,
+    1786554482.194679
+   ],
+   "file_type": "Q3_K - Large",
+   "file_sha256": "4cc006968acfee52002f0d117d14cf2ed587e15c93a85c84fe8c053c5c47455d",
+   "serve_log_line": 293271,
+   "loaded_blob_sha256": "8bf4fef0815dc812dc12f72fa315f393d91805736d7e154124355c843d954393",
+   "loaded_serve_log_line": 293467
+  },
+  "hf:bartowski/Phi-3.5-mini-instruct-GGUF/Phi-3.5-mini-instruct-Q2_K.gguf": {
+   "channel": "hf-adjudication",
+   "run_window_utc": [
+    1786554482.1964946,
+    1786554612.5314274
+   ],
+   "file_type": "Q2_K - Medium",
+   "file_sha256": "7425cb5fec0d2673151c95d1418f5e11bdf102edd0d8b22986d17210adb05bbd",
+   "serve_log_line": 294281,
+   "loaded_blob_sha256": "e95574c5095079eafcfc7331921299230ec128304bd75f40ab280ab2829cd045",
+   "loaded_serve_log_line": 294533
+  },
+  "hf:unsloth/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q2_K.gguf": {
+   "channel": "hf-adjudication",
+   "run_window_utc": [
+    1786578762.1388729,
+    1786578828.4017017
+   ],
+   "file_type": "Q2_K - Medium",
+   "file_sha256": "8b7091a92bc10d70392a91ebe06cd43e1f5048ae0162e88f8fbe8445447ceae8",
+   "serve_log_line": 1009968,
+   "loaded_blob_sha256": "224c623bc5673fc9251d5b8b3f0508df3784da29677b4dd4704e0ab13dec3403",
+   "loaded_serve_log_line": 1010169
+  },
+  "hf:unsloth/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q3_K_S.gguf": {
+   "channel": "hf-adjudication",
+   "run_window_utc": [
+    1786578828.412714,
+    1786578888.184701
+   ],
+   "file_type": "Q3_K - Small",
+   "file_sha256": "7fe2f725782ce9e742ecb8fc8ba9a3e1621736297d98bcdb2145e30ad88c0a4f",
+   "serve_log_line": 1010986,
+   "loaded_blob_sha256": "7e9df402798bad6bd1b21f3d3d7b7d99b76e4a605fd850257befbc4c969bc3b3",
+   "loaded_serve_log_line": 1011182
+  }
+ },
+ "template_selection_blobs": {
+  "qwen2.5-coder:0.5b-instruct-q4_K_M": [
+   "sha256-20693aeb02c63304e263a72453b6ab89e1c700a87c6948cac523ac1e6f7cade0"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q2_K": [
+   "sha256-6b95d20d03ce6922adf79e18db68183a0aa6662cdb231e56bccea2faccf0073f"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q3_K_S": [
+   "sha256-e3a42de4cfa023691dc37bb803f49ab7ea128567d469d1a54f3519efa5ff375c"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q3_K_M": [
+   "sha256-130b4472ef7b12a7c9312fe99862e7b63bb451b4ea79219d7fac94807965da9b"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q3_K_L": [
+   "sha256-d1034b2e54e2461f4d4fa2819b13379f7fc5afb60ddc476a4d3108a9ad2a045c"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q4_0": [
+   "sha256-b69f94244daed4c088f3f31e8ad45bd427e5df14df360d23ef6d6b99f678bc18"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q4_K_S": [
+   "sha256-2d3d77880bd4496170da0be469ef6f664f5554ca5f372decec3915ae87396995"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q5_K_S": [
+   "sha256-bba0961c805082120d318ac3f6b70b89fbcc08da23b9297d3e5db192f629a40b"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q5_K_M": [
+   "sha256-3392df8b589198824f2db15999530583bda1943ed8c68aecd0d9eb0d0da592f0"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q6_K": [
+   "sha256-e119a9abcbc15328fc13d61e9902aefe8c34cd13ed52dd33091a6f62cb2cf36b"
+  ],
+  "qwen2.5-coder:0.5b-instruct-q8_0": [
+   "sha256-828125e28bf46a219fa4f75b6982cb0c41fd9187467abe91c9b175287945b7ef"
+  ],
+  "qwen2.5-coder:0.5b-instruct-fp16": [
+   "sha256-f44732b10856f1137245774806a1ba1d762cd4ae6bd559aabe9e6503cad0b466"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q2_K": [
+   "sha256-2ad3bff59cf29da8ee66d325a468d05901c3726891e1ab5830d55de731810cb9"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q3_K_S": [
+   "sha256-8daa93edc1cc760b0924c3953afdd5e080397ea29c85736c419880ac825c3a57"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q3_K_M": [
+   "sha256-57ab67e0bedf81428701ae65db8d8c928657388239aaf096c8be0f9ce31f28cc"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q3_K_L": [
+   "sha256-0c0f0929e3d8d2aff5c77d2a3d39ca844b5b529e6ea7a242e67eff13e7a85f4e"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q4_0": [
+   "sha256-47f040d8da18f80490d8c6b33747b195c119cb4567787c21d2177140ba449c8a"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q4_K_S": [
+   "sha256-0b8c788c3585fb65595e274cc04a6d2aa2fa489e931a9f8b65edfb1ab52a377e"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q4_K_M": [
+   "sha256-29d8c98fa6b098e200069bfb88b9508dc3e85586d20cba59f8dda9a808165104"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q5_K_S": [
+   "sha256-fa967541c2f4b7b6720b42e08c88d38537b0e56425b536d2f43bc9074e96b2aa"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q5_K_M": [
+   "sha256-64fffaf8be7f0cdfecfcffd0d8c8d066d1959b367493e5b9d8168da6801578fb"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q6_K": [
+   "sha256-d2b23e7347196ba409885103177e5bc25ebe048b19c4576a11ff78efeb77af34"
+  ],
+  "qwen2.5-coder:1.5b-instruct-q8_0": [
+   "sha256-58db9b8722fe2dec6918b842b05de814dd56c6a8bc55f35c5e8b66812206398e"
+  ],
+  "qwen2.5-coder:1.5b-instruct-fp16": [
+   "sha256-298d758b014dffd713cda0e8d23404e81faea39446c45074ce9470f0a135799a"
+  ],
+  "qwen2.5-coder:3b-instruct-q2_K": [
+   "sha256-14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e"
+  ],
+  "qwen2.5-coder:3b-instruct-q3_K_S": [
+   "sha256-81d167af7fa3dc4e7eb361fc6df220638eb0f0783c49d317f5c4a3f8f94380d9"
+  ],
+  "qwen2.5-coder:3b-instruct-q3_K_M": [
+   "sha256-9bb5d28b842a91987a4d0c9a0616a69a3f031bcf535817c1f901639d1949a2ab"
+  ],
+  "qwen2.5-coder:3b-instruct-q3_K_L": [
+   "sha256-7a88dc11faae61e335bc9993f57f056a63eeb9d82b76ea6a8021f5657365d7c2"
+  ],
+  "qwen2.5-coder:3b-instruct-q4_0": [
+   "sha256-e717d23e294def714c9fe962b57027388c25632820072609d5fb68071b8a3d41"
+  ],
+  "qwen2.5-coder:3b-instruct-q4_K_S": [
+   "sha256-e9235a894a5ed24585ba4d84042680bfaeac9ff6b17f303ef3a4f48e87ab6eb9"
+  ],
+  "qwen2.5-coder:3b-instruct-q4_K_M": [
+   "sha256-4a188102020e9c9530b687fd6400f775c45e90a0d7baafe65bd0a36963fbb7ba"
+  ],
+  "qwen2.5-coder:3b-instruct-q5_K_S": [
+   "sha256-8300800474501d382ed2be01f7ae4605da16f9309bd93566471cb4f2593e569a"
+  ],
+  "qwen2.5-coder:3b-instruct-q5_K_M": [
+   "sha256-9904d1e7ecaa041011a26546d69260d28ced3806b789caf1de49158e9a934edc"
+  ],
+  "qwen2.5-coder:3b-instruct-q6_K": [
+   "sha256-8ca4331ecf55a22adc66ba21bf55125cd8f5c04fa9dc4a86ad01569e1e6f228d"
+  ],
+  "qwen2.5-coder:3b-instruct-q8_0": [
+   "sha256-9b07ebf4379547255597cdd67dba9230db2760ab9daca8ce4f9e6f2f4c71f57f"
+  ],
+  "qwen2.5-coder:3b-instruct-fp16": [
+   "sha256-b293d7aa8e6396f427a8ff7b8367c1cab3524dc0c92aeb85b2c9f3f7b7ebfeb9"
+  ],
+  "qwen2.5-coder:7b-instruct-q2_K": [
+   "sha256-1da8a118ae881a5076c3fbf30b3baecce4cfac4936fc6513cc82ae323021c5f6"
+  ],
+  "qwen2.5-coder:7b-instruct-q3_K_S": [
+   "sha256-979f4d4ba7d830f77bddc008ae8841bcfd6523dd7039101bdc6d00c9352b818e"
+  ],
+  "qwen2.5-coder:7b-instruct-q3_K_M": [
+   "sha256-05aa5009764dce4f80474103b171e7c42bf5c2041e121443c863f03b23a3d894"
+  ],
+  "qwen2.5-coder:7b-instruct-q3_K_L": [
+   "sha256-a11ec032a38beeabbc3ada2b6c60e4140bede9e3ce81e30a9436620411836898"
+  ],
+  "qwen2.5-coder:7b-instruct-q4_0": [
+   "sha256-e37c9e2996ab00cbe2ea633cc0ca37a872b2df67b7229659874df63775e88c29"
+  ],
+  "qwen2.5-coder:7b-instruct-q4_K_S": [
+   "sha256-5eff4fa361d86fe6d8553b3ba8addea785537e770d660c675a8b3351948cd378"
+  ],
+  "qwen2.5-coder:7b-instruct-q4_K_M": [
+   "sha256-60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463"
+  ],
+  "qwen2.5-coder:7b-instruct-q5_K_S": [
+   "sha256-9a3a93100e1ed4ed391075a88cd54c4840180b976798344b5e1be8d935e50bd9"
+  ],
+  "qwen2.5-coder:7b-instruct-q5_K_M": [
+   "sha256-52476f59a3cf8b77b96872a0ba56b62c528591af0068c79dde8d23394e88a315"
+  ],
+  "qwen2.5-coder:7b-instruct-q6_K": [
+   "sha256-c7ba7615f264a88de19b56663db267ca93af146e89aee704b062e981581015f0"
+  ],
+  "qwen2.5-coder:14b-instruct-q2_K": [
+   "sha256-58a5617cac26a73b4bec1110e507630331a0198137c2cef4d44f5fa28d1a336b"
+  ],
+  "qwen2.5-coder:14b-instruct-q3_K_S": [
+   "sha256-dcc223a447daa89f758ad0f12f5e71e4b92fadee5f5b45607f191d6b15f9ce40"
+  ],
+  "qwen2.5-coder:14b-instruct-q3_K_M": [
+   "sha256-a0c47f63879e67d13abda9945f814e70468ebb38288d5991b5fdbe2618039c64"
+  ],
+  "qwen2.5-coder:14b-instruct-q3_K_L": [
+   "sha256-f8ca0ba1d6cf2fac232706e6313684eba634ea6972e6ba399c0380bf4ec59bd4"
+  ],
+  "llama3.2:1b-instruct-q2_K": [
+   "sha256-d1ede02a2111e30c0585383c5702933a07f1d6d7cb9e5727ae41d48e3885d1f3"
+  ],
+  "llama3.2:1b-instruct-q3_K_S": [
+   "sha256-81881dcc12ece016e1aca828677376b0a772cd296aff2b6dd3a8505b5bd9cb31"
+  ],
+  "llama3.2:1b-instruct-q3_K_M": [
+   "sha256-4aad99b45e1ed1c05952eda608b951cd6e28a99aa366f3f6e2324653fa1ba593"
+  ],
+  "llama3.2:1b-instruct-q3_K_L": [
+   "sha256-8ee2056d33ee7965a854be299169c0f2e33f7be46a6a5246e676d64b88300928"
+  ],
+  "llama3.2:1b-instruct-q4_0": [
+   "sha256-b98b382ad8598741921dd8fe72c0dbf59af0f93c1916ce848939d710dfdba81d"
+  ],
+  "llama3.2:1b-instruct-q4_K_S": [
+   "sha256-9eec99c09bf1919a1ec6ce35ee8bc731dfe01181adf64c1f05b41c35f7743d9a"
+  ],
+  "llama3.2:1b-instruct-q4_K_M": [
+   "sha256-84fffd9ce0ecc7e0a36ec7a3c3aa21bb888213f8bf3db9408d5520a26412f06e"
+  ],
+  "llama3.2:1b-instruct-q5_K_S": [
+   "sha256-a527707c396019546d772b1f91cc15e93676ad77bb71ea4ff328d8f53c34f7eb"
+  ],
+  "llama3.2:1b-instruct-q5_K_M": [
+   "sha256-a1d443469dbae8c1aa29fc52db681e65d58bd521872c00d410a70670f852191b"
+  ],
+  "llama3.2:1b-instruct-q6_K": [
+   "sha256-ac1e61f30b7e7be438c0b6a6aade8e3a1a1a8d50b5184ab82385c84a7b43a081"
+  ],
+  "llama3.2:1b-instruct-q8_0": [
+   "sha256-74701a8c35f6c8d9a4b91f3f3497643001d63e0c7a84e085bed452548fa88d45"
+  ],
+  "llama3.2:1b-instruct-fp16": [
+   "sha256-1ec85b6f7ac019cc3b9f025213672fec438881df00df953cc37e92b2cee9a995"
+  ],
+  "llama3.2:3b-instruct-q2_K": [
+   "sha256-7b9c6394c3eb23ee6dedeb964ba6f86a4196ea63be1809aad6a7184edfd67509"
+  ],
+  "llama3.2:3b-instruct-q3_K_S": [
+   "sha256-d3f9b822234e838a31d5b97898b1bb0d7a76cee14739aafcd0b6c3a8fbb249fd"
+  ],
+  "llama3.2:3b-instruct-q3_K_M": [
+   "sha256-1fe0d0287b086dbee33c53511787b20f3bfdbaf24c2d4c7b10379a30058394ed"
+  ],
+  "llama3.2:3b-instruct-q3_K_L": [
+   "sha256-a2cbe2d133cce5e7acc5c40bc89670c0f137559f66928fddee70d2f642a6596e"
+  ],
+  "llama3.2:3b-instruct-q4_0": [
+   "sha256-9c8a9ab5edab20fcfa0e9ca322f0131c3bfb2f5a2f4ec12425a761f2f12deefa"
+  ],
+  "llama3.2:3b-instruct-q4_K_S": [
+   "sha256-d5e517daeee4e5788d92eea5b41b9c5fd534019ea18849d00f25c66cb65109a5"
+  ],
+  "llama3.2:3b-instruct-q4_K_M": [
+   "sha256-dde5aa3fc5ffc17176b5e8bdc82f587b24b2678c6c66101bf7da77af9f7ccdff"
+  ],
+  "llama3.2:3b-instruct-q5_K_S": [
+   "sha256-338cb28d842b37b4573fe39049fc7bbb576363974a6879c2401e9f423145acf1"
+  ],
+  "llama3.2:3b-instruct-q5_K_M": [
+   "sha256-05fc42664a9311c427413f9bf2077bd5ee7d59d6a5a034d54fc738f93976d065"
+  ],
+  "llama3.2:3b-instruct-q6_K": [
+   "sha256-0ba5c285c16ba078b17959f8ee1ad4142d161c99c6e3e8c713aeb7a0316a95a8"
+  ],
+  "llama3.2:3b-instruct-q8_0": [
+   "sha256-ed5cd7dbde6e2b5fb2d9926857ecf0f73ae3509ac1efd119ee54584d7a724688"
+  ],
+  "llama3.2:3b-instruct-fp16": [
+   "sha256-e2f46f5b501c2982b2c495a4694cb4e620aabfa2c37ebb23a90ffc8cce93854b"
+  ],
+  "llama3.1:8b-instruct-q2_K": [
+   "sha256-36cc41839cc170480c8e4fd176b404024e06df4bd7128bcbe199293283b844a9"
+  ],
+  "llama3.1:8b-instruct-q3_K_S": [
+   "sha256-dd7bd451c8d39a9401fa56a6be1b666f78ced21d957c5b487fe24c290e2a5665"
+  ],
+  "llama3.1:8b-instruct-q3_K_M": [
+   "sha256-df08b8a44ba3a31feca67933d850938cb651f74f5aa146c408de674ddb0f7918"
+  ],
+  "llama3.1:8b-instruct-q3_K_L": [
+   "sha256-ac3190703683f1c0d9533f415034f9f694fbae3e243b05f7bf27e2c6cb9b002f"
+  ],
+  "llama3.1:8b-instruct-q4_0": [
+   "sha256-8eeb52dfb3bb9aefdf9d1ef24b3bdbcfbe82238798c4b918278320b6fcef18fe"
+  ],
+  "llama3.1:8b-instruct-q4_K_S": [
+   "sha256-4d14ff3147f7f99ba6e10643aa8fb75aa97b4aee2dd0567676b962ed844f9c62"
+  ],
+  "llama3.1:8b-instruct-q4_K_M": [
+   "sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29"
+  ],
+  "llama3.1:8b-instruct-q5_K_S": [
+   "sha256-543968cfcb9b353f55424d9b67368e6b73f6bd52868267bbe5a85d073a15098d"
+  ],
+  "llama3.1:8b-instruct-q5_K_M": [
+   "sha256-1ae48274baafb576c66af17eca484ba3d44759316a0e9cbef252b6235af9ceef"
+  ],
+  "llama3.1:8b-instruct-q6_K": [
+   "sha256-2eda6fab632c5584da09426d35d410a7d2b23ed6259d71455b664824c2d17076"
+  ],
+  "gemma2:2b-instruct-q2_K": [
+   "sha256-5801226dd8c15f292142d2152443193bb5cb69d2d4ac62caeaba126415b2dc04"
+  ],
+  "gemma2:2b-instruct-q3_K_S": [
+   "sha256-34e1a838262eec4d247a4548f13e8ec213e73a686151d9a04c7ad85854bd4263"
+  ],
+  "gemma2:2b-instruct-q3_K_M": [
+   "sha256-19026d829714d8706cda27592e5b913978832e2a666e8f5f24f054b9a97442b1"
+  ],
+  "gemma2:2b-instruct-q3_K_L": [
+   "sha256-ee7a25fe8a34bcb883016619970f90d2df5b0e807feb40ed983c475ff6b2a35f"
+  ],
+  "gemma2:2b-instruct-q4_0": [
+   "sha256-7462734796d67c40ecec2ca98eddf970e171dbb6b370e43fd633ee75b69abe1b"
+  ],
+  "gemma2:2b-instruct-q4_K_S": [
+   "sha256-7c3021706684c615c3d5caf59f2e2f9ccd15e3e779394c4325dc69157709a0c3"
+  ],
+  "gemma2:2b-instruct-q4_K_M": [
+   "sha256-1e4fc624315d98d43f7ca5599bc5ce0215c96f4b699d9b6a84ce47c7a3664cdf"
+  ],
+  "gemma2:2b-instruct-q5_K_S": [
+   "sha256-7145ce0ac8c755a8def4d606962994eb188e1bc2017072743b84c4c2f7cb3ff5"
+  ],
+  "gemma2:2b-instruct-q5_K_M": [
+   "sha256-b21594fe35023c20333008b4284c00869ec3904d40be091b9d99f1d41f7bd165"
+  ],
+  "gemma2:2b-instruct-q6_K": [
+   "sha256-0ba7df0925239c02b677883dc7b7b08f579808363e36482ba3bac6580731b699"
+  ],
+  "gemma2:2b-instruct-q8_0": [
+   "sha256-9a31a1608e139e7ba6ceb61db8c49022eb26886d715363b21a01943f93fbc0d6"
+  ],
+  "gemma2:2b-instruct-fp16": [
+   "sha256-a4301a091f097407fffc2769d0e160d6eec570c64fb70ba365c09fbca4fddfa9"
+  ],
+  "gemma2:9b-instruct-q2_K": [
+   "sha256-3c811cffef2cd19a7b46352d58d4a3a93328db3a62f27d3d6cced11e5c7aac86"
+  ],
+  "gemma2:9b-instruct-q3_K_S": [
+   "sha256-52ffd1de6cd7c23cdcac36fd24fd8a04748bfe5c1b667d72fd8577cbc3e753f3"
+  ],
+  "gemma2:9b-instruct-q3_K_M": [
+   "sha256-9c58bc7ce0457270116deecd158efb3b46eae902e1d46d6ccc105491425387ef"
+  ],
+  "gemma2:9b-instruct-q3_K_L": [
+   "sha256-e7467170c0833f82d5b0cb442ce2ef6a6cba115eaacf1df92364d8df7d3ec9db"
+  ],
+  "gemma2:9b-instruct-q4_0": [
+   "sha256-ff1d1fc78170d787ee1201778e2dd65ea211654ca5fb7d69b5a2e7b123a50373"
+  ],
+  "gemma2:9b-instruct-q4_K_S": [
+   "sha256-4833479eb63eb1c6cce72c9a43341d22aaa6e0c421097e560c2a456ac7fe551b"
+  ],
+  "gemma2:9b-instruct-q4_K_M": [
+   "sha256-cb654129f57b4f44e372fab3d6540c0d6784c3adc33125d7c38ab47122ee2a54"
+  ],
+  "gemma2:9b-instruct-q5_K_S": [
+   "sha256-cada397cadf02690222b32b1c8d33c38bf0b7ab56de92cb0f9935a9f3a258958"
+  ],
+  "gemma2:9b-instruct-q5_K_M": [
+   "sha256-d44cd3b3a39e39828c83d7f1d3e953ed7fc34ba508695297a9d751a9e542fcca"
+  ],
+  "gemma2:9b-instruct-q6_K": [
+   "sha256-f26ac421f17171d67bf812c6f8eb3a599628b2834a31c8b1702e29f544cf5b29"
+  ],
+  "gemma3:270m-it-q8_0": [
+   "sha256-735af2139dc652bf01112746474883d79a52fa1c19038265d363e3d42556f7a2"
+  ],
+  "gemma3:270m-it-fp16": [
+   "sha256-08399814145c73aa10a18ab0e94587f3afe4fd48cfea18fd04972ffe1ae423bc"
+  ],
+  "gemma3:1b-it-q4_K_M": [
+   "sha256-7cd4618c1faf8b7233c6c906dac1694b6a47684b37b8895d470ac688520b9c01"
+  ],
+  "gemma3:1b-it-q8_0": [
+   "sha256-62901574f2522ef2657cb6f9a35a670efd3942d9a2b4b39c3f0032bdef2dfbc4"
+  ],
+  "gemma3:1b-it-fp16": [
+   "sha256-95686f6f23dfba5f40bfbaf127acc34b554a621649b7d258f1762a5a2ce27f0f"
+  ],
+  "gemma3:4b-it-q4_K_M": [
+   "sha256-aeda25e63ebd698fab8638ffb778e68bed908b960d39d0becc650fa981609d25"
+  ],
+  "gemma3:4b-it-q8_0": [
+   "sha256-b3ec67796e032db2b124e3b57ac83dadeed7cd55d62a673f6cecd9f4e1a611be"
+  ],
+  "phi3.5:3.8b-mini-instruct-q2_K": [
+   "sha256-54d47caa8bf30afce66f6945667b03df2df4deb94711c21d854706481c9c4c4b"
+  ],
+  "phi3.5:3.8b-mini-instruct-q3_K_S": [
+   "sha256-81c2147a6c5a94b01185b14ae424a26163543afa2333560c7d2297f000cb31ee"
+  ],
+  "phi3.5:3.8b-mini-instruct-q3_K_M": [
+   "sha256-abcfd2f187d16cb29ba3e5d1fd9b05b860e9a5afdd4d609e40ec0596fdbdc8c8"
+  ],
+  "phi3.5:3.8b-mini-instruct-q3_K_L": [
+   "sha256-cda3c938fc13343a80f60881f4987bbbb990a59403aafce7f81d4380b76fd2f1"
+  ],
+  "phi3.5:3.8b-mini-instruct-q4_0": [
+   "sha256-b5374915da534cb93df39f03bd4f2cd5a0c533df0d5e21957dc9556c260be9eb"
+  ],
+  "phi3.5:3.8b-mini-instruct-q4_K_S": [
+   "sha256-5db3e683309003f16a47246b8e4b610204c16c0d3abe0de86ccf971569493d68"
+  ],
+  "phi3.5:3.8b-mini-instruct-q4_K_M": [
+   "sha256-3ef532675b6684b28e0a1a0dca8b3bf4132673bf2294b7d87b41b1d64bb03bca"
+  ],
+  "phi3.5:3.8b-mini-instruct-q5_K_S": [
+   "sha256-50b8dc3b4ccc9c28778f43df7356709463d96a1bd35e942ed46ee88a34a4b22f"
+  ],
+  "phi3.5:3.8b-mini-instruct-q5_K_M": [
+   "sha256-ef57be356e37cdf6045f7ef9149f7f6974e7c18f23b384296608029466c48f01"
+  ],
+  "phi3.5:3.8b-mini-instruct-q6_K": [
+   "sha256-86e5e74919d7935fe84e29a2e525feb9f1cce5beb6d550bc8cb2098f0f931410"
+  ],
+  "phi3.5:3.8b-mini-instruct-q8_0": [
+   "sha256-81fd0b829a6ff15b3df3cc792de3f3e75a9fb2f1f55c0059af55a698b1173150"
+  ],
+  "phi3.5:3.8b-mini-instruct-fp16": [
+   "sha256-04381ade8b69632b564f1dbc473dac52f7819349ceb3cc76d268dee91f762fe2"
+  ],
+  "deepseek-coder:1.3b-instruct-q2_K": [
+   "sha256-0baec13e604a747485b59fc2ed855a44f7683176be8170ae0e6bd8918bb0ce60"
+  ],
+  "deepseek-coder:1.3b-instruct-q3_K_S": [
+   "sha256-fe5a110d0a64ce73713a9b0a0d757c11f579bc5c2e14683da293128f3161c225"
+  ],
+  "deepseek-coder:1.3b-instruct-q3_K_M": [
+   "sha256-8695ca2daa97efc42ba64cfe847f6a216d89410fd8384576bc186da9a77bdadc"
+  ],
+  "deepseek-coder:1.3b-instruct-q3_K_L": [
+   "sha256-9d8833106bb7e48ee967e1d3d5910c21a91fcd2834c1196bf10063db436035a7"
+  ],
+  "deepseek-coder:1.3b-instruct-q4_0": [
+   "sha256-d040cc18521592f70c199396aeaa44cdc40224079156dc09d4283d745d9dc5fd"
+  ],
+  "deepseek-coder:1.3b-instruct-q4_K_S": [
+   "sha256-5b448d0aaef917a82ce71c1f8c82dcfc3ec77d360a728ba043a79223c6714f79"
+  ],
+  "deepseek-coder:1.3b-instruct-q4_K_M": [
+   "sha256-aa970367df1070b793ca8f7a63129407db5fe867cd80068c7725bc062019ef10"
+  ],
+  "deepseek-coder:1.3b-instruct-q5_K_S": [
+   "sha256-433f894b681fab4697218a9ab18897b91a7e7b31443f766913728e8c0b665f03"
+  ],
+  "deepseek-coder:1.3b-instruct-q5_K_M": [
+   "sha256-2c33114a5e4941b2cac2627de041e3d3bc84df5b55786ed03063260715807e0d"
+  ],
+  "deepseek-coder:1.3b-instruct-q6_K": [
+   "sha256-c5f514eee92b899fc0d9e549eb0e80c83edad917fd5bbd53cb5c159823bf8881"
+  ],
+  "deepseek-coder:1.3b-instruct-q8_0": [
+   "sha256-f73bbadf4596338f2a856d4ba76e8cee4de882386d299a6e0be437f6bf6faf6c"
+  ],
+  "deepseek-coder:1.3b-instruct-fp16": [
+   "sha256-ee7d8f0e5808c78d24e7f23bec6a4f43b6135c7a15cf6e8dbe42e1632194902d"
+  ],
+  "deepseek-coder:6.7b-instruct-q2_K": [
+   "sha256-f30988691a6d3c64f7152aa9f866c7cb547c68fc7945182e1304880d0fd07683"
+  ],
+  "deepseek-coder:6.7b-instruct-q3_K_S": [
+   "sha256-4067f035300d55d5e95fe59b75b7212729b2e924113e93277d3445b0bf93c027"
+  ],
+  "deepseek-coder:6.7b-instruct-q3_K_M": [
+   "sha256-16eec58f210578937c24792fceb3ec5b6f745aedd2b63efe8bb49e805e77275d"
+  ],
+  "deepseek-coder:6.7b-instruct-q3_K_L": [
+   "sha256-0007cc9e14ff63b746ffa9766192313bba71182eba370543fc21bdc64acbda8b"
+  ],
+  "deepseek-coder:6.7b-instruct-q4_0": [
+   "sha256-59bb50d8116b6a1f9bfbb940d6bb946a05554e591e30c8c2429ed6c854867ecb"
+  ],
+  "deepseek-coder:6.7b-instruct-q4_K_S": [
+   "sha256-1ca7dc91aff7182e0485aa3fb6ce2026a8efc59beb30bbc12e4df474529cf4f9"
+  ],
+  "deepseek-coder:6.7b-instruct-q4_K_M": [
+   "sha256-8de39949f334605a7b8d7167723c9ccc926e506f38405f6d00bdf3df12e8dcf9"
+  ],
+  "deepseek-coder:6.7b-instruct-q5_K_S": [
+   "sha256-2cea35d0d8a8e3b510b75d8c5e095e1b9acfc36026f37837426092cbe5645c4f"
+  ],
+  "deepseek-coder:6.7b-instruct-q5_K_M": [
+   "sha256-33d99dbfe4003df0a770d9ceefb633866832b097b27fb09b284fa78f3386b4e6"
+  ],
+  "deepseek-coder:6.7b-instruct-q6_K": [
+   "sha256-374bdd4ee9532fb69f241e0493d3cd337a74832d71ea67d6648f684ebec8461d"
+  ],
+  "deepseek-coder:6.7b-instruct-q8_0": [
+   "sha256-b6dfda3810bc128d1853df0d627af48c02ca9bbc28376c3f3484ea881208c9b2"
+  ],
+  "deepseek-coder-v2:16b-lite-instruct-q2_K": [
+   "sha256-52828c5725f9106c6bdf2d3529c7cf159c84133d575d9d5ee3b292717d8adcd2"
+  ],
+  "deepseek-coder-v2:16b-lite-instruct-q3_K_S": [
+   "sha256-8b8b6827355fbc18c36e5442cccd26119652a97ab7d6bcb29bee16ad025ec06f"
+  ],
+  "mistral:7b-instruct-q2_K": [
+   "sha256-6547352386940a480d6fa11958bb027b757b628c98266c0ae20886f7fd9068d6"
+  ],
+  "mistral:7b-instruct-q3_K_S": [
+   "sha256-067ecc276050c06039eee72517e53c5b73fdba46105e0a4df48445c2fe7b04d8"
+  ],
+  "mistral:7b-instruct-q3_K_M": [
+   "sha256-0b5c278cdb26628729c96ae1a22415589735b49c933485559548d74d82402b51"
+  ],
+  "mistral:7b-instruct-q3_K_L": [
+   "sha256-4948f908f437c0982eecf3113c33a9dfadd19f49f71ef78315926eb91256d66e"
+  ],
+  "mistral:7b-instruct-q4_0": [
+   "sha256-2a9b718fde09b9237da3edde181fb74d8731f09d5ae5f9478d95af1932feda4b"
+  ],
+  "mistral:7b-instruct-q4_K_S": [
+   "sha256-956cfea314ca12f600b38bb6d173ae4f9b62db34e0a6cc7e7accca5c4523b7cf"
+  ],
+  "mistral:7b-instruct-q4_K_M": [
+   "sha256-faf975975644f275f00075e7cf79cd207642412560640cd1930afbab95fea25c"
+  ],
+  "mistral:7b-instruct-q5_K_S": [
+   "sha256-7247a2b9058b98b6b83d7ae5fad3a56be827d0df8cf5e6578947c519f539e9f0"
+  ],
+  "mistral:7b-instruct-q5_K_M": [
+   "sha256-1849ef83c4dd8c8c34e5c2fb964db1efe5dc994eb40909bd96c751b1346f8123"
+  ],
+  "mistral:7b-instruct-q6_K": [
+   "sha256-02c4f7e34d04dcde88f545a41bd2ea829645794873082a938f79b9badf37075d"
+  ],
+  "mistral:7b-instruct-q8_0": [
+   "sha256-0624ba75c3cebd8c75b53cc7bcc3f344ad5a410ef74bfc68d757a9ac6764495a"
+  ],
+  "mistral:7b-instruct-v0.2-q2_K": [
+   "sha256-df479b25f64df151a6a97bd6e5b4439be39960c9ceb56328ef0a82f85a879f6a"
+  ],
+  "mistral:7b-instruct-v0.2-q3_K_S": [
+   "sha256-f66f5d5578624dfad7893eb87bef89699136ce8862edc097538cfd77cee1323c"
+  ],
+  "mistral:7b-instruct-v0.2-q3_K_M": [
+   "sha256-779c6acd97ebaf9334fc4f426b7d1333af23253a5ab6127b4882d18c7ba0122e"
+  ],
+  "mistral:7b-instruct-v0.2-q3_K_L": [
+   "sha256-cc95eb6a94a0c558e4d1e733d7813637ff977cd69c8f23e50ac87e48c051c924"
+  ],
+  "mistral:7b-instruct-v0.2-q4_0": [
+   "sha256-e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730"
+  ],
+  "mistral:7b-instruct-v0.2-q4_K_S": [
+   "sha256-bd8bda8a045d68f363f542929791f630de023f3cc610b72f90454a6157eed698"
+  ],
+  "mistral:7b-instruct-v0.2-q4_K_M": [
+   "sha256-a62468bbef4a991a59c574c04f424c0c2241f33b68b5119403b86935b41977ea"
+  ],
+  "mistral:7b-instruct-v0.2-q5_K_S": [
+   "sha256-6b14cd7d015138d1e79a982b538c5198166bc31006ea9012792df3bc1043e00c"
+  ],
+  "mistral:7b-instruct-v0.2-q5_K_M": [
+   "sha256-615027ef578cd90aa3c2efc786f8c83b689ab594622fcd37ad90565cbeb5ea2d"
+  ],
+  "mistral:7b-instruct-v0.2-q6_K": [
+   "sha256-3678b2e574ad0f55d4db20a8d443b024af2dab411f167369357bb2639f239dab"
+  ],
+  "mistral:7b-instruct-v0.2-q8_0": [
+   "sha256-2f4cf9600fb1f1223dec03a4b4286d3f6fed012c5c8e15c8c15f82a9cc10415c"
+  ],
+  "mistral:7b-instruct-v0.3-q2_K": [
+   "sha256-4f9dcf17dbd0097adcb0aac9157ef9ec7ed716713cfcc3d165cd3e4c1ce98f72"
+  ],
+  "mistral:7b-instruct-v0.3-q3_K_S": [
+   "sha256-64d246b2b845d60b175d403946c0a5d7e8af0c3713ca81cfcb3270c23e3d42fd"
+  ],
+  "mistral:7b-instruct-v0.3-q3_K_M": [
+   "sha256-19eac7b807c3c35c64714833b800f10dd311e039ca100802d21b069c60776813"
+  ],
+  "mistral:7b-instruct-v0.3-q3_K_L": [
+   "sha256-eef5b3aea14da7e8e049aff0d4943b63c254ca12bcff2584ada25833f54ec804"
+  ],
+  "mistral:7b-instruct-v0.3-q4_0": [
+   "sha256-ff82381e2bea77d91c1b824c7afb83f6fb73e9f7de9dda631bcdbca564aa5435"
+  ],
+  "mistral:7b-instruct-v0.3-q4_K_S": [
+   "sha256-437a58eed892f130783c24558417ec363dfd442faa96c2caaf21dd64abaa9cfe"
+  ],
+  "mistral:7b-instruct-v0.3-q4_K_M": [
+   "sha256-f5074b1221da0f5a2910d33b642efa5b9eb58cfdddca1c79e16d7ad28aa2b31f"
+  ],
+  "mistral:7b-instruct-v0.3-q5_K_S": [
+   "sha256-6c979bfa158202c4fc54a46781ccafaeb35776badf7e7ddd7b9f1a44a93ac0d5"
+  ],
+  "mistral:7b-instruct-v0.3-q5_K_M": [
+   "sha256-aaf7a285880e93f4628e290d46fda4651330289c83438dd6a5b35eb1c9641071"
+  ],
+  "mistral:7b-instruct-v0.3-q6_K": [
+   "sha256-b33d2cd0c316ef8f0bade3ffdc0253b83050e16e724ef43875f8140599ef6a20"
+  ],
+  "mistral:7b-instruct-v0.3-q8_0": [
+   "sha256-6e3f7757a149db5a1acc9d1e8efa55ca5ccb6e0bf402f312369a4eca0ad390a0"
+  ],
+  "codellama:7b-instruct-q2_K": [
+   "sha256-35eb9ec93039dcffa92f4770fa6b0343df9a59279f36e3cb6cce52bbe78d12c8"
+  ],
+  "codellama:7b-instruct-q3_K_S": [
+   "sha256-0307401fa08e6b4739cc24e059c3a8ed85f8c14a0bcf75fc12d8f001352c7276"
+  ],
+  "codellama:7b-instruct-q3_K_M": [
+   "sha256-619cd4fdd34f4782fb2944ad6f3a470995aec9e6eb3e3ee536a16a725772ab0e"
+  ],
+  "codellama:7b-instruct-q3_K_L": [
+   "sha256-8a34789228ed9f9ec4933a8e1f70b5e8e4e4e84ac680b131a80b67999532e099"
+  ],
+  "codellama:7b-instruct-q4_0": [
+   "sha256-3a43f93b78ec50f7c4e4dc8bd1cb3fff5a900e7d574c51a6f7495e48486e0dac"
+  ],
+  "codellama:7b-instruct-q4_K_S": [
+   "sha256-2e4eb787009d9e96e90c691a802ae6a36426ab02a16b391c4c2db1150efb90a8"
+  ],
+  "codellama:7b-instruct-q4_K_M": [
+   "sha256-937db1460e71b8afc5bc3607bb4a8bcaf1659605b544ba6082ad40e37d8e3a8b"
+  ],
+  "codellama:7b-instruct-q5_K_S": [
+   "sha256-b397edcaf211321ae71c368fd1739c1280bdd29ae13e8361657ebd7d541ce2d1"
+  ],
+  "codellama:7b-instruct-q5_K_M": [
+   "sha256-dd56680910b3eca2c83662e9c523d5ff98f56157005382ed174c53a3da31e1da"
+  ],
+  "codellama:7b-instruct-q6_K": [
+   "sha256-bb3f5fc1db2b4a265d7588e2c3372ca61f218831201884694c6de5e779170b17"
+  ],
+  "codellama:7b-instruct-q8_0": [
+   "sha256-6104edb4f3e4d3758d266cdbd27723ede41135ebc7099e2c3daf06de31a29a00"
+  ],
+  "codellama:13b-instruct-q2_K": [
+   "sha256-44fc1a788c6ee9fb43f08c1915191e7b060b354fdeaa869581a1d02d7590fb9d"
+  ],
+  "codellama:13b-instruct-q3_K_S": [
+   "sha256-d67a71d25d9bee5696e05b36ef1eaf7872fcce58614772f7cece5cba4f59c330"
+  ],
+  "codellama:13b-instruct-q3_K_M": [
+   "sha256-96c02be37f3ced55d527814b6adda41d0241ebbf08fe83cb56d26a0707818dc0"
+  ],
+  "codellama:13b-instruct-q3_K_L": [
+   "sha256-a26e726b4f9a3130c2fedb89d524d9b4e133387fd322a0173e39ec173a0e45d5"
+  ],
+  "codellama:13b-instruct-q4_0": [
+   "sha256-e73cc17c718156e5ad34b119eb363e2c10389a503673f9c36144c42dfde8334c"
+  ],
+  "codellama:13b-instruct-q4_K_S": [
+   "sha256-6720166940014f005e3098490778ae7aa27aadf68ee2919413e7f3e4f4a9c61a"
+  ],
+  "codellama:13b-instruct-q4_K_M": [
+   "sha256-11eec43b3a9a2fc98afe804fd55c375628f1144bd9117501ad6b6a4406c6e314"
+  ],
+  "starcoder2:15b-instruct-v0.1-q2_K": [
+   "sha256-9019f05dbad0972938b43ab7d2b4638dc9f6b6417a5dc977ceea3d7e0c315e50"
+  ],
+  "starcoder2:15b-instruct-v0.1-q3_K_S": [
+   "sha256-f3b2d35227a3242c5f2b19e82ec745a650be7de3807fb06af0c0fc29e8fda376"
+  ],
+  "starcoder2:15b-instruct-v0.1-q3_K_M": [
+   "sha256-9bda0a29ca354331f760aff70c9d5b43694ae9f4192589f5290eb419bb07d58c"
+  ],
+  "granite-code:3b-instruct-q2_K": [
+   "sha256-dad26156511e5b9e272b69d9e95b565b65b9f2c9c3f94348009bd01a16d63975"
+  ],
+  "granite-code:3b-instruct-q3_K_S": [
+   "sha256-2dadbc3c2425ef5949adee49b814fc825842e3395af2807221c477bbc148c82a"
+  ],
+  "granite-code:3b-instruct-q3_K_M": [
+   "sha256-9c66e1aac6105389b7d3cc47ac70e79f285c3a7fa1595fc53020f118c8893ee5"
+  ],
+  "granite-code:3b-instruct-q3_K_L": [
+   "sha256-032982e6766fa70a3642e6e613e47e26c2800045650797c2dff9686bba7cad75"
+  ],
+  "granite-code:3b-instruct-q4_0": [
+   "sha256-02ab8cd2f51476c9a13778448ec83ebbd327ec1f5746c992e3e3453a43ee9aeb"
+  ],
+  "granite-code:3b-instruct-q4_K_S": [
+   "sha256-3d27781de9015ed3b6ea1ae93ed7ab221de5e03bf2981a98c4983b342b9ad818"
+  ],
+  "granite-code:3b-instruct-q4_K_M": [
+   "sha256-7fcdd6d026931c8e5feeb63ca1cdd9d5ba30c67d7288b8aae7c0229d8ba8040b"
+  ],
+  "granite-code:3b-instruct-q5_K_S": [
+   "sha256-f2690cf0a416107e95584eae50d998dc4505c69b67ecd13a99c279137135d78c"
+  ],
+  "granite-code:3b-instruct-q5_K_M": [
+   "sha256-ee3983d9100143d24ab14076adf852a950f4dfb714f933e4501f0e2d52e33ed8"
+  ],
+  "granite-code:3b-instruct-q6_K": [
+   "sha256-bf584c64e05f8d2818fefcd5ee7c7067abd30df8c1c8b6f0ac3213ec0adc770a"
+  ],
+  "granite-code:3b-instruct-q8_0": [
+   "sha256-0d30b889a640c85e94b3ac53bb07f673848dbf5e6f632deb8eb6234d47dcfa3e"
+  ],
+  "granite-code:3b-instruct-fp16": [
+   "sha256-2953a1d93a2f89c9821a7f7d8ea54c569f7ad69f331e088ebbe962393f3ed3ab"
+  ],
+  "granite-code:3b-instruct-128k-q2_K": [
+   "sha256-a55f836131f3e40ff7c678cbf7500baa4c43faa7c45d1a5f56708cbfca439322"
+  ],
+  "granite-code:3b-instruct-128k-q3_K_S": [
+   "sha256-80c0242daddd85be03ae774d06116705a4ec9a625d346858b73ab3374f29e9e9"
+  ],
+  "granite-code:3b-instruct-128k-q3_K_M": [
+   "sha256-9386255dfefa297a286b84402b89cef54223d39bea2fc3da667b287454de9407"
+  ],
+  "granite-code:3b-instruct-128k-q3_K_L": [
+   "sha256-1fe3677ad7c62352530d6452fc980269f0691385f62986a5a755ab475cdb17bd"
+  ],
+  "granite-code:3b-instruct-128k-q4_0": [
+   "sha256-9699e81546fad30bfcc6a005f9c30316828b444e37ece48ddab1babfb4d634c5"
+  ],
+  "granite-code:3b-instruct-128k-q4_K_S": [
+   "sha256-24a4784ad5b02086d131aa08ef19a36491bc5559fd7e8e7df414b2184a90873f"
+  ],
+  "granite-code:3b-instruct-128k-q4_K_M": [
+   "sha256-34ea0ece100357a65b881fda3ad7f2e473f562ea9db58c24d87bf2bd625e5da6"
+  ],
+  "granite-code:3b-instruct-128k-q5_K_S": [
+   "sha256-d4188ca5027be702dd0410ef3823ff47cdb2d2e7dca7f6664c5ee7e08557b60c"
+  ],
+  "granite-code:3b-instruct-128k-q5_K_M": [
+   "sha256-686526ae62f69c74409e2ce2c06bbc324a536188a17d08dd79672e64b4e96026"
+  ],
+  "granite-code:3b-instruct-128k-q6_K": [
+   "sha256-ba4a100bf5e53d7a287ab6ce892faaeccf7623fead7188d84d9d18600caddc17"
+  ],
+  "granite-code:3b-instruct-128k-q8_0": [
+   "sha256-26b3247c4ebb3cdc7d12595826d37142ffa4d9c6183a248932574e8a1a2abf89"
+  ],
+  "granite-code:3b-instruct-128k-fp16": [
+   "sha256-a1c270cabae8cde171caabd6d4cc97837920c77fdd195fbf3040b4184c541ecd"
+  ],
+  "granite-code:8b-instruct-q2_K": [
+   "sha256-6e1484d5d0ff8e5fb7b4b55fb1efbabb6123112863c21278d699ceb7ab16b0a7"
+  ],
+  "granite-code:8b-instruct-q3_K_S": [
+   "sha256-e684c403276ea08638a72798a2302e4fe7cb4a6764de36b3807f7f46d17f3866"
+  ],
+  "granite-code:8b-instruct-q3_K_M": [
+   "sha256-b75f32d0967da77dbe2cb5c3f63966fe103c6deafe9dae6171735e8de2076307"
+  ],
+  "granite-code:8b-instruct-q3_K_L": [
+   "sha256-fd6578560e3ce88a86c1ae9e909f058fb74f6a03d5b73fa88229a47555bf04e4"
+  ],
+  "granite-code:8b-instruct-q4_0": [
+   "sha256-8718ec2805725a8e2cf2ec06c39416342c82f961d2c2a0b778be32365dd827b0"
+  ],
+  "granite-code:8b-instruct-128k-q4_0": [
+   "sha256-bf481f838ba0e13524bde2f44cfd57a0eefb1c422da885fb26ca6cf12bea11fa"
+  ],
+  "granite-code:8b-instruct-q4_K_S": [
+   "sha256-8ff46a9e1ea07e2228aa5377aa26592d7df3a8cf05e54c19ba4e8f1591d291b4"
+  ],
+  "granite-code:8b-instruct-q4_K_M": [
+   "sha256-a46b17f302f0f9e2b119097b158bc2a723f53023a9f9f7bbe0262f1db7c7beee"
+  ],
+  "granite-code:8b-instruct-q5_K_S": [
+   "sha256-d1396fd0e97b545842bb738c965a42df9bf7dfcdd8101d6bd958c56bdea2e543"
+  ],
+  "granite-code:8b-instruct-q5_K_M": [
+   "sha256-b5fc6932efed30323bb62d2f7bdf7009033c61e885d829a18995e1471c305fbf"
+  ],
+  "granite-code:8b-instruct-q6_K": [
+   "sha256-b60564cd61dc5814406e451d9429e812061f86d6ae084446118d40724c96aa14"
+  ],
+  "granite-code:20b-instruct-q2_K": [
+   "sha256-08ab31b73689cd7b9253f88975caa953e47f3a76e5a16f2a9864a4ce6ad65fba"
+  ],
+  "granite-code:20b-instruct-8k-q2_K": [
+   "sha256-cb1bbf4e62f20ebfbf1704435efe2f880d14580f979e57fb84d45657bbb0d5d0"
+  ],
+  "granite3.1-dense:2b-instruct-q2_K": [
+   "sha256-6e871e685f19d9863f1d8fffb5a30e6d850fe6367ff43bb0f29f1105214e3084"
+  ],
+  "granite3.1-dense:2b-instruct-q3_K_S": [
+   "sha256-56c467ceeb9c3c4ab0ffe28d0fb10c0e57685ec71ef7195ffa3ebe131721d343"
+  ],
+  "granite3.1-dense:2b-instruct-q3_K_M": [
+   "sha256-b96afccbaba011f3fc9baa37f481bd96eb79ece7c32fa92419bfaf3a2a679884"
+  ],
+  "granite3.1-dense:2b-instruct-q3_K_L": [
+   "sha256-1d8543b843b44b0a17848f396ee217f188da8918eca5c1714f270b2015999ec7"
+  ],
+  "granite3.1-dense:2b-instruct-q4_0": [
+   "sha256-b3c0dea4e4413c3bcf467b0cc574f95e379e37d845b1db9e94e8c460e6ea4408"
+  ],
+  "granite3.1-dense:2b-instruct-q4_K_S": [
+   "sha256-ffe02f2536e57801fae5b018513f384c43dadc644c356074fcc5bff6fa011f9c"
+  ],
+  "granite3.1-dense:2b-instruct-q4_K_M": [
+   "sha256-5c56bb0256a2c402e95282a29bb5cb747bb805eda0e14a84b1f6c594a297ec1a"
+  ],
+  "granite3.1-dense:2b-instruct-q5_K_S": [
+   "sha256-11662e9ef84ee58730f670b76f2c92571a4fad55314d828fe2eacecbd8389dfb"
+  ],
+  "granite3.1-dense:2b-instruct-q5_K_M": [
+   "sha256-c83a4890e52ef07f41a0bffa7977dbff450659a1c681ba6a508ff82de0b99d4a"
+  ],
+  "granite3.1-dense:2b-instruct-q6_K": [
+   "sha256-54880b8d11bf70185c363215a9c575e62305b7a7f8d3137b426747a32d89b4e8"
+  ],
+  "granite3.1-dense:2b-instruct-q8_0": [
+   "sha256-5da3ed56a18b4e85c3910c2ab2d0d0e83db84f7acd1e89e792bc465ef8188c6f"
+  ],
+  "granite3.1-dense:2b-instruct-fp16": [
+   "sha256-4cc7c39a9cc7173ef03b3cf3c5e47c3bc4ef20d29270f57f2dc9cdc677c4f232"
+  ],
+  "granite3.1-dense:8b-instruct-q2_K": [
+   "sha256-ac1cada707e46f996daf178fcb93263d4a3f3951013c5855abb0bd88cbd750fd"
+  ],
+  "granite3.1-dense:8b-instruct-q3_K_S": [
+   "sha256-db62f48d24bddd4dc948396c52e9a18ad030f0222464f156192b5a642a3d6c49"
+  ],
+  "granite3.1-dense:8b-instruct-q3_K_M": [
+   "sha256-33fcc80b5a709f53caf474f402a2c39bdf6ba69577eaee4e7ffc8810a7474693"
+  ],
+  "granite3.1-dense:8b-instruct-q3_K_L": [
+   "sha256-e4956cbac210daf89798a96a2525ed9d615ead7b0a0b50a2623cb8226019a8eb"
+  ],
+  "granite3.1-dense:8b-instruct-q4_0": [
+   "sha256-59978af1d1c9d4da77637c4b4d3a1d55534f4d45d8116c03e812a89996090641"
+  ],
+  "granite3.1-dense:8b-instruct-q4_K_S": [
+   "sha256-07439a26980cba2012dc4dbd54e4ebacb598984c6dc26f9609810d9ab0495804"
+  ],
+  "granite3.1-dense:8b-instruct-q4_K_M": [
+   "sha256-44d19d212d76a6f3fc442e8411fdb44ea6b67ceccfb00be4b4345c9a4cf813e8"
+  ],
+  "granite3.1-dense:8b-instruct-q5_K_S": [
+   "sha256-a7e934c8b2479030596d99b387bd1f72fdb694ca3a9292fdde97433dfa61a469"
+  ],
+  "granite3.1-dense:8b-instruct-q5_K_M": [
+   "sha256-032622a5b6f06a9c1868eb3eb7173e0200d997722a9f0dbd96ae3a911bbb97f2"
+  ],
+  "granite3.1-dense:8b-instruct-q6_K": [
+   "sha256-a693c7b8b5034d013c47f23d6595ca222440494c6e49480c46143da5b1a0826b"
+  ],
+  "yi-coder:1.5b-chat-q2_K": [
+   "sha256-50b0b5c00a91292fe0b3fb3e00eb8764ce889043c02b2835bbf0fbcc9fca67eb"
+  ],
+  "yi-coder:1.5b-chat-q3_K_S": [
+   "sha256-3293ddbe7a3b8dc7d5f371c0116976c927510f228ca35494b2721856b5c2a05e"
+  ],
+  "yi-coder:1.5b-chat-q3_K_M": [
+   "sha256-d89dbd94e4bfe8502d6324d329c65530d93690d8e6017c562b8ff81c2aeb20e4"
+  ],
+  "yi-coder:1.5b-chat-q3_K_L": [
+   "sha256-e92d0cfde78485cc90c60dbaa2dd62fee739c07a92cb9d2a796d637a42c1f3a7"
+  ],
+  "yi-coder:1.5b-chat-q4_0": [
+   "sha256-e09fc6a79fda76ab8381f7ef6a66b8a00daae1151d546b7358ac3197ade79083"
+  ],
+  "yi-coder:1.5b-chat-q4_K_S": [
+   "sha256-d26412626c8193c06e3186fae80cc082a939396f03ebe04096f5557c53c2feb4"
+  ],
+  "yi-coder:1.5b-chat-q4_K_M": [
+   "sha256-1c4df9bcae6f6db2436948003242c9f4748f12906a53b5394c949046fc138b17"
+  ],
+  "yi-coder:1.5b-chat-q5_K_S": [
+   "sha256-51a0d78af9f230c6820561230760e6dad14cb5b70da800e1a6734c4e7b180428"
+  ],
+  "yi-coder:1.5b-chat-q5_K_M": [
+   "sha256-7f8b3b19ce62d174b5764a4ebad81b1fa91a2d819bbbd6bf57c80a3bfd6f5781"
+  ],
+  "yi-coder:1.5b-chat-q6_K": [
+   "sha256-02efc4bfa0e4f10b4eb8962d91957ecd2a5a3049081e59164f5b6a55a78710a6"
+  ],
+  "yi-coder:1.5b-chat-q8_0": [
+   "sha256-e782e7e134d84ec00a0fb10770bb1ae4dddf520d5d968ebde24f25adac052a6e"
+  ],
+  "yi-coder:1.5b-chat-fp16": [
+   "sha256-57f886e2f1b14c28ee13dcb8f8aaa9667b504f6601931b625040e5d0932db6f8"
+  ],
+  "yi-coder:9b-chat-q2_K": [
+   "sha256-746b5a778f1ba1f15d0ace89556bf88a0b53e975c2f3e207637de70f59a5799c"
+  ],
+  "yi-coder:9b-chat-q3_K_S": [
+   "sha256-1e324edb711294408f449678c8ae71e246727fa66548c69d039a5d4338ef2ac7"
+  ],
+  "yi-coder:9b-chat-q3_K_M": [
+   "sha256-ca45ba79d725d952253891f44f8820f11f4003ed0726679e2f0643783cef2740"
+  ],
+  "yi-coder:9b-chat-q3_K_L": [
+   "sha256-4c760bb6c9a78e893858cd6d49d0ce5b7b7289adb3d96a71cba6232665115bb5"
+  ],
+  "yi-coder:9b-chat-q4_0": [
+   "sha256-8169bd33ad1351c56755330bd6f1cf5696de6ac297420024fa8aebae5656b0e2"
+  ],
+  "yi-coder:9b-chat-q4_K_S": [
+   "sha256-642548cc83d0ee2c415ab76aba283302d699a3e758701172c68c1776684a5c06"
+  ],
+  "yi-coder:9b-chat-q4_K_M": [
+   "sha256-20fadc2ccf47978265e07802e511c3d671f4206076ebef21108bd89702f558ac"
+  ],
+  "yi-coder:9b-chat-q5_K_S": [
+   "sha256-d3b30dd75589132b87f49f352db94c5ec436d293073be674db1abaa1a83193ae"
+  ],
+  "yi-coder:9b-chat-q5_K_M": [
+   "sha256-63bcc8fb8c999ef4125a0db5238e84e13cfbb6b37623de9b9aed8453bd278f99"
+  ],
+  "yi-coder:9b-chat-q6_K": [
+   "sha256-06791a45d450f775d94ba260532143746a35f73160b4cd6ff736497723da53ff"
+  ],
+  "codegemma:7b-instruct-q2_K": [
+   "sha256-2137856a8d4a132d134e60f1296d052afcaaa6c47c9de030cd6c34a06e368a62"
+  ],
+  "codegemma:7b-instruct-q3_K_S": [
+   "sha256-e5e74ebd025b01d38ee1be546f3ef94d83b7006e7824404d74d246f109241eb4"
+  ],
+  "codegemma:7b-instruct-q3_K_M": [
+   "sha256-188832bbe5961c3d6856e416fccdf22fdcfaeadebaae5bd6931fdbac9e0ba26c"
+  ],
+  "codegemma:7b-instruct-q3_K_L": [
+   "sha256-70dcee64d9aef793e46de737ae8a9e0ccc2163a2e4b157321b1be102d6033d43"
+  ],
+  "codegemma:7b-instruct-q4_0": [
+   "sha256-7cb8cb805c5353eea303c6020a50cc5722af91c1528e513eee6866175dfb842f"
+  ],
+  "codegemma:7b-instruct-q4_K_S": [
+   "sha256-2b3dd77f2c7d2582f581cdc2285009afb5d3e5baf528d68acf9c756f9dce0111"
+  ],
+  "codegemma:7b-instruct-q4_K_M": [
+   "sha256-5e90470aa15739c7653da6853723129c403aa38d2b6ced251553badb164e3e29"
+  ],
+  "codegemma:7b-instruct-q5_K_S": [
+   "sha256-39cc4029eaefe00b555a232fe25b9f7d03b7a7881ff6775e2949c3419ec2c71d"
+  ],
+  "codegemma:7b-instruct-q5_K_M": [
+   "sha256-1cb5146aa073d3f200802dc3b8bdfcbd64ce7b3284367d5d2dc0b4d23eb08c15"
+  ],
+  "codegemma:7b-instruct-q6_K": [
+   "sha256-0b17fdc676ac4fdf308db7fc08a40b2e28909d37133e25f9cd724191e5a26f3b"
+  ],
+  "codegemma:7b-instruct-v1.1-q2_K": [
+   "sha256-ddc84d40e421cf0d7ad80e67bc08940bfe138edb77995a4ef9f76d357b116043"
+  ],
+  "codegemma:7b-instruct-v1.1-q3_K_S": [
+   "sha256-0830c875fce845243cd85cb613537001455436045f56eec6c8f6ddd8ef082199"
+  ],
+  "codegemma:7b-instruct-v1.1-q3_K_M": [
+   "sha256-f372345cf6a572d612bf40cd4caad153676c9a07aba8c730759102373a56c5c5"
+  ],
+  "codegemma:7b-instruct-v1.1-q3_K_L": [
+   "sha256-36e7f9f6f59257336d5e543130420c8bfaad790647ede22984e18e232b0b4823"
+  ],
+  "codegemma:7b-instruct-v1.1-q4_0": [
+   "sha256-392f2ba7a9bea371a2e27b547cbed87eb3964ac722b26d847b66fa90e5b8c49e"
+  ],
+  "codegemma:7b-instruct-v1.1-q4_K_S": [
+   "sha256-638ab3a5bbdf26aba9754ae1bbe5bea224035e94f81820bd1bd89e332ef8b50e"
+  ],
+  "codegemma:7b-instruct-v1.1-q4_K_M": [
+   "sha256-4e11661f52773b10298fecdce55339ab3b96d2a5eba873f758c0e1e00fd0ef40"
+  ],
+  "codegemma:7b-instruct-v1.1-q5_K_S": [
+   "sha256-d10f1251c9fa2622f4bf5bc8cba9219fd93e037b9a572576d6e059ad53436e22"
+  ],
+  "codegemma:7b-instruct-v1.1-q5_K_M": [
+   "sha256-496622c3b0b62ce4b405f355e89ef808a8e437b340d829a50155ca285f1ba4a4"
+  ],
+  "codegemma:7b-instruct-v1.1-q6_K": [
+   "sha256-c283b07203ced2d8b7c3abb20918370d8c5b129d0a79db5aca8f4ed4e8b5ab27"
+  ]
+ }
+}

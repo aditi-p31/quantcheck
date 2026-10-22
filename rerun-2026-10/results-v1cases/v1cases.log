@@ -1,0 +1,8 @@
+164
+{"version":"0.32.6"}
+[1/2] v1fn-granite-code_3b-instruct-q3_K_M (full164): 3.6 min
+[2/2] v1fn-mistral_7b-instruct-q3_K_S (full164): 5.4 min
+RUN_DONE full164
+"blob": "/root/omodels/blobs/sha256-9c66e1aac6105389b7d3cc47ac70e79f285c3a7fa1595fc53020f118c8893ee5"
+"blob": "/root/omodels/blobs/sha256-067ecc276050c06039eee72517e53c5b73fdba46105e0a4df48445c2fe7b04d8"
+V1CASES_DONE

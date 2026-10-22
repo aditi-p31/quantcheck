@@ -4,11 +4,16 @@ gates/ds13/logs/serve.log from results/audit_data_full.tgz), record the
 llama-server model name, layer count, file type, pre-tokenizer status and the
 prompt token count of each request. Writes gates/ds13/servelog_loads.json and
 prints the loads whose pre-tokenizer is missing.
+Paths (release): inputs and outputs follow the repository layout and can be overridden with
+environment variables; see the README section on rerun-2026-10/ds13/.
+The census serve.log is not released (QUANTCHECK_CENSUS_SERVELOG gives its path); the
+output is written next to this script (QUANTCHECK_OUT_DIR overrides).
 """
 import collections, json, os, re
 
 V3 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LOG = os.path.join(V3, "gates", "ds13", "logs", "serve.log")
+LOG = os.environ.get("QUANTCHECK_CENSUS_SERVELOG", os.path.join(V3, "gates", "ds13", "logs", "serve.log"))
+OUT_DIR = os.environ.get("QUANTCHECK_OUT_DIR", os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     loads, cur = [], None
@@ -44,7 +49,7 @@ def main():
                 cur["n_prompt"].append(int(m.group(1)))
     for l in loads:
         l.pop("srv_meta", None)
-    json.dump(loads, open(os.path.join(V3, "gates", "ds13", "servelog_loads.json"), "w"), indent=0)
+    json.dump(loads, open(os.path.join(OUT_DIR, "servelog_loads.json"), "w"), indent=0)
     miss = [l for l in loads if l["pretok"].startswith("MISSING")]
     print("loads:", len(loads), " missing pre-tokenizer:", len(miss))
     c = collections.Counter((l["name"], l["layers"]) for l in miss)

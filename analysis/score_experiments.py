@@ -12,7 +12,7 @@ import glob, json, os, subprocess, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-EV = os.path.expanduser("~/Library/Python/3.9/bin")
+EV = os.environ.get("EVALPLUS_BIN", os.path.expanduser("~/Library/Python/3.9/bin"))
 SUITE = set(json.load(open(os.path.join(ROOT, "smoke_suite_v1.json")))["suite_tasks"])
 HELD = set(json.load(open(os.path.join(ROOT, "heldout_49.json"))))
 

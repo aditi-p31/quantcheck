@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """F05 diagnosis, step 3: share of census smoke outputs whose first code block
 does not parse (static ast.parse, nothing executed), for deepseek-coder-1.3B,
-the seven suspects, and the other 286 official tags. Needs the census
-transcripts extracted to gates/ds13/all/results/transcripts.
+the seven suspects, and the other 286 official tags. Reads the census
+transcripts in results/transcripts (QUANTCHECK_CENSUS_TRANSCRIPTS overrides; the run
+used the copy extracted from results/audit_data_full.tgz, identical for the official tags).
 """
 import ast, json, os, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 P2 = os.path.abspath(os.path.join(HERE, "..", ".."))
-TD = os.path.join(HERE, "..", "gates", "ds13", "all", "results", "transcripts")
+TD = os.environ.get("QUANTCHECK_CENSUS_TRANSCRIPTS", os.path.join(P2, "results", "transcripts"))
 FENCE = re.compile(r"```([A-Za-z0-9_+-]*)[ \t]*\n(.*?)(?:```|\Z)", re.S)
 SUSP = {"qwen2.5-coder:3b-instruct-q2_K", "qwen2.5-coder:3b-instruct-q3_K_S",
         "qwen2.5-coder:3b-instruct-q3_K_M", "qwen2.5-coder:3b-instruct-q3_K_L",

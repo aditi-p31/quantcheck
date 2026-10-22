@@ -1,0 +1,23 @@
+{
+ "closure": [
+  {
+   "tag": "granite-code:3b-instruct-q3_K_M",
+   "status": "certified by a full 164-task run on the census file (CUDA)",
+   "run": "2026-10-22 RTX 4090, Ollama 0.32.6, census options, all 164 HumanEval+ tasks, scored serially",
+   "blob_sha256": "9c66e1aac6105389b7d3cc47ac70e79f285c3a7fa1595fc53020f118c8893ee5",
+   "blob_equals_census": true,
+   "n_pass_164": 65,
+   "threshold": "non-functional means at most 16 of 164"
+  },
+  {
+   "tag": "mistral:7b-instruct-q3_K_S",
+   "status": "certified by a full 164-task run on the census file (CUDA)",
+   "run": "2026-10-22 RTX 4090, Ollama 0.32.6, census options, all 164 HumanEval+ tasks, scored serially",
+   "blob_sha256": "067ecc276050c06039eee72517e53c5b73fdba46105e0a4df48445c2fe7b04d8",
+   "blob_equals_census": true,
+   "n_pass_164": 44,
+   "threshold": "non-functional means at most 16 of 164"
+  }
+ ],
+ "note": "Closes the two v1 audit cases whose original audit run left no backend or digest record. The 49 held-out outputs of these runs match the v1 audit transcripts on 41 and 40 of 49 tasks, so the v1 run is not reproduced byte for byte; the certificate rests on these single runs alone."
+}
