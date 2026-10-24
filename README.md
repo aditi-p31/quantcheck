@@ -7,8 +7,10 @@ through Ollama), and the full audit dataset behind the paper:
 > Registries and How to Catch Them.** Aditi Patodiya, 2026.
 > [arXiv:2609.05881](https://arxiv.org/abs/2609.05881)
 
-Release `v3.2` of this repository accompanies the revised paper, which
-replaces version 1 of the preprint as arXiv version 2. Version 1 had a
+Release `v3.2.1` of this repository accompanies the revised paper, which
+replaces version 1 of the preprint as arXiv version 2. It differs from `v3.2`
+in documentation only: the description of the run plan's log and of Qwen's
+GGUF files (see [`RELEASE_NOTES_v3.2.1.md`](RELEASE_NOTES_v3.2.1.md)). Version 1 had a
 different title ("Broken on Arrival: Silently Defective LLM Artifacts in
 Public Model Registries and How to Catch Them") and a defect diagnosis that
 the revision corrects; see the corrections under [Findings](#findings).
@@ -77,8 +79,9 @@ scripts that run from a clean checkout. See
   upload from lm-kit also failed. That upload carries the library file's
   tensors, so it was not an independent test. The same comment kept the four
   Qwen claims, using Qwen's own GGUF files as no-imatrix referees; those
-  files are AWQ-derived, so they are calibrated too. The v3 verdicts rest on
-  our own rebuilds.
+  files are labeled `Instruct-AWQ` in their metadata, which indicates
+  AWQ-scaled weights, so they are not uncalibrated referees either. The v3
+  verdicts rest on our own rebuilds.
 - **A scoring fault is corrected.** The census scorer marked HumanEval/15 as
   failed for every artifact, although most generations contain the standard
   solution: its strengthened tests can exceed the time limit when scoring runs
@@ -148,16 +151,19 @@ census version) for generation and llama.cpp v0.7.0 (`620d222`) on CPU for
 conversion, quantization, importance matrices and perplexity. A third RTX 4090
 pod, after the census pod and the October pod, ran the miss-audit closure
 (`results-v1cases/`) on 22 October 2026 with the same Ollama release.
-`RUN_PLAN.md` is the dated local run plan: the decision rule and the
-first-round runs were written before any run, and its log records each later
-addition and its expected reading before it ran. The closure run is not in
-it; `scripts/v1cases.sh` states its purpose and the digests it had to load.
+`RUN_PLAN.md` is the dated local run plan. The decision rule and the
+first-round runs were written before any run. Its log records the later
+additions, most of them before they ran and four with a fixed expected reading;
+the positive control and the order-independent tensor comparison were logged
+with their results. The serial re-scoring (`serial/SERIAL_REPORT.md`) and the
+closure run are not in it; `scripts/v1cases.sh` states the closure run's
+purpose and the digests it had to load.
 
 | Path | Contents |
 |---|---|
 | `RUN_PLAN.md` | Dated run plan and run log |
 | `fn_sample_30.json`, `fn_sample_b.json` | The two pre-drawn samples of unflagged artifacts for the miss audit (seeds 20261021, 20261022) |
-| `results/` | R1, 15 tasks: the five library suspects, their 4-bit siblings, our plain (uncalibrated) rebuilds, third-party imatrix (bartowski) and Qwen AWQ-derived files, and the Q4_K_M/Q6_K positive controls |
+| `results/` | R1, 15 tasks: the five library suspects, their 4-bit siblings, our plain (uncalibrated) rebuilds, third-party imatrix (bartowski) and Qwen's `Instruct-AWQ`-labeled files, and the Q4_K_M/Q6_K positive controls |
 | `results-r2/` | R2, generation settings: context 4,096 and 8,192, 2,048-token cap, temperature 0.2 with seeds 1–3, for ten builds |
 | `results-r3/`, `results-r3b/` | Miss audit: 29 + 27 unflagged census artifacts on the 49 held-out tasks |
 | `results-r5/` | R5, 15 tasks: our own WikiText-2 imatrix builds |
