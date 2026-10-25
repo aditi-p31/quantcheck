@@ -14,16 +14,22 @@ Only three things differ from a1_serial.py (same folder):
      of the author's working copy are accepted as aliases). a1_analysis.py is imported and its input
      paths are re-pointed at the same files (module globals P2, CENSUS, SUITE_FILE, ANALYZE_PY,
      CLASSIFY_PY, FINDINGS, P1_RES, CENSUS_TGZ). Paths written to the output JSON are relative to this
-     script; the withheld tuning files are written as "<withheld tuning data>/<file name>".
-  3. Inputs that are not in this release. The calibration check (part 4 below: the "94% of random
-     15-of-164 suites" figure and the MBPP+ cross-check) needs the per-task results of the 24
-     screen-tuning configurations, which belong to a separate study and are withheld: the serial files
-     (tuning_p1_*_serial.jsonl, QUANTCHECK_TUNING_DIR) and the original EvalPlus result files
-     (QUANTCHECK_P1_RESULTS). Without them, parts 1 to 3 and the drop-out analyses are recomputed, and
-     calibration_94pct_check, headline.calibration_94pct and the two tuning-file hashes are copied from
-     the committed a1_regroup.json; calibration_94pct_check is then marked from_committed_file.
-Reads numbers_regroup.json (run numbers_regroup.py first); writes a1_regroup.json in QUANTCHECK_OUT_DIR
-(default: next to this script).
+     script, except the two tuning files and numbers_regroup.json, which are written under their bare
+     names wherever they are read from; a tuning file that is absent is written as
+     "<withheld tuning data>/<file name>".
+  3. Tuning inputs. The calibration check (part 4 below: the "94% of random 15-of-164 suites" figure
+     and the MBPP+ cross-check) reads the serially re-scored per-task results of the 24 screen-tuning
+     configurations, tuning_p1_*_serial.jsonl (QUANTCHECK_TUNING_DIR; released in this directory since
+     v3.3). Each row carries the tasks whose verdict changed against the pool-scored evaluation
+     ("flips"), so the serial-versus-pool differences are recomputed from the released files alone. The
+     original EvalPlus result files of the tuning study (QUANTCHECK_P1_RESULTS) are not released; when
+     they are present the script also checks them against the hashes in the released a1_results.json
+     and against the flips. Without the serial files, parts 1 to 3 and the drop-out analyses are
+     recomputed, and calibration_94pct_check, headline.calibration_94pct and the two tuning-file hashes
+     are copied from the committed a1_regroup.json; calibration_94pct_check is then marked
+     from_committed_file.
+Reads numbers_regroup.json from QUANTCHECK_OUT_DIR (run numbers_regroup.py first with the same setting);
+writes a1_regroup.json there (default: next to this script).
 
 Original docstring of a1_serial.py follows.
 
@@ -79,8 +85,8 @@ def _dir(var, default):
 P2 = _dir("QUANTCHECK_ROOT", os.path.join(HERE, "..", ".."))                          # repository root
 SER = _dir("QUANTCHECK_SERIAL_DIR", HERE)
 A1_DIR = _dir("QUANTCHECK_A1_DIR", os.path.join(HERE, "..", "a1"))
-P1_RES = _dir("QUANTCHECK_P1_RESULTS", os.path.join(P2, "p1_results"))               # not in this release
-TUNING_DIR = _dir("QUANTCHECK_TUNING_DIR", SER)                                        # not in this release
+P1_RES = _dir("QUANTCHECK_P1_RESULTS", os.path.join(P2, "p1_results"))               # original EvalPlus files: not in this release
+TUNING_DIR = _dir("QUANTCHECK_TUNING_DIR", SER)                                        # tuning_p1_*_serial.jsonl: released here since v3.3
 OUT_DIR = _dir("QUANTCHECK_OUT_DIR", HERE)
 A1_PY = os.path.join(A1_DIR, "a1_analysis.py")
 A1_RESULTS = os.path.join(A1_DIR, "a1_results.json")
@@ -90,7 +96,7 @@ TUNING_MBPP = os.path.join(TUNING_DIR, "tuning_p1_mbpp_serial.jsonl")
 NUMBERS = os.path.join(OUT_DIR, "numbers_regroup.json")             # regroup numbers (checkpoint grouping)
 A1_POD = os.path.join(A1_DIR, "a1_rescored.json")                  # pod-rescore A1, comparison only
 A1_SERIAL = os.path.join(SER, "a1_serial.json")                    # serial A1, size_key grouping, comparison only
-A1_COMMITTED = os.path.join(SER, "a1_regroup.json")                # committed output (withheld-data fallback)
+A1_COMMITTED = os.path.join(SER, "a1_regroup.json")                # committed output (fallback when the tuning files are absent)
 OUT_JSON = os.path.join(OUT_DIR, "a1_regroup.json")
 WITHHELD = (TUNING_HE, TUNING_MBPP)
 
@@ -110,23 +116,30 @@ A1.OUT_JSON = None                                                  # never writ
 
 
 def relpath_out(p):
-    if p in WITHHELD:      # same label wherever the withheld tuning files are read from
-        return "<withheld tuning data>/" + os.path.basename(p)
+    if p in WITHHELD:      # tuning files: base name wherever they are read from, or a fixed label when absent
+        return os.path.basename(p) if os.path.exists(p) else "<withheld tuning data>/" + os.path.basename(p)
+    if p == NUMBERS:       # numbers_regroup.json: base name wherever QUANTCHECK_OUT_DIR points
+        return os.path.basename(p)
     return os.path.relpath(p, HERE)
 
 
 def input_sha256(p):
-    """sha256 of an input; for a withheld tuning file that is absent, the hash in the committed output"""
+    """sha256 of an input; for a tuning file that is absent, the hash recorded in the committed output"""
     if os.path.exists(p) or p not in WITHHELD:
         return A1.sha256(p)
-    return json.load(open(A1_COMMITTED))["meta"]["inputs_sha256"][relpath_out(p)]
+    d = json.load(open(A1_COMMITTED))["meta"]["inputs_sha256"]
+    return d.get(os.path.basename(p)) or d["<withheld tuning data>/" + os.path.basename(p)]
 
 
 def calibration_inputs_available():
-    """True when both withheld inputs of the calibration check are present."""
+    """True when both serial tuning files of the calibration check are present."""
+    return all(os.path.exists(p) for p in WITHHELD)
+
+
+def p1_originals_available():
+    """True when the original (pool-scored) EvalPlus result files of the tuning study are present."""
     import glob
-    return (all(os.path.exists(p) for p in WITHHELD)
-            and bool(glob.glob(os.path.join(P1_RES, "*.samples-sanitized_eval_results.json"))))
+    return bool(glob.glob(os.path.join(P1_RES, "*.samples-sanitized_eval_results.json")))
 
 
 QSUFFIX = sorted(["q2_K", "q3_K_S", "q3_K_M", "q3_K_L", "q4_0", "q4_K_S", "q4_K_M", "q5_0", "q5_K_S", "q5_K_M",
@@ -189,6 +202,21 @@ def load_p1_serial(kind):
         if l.strip():
             r = json.loads(l)
             out[r["id"]] = {t: bool(v) for t, v in r["per_task"].items()}
+    return out
+
+
+def load_p1_pool_from_flips(kind):
+    """The pool-scored verdicts, reconstructed from each serial row's per_task and flips: a task listed in
+    flips had the opposite verdict under the pool-scored evaluation."""
+    path = {"humaneval": TUNING_HE, "mbpp": TUNING_MBPP}[kind]
+    out = {}
+    for l in open(path):
+        if l.strip():
+            r = json.loads(l)
+            flips = {f if isinstance(f, str) else (f.get("task") or f.get("task_id")) for f in r["flips"]}
+            assert all(flips), (r["id"], kind, r["flips"][:1])
+            out[r["id"]] = {t: (not bool(v)) if t in flips else bool(v) for t, v in r["per_task"].items()}
+            assert sum(out[r["id"]].values()) == r["old_n_pass"], (r["id"], kind)
     return out
 
 
@@ -416,8 +444,11 @@ def main():
     # ---- 4. calibration (part 2/3) on the serial tuning configurations, compared with the released file
     if calibration_inputs_available():
         released_load_p1 = A1.load_p1
-        pool_he, pool_mb = released_load_p1("humaneval"), released_load_p1("mbpp")
         ser_he, ser_mb = load_p1_serial("humaneval"), load_p1_serial("mbpp")
+        pool_he, pool_mb = load_p1_pool_from_flips("humaneval"), load_p1_pool_from_flips("mbpp")
+        if p1_originals_available():      # the original files, when present, must agree with the flips
+            orig_he, orig_mb = released_load_p1("humaneval"), released_load_p1("mbpp")
+            assert orig_he == pool_he and orig_mb == pool_mb, "original EvalPlus files disagree with the serial files' flips"
         assert sorted(ser_he) == sorted(pool_he) and sorted(ser_mb) == sorted(pool_mb)
         he_diff = {c: sorted(t for t in ser_he[c] if ser_he[c][t] != pool_he[c][t]) for c in ser_he}
         mb_diff = {c: sorted(t for t in ser_mb[c] if ser_mb[c][t] != pool_mb[c][t]) for c in ser_mb}
@@ -426,10 +457,13 @@ def main():
             p23 = A1.part2_3(suite, resc, False)
         finally:
             A1.load_p1 = released_load_p1
-        p1_files = sorted(os.path.basename(p) for p in
-                          __import__("glob").glob(os.path.join(A1.P1_RES, "*.samples-sanitized_eval_results.json")))
-        p1_hashes_same = all(A1.sha256(os.path.join(A1.P1_RES, f)) == released["meta"]["p1_eval_files_sha256"].get(f)
-                             for f in p1_files) and len(p1_files) == len(released["meta"]["p1_eval_files_sha256"])
+        if p1_originals_available():
+            p1_files = sorted(os.path.basename(p) for p in
+                              __import__("glob").glob(os.path.join(A1.P1_RES, "*.samples-sanitized_eval_results.json")))
+            p1_hashes_same = all(A1.sha256(os.path.join(A1.P1_RES, f)) == released["meta"]["p1_eval_files_sha256"].get(f)
+                                 for f in p1_files) and len(p1_files) == len(released["meta"]["p1_eval_files_sha256"])
+        else:
+            p1_hashes_same = "not checked: the original EvalPlus result files are not in this release"
         pb = p23["part2"]["b_c_alternative_suites"]["pool164"]
         p3s = p23["part3_mbpp_cross_check"]["summary"]
         rel3 = released["part3_mbpp_cross_check"]["summary"]
@@ -462,8 +496,9 @@ def main():
             "note": "part2 reads only the tuning HumanEval+ results and its own RNG; the census rows are passed to "
                     "part2_3 only for the supplementary census-vs-calibration overlap, which does change",
         }
-        assert calib["part2_identical_to_released"] and calib["p1_eval_files_sha256_unchanged"]
-    else:  # withheld tuning data: copy the committed values, marked as such
+        assert calib["part2_identical_to_released"]
+        assert calib["p1_eval_files_sha256_unchanged"] in (True, "not checked: the original EvalPlus result files are not in this release")
+    else:  # tuning files absent: copy the committed values, marked as such
         calib = dict(json.load(open(A1_COMMITTED))["calibration_94pct_check"], from_committed_file=True)
 
     # ---- phi3.5 q2_K drop-outs (k = 3, 4 are fully enumerated): which subsets, and why

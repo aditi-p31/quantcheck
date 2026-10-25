@@ -16,14 +16,14 @@ Copy of numbers_serial.py (same folder). Only three things differ from that scri
      QUANTCHECK_TUNING_DIR, QUANTCHECK_CENSUS_SERVELOG (the QC_* names of the author's working copy are
      accepted as aliases). No absolute or home-relative path is used. Output: numbers_regroup.json in
      QUANTCHECK_OUT_DIR (default: next to this script).
-  3. Inputs that are not in this release. (a) The per-task results of the 24 screen-tuning
-     configurations (tuning_p1_*_serial.jsonl) belong to a separate study and are withheld. Without them
-     the tuning names come from tuning_configs.json and the "tuning_serial" values (the MBPP+ range, the
-     39-task pool) are copied from the committed numbers_regroup.json and marked from_committed_file.
+  3. Optional inputs. (a) The per-task results of the 24 screen-tuning configurations
+     (tuning_p1_*_serial.jsonl, QUANTCHECK_TUNING_DIR, default: this directory) are released since v3.3;
+     the "tuning_serial" values (the MBPP+ range, the 39-task pool) are recomputed from them. If the files
+     are absent, the tuning names come from tuning_configs.json and those values are copied from the
+     committed numbers_regroup.json and marked from_committed_file.
      (b) The census Ollama serve.log is not released; without it the blob check reads its released
-     extraction, census_digests.json (written by census_digests.py from that log).
-     With QUANTCHECK_TUNING_DIR and QUANTCHECK_CENSUS_SERVELOG pointing at those files, every value is
-     recomputed.
+     extraction, census_digests.json (written by census_digests.py from that log). With
+     QUANTCHECK_CENSUS_SERVELOG pointing at the log, that check is recomputed from it.
 Keys added for the regroup pass are listed in REGROUP_KEYS at the end.
 
 Original docstring of numbers_serial.py follows.
@@ -71,7 +71,7 @@ SER = _dir("QUANTCHECK_SERIAL_DIR", HERE)                                       
 RERUN = _dir("QUANTCHECK_RERUN_DIR", os.path.join(HERE, ".."))                        # rerun-2026-10/: ppl, tensors
 A1_DIR = _dir("QUANTCHECK_A1_DIR", os.path.join(RERUN, "a1"))                          # released a1_results.json
 OUT_DIR = _dir("QUANTCHECK_OUT_DIR", HERE)
-TUNING_DIR = _dir("QUANTCHECK_TUNING_DIR", SER)       # tuning_p1_*_serial.jsonl: withheld from this release
+TUNING_DIR = _dir("QUANTCHECK_TUNING_DIR", SER)       # tuning_p1_*_serial.jsonl: released here since v3.3
 TUNING_AVAILABLE = os.path.exists(os.path.join(TUNING_DIR, "tuning_p1_humaneval_serial.jsonl"))
 CENSUS_LOG = os.path.abspath(os.environ.get("QUANTCHECK_CENSUS_SERVELOG")
                              or os.path.join(P2, "results", "pod_archive", "serve.log"))   # not released
@@ -456,7 +456,7 @@ _tuning_names = {i.replace("_", ":", 1) for i in json.load(open(os.path.join(SER
 if TUNING_AVAILABLE:
     tuning_tags = {r["id"].replace("_", ":", 1) for r in serial("tuning_p1_humaneval")}
     assert tuning_tags == _tuning_names, "tuning_configs.json does not list the tuning configurations"
-else:  # release layout: names only (tuning_configs.json)
+else:  # tuning files absent: names only (tuning_configs.json)
     tuning_tags = _tuning_names
 tun_in = [r for r in official if r["tag"] in tuning_tags]
 N["miss_audit_frame"] = {
@@ -640,7 +640,7 @@ if TUNING_AVAILABLE:
         "humaneval_changed_vs_pool": [r["id"] for r in serial("tuning_p1_humaneval") if r["flips"]],
         "mbpp_changed_vs_pool": {r["id"]: [r["old_n_pass"], r["n_pass"]] for r in serial("tuning_p1_mbpp") if r["n_pass"] != r["old_n_pass"]},
     }
-else:  # tuning results not released: keep the committed values, marked as such
+else:  # tuning files absent: keep the committed values, marked as such
     _prev = json.load(open(os.path.join(SER, "numbers_regroup.json")))
     N["tuning_serial"] = dict(_prev["tuning_serial"], from_committed_file=True)
 

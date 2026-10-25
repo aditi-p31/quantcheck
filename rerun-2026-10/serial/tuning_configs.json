@@ -1,5 +1,5 @@
 {
- "note": "Ids of the 24 Qwen2.5-Coder screen-tuning configurations (names only; their per-task results belong to a separate study and are not released here).",
+ "note": "Ids of the 24 Qwen2.5-Coder screen-tuning configurations; their serially re-scored per-task results are in tuning_p1_humaneval_serial.jsonl and tuning_p1_mbpp_serial.jsonl in this directory (released since v3.3).",
  "ids": [
   "qwen2.5-coder_0.5b-instruct-fp16",
   "qwen2.5-coder_0.5b-instruct-q3_K_M",

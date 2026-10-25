@@ -7,10 +7,13 @@ through Ollama), and the full audit dataset behind the paper:
 > Registries and How to Catch Them.** Aditi Patodiya, 2026.
 > [arXiv:2609.05881](https://arxiv.org/abs/2609.05881)
 
-Release `v3.2.1` of this repository accompanies the revised paper, which
-replaces version 1 of the preprint as arXiv version 2. It differs from `v3.2`
-in documentation only: the description of the run plan's log and of Qwen's
-GGUF files (see [`RELEASE_NOTES_v3.2.1.md`](RELEASE_NOTES_v3.2.1.md)). Version 1 had a
+Release `v3.3` of this repository accompanies the revised paper, which
+replaces version 1 of the preprint as arXiv version 2. It adds the per-task
+results of the 24 screen-tuning configurations, so that no analysis value is
+copied from a committed file any more; what still rests on inputs not in the
+release is read from released extractions or marked in `PROVENANCE.md` (see
+[`RELEASE_NOTES_v3.3.md`](RELEASE_NOTES_v3.3.md)); `v3.2.1` differed from
+`v3.2` in documentation only ([`RELEASE_NOTES_v3.2.1.md`](RELEASE_NOTES_v3.2.1.md)). Version 1 had a
 different title ("Broken on Arrival: Silently Defective LLM Artifacts in
 Public Model Registries and How to Catch Them") and a defect diagnosis that
 the revision corrects; see the corrections under [Findings](#findings).
@@ -186,7 +189,7 @@ purpose and the digests it had to load.
 | `scripts/` | The pod scripts and run-entry files (see "Rebuild, calibrate and compare"), including `v1cases.sh` (the miss-audit closure run) and `score_v1cases_serial.py` (its serial scoring, one EvalPlus worker) |
 | `a1/` | Suite-size analysis: `a1_analysis.py` and `a1_results.json` on the original scores, `A1_REPORT.md`, an independent check in `verify/`, and `a1_rescored.py`/`.json` on the corrected scores |
 | `analysis/` | `numbers_v3.py`, `numbers_v3.json` and `figures_v3.py` on the earlier parallel rescore |
-| `serial/` | The serial re-scoring the paper reports: `serial_rescore.py`, per-set `*_serial.jsonl` scores, `flips.jsonl`, `instances.jsonl` (one line per serial evaluation, with EvalPlus reasons and timings), `numbers_regroup.py`/`.json` (the paper's numbers apart from the population bound and the gate evaluation, model-variant baselines; v3.1), `a1_regroup.py`/`.json` (suite-size analysis, model-variant baselines; v3.1), `figures_serial.py`, `census_digests.py`/`.json` (per-artifact file digests of the census, extracted from the census server log; v3.1), `tuning_configs.json` (names of the 24 screen-tuning configurations), the v3.0 versions `numbers_serial.py`/`.json` and `a1_serial.py`/`.json` (older baseline groups), and the reports `SERIAL_REPORT.md`, `PAPER_DIFF.md`, `VERIFY_REPORT.md` |
+| `serial/` | The serial re-scoring the paper reports: `serial_rescore.py`, per-set `*_serial.jsonl` scores, `flips.jsonl`, `instances.jsonl` (one line per serial evaluation of every set except the two tuning sets, with EvalPlus reasons and timings; the tuning sets' re-evaluations are summarized in `serial_summary.json` and `SERIAL_REPORT.md`), `tuning_p1_humaneval_serial.jsonl` and `tuning_p1_mbpp_serial.jsonl` (the 24 screen-tuning configurations' per-task results, v3.3), `numbers_regroup.py`/`.json` (the paper's numbers apart from the population bound and the gate evaluation, model-variant baselines; v3.1), `a1_regroup.py`/`.json` (suite-size analysis, model-variant baselines; v3.1), `figures_serial.py`, `census_digests.py`/`.json` (per-artifact file digests of the census, extracted from the census server log; v3.1), `tuning_configs.json` (names of the 24 screen-tuning configurations), the v3.0 versions `numbers_serial.py`/`.json` and `a1_serial.py`/`.json` (older baseline groups), and the reports `SERIAL_REPORT.md`, `PAPER_DIFF.md`, `VERIFY_REPORT.md` |
 | `miss_audit/` | `certificates.csv`, `certificates.json`: per-artifact evidence for the 66 artifacts of the miss audit (v3.1; see "Miss-audit certificates"). `bounds.py`, `bounds.csv`, `bounds.json`, `BOUNDS.md`: population bounds with their assumptions, and `bounds_check.py`, an exact-fraction check; `v1_seed_search.py`/`.log`: the seed search for the first-version draw (v3.2; see "Miss-audit population bound") |
 | `miss_audit/closure_v1cases.json` | Closure record of the two first-version audit tags: census digest, digest match, and 164-task serial score of each (65 and 44 of 164) |
 | `ds13/` | deepseek-coder-1.3B diagnosis scripts and outputs |
@@ -213,8 +216,9 @@ corresponds to `rerun-2026-10/`, and `/root/p2/run/` to
 `rerun-2026-10/scripts/` together with `harness/`, `smoke_suite_v1.json` and
 `heldout_49.json` at the repository root and the two `fn_sample_*.json` files
 in `rerun-2026-10/`.
-The `transcript` fields of `serial/*_serial.jsonl` are paths in the
-author's working copy; their file names identify the transcripts, which are
+The `transcript` fields of `serial/*_serial.jsonl` (all but the two tuning
+files, which carry none; the tuning study's generations are not released) are
+paths in the author's working copy; their file names identify the transcripts, which are
 in `results/transcripts/` (census), `rerun-2026-10/results*/transcripts/`
 (rerun) and `results-mac/`, `results-metalrep/`, `results-native/` and
 `results-sensitivity/` (`transcripts/` in each).
@@ -265,22 +269,26 @@ python3 rerun-2026-10/gate/facts_b.py             # RQ3 flag status, gate on the
 - `facts_b.py` (v3.2) recomputes the output statistics from the
   per-generation metrics and rewrites `rerun-2026-10/gate/facts_b.json`.
 
-**Values a clean checkout cannot recompute.**
+**Screen-tuning data, and inputs that are not in this release.**
 
 - *Screen tuning.* The screen was tuned on 24 Qwen2.5-Coder configurations
-  from a separate study. Their names are in `serial/tuning_configs.json`;
-  their per-task results are withheld. Without them the scripts copy the
-  tuning values from the committed output and mark them
-  `"from_committed_file": true`: in `numbers_regroup.json` the `tuning_serial`
-  block (the 39-task pool, the 0 of 15 of the known failure and the MBPP+
-  range of the healthy configurations, 38.6–70.1%), and in `a1_regroup.json`
-  the `calibration_94pct_check` block, which `headline.calibration_94pct`
-  repeats (the "94% of random 15-of-164 suites" figure), together with the two
-  tuning-file hashes in `meta.inputs_sha256`. These values are inherited from
-  the committed outputs and cannot be recomputed from this release. With the
-  data, `QUANTCHECK_TUNING_DIR` (serial tuning files) and
-  `QUANTCHECK_P1_RESULTS` (the original EvalPlus result files) make both
-  scripts recompute them.
+  from a separate study. Their names are in `serial/tuning_configs.json` and,
+  since v3.3, their serially re-scored per-task results are in
+  `serial/tuning_p1_humaneval_serial.jsonl` and
+  `serial/tuning_p1_mbpp_serial.jsonl`: one row per configuration with the
+  `per_task` verdicts, `n_pass`, the pool-scored `old_n_pass`, the tasks that
+  were re-evaluated and the `flips` whose verdict changed. From them
+  `numbers_regroup.py` recomputes the `tuning_serial` block (the 39-task pool,
+  the 0 of 15 of the known failure and the MBPP+ range of the healthy
+  configurations, 38.6–70.1%), `a1_regroup.py` the `calibration_94pct_check`
+  block that `headline.calibration_94pct` repeats (the "94% of random
+  15-of-164 suites" figure), and `facts_b.py` the
+  `tuning_full164_separate_study` summary. What is not released is the tuning
+  study's original, pool-scored EvalPlus result files
+  (`QUANTCHECK_P1_RESULTS`); the serial rows carry the tasks whose verdict
+  changed (`flips`), from which `a1_regroup.py` rebuilds the pool-scored
+  verdicts and the serial-versus-pool differences. If the serial tuning files are removed, each script falls back to the
+  committed values and marks them `"from_committed_file": true`.
 - *Census server log.* The census Ollama `serve.log` (93 MB) is not released.
   `serial/census_digests.json`, written from it by `serial/census_digests.py`,
   records the server version and, for every census artifact, the SHA-256 of
@@ -288,17 +296,10 @@ python3 rerun-2026-10/gate/facts_b.py             # RQ3 flag status, gate on the
   takes its file-identity check from it, or from the log itself when
   `QUANTCHECK_CENSUS_SERVELOG` points at the log, in which case it also
   asserts that the two agree. `gate/facts_b.py` does the same.
-- *Screen-tuning full runs.* `gate/facts_b.json` keeps only a summary of the
-  tuning configurations' full 164-task runs (counts and range,
-  `fullrun_table.tuning_full164_separate_study`). Without the withheld file
-  `facts_b.py` copies that block from the committed output and marks it
-  `"from_committed_file": true`, as it is committed; with
-  `QUANTCHECK_TUNING_DIR` it recomputes it.
 
-After a clean run, `git diff` shows only the two `from_committed_file` flags
-and, in `a1_regroup.json`, the recorded SHA-256 of `numbers_regroup.json`,
-which changes with its flag (and `meta.python` if your Python version
-differs). `bounds.py` and `facts_b.py` reproduce their committed outputs
+After a clean run, `git diff` shows nothing, apart from `meta.python` in
+`a1_regroup.json` if your Python version differs. `bounds.py` and
+`facts_b.py` reproduce their committed outputs
 byte for byte; `v1_seed_search.py` reproduces its log except for the
 elapsed seconds. With matplotlib 3.9.4 and numpy 2.0.2 the figures match the
 paper's: the PNG files byte for byte, the PDF files except for their
@@ -313,15 +314,14 @@ python3 rerun-2026-10/analysis/figures_v3.py      # figures on the parallel resc
 python3 analysis/analyze.py                       # v1 pipeline, withdrawn v1 rule, rewrites analysis/findings.json
 ```
 
-`numbers_v3.py` and `analyze.py` reproduce their committed outputs byte for
-byte; `numbers_serial.py` does too, except that it marks its `tuning_serial`
-block `from_committed_file`, as above. The two earlier suite-size scripts
-need the withheld tuning data for their last step: `a1/a1_rescored.py` stops
-with an `AssertionError` in `part2_3` and writes nothing, and
-`serial/a1_serial.py` stops with a `FileNotFoundError` for
-`tuning_p1_humaneval_serial.jsonl`. Their census parts are covered by
-`a1_regroup.py`, which reproduces `a1_results.json` and compares itself with
-`a1_serial.json`.
+`numbers_v3.py`, `analyze.py` and `numbers_serial.py` reproduce their
+committed outputs byte for byte. The two earlier suite-size scripts need the
+tuning study's original EvalPlus result files for their last step:
+`a1/a1_rescored.py` stops with an `AssertionError` in `part2_3` and writes
+nothing, and `serial/a1_serial.py` stops with a message and writes nothing.
+Their census parts are covered by `a1_regroup.py`, which reproduces
+`a1_results.json`, compares itself with `a1_serial.json` and performs the
+calibration check from the released serial files.
 
 **The deepseek-coder-1.3B diagnosis** (RQ1, `rerun-2026-10/ds13/`):
 
@@ -354,8 +354,8 @@ Hugging Face cache are tool locations.
 | `QUANTCHECK_SERIAL_DIR` | `rerun-2026-10/serial/` | `numbers_regroup.py`, `a1_regroup.py`, `bounds.py`, `facts_b.py` |
 | `QUANTCHECK_A1_DIR` | `rerun-2026-10/a1/` | `numbers_regroup.py`, `a1_regroup.py`, `numbers_serial.py`, `a1_serial.py`, `numbers_v3.py`, `a1_rescored.py` |
 | `QUANTCHECK_OUT_DIR` | next to the script | `numbers_regroup.py`, `a1_regroup.py`, `ds13/*.py` (except `ds13_census_parse.py`, which only prints), `bounds.py`, `facts_b.py` |
-| `QUANTCHECK_TUNING_DIR` | `rerun-2026-10/serial/` (files withheld) | `numbers_regroup.py`, `a1_regroup.py`, `facts_b.py` |
-| `QUANTCHECK_P1_RESULTS` | none in this repository | `a1_regroup.py`, `a1_analysis.py`, `a1_rescored.py`, `a1/verify/*.py`, `serial_rescore.py` |
+| `QUANTCHECK_TUNING_DIR` | `rerun-2026-10/serial/` | `numbers_regroup.py`, `a1_regroup.py`, `facts_b.py` |
+| `QUANTCHECK_P1_RESULTS` | none in this repository | `a1_regroup.py`, `a1_serial.py`, `a1_analysis.py`, `a1_rescored.py`, `a1/verify/*.py`, `serial_rescore.py` |
 | `QUANTCHECK_CENSUS_SERVELOG` | not in this repository | `numbers_regroup.py`, `ds13_servelog.py`, `facts_b.py` |
 | `QUANTCHECK_CENSUS_TRANSCRIPTS` | `results/transcripts/` | `ds13_census_parse.py` |
 | `QUANTCHECK_DS13_DIR`, `QUANTCHECK_DS13_TOKENIZER` | see above | `ds13_outputs.py`, `ds13_tokcheck.py` |
@@ -528,8 +528,9 @@ original scores are in `results/fullrun_scores.jsonl`). Closure runs:
 `rerun-2026-10/results-v1cases/scored_serial.jsonl`. October re-downloads:
 `serial/rerun_r6_serial.jsonl` and `serial/rerun_p0c_serial.jsonl`, on files
 equal to the census digests. The screen-tuning configurations of a separate
-study also have full runs; their results are not released and they are left
-out of this table.
+study also have full runs (`serial/tuning_p1_humaneval_serial.jsonl`); they
+are left out of this table because their file identity with the census was
+not recorded.
 
 ## Smoke-test an artifact yourself
 

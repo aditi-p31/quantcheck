@@ -26,8 +26,8 @@
    "../a1/a1_analysis.py": "5ceda81649350a4531ed4aa1e343f08ccdaaabfa207424506dd3985ceeed027f",
    "../../results/audit_scored.jsonl": "1175eea1d425c406c4f51c50be132690d57d44138c57df123b841ae66cc8276a",
    "census_smoke_serial.jsonl": "0b7815b651aa96a7361cce89fdd3c1474839b0dd9ce99a25cb23f7fa8733c649",
-   "<withheld tuning data>/tuning_p1_humaneval_serial.jsonl": "12a09d6e0b8d1521f8a054a25e1c6c3e52be61a6f70525da2e36211aa8297ff8",
-   "<withheld tuning data>/tuning_p1_mbpp_serial.jsonl": "a1705020d25f5c3fd41e31ea7d37715c05cc3b9f40c7c626cfc809870b0eb76e",
+   "tuning_p1_humaneval_serial.jsonl": "9882a11244dc9a569448a9e82427ee591b080665172b0dd26b7eb5938f604c7a",
+   "tuning_p1_mbpp_serial.jsonl": "f32d44300d7c454446653134185fece505165c57342dcb5b7fcc7de23b9d7f2b",
    "../../smoke_suite_v1.json": "0f50c6f29e2dfd2afe6153a60d9e806d7b8292bbebe23fe6276340a2180abf96",
    "../../analysis/analyze.py": "1f01d1491c23fffda7a4152688d53dae8489373760179dd3f731e4e06829675c",
    "numbers_regroup.json": "c01a88c7fd198e5fe12659ab6619af7046ff3a2424920f56c3caab28f4916b53",
@@ -3920,8 +3920,8 @@
   "figure": "share of 1000 random 15-of-164 HumanEval+ suites in which the 60% bar flags >= 1 healthy calibration config (serial P1 tuning data, 23 healthy Qwen2.5-Coder configs)",
   "census_used": false,
   "tuning_source": [
-   "<withheld tuning data>/tuning_p1_humaneval_serial.jsonl",
-   "<withheld tuning data>/tuning_p1_mbpp_serial.jsonl"
+   "tuning_p1_humaneval_serial.jsonl",
+   "tuning_p1_mbpp_serial.jsonl"
   ],
   "humaneval_per_task_differences_serial_vs_pool": {},
   "mbpp_per_task_differences_serial_vs_pool": {
@@ -4032,7 +4032,7 @@
    "all_healthy_15_of_15": true,
    "defective_suite_score": 0
   },
-  "p1_eval_files_sha256_unchanged": true,
+  "p1_eval_files_sha256_unchanged": "not checked: the original EvalPlus result files are not in this release",
   "census_vs_calibration_overlap_summary_serial": {
    "n_in_census": 23,
    "n_identical_per_task": 20,

@@ -189,7 +189,7 @@ for the 8 first-version runs.
 | `results/audit_scored.jsonl` | `1175eea1d425c406` |
 | `inventory_candidates.json` | `ac0769c6259da8ec` |
 | `sensitivity_sample.json` | `4a43d0aa00c9e95c` |
-| `rerun-2026-10/serial/tuning_configs.json` | `684f7041a2f4596b` |
+| `rerun-2026-10/serial/tuning_configs.json` | `f3000deaa8800dc2` (v3.3 changed only its note; the 24 ids are unchanged, `684f7041a2f4596b` in v3.2.1) |
 | `rerun-2026-10/serial/sensitivity_serial.jsonl` | `406d9f130b791190` |
 | `rerun-2026-10/serial/rerun_r3_serial.jsonl` | `8679891dbef66f93` |
 | `rerun-2026-10/serial/rerun_r3b_serial.jsonl` | `41f57ec4dcade068` |
@@ -202,7 +202,7 @@ for the 8 first-version runs.
 | `rerun-2026-10/serial/census_digests.json` | `210dfbe1fc7a627f` |
 
 The bounds were first computed in the author's working copy, where the tuning-set names came from the
-screen-tuning result file (not released) instead of `tuning_configs.json`; the 24 names are the same,
+author's copy of the screen-tuning result file (released since v3.3 as `tuning_p1_humaneval_serial.jsonl`, minus two provenance fields) instead of `tuning_configs.json`; the 24 names are the same,
 and the release copy of `bounds.py` reproduces those first outputs except for the input paths
 recorded in `bounds.json` (`inputs`) and the `note` column: row 1 drops an outdated note, and row 4
 now reads "the bound the paper prints".

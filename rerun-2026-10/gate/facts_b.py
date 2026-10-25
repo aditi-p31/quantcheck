@@ -13,10 +13,11 @@ repository layout; QUANTCHECK_ROOT, QUANTCHECK_RERUN_DIR, QUANTCHECK_SERIAL_DIR 
                                     serve.log); with QUANTCHECK_CENSUS_SERVELOG pointing at that log (not released)
                                     the script also parses it and asserts that both agree
   October file digests              rerun-2026-10/results*/runs.jsonl
-  screen-tuning study (optional)    tuning_p1_humaneval_serial.jsonl in QUANTCHECK_TUNING_DIR (not released). It
-                                    feeds only fullrun_table.tuning_full164_separate_study, a summary (counts and
-                                    range); without the file that block is copied from the committed facts_b.json
-                                    and marked "from_committed_file": true
+  screen-tuning study               tuning_p1_humaneval_serial.jsonl in QUANTCHECK_TUNING_DIR (default
+                                    rerun-2026-10/serial/, released since v3.3). It feeds only
+                                    fullrun_table.tuning_full164_separate_study, a summary (counts and range);
+                                    without the file that block is copied from the committed facts_b.json and
+                                    marked "from_committed_file": true
 Writes facts_b.json next to this file (QUANTCHECK_OUT_DIR overrides).
 Usage, from the repository root: python3 rerun-2026-10/gate/facts_b.py
 """
@@ -327,14 +328,14 @@ for t in sorted(full):
                     "stage1_flag_serial": score[t] < 9, "stage1_flag_original": orig_score[t] < 9,
                     "full164_serial": e["n_pass"], "source": e["source"]})
 census_ns = [x for x in tab if x["source"].startswith("census_full164")]
-# screen-tuning study: summary only (per-configuration and per-task results belong to a separate study, withheld)
+# screen-tuning study: summary (the per-task results are in rerun-2026-10/serial/tuning_p1_*_serial.jsonl since v3.3)
 if TUNING_AVAILABLE:
     ns_tun = [v for t, v in tuning.items() if t in res and t not in SUS]
     tun_block = {"n": len(tuning), "not_in_census": sorted(t for t in tuning if t not in res),
                  "n_nonsuspect_in_census": len(ns_tun), "nonsuspect_in_census_full164_range": [min(ns_tun), max(ns_tun)],
                  "n_suspect_in_census": sum(1 for t in tuning if t in SUS),
                  "note": ("full 164-task runs of the 24 screen-tuning configurations, from a separate study; file identity "
-                          "with the census not recorded; per-configuration and per-task results are not released"),
+                          "with the census not recorded; per-task results in rerun-2026-10/serial/tuning_p1_*_serial.jsonl"),
                  "from_committed_file": False}
 else:
     tun_block = dict(json.load(open(COMMITTED))["fullrun_table"]["tuning_full164_separate_study"])
@@ -361,4 +362,4 @@ json.dump(OUT, open(os.path.join(OUT_DIR, "facts_b.json"), "w"), indent=1, defau
 print(json.dumps({k: OUT[k] for k in ("classes",)}, indent=0))
 print("census digests from:", DIGEST_SOURCE)
 print("tuning summary:", "recomputed from " + os.path.basename(TUNING) if TUNING_AVAILABLE
-      else "copied from the committed facts_b.json (tuning file not released)")
+      else "copied from the committed facts_b.json (tuning file absent)")

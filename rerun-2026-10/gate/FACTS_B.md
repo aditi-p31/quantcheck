@@ -6,22 +6,23 @@ Recomputed from raw records by `facts_b.py` (stdlib, read-only on inputs); every
 python3 rerun-2026-10/gate/facts_b.py      # rewrites rerun-2026-10/gate/facts_b.json (under a second)
 ```
 
-From a clean checkout it reproduces the committed `facts_b.json` byte for byte. Two inputs are not released:
+From a clean checkout it reproduces the committed `facts_b.json` byte for byte. One input is not released:
 
 - The census Ollama `serve.log`. The script takes each census tag's file digest from its released extraction,
   `rerun-2026-10/serial/census_digests.json`. With `QUANTCHECK_CENSUS_SERVELOG` pointing at the log it also parses
   the log itself and asserts that both agree (they do, for all 305 official tags).
-- The full 164-task results of the 24 screen-tuning configurations, which belong to a separate study. They feed
-  only `fullrun_table.tuning_full164_separate_study`, a summary (counts and range, no per-configuration values).
-  Without them that block is copied from the committed `facts_b.json` and marked `"from_committed_file": true`;
-  with `QUANTCHECK_TUNING_DIR` pointing at them it is recomputed.
+The full 164-task results of the 24 screen-tuning configurations, from a separate study, are in
+`rerun-2026-10/serial/tuning_p1_humaneval_serial.jsonl` (released since v3.3; `QUANTCHECK_TUNING_DIR` overrides
+the directory). They feed only `fullrun_table.tuning_full164_separate_study`, a summary (counts and range). If
+the file is removed, that block is copied from the committed `facts_b.json` and marked
+`"from_committed_file": true`.
 
 Input hashes (sha256, first 8 hex digits): `rerun-2026-10/serial/census_smoke_serial.jsonl` `0b7815b6`,
 `census_full164_serial.jsonl` `3b62186c`, `results/audit_results.jsonl` `02675274`, `results/audit_scored.jsonl`
 `1175eea1`, `results/fullrun_scores.jsonl` `b66f1a39`, `rerun-2026-10/serial/census_digests.json` `210dfbe1`,
-`rerun-2026-10/serial/numbers_regroup.json` `c01a88c7`. The script was first run in the author's working copy, on
-the same records plus the two unreleased inputs; the release copy reproduces that output except for the tuning
-summary block, which the first run listed per configuration.
+`rerun-2026-10/serial/numbers_regroup.json` `c01a88c7`, `rerun-2026-10/serial/tuning_p1_humaneval_serial.jsonl`
+`9882a112`. The script was first run in the author's working copy on the same records plus the census `serve.log`;
+the committed `facts_b.json` is the output of the released code on the released inputs.
 
 Independent checks that pass (asserted in the script): output statistics recomputed from the 15 per-generation
 metrics equal the stored `trunc_frac` / `rep6_share_mean` for all 305 official tags; serial scores equal the sum of
@@ -173,5 +174,5 @@ Other full runs of non-suspect official tags on the census file (October): grani
 mistral:7b q3_K_S 44 (miss-audit closure), qwen2.5-coder:3b q4_K_M 132 (R6) and phi3.5 q4_K_M 74 (P0c); so 16
 non-suspect tags have census-file full runs above 16. Separately, the 24 screen-tuning configurations of a separate
 study include 22 census non-suspect Qwen tags with full runs (74 to 139 of 164); their file identity with the census
-is not recorded and their results are not released, so they are left out of this table and of any artifact-table
-claim (summary only, `fullrun_table.tuning_full164_separate_study`).
+is not recorded, so they are left out of this table and of any artifact-table claim (summary in
+`fullrun_table.tuning_full164_separate_study`; per-task results in `rerun-2026-10/serial/tuning_p1_humaneval_serial.jsonl`).

@@ -109,11 +109,11 @@ in this release; anyone can repeat it with
 | Statement | Record | Kind |
 |---|---|---|
 | EvalPlus 0.3.1, HumanEval+ plus tests | `rerun-2026-10/serial/serial_summary.json` `env` (EvalPlus 0.3.1, HumanEval+ v0.1.10 with its dataset hash); pod packages in `rerun-2026-10/pip_freeze.txt` | raw |
-| Every failed task was re-evaluated serially, with a 3% sample of passes, none of which changed | Method: `rerun-2026-10/serial/serial_rescore.py`. One line per evaluation: `serial/instances.jsonl` (`kind` = `fail`, `sample_pass`, or `full` for sets that stored only counts; EvalPlus statuses, reasons, timings). Changed verdicts: `serial/flips.jsonl`. Per-set counts: `serial/serial_summary.json` and `serial/SERIAL_REPORT.md` | raw |
+| Every failed task was re-evaluated serially, with a 3% sample of passes, none of which changed | Method: `rerun-2026-10/serial/serial_rescore.py`. One line per evaluation: `serial/instances.jsonl` (`kind` = `fail`, `sample_pass`, or `full` for sets that stored only counts; EvalPlus statuses, reasons, timings). Changed verdicts: `serial/flips.jsonl` (both cover every set except the two tuning sets; the tuning sets' re-evaluations are summarized in `serial/serial_summary.json` and `serial/SERIAL_REPORT.md`, with per-task outcomes in `serial/tuning_p1_*_serial.jsonl`). Per-set counts: `serial/serial_summary.json` and `serial/SERIAL_REPORT.md` | raw |
 | HumanEval/15 passes for 275 of 305 official artifacts, one also gains HumanEval/23, no pass turns into a fail | `numbers_regroup.json`: `he15_pass_official`, `artifacts_changed_vs_original_census` (`tasks_gained`, `any_loss`) | derived |
-| The slowest HumanEval/15 test uses at most 18% of its time limit | `serial/SERIAL_REPORT.md`, "Flips by task id" (maximum runtime over limit 0.18 for the census set); repeats with `first_ratio` in `serial/stability.jsonl` | raw |
+| In the 192 passing HumanEval/15 evaluations with timings, the task's slowest test used at most 20% of its time limit | `serial/instances.jsonl`, `diag.plus.max_runtime_over_limit` over the 192 records with `task_id` HumanEval/15, `pass` true and a per-test timing (`diag`) record (the other 146 passing records have only wall-clock times; maximum 0.1966, in the `census_full164` set); `serial/SERIAL_REPORT.md` gives 0.18 for the census screen set alone; repeats with `first_ratio` in `serial/stability.jsonl` | raw |
 | Per-task serial scores of every result set | `rerun-2026-10/serial/*_serial.jsonl` (the original scores are kept unchanged in `results*/` and `rerun-2026-10/results*/scored.jsonl`); the closure runs, scored only serially, in `rerun-2026-10/results-v1cases/scored_serial.jsonl` | raw |
-| The screen was tuned on 24 Qwen2.5-Coder configurations | `serial/tuning_configs.json` (names). Their per-task results belong to a separate study and are withheld; the tuning values in `numbers_regroup.json` (`tuning_serial`) and `a1_regroup.json` (`calibration_94pct_check`) are inherited from the committed outputs | not released |
+| The screen was tuned on 24 Qwen2.5-Coder configurations; 39 tasks are solved by all 23 healthy ones and the suite is the first 15 in lexicographic order of task id; the known failure solves 0 of 15, 0 of 164 and 7 of 378 MBPP+ tasks; healthy MBPP+ rates 38.6–70.1%; 94% of random 15-of-164 suites flag a healthy configuration | `serial/tuning_configs.json` (names), `serial/tuning_p1_humaneval_serial.jsonl` and `serial/tuning_p1_mbpp_serial.jsonl` (per-task serial verdicts, v3.3); recomputed by `serial/numbers_regroup.py` (`tuning_serial`) and `serial/a1_regroup.py` (`calibration_94pct_check`) | raw; derived |
 
 ## Miss audit
 
@@ -147,6 +147,6 @@ in this release; anyone can repeat it with
 - The Mac server logs behind the Metal-side digests and server version in
   `certificates.json`.
 - The calibration texts (hashes above).
-- The per-task results of the 24 screen-tuning configurations (a summary of
-  their full 164-task runs, counts and range, is in
-  `rerun-2026-10/gate/facts_b.json`, marked `from_committed_file`).
+- The tuning study's original, pool-scored EvalPlus result files, which hold
+  its generated solutions; the released serial rows carry the tasks whose
+  verdict changed (`flips`), from which the pool-scored verdicts are rebuilt.

@@ -21,7 +21,9 @@ validated, as in a1_rescored.py, by reproducing every per-k metric of the releas
 a1_results.json from the original scores with the released settings (enumerate <= 1000,
 1000 draws).
 
-Run: python3 -I a1_serial.py      (writes a1_serial.json next to it)
+Run: python3 -I a1_serial.py      (writes a1_serial.json next to it; part 4 needs the tuning study's
+     original EvalPlus result files in QUANTCHECK_P1_RESULTS, which are not in the release: without them
+     the script stops after part 3 with a message, exit status 0, and writes nothing)
 Standard library only.
 """
 import importlib.util
@@ -321,6 +323,11 @@ def main():
     # ---- 4. calibration (part 2/3) on the serial tuning configurations, compared with the released file
     released_load_p1 = A1.load_p1
     pool_he, pool_mb = released_load_p1("humaneval"), released_load_p1("mbpp")
+    if not pool_he:
+        print("a1_serial.py: part 4 needs the original EvalPlus result files of the tuning study "
+              "(QUANTCHECK_P1_RESULTS), which are not in this release; a1_regroup.py performs the same "
+              "calibration check from the released serial files. Stopping without writing.")
+        return
     ser_he, ser_mb = load_p1_serial("humaneval"), load_p1_serial("mbpp")
     assert sorted(ser_he) == sorted(pool_he) and sorted(ser_mb) == sorted(pool_mb)
     he_diff = {c: sorted(t for t in ser_he[c] if ser_he[c][t] != pool_he[c][t]) for c in ser_he}

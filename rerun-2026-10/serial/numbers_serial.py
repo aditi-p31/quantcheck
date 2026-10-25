@@ -372,7 +372,7 @@ N["heldout_1p5b"] = {
 TUNING_AVAILABLE = os.path.exists(os.path.join(HERE, "tuning_p1_humaneval_serial.jsonl"))
 if TUNING_AVAILABLE:
     tuning_tags = {r["id"].replace("_", ":", 1) for r in serial("tuning_p1_humaneval")}
-else:  # release layout: names only (tuning_configs.json)
+else:  # tuning files absent: names only (tuning_configs.json)
     tuning_tags = {i.replace("_", ":", 1) for i in json.load(open(os.path.join(HERE, "tuning_configs.json")))["ids"]}
 tun_in = [r for r in official if r["tag"] in tuning_tags]
 N["miss_audit_frame"] = {
@@ -556,7 +556,7 @@ if TUNING_AVAILABLE:
         "humaneval_changed_vs_pool": [r["id"] for r in serial("tuning_p1_humaneval") if r["flips"]],
         "mbpp_changed_vs_pool": {r["id"]: [r["old_n_pass"], r["n_pass"]] for r in serial("tuning_p1_mbpp") if r["n_pass"] != r["old_n_pass"]},
     }
-else:  # tuning results not released: keep the committed values, marked as such
+else:  # tuning files absent: keep the committed values, marked as such
     _prev = json.load(open(os.path.join(HERE, "numbers_serial.json")))
     N["tuning_serial"] = dict(_prev.get("tuning_serial", {}), from_committed_file=True)
 

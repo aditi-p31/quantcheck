@@ -1435,8 +1435,8 @@
     139
    ],
    "n_suspect_in_census": 1,
-   "note": "full 164-task runs of the 24 screen-tuning configurations, from a separate study; file identity with the census not recorded; per-configuration and per-task results are not released",
-   "from_committed_file": true
+   "note": "full 164-task runs of the 24 screen-tuning configurations, from a separate study; file identity with the census not recorded; per-task results in rerun-2026-10/serial/tuning_p1_*_serial.jsonl",
+   "from_committed_file": false
   },
   "census_selection_rule": "harness/fullrun.py: every official tag with original smoke_pass <= 2 and verdict DEFECTIVE (13), plus the lowest-scoring tag with original smoke_pass 3..8 per (model, size) key (14; the gemma3 270m tags fail the size regex, so each is its own key); rule-based, not random",
   "census_nonsuspect_above_16_range": [
