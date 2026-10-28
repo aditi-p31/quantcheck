@@ -1547,6 +1547,149 @@
   },
   "five_rebuilt_suspects_zero_on_metal": true
  },
+ "template_test": {
+  "runs": {
+   "tb-ds67-Q3_K_M-fromonly": {
+    "modelfile": "from-only",
+    "adopted_template": "{{ .Prompt }}",
+    "file_sha256": "6c841fde",
+    "screen": {
+     "n_pass": 5,
+     "n": 15,
+     "trunc_frac": 0.867,
+     "invented_chat_turns": 13
+    },
+    "full164": {
+     "n_pass": 16,
+     "n": 164,
+     "trunc_frac": 0.872,
+     "invented_chat_turns": 124
+    }
+   },
+   "tb-ds67-Q3_K_M-metaltpl": {
+    "modelfile": "metal-template",
+    "adopted_template": "{{ .System }}\n### Instruction:\n{{ .Prompt }}\n### Response:\n",
+    "file_sha256": "6c841fde",
+    "screen": {
+     "n_pass": 13,
+     "n": 15,
+     "trunc_frac": 0.067,
+     "invented_chat_turns": 0
+    },
+    "full164": {
+     "n_pass": 98,
+     "n": 164,
+     "trunc_frac": 0.11,
+     "invented_chat_turns": 0
+    }
+   },
+   "tb-ds67-Q3_K_M-donor": {
+    "modelfile": "donor",
+    "adopted_template": "{{ .System }}\n{{ .Prompt }}\n",
+    "file_sha256": "6c841fde",
+    "screen": {
+     "n_pass": 12,
+     "n": 15,
+     "trunc_frac": 0.0,
+     "invented_chat_turns": 0
+    },
+    "full164": {
+     "n_pass": 79,
+     "n": 164,
+     "trunc_frac": 0.085,
+     "invented_chat_turns": 0
+    }
+   },
+   "tb-ds67-Q4_K_M-fromonly": {
+    "modelfile": "from-only",
+    "adopted_template": "{{ .Prompt }}",
+    "file_sha256": "92da6238",
+    "screen": {
+     "n_pass": 6,
+     "n": 15,
+     "trunc_frac": 1.0,
+     "invented_chat_turns": 15
+    },
+    "full164": {
+     "n_pass": 18,
+     "n": 164,
+     "trunc_frac": 0.957,
+     "invented_chat_turns": 145
+    }
+   },
+   "tb-ds67-Q4_K_M-metaltpl": {
+    "modelfile": "metal-template",
+    "adopted_template": "{{ .System }}\n### Instruction:\n{{ .Prompt }}\n### Response:\n",
+    "file_sha256": "92da6238",
+    "screen": {
+     "n_pass": 15,
+     "n": 15,
+     "trunc_frac": 0.133,
+     "invented_chat_turns": 0
+    },
+    "full164": {
+     "n_pass": 101,
+     "n": 164,
+     "trunc_frac": 0.104,
+     "invented_chat_turns": 0
+    }
+   },
+   "tb-ds67-Q4_K_M-donor": {
+    "modelfile": "donor",
+    "adopted_template": "{{ .System }}\n{{ .Prompt }}\n",
+    "file_sha256": "92da6238",
+    "screen": {
+     "n_pass": 14,
+     "n": 15,
+     "trunc_frac": 0.0,
+     "invented_chat_turns": 0
+    },
+    "full164": {
+     "n_pass": 93,
+     "n": 164,
+     "trunc_frac": 0.085,
+     "invented_chat_turns": 0
+    }
+   }
+  },
+  "census_cuda_no_template": {
+   "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q4_K_M.gguf": 6,
+   "hf:TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q3_K_M.gguf": 5
+  },
+  "files_equal_census_digests": true,
+  "paper": {
+   "cuda_no_template_15": [
+    5,
+    6
+   ],
+   "cuda_no_template_164": [
+    16,
+    18
+   ],
+   "cuda_no_template_trunc_164_pct": [
+    87,
+    96
+   ],
+   "cuda_no_template_invented_turns_of_30": 28,
+   "cuda_instruction_template_15": [
+    13,
+    15
+   ],
+   "cuda_instruction_template_164": [
+    98,
+    101
+   ],
+   "metal_instruction_template_15": [
+    13,
+    15
+   ],
+   "ollama_tags_cuda_15": [
+    14,
+    14
+   ]
+  },
+  "no_template_equals_census": true
+ },
  "pretokenizer_other_14": {
   "n": 14,
   "classes": {
@@ -2237,7 +2380,8 @@
    "community_serial",
    "metal_serial",
    "pretokenizer_other_14",
-   "tuning_serial"
+   "tuning_serial",
+   "template_test"
   ],
   "note": "keys ending in _rescored hold the serial values; *_pod_rescore_v3 hold the pod rescore",
   "grouping": "checkpoint identity (full tag minus quantization suffix); under analyze.size_key this copy reproduces numbers_v3.json and numbers_serial.json (asserted)",

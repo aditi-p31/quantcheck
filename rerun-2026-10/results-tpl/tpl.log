@@ -1,0 +1,19 @@
+[1/6] tb-ds67-Q3_K_M-fromonly (screen): ERR URLError: <urlopen error unknown url type: 127.0.0.1>
+[1/6] tb-ds67-Q3_K_M-fromonly (full164): ERR URLError: <urlopen error unknown url type: 127.0.0.1>
+[2/6] tb-ds67-Q3_K_M-metaltpl (screen): ERR URLError: <urlopen error unknown url type: 127.0.0.1>
+[2/6] tb-ds67-Q3_K_M-metaltpl (full164): ERR URLError: <urlopen error unknown url type: 127.0.0.1>
+restart 2026-10-28T03:36:17Z: first attempt failed on every /api/chat call with URLError (OLLAMA_HOST exported without scheme); no generation happened; rerun with OLLAMA_HOST=http://127.0.0.1:11434 on the same server, files and donor pull
+[1/6] tb-ds67-Q3_K_M-fromonly (screen): 2.1 min, trunc 0.867
+[1/6] tb-ds67-Q3_K_M-fromonly (full164): 12.0 min, trunc 0.872
+[2/6] tb-ds67-Q3_K_M-metaltpl (screen): 0.5 min, trunc 0.067
+[2/6] tb-ds67-Q3_K_M-metaltpl (full164): 6.3 min, trunc 0.11
+[3/6] tb-ds67-Q3_K_M-donor (screen): 0.4 min, trunc 0.0
+[3/6] tb-ds67-Q3_K_M-donor (full164): 5.0 min, trunc 0.085
+[4/6] tb-ds67-Q4_K_M-fromonly (screen): 1.4 min, trunc 1.0
+[4/6] tb-ds67-Q4_K_M-fromonly (full164): 13.8 min, trunc 0.957
+[5/6] tb-ds67-Q4_K_M-metaltpl (screen): 0.6 min, trunc 0.133
+[5/6] tb-ds67-Q4_K_M-metaltpl (full164): 7.4 min, trunc 0.104
+[6/6] tb-ds67-Q4_K_M-donor (screen): 0.4 min, trunc 0.0
+[6/6] tb-ds67-Q4_K_M-donor (full164): 5.3 min, trunc 0.085
+TEMPLATE_TEST_DONE
+TPL_DONE

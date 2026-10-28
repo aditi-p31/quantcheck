@@ -5,6 +5,12 @@ For each entry whose tag is "hf:<repo>/<filename>":
   1. download the GGUF from huggingface.co/<repo>/resolve/main/<filename>
   2. create a temporary Ollama model: FROM <gguf> + TEMPLATE copied verbatim
      from the corresponding official Ollama entry for that family (recorded)
+     Note (v3.4): only families in TEMPLATE_DONOR get a TEMPLATE line. The 22
+     community entries of the inventory carry the family "mixed (per-repo
+     family in notes)", so they ran with FROM only (template_donor null) and
+     Ollama used each file's own chat template, or llama-server's default
+     ChatML format where the file has none. See PROVENANCE.md and
+     rerun-2026-10/results-tpl/.
   3. run the same 15-task smoke suite via audit.audit_one
   4. delete model + file
 

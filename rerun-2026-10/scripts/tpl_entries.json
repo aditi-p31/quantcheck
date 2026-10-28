@@ -1,0 +1,8 @@
+[
+ {"id": "tb-ds67-Q3_K_M-fromonly", "role": "census-condition", "kind": "gguf", "path": "/root/hfdl/deepseek-coder-6.7b-instruct.Q3_K_M.gguf", "modelfile": "from-only"},
+ {"id": "tb-ds67-Q3_K_M-metaltpl", "role": "metal-condition", "kind": "gguf", "path": "/root/hfdl/deepseek-coder-6.7b-instruct.Q3_K_M.gguf", "modelfile": "metal-template"},
+ {"id": "tb-ds67-Q3_K_M-donor", "role": "donor-modelfile", "kind": "gguf", "path": "/root/hfdl/deepseek-coder-6.7b-instruct.Q3_K_M.gguf", "modelfile": "donor", "donor": "deepseek-coder:6.7b-instruct-q4_K_M"},
+ {"id": "tb-ds67-Q4_K_M-fromonly", "role": "census-condition", "kind": "gguf", "path": "/root/hfdl/deepseek-coder-6.7b-instruct.Q4_K_M.gguf", "modelfile": "from-only"},
+ {"id": "tb-ds67-Q4_K_M-metaltpl", "role": "metal-condition", "kind": "gguf", "path": "/root/hfdl/deepseek-coder-6.7b-instruct.Q4_K_M.gguf", "modelfile": "metal-template"},
+ {"id": "tb-ds67-Q4_K_M-donor", "role": "donor-modelfile", "kind": "gguf", "path": "/root/hfdl/deepseek-coder-6.7b-instruct.Q4_K_M.gguf", "modelfile": "donor", "donor": "deepseek-coder:6.7b-instruct-q4_K_M"}
+]

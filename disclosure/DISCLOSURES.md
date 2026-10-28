@@ -37,8 +37,9 @@ The two `llama3.2:1b-instruct` tags (q2_K, q3_K_S) are also non-functional
 their cause is not attributed, and no report was filed.
 
 No defects were confirmed in community Hugging Face conversions, so no
-reports are owed there. Two community files with backend-dependent behavior
-were classified as backend-dependent failures, not defects; see the paper.
+reports are owed there. Two community files fail without an instruction
+template and work with one; they are classified as template-dependent failures,
+not file defects (v3.4; the v2 preprint called them backend-dependent).
 
 ## Referee independence
 

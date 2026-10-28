@@ -2,7 +2,15 @@
 """Overnight Mac chain: (1) Metal smoke replications for the two defects
 never confirmed on this backend; (2) Metal smoke for the two TheBloke
 community files (native + supplied template both); (3) census-template
-full-164 for the two TheBloke files (Table 2 consistency)."""
+full-164 for the two TheBloke files (Table 2 consistency).
+
+Note (v3.4): of (2) and (3) only the supplied-template smoke runs completed
+(results-metalrep, condition metal-smoke-supplied-template); the native
+runs were not made here, and the full-164 runs failed with HTTP 404 because
+the model had been removed after the smoke run. The census supplied no
+template to community files, so these Metal scores differ from the census
+in template as well as backend; rerun-2026-10/results-tpl/ separates the two.
+"""
 import json, os, subprocess, sys, time
 HERE=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,HERE)
 import audit

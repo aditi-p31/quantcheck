@@ -2,6 +2,13 @@
 """Re-test TheBloke deepseek-coder-6.7b suspects with their NATIVE embedded
 chat template (no Ollama template override) to rule out a harness-induced
 template confound. Runs smoke 15 + full 164 for each. Mac-local.
+
+Note (v3.4): this is the same FROM-only Modelfile that the census used for
+community files (harness/hf_audit.py adds no TEMPLATE line for them), so the
+run repeats the census condition rather than varying it; Ollama adopted
+"{{ .Prompt }}" for both files (native_template). Its throughput (about 175
+to 200 tokens per second) shows it ran on a CUDA GPU, not the Mac. The run
+that varies the template on one backend is rerun-2026-10/results-tpl/.
 """
 import json, os, subprocess, sys, time
 

@@ -20,7 +20,7 @@ the file is removed, that block is copied from the committed `facts_b.json` and 
 Input hashes (sha256, first 8 hex digits): `rerun-2026-10/serial/census_smoke_serial.jsonl` `0b7815b6`,
 `census_full164_serial.jsonl` `3b62186c`, `results/audit_results.jsonl` `02675274`, `results/audit_scored.jsonl`
 `1175eea1`, `results/fullrun_scores.jsonl` `b66f1a39`, `rerun-2026-10/serial/census_digests.json` `210dfbe1`,
-`rerun-2026-10/serial/numbers_regroup.json` `c01a88c7`, `rerun-2026-10/serial/tuning_p1_humaneval_serial.jsonl`
+`rerun-2026-10/serial/numbers_regroup.json` `a7631034` (v3.4; `c01a88c7` in v3.3, which lacked the `template_test` key and its entry in `_meta.added_keys`), `rerun-2026-10/serial/tuning_p1_humaneval_serial.jsonl`
 `9882a112`. The script was first run in the author's working copy on the same records plus the census `serve.log`;
 the committed `facts_b.json` is the output of the released code on the released inputs.
 

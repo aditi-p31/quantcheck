@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use quantcheck or the audit dataset, please cite the paper below."
 title: "quantcheck: functional acceptance testing for quantized LLM artifacts"
-version: "3.3"
+version: "3.4"
 authors:
   - family-names: Patodiya
     given-names: Aditi

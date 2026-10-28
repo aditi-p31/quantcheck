@@ -7,7 +7,12 @@ through Ollama), and the full audit dataset behind the paper:
 > Registries and How to Catch Them.** Aditi Patodiya, 2026.
 > [arXiv:2609.05881](https://arxiv.org/abs/2609.05881)
 
-Release `v3.3` of this repository accompanies the revised paper, which
+Release `v3.4` adds a template test of the two TheBloke deepseek-coder-6.7B
+community files on one CUDA pod (`rerun-2026-10/results-tpl/`), which shows
+that their low census scores come from a missing chat template, not from the
+backend, and corrects the documentation that described the census template
+setup for community files (see [`RELEASE_NOTES_v3.4.md`](RELEASE_NOTES_v3.4.md)
+and the finding below). Release `v3.3` accompanies the revised paper, which
 replaces version 1 of the preprint as arXiv version 2. It adds the per-task
 results of the 24 screen-tuning configurations, so that no analysis value is
 copied from a committed file any more; what still rests on inputs not in the
@@ -60,6 +65,26 @@ scripts that run from a clean checkout. See
 - **The recipe alone does not predict failure.** The library's q2_K to
   q3_K_L tags of Qwen2.5-Coder-1.5B are also tensor-identical to our
   uncalibrated rebuild (all 338 tensors) and stay functional (13–15 of 15).
+- **Two community files fail for want of a chat template (v3.4).** TheBloke's
+  deepseek-coder-6.7B files at Q3_K_M and Q4_K_M score 5 and 6 of 15 in the
+  census, where Hugging Face community files ran with no `TEMPLATE` line
+  (`harness/hf_audit.py` copies a template only for the families in its donor
+  table, and the community entries' family is `mixed`; `template_donor` is null
+  on all 22). The files carry no `tokenizer.chat_template`; Ollama then selects
+  no template (`ollama show --template` prints `{{ .Prompt }}`) and its bundled
+  llama-server formats each request with its default ChatML template, which
+  the model was not trained on: 28 of their 30 answers run on into invented
+  chat turns. On one RTX 4090 pod with the same Ollama release
+  (`rerun-2026-10/results-tpl/`), the same files with no template reproduce the
+  census screen answers (5 and 6 of 15; all 30 answers identical) and solve 16
+  and 18 of 164; with the deepseek-coder instruction template they score 13 and
+  15 of 15 and 98 and 101 of 164, as they do on Metal (13 and 15, where
+  `harness/mac_night.py` supplied that template). The paper's arXiv v2 text
+  called the pair backend-dependent; this release corrects the census template
+  documentation (see `RELEASE_NOTES_v3.4.md`), and the paper's next version (the
+  workshop submission and arXiv v3) carries the template-dependent verdict.
+  `analysis/findings.json` (superseded, v1) still lists the pair as
+  `BACKEND_DEPENDENT`.
 - **Seven is a lower bound.** All 12 deepseek-coder-1.3B tags, fp16
   included, score 1 to 6 of 15, so a group baseline cannot judge them; the
   group is not attributed.
@@ -124,7 +149,9 @@ scripts that run from a clean checkout. See
   finding. The paper's numbers are in `rerun-2026-10/serial/numbers_regroup.json`
   (`rerun-2026-10/serial/numbers_serial.json` is the v3.0 version with the
   older baseline groups, and `rerun-2026-10/analysis/numbers_v3.json` the
-  earlier parallel-rescore version).
+  earlier parallel-rescore version). `findings.json`'s
+  `backend_dependent` entries are superseded by the v3.4 template-dependent
+  verdict.
 - **Upstream reports.** `disclosure/DISCLOSURES.md` records the original
   report, the withdrawals and their dates.
 
@@ -138,7 +165,7 @@ scripts that run from a clean checkout. See
 | `inventory_candidates.json` | The census inventory (327 artifacts) |
 | `results/` | Census dataset: per-artifact generation transcripts (361 files), raw results with output statistics, original scores, and the full 164-task runs of the suspects |
 | `results-mac/`, `results-metalrep/` | Metal-backend replication runs |
-| `results-native/` | Native-template control runs for two community files |
+| `results-native/` | Control runs of the two TheBloke community files with no `TEMPLATE` line, the census condition (Ollama selects no template; `native_template` records `{{ .Prompt }}`); the script's docstring calls them native-template runs. Run on 13 August 2026 on an unrecorded CUDA machine with all 164 tasks in one pass, in numeric task order; the answers differ from the census on 28 of the 30 screen tasks, and the files solve 22 and 16 of 164 (`serial/native_serial.jsonl`) |
 | `results-sensitivity/` | Threshold sensitivity runs (v1) |
 | `analysis/` | v1 analysis code and outputs (superseded; see [Findings](#findings)) |
 | `metal_replication.json`, `referee_round2.json`, `sensitivity_sample.json` | v1 adjudication and robustness inputs; `sensitivity_sample.json` lists the 10 first-version miss-audit tags (how they were drawn is not recorded; see [Miss-audit population bound](#miss-audit-population-bound)) |
@@ -153,7 +180,9 @@ The rerun used one RTX 4090 pod (the October pod) with Ollama 0.32.6 (the
 census version) for generation and llama.cpp v0.7.0 (`620d222`) on CPU for
 conversion, quantization, importance matrices and perplexity. A third RTX 4090
 pod, after the census pod and the October pod, ran the miss-audit closure
-(`results-v1cases/`) on 22 October 2026 with the same Ollama release.
+(`results-v1cases/`) on 22 October 2026 with the same Ollama release. A fourth
+RTX 4090 pod ran the template test (`results-tpl/`) on 28 October 2026, again
+with the same release archive.
 `RUN_PLAN.md` is the dated local run plan. The decision rule and the
 first-round runs were written before any run. Its log records the later
 additions, most of them before they ran and four with a fixed expected reading;
@@ -175,6 +204,7 @@ purpose and the digests it had to load.
 | `results-p0c/` | All 164 tasks: phi3.5 builds, the remaining third-party Qwen builds, code-imatrix Qwen builds |
 | `results-g1/` | Qwen2.5-Coder 0.5B and 1.5B at q2_K–q3_K_L: library tag, plain rebuild, own imatrix |
 | `results-v1cases/` | Miss-audit closure (third pod, 22 October 2026): `granite-code:3b-instruct-q3_K_M` and `mistral:7b-instruct-q3_K_S` on all 164 tasks from the census files. `runs.jsonl` (with each run's `blob`), `transcripts/`, `scored_serial.jsonl` (serial scores), the pod's Ollama server log `serve_v1cases.log.xz`, `env_v1cases.txt` (date, GPU and driver, Ollama version), `ollama_tarball_v1cases.sha256` and the run log `v1cases.log` |
+| `results-tpl/` | Template test (fourth pod, 28 October 2026, v3.4): the two TheBloke deepseek-coder-6.7B files on CUDA under three Modelfiles (no template; the Metal run's instruction template; the `deepseek-coder:6.7b-instruct-q4_K_M` Modelfile as `run_entries.donor_modelfile` copies it), 15 screen tasks and all 164. `runs.jsonl` (Modelfile text and hash, the template Ollama adopted, file and tensor hashes, per-generation metrics), `transcripts/`, `scored_serial.jsonl`, `env_tpl.txt`, `pip_freeze_tpl.txt`, `file_sha256.txt` (both files equal the census digests), `ollama_tarball_tpl.sha256`, `donor_modelfile.txt`, `donor_template.txt`, the server log `serve_tpl.log.xz`, the run log `tpl.log` and the records of an aborted first launch (`aborted_first_attempt/`, no generation) |
 | `census_rescore.jsonl` | Corrected per-task results for the 15 suite tasks of all 334 archived census smoke transcripts |
 | `p0b_tensor_compare.jsonl` | Library tag vs plain rebuild, per tensor: Qwen-3B q2_K–q3_K_L and q4_K_M, phi3.5 q2_K |
 | `p0f_compare.jsonl` | phi3.5 q2_K library tag vs our rebuild with `attn_qkv` at `Q2_K` |
@@ -186,10 +216,10 @@ purpose and the digests it had to load.
 | `env.txt`, `pip_freeze.txt`, `ollama_tarball.sha256` | Pod environment, Python packages, hash of the Ollama 0.32.6 release archive |
 | `calib_sha256.txt`, `calib_code_sha256.txt` | SHA-256 of the two calibration texts (the texts are not included; see below) |
 | `logs.tar.xz` | Run logs: Ollama server log, conversion, quantization, imatrix and queue logs (84 MB unpacked) |
-| `scripts/` | The pod scripts and run-entry files (see "Rebuild, calibrate and compare"), including `v1cases.sh` (the miss-audit closure run) and `score_v1cases_serial.py` (its serial scoring, one EvalPlus worker) |
+| `scripts/` | The pod scripts and run-entry files (see "Rebuild, calibrate and compare"), including `v1cases.sh` (the miss-audit closure run) and `score_v1cases_serial.py` (its serial scoring, one EvalPlus worker); `tpl_test.sh`, `run_template_test.py` and `tpl_entries.json` (the template test, v3.4) and `score_template_serial.py` (its serial scoring) |
 | `a1/` | Suite-size analysis: `a1_analysis.py` and `a1_results.json` on the original scores, `A1_REPORT.md`, an independent check in `verify/`, and `a1_rescored.py`/`.json` on the corrected scores |
 | `analysis/` | `numbers_v3.py`, `numbers_v3.json` and `figures_v3.py` on the earlier parallel rescore |
-| `serial/` | The serial re-scoring the paper reports: `serial_rescore.py`, per-set `*_serial.jsonl` scores, `flips.jsonl`, `instances.jsonl` (one line per serial evaluation of every set except the two tuning sets, with EvalPlus reasons and timings; the tuning sets' re-evaluations are summarized in `serial_summary.json` and `SERIAL_REPORT.md`), `tuning_p1_humaneval_serial.jsonl` and `tuning_p1_mbpp_serial.jsonl` (the 24 screen-tuning configurations' per-task results, v3.3), `numbers_regroup.py`/`.json` (the paper's numbers apart from the population bound and the gate evaluation, model-variant baselines; v3.1), `a1_regroup.py`/`.json` (suite-size analysis, model-variant baselines; v3.1), `figures_serial.py`, `census_digests.py`/`.json` (per-artifact file digests of the census, extracted from the census server log; v3.1), `tuning_configs.json` (names of the 24 screen-tuning configurations), the v3.0 versions `numbers_serial.py`/`.json` and `a1_serial.py`/`.json` (older baseline groups), and the reports `SERIAL_REPORT.md`, `PAPER_DIFF.md`, `VERIFY_REPORT.md` |
+| `serial/` | The serial re-scoring the paper reports: `serial_rescore.py`, per-set `*_serial.jsonl` scores (`tpl_serial.jsonl`, v3.4, holds the template test's), `flips.jsonl`, `instances.jsonl` (one line per serial evaluation of every set except the two tuning sets and the template test, with EvalPlus reasons and timings; the tuning sets' re-evaluations are summarized in `serial_summary.json` and `SERIAL_REPORT.md`), `tuning_p1_humaneval_serial.jsonl` and `tuning_p1_mbpp_serial.jsonl` (the 24 screen-tuning configurations' per-task results, v3.3), `numbers_regroup.py`/`.json` (the paper's numbers apart from the population bound and the gate evaluation, model-variant baselines; v3.1), `a1_regroup.py`/`.json` (suite-size analysis, model-variant baselines; v3.1), `figures_serial.py`, `census_digests.py`/`.json` (per-artifact file digests of the census, extracted from the census server log; v3.1), `tuning_configs.json` (names of the 24 screen-tuning configurations), the v3.0 versions `numbers_serial.py`/`.json` and `a1_serial.py`/`.json` (older baseline groups), and the reports `SERIAL_REPORT.md`, `PAPER_DIFF.md`, `VERIFY_REPORT.md` |
 | `miss_audit/` | `certificates.csv`, `certificates.json`: per-artifact evidence for the 66 artifacts of the miss audit (v3.1; see "Miss-audit certificates"). `bounds.py`, `bounds.csv`, `bounds.json`, `BOUNDS.md`: population bounds with their assumptions, and `bounds_check.py`, an exact-fraction check; `v1_seed_search.py`/`.log`: the seed search for the first-version draw (v3.2; see "Miss-audit population bound") |
 | `miss_audit/closure_v1cases.json` | Closure record of the two first-version audit tags: census digest, digest match, and 164-task serial score of each (65 and 44 of 164) |
 | `ds13/` | deepseek-coder-1.3B diagnosis scripts and outputs |
@@ -201,8 +231,11 @@ files, a `hash` record with the whole-file SHA-256, the tensor-payload
 SHA-256, the tensor count, key metadata and any imatrix keys),
 `scored.jsonl` (EvalPlus per-task results; a task passes only when both the
 base and the plus tests pass), and `transcripts/<id>__<setting>.jsonl`.
-`results-v1cases/` has `scored_serial.jsonl` instead of `scored.jsonl`: it
-was scored only serially, by `scripts/score_v1cases_serial.py`. Runs
+`results-v1cases/` and `results-tpl/` have `scored_serial.jsonl` instead of `scored.jsonl`: they
+were scored only serially, by `scripts/score_v1cases_serial.py` and `scripts/score_template_serial.py`. To
+rescore the template test, run `EVALPLUS_BIN=.venv/bin .venv/bin/python
+rerun-2026-10/scripts/score_template_serial.py COPY` on a copy of `results-tpl/`
+(the script rewrites `scored_serial.jsonl` in the directory it is given). Runs
 of census tags and already hashed builds were made with `--no-hash`. Some
 `(id, setting)` pairs in `scored.jsonl` were scored twice by overlapping
 scorer passes with identical results; the analysis uses the last row. Two R1
@@ -217,7 +250,8 @@ corresponds to `rerun-2026-10/`, and `/root/p2/run/` to
 `heldout_49.json` at the repository root and the two `fn_sample_*.json` files
 in `rerun-2026-10/`.
 The `transcript` fields of `serial/*_serial.jsonl` (all but the two tuning
-files, which carry none; the tuning study's generations are not released) are
+files, which carry none, and `tpl_serial.jsonl`, whose field is a file name under
+`results-tpl/transcripts/`; the tuning study's generations are not released) are
 paths in the author's working copy; their file names identify the transcripts, which are
 in `results/transcripts/` (census), `rerun-2026-10/results*/transcripts/`
 (rerun) and `results-mac/`, `results-metalrep/`, `results-native/` and
@@ -237,7 +271,9 @@ python3 rerun-2026-10/miss_audit/bounds.py        # miss-audit population bounds
 python3 rerun-2026-10/gate/facts_b.py             # RQ3 flag status, gate on the census, persistence, full runs
 ```
 
-- `numbers_regroup.py` reads the serial scores (`rerun-2026-10/serial/*_serial.jsonl`),
+- `numbers_regroup.py` reads the serial scores (`rerun-2026-10/serial/*_serial.jsonl`,
+  since v3.4 also `tpl_serial.jsonl` with `results-tpl/runs.jsonl` and its transcripts for the
+  `template_test` block),
   the census files at the repository root (`results/audit_scored.jsonl`,
   `results/audit_results.jsonl`, `smoke_suite_v1.json`, `heldout_49.json`, and
   `analysis/analyze.py` for its helpers) and the rerun files (`ppl/`, the
@@ -593,7 +629,7 @@ needs the rebuild comparison below.
 ## Rebuild, calibrate and compare
 
 `rerun-2026-10/scripts/` holds the scripts exactly as they ran on the pod.
-They hardcode pod paths (`/root/p2`, `/root/p2/run`, `/workspace/p2rerun`,
+They hardcode pod paths (`/root/p2`, `/root/p2/run`, `/workspace/p2rerun`, `/workspace/p2tpl`,
 Ollama at `/root/p2/ollama/bin/ollama`); adjust these before reuse. The
 underlying steps, with llama.cpp v0.7.0:
 
@@ -640,7 +676,14 @@ log is empty. The library-vs-plain comparison in `p0b_tensor_compare.jsonl` was
 run by calling `compare_tensors.py` directly. The miss-audit closure ran later
 on a third pod with `v1cases.sh`, which installs Ollama 0.32.6 and EvalPlus
 itself and expects the scripts in `/root/p2/run`; `score_v1cases_serial.py`
-then scored its transcripts serially on a Mac.
+then scored its transcripts serially on a Mac. The template test ran on a
+fourth pod with `tpl_test.sh`, which installs the same Ollama archive and
+EvalPlus, downloads the two TheBloke files and checks their digests, and
+expects `run_template_test.py`, `tpl_entries.json`, `run_entries.py`,
+`gguf_hash.py`, `all164.json`, `harness/` and `smoke_suite_v1.json` in
+`/root/p2/run`; its `/workspace/p2tpl` `results/` and `logs/` are released
+flat in `results-tpl/` (`serve.log.xz` as `serve_tpl.log.xz`), and
+`score_template_serial.py` scored its transcripts serially on a Mac.
 
 ### Calibration texts (not included)
 
@@ -673,7 +716,11 @@ against its recorded SHA-256:
   `...Q4_K_M.native.jsonl`, and
   `results/transcripts/hf_TheBloke_deepseek-coder-6.7B-instruct-GGUF_deepseek-coder-6.7b-instruct.Q4_K_M.gguf.jsonl`).
   In v3 they are replaced by `<EMAIL_REDACTED>`. Only the contents of string
-  literals changed, so scores are unaffected.
+  literals changed, so scores are unaffected. The same replacement was made in
+  the v3.4 template-test transcripts (`rerun-2026-10/results-tpl/transcripts/`,
+  seven distinct addresses, 11 occurrences in eight answers across three
+  files) before release; their serial scores were
+  recomputed afterwards and are unchanged.
 - In `rerun-2026-10/logs.tar.xz`, the public key that Ollama generated for
   the pod at start-up is replaced by `<OLLAMA_PUBLIC_KEY_REDACTED>`, and
   `RUN_PLAN.md` names the pod's storage volume `<RUNPOD_VOLUME>`.

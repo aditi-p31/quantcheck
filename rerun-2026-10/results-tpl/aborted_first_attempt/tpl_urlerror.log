@@ -1,0 +1,4 @@
+[1/6] tb-ds67-Q3_K_M-fromonly (screen): ERR URLError: <urlopen error unknown url type: 127.0.0.1>
+[1/6] tb-ds67-Q3_K_M-fromonly (full164): ERR URLError: <urlopen error unknown url type: 127.0.0.1>
+[2/6] tb-ds67-Q3_K_M-metaltpl (screen): ERR URLError: <urlopen error unknown url type: 127.0.0.1>
+[2/6] tb-ds67-Q3_K_M-metaltpl (full164): ERR URLError: <urlopen error unknown url type: 127.0.0.1>

@@ -618,6 +618,56 @@ mac = {r["id"]: r["n_pass"] for r in serial("mac")}
 N["metal_serial"] = {"metalrep": metal, "mac": mac,
                      "five_rebuilt_suspects_zero_on_metal": all(v == 0 for k, v in {**metal, **mac}.items() if "deepseek" not in k)
                      and len([k for k in {**metal, **mac} if "deepseek" not in k]) == 5}
+# ---- template test (v3.4): the two TheBloke deepseek-coder-6.7B community files on one CUDA pod under three
+# Modelfiles (rerun-2026-10/results-tpl/, scripts/run_template_test.py). from-only is the census condition
+# (no TEMPLATE line); metal-template is the template harness/mac_night.py supplied on Metal; donor is the
+# deepseek-coder:6.7b-instruct-q4_K_M Modelfile as run_entries.donor_modelfile copies it (system prompt, and
+# no instruction markers: that function drops lines beginning with '#').
+TPL_DIR = os.path.join(RERUN, "results-tpl")
+tpl_rows = serial("tpl")
+tpl_runs = {(r["id"], r["setting"]): r for r in jl(os.path.join(TPL_DIR, "runs.jsonl")) if not r.get("error")}
+assert set(tpl_runs) == {(r["id"], r["setting"]) for r in tpl_rows} and len(tpl_rows) == 12
+# tpl_serial.jsonl is results-tpl/scored_serial.jsonl (score_template_serial.py) in the release's record shape
+tpl_scored = {(r["id"], r["setting"]): r for r in jl(os.path.join(TPL_DIR, "scored_serial.jsonl"))}
+assert all(tpl_scored[(r["id"], r["setting"])]["per_task"] == r["per_task"] and
+           tpl_scored[(r["id"], r["setting"])]["n_pass"] == r["n_pass"] for r in tpl_rows)
+tpl_tr = {}
+for r in tpl_rows:
+    with open(os.path.join(TPL_DIR, "transcripts", r["transcript"])) as f:
+        tpl_tr[(r["id"], r["setting"])] = [json.loads(l)["solution"] for l in f if l.strip()]
+tpl = {}
+for r in tpl_rows:
+    k = (r["id"], r["setting"]); run = tpl_runs[k]
+    # adopted_template is what `ollama show --template` prints; for from-only models that is "{{ .Prompt }}" while
+    # the server selected no template and llama-server applied its default ChatML format (serve_tpl.log.xz)
+    tpl.setdefault(r["id"], {"modelfile": run["modelfile_mode"], "adopted_template": run["adopted_template"],
+                             "file_sha256": run["file_sha256"][:8]})
+    tpl[r["id"]][r["setting"]] = {"n_pass": r["n_pass"], "n": r["n"], "trunc_frac": run["trunc_frac"],
+                                  "invented_chat_turns": sum("<|im_start|>" in x for x in tpl_tr[k])}
+census_tb = {t: v for t, v in comm.items() if "TheBloke/deepseek-coder-6.7B" in t}
+census_dig = json.load(open(CENSUS_DIGESTS))["artifacts"]
+tpl_file_match = {r["id"]: any(census_dig[t]["file_sha256"] == tpl_runs[(r["id"], r["setting"])]["file_sha256"]
+                               and r["id"].split("-")[2] in t for t in census_tb) for r in tpl_rows}
+N["template_test"] = {
+    "runs": tpl,
+    "census_cuda_no_template": census_tb,
+    "files_equal_census_digests": all(tpl_file_match.values()),
+    "paper": {
+        "cuda_no_template_15": [tpl["tb-ds67-Q3_K_M-fromonly"]["screen"]["n_pass"], tpl["tb-ds67-Q4_K_M-fromonly"]["screen"]["n_pass"]],
+        "cuda_no_template_164": [tpl["tb-ds67-Q3_K_M-fromonly"]["full164"]["n_pass"], tpl["tb-ds67-Q4_K_M-fromonly"]["full164"]["n_pass"]],
+        "cuda_no_template_trunc_164_pct": [round(100 * tpl["tb-ds67-Q3_K_M-fromonly"]["full164"]["trunc_frac"]),
+                                           round(100 * tpl["tb-ds67-Q4_K_M-fromonly"]["full164"]["trunc_frac"])],
+        "cuda_no_template_invented_turns_of_30": tpl["tb-ds67-Q3_K_M-fromonly"]["screen"]["invented_chat_turns"]
+                                                 + tpl["tb-ds67-Q4_K_M-fromonly"]["screen"]["invented_chat_turns"],
+        "cuda_instruction_template_15": [tpl["tb-ds67-Q3_K_M-metaltpl"]["screen"]["n_pass"], tpl["tb-ds67-Q4_K_M-metaltpl"]["screen"]["n_pass"]],
+        "cuda_instruction_template_164": [tpl["tb-ds67-Q3_K_M-metaltpl"]["full164"]["n_pass"], tpl["tb-ds67-Q4_K_M-metaltpl"]["full164"]["n_pass"]],
+        "metal_instruction_template_15": [metal["deepseek-coder-6.7b-instruct.Q3_K_M.metal-smoke"], metal["deepseek-coder-6.7b-instruct.Q4_K_M.metal-smoke"]],
+        "ollama_tags_cuda_15": N["community_serial"]["ollama_deepseek_6.7b_q3_K_M_q4_K_M"],
+    },
+    "no_template_equals_census": [tpl["tb-ds67-Q3_K_M-fromonly"]["screen"]["n_pass"], tpl["tb-ds67-Q4_K_M-fromonly"]["screen"]["n_pass"]]
+                                  == [census_tb[t] for t in sorted(census_tb)],
+}
+
 pretok_other = [t for t in by_tag if t.startswith(("deepseek-coder:6.7b", "starcoder2:15b"))]
 N["pretokenizer_other_14"] = {"n": len(pretok_other), "classes": dict(Counter(cls_s[t] for t in pretok_other)),
                               "min_smoke": min(fixed(by_tag[t]) for t in pretok_other)}
@@ -728,7 +778,7 @@ ADDED_KEYS = ["classes_pod_rescore_v3", "stage1_flags_pod_rescore_v3", "suspects
               "rq3_output_rules", "fn_audit_serial", "fn_audit_v1_sample_serial", "heldout_1p5b", "miss_audit_frame",
               "full164", "table_IV_attribution", "table_IV_caption", "table_VI_sizes", "table_VI_text", "table_VIII_settings",
               "table_VIII_note", "mcnemar_phi35_plain_vs_wikitext", "mcnemar_phi35_libmix_vs_bartowski", "deepseek_coder_1.3b",
-              "community_serial", "metal_serial", "pretokenizer_other_14", "tuning_serial"]
+              "community_serial", "metal_serial", "pretokenizer_other_14", "tuning_serial", "template_test"]
 assert set(V3N) <= set(N), sorted(set(V3N) - set(N))
 N["_meta"] = {"scores": "serial (serial_rescore.py): one evaluation at a time, default EvalPlus time limits",
               "keys_from_numbers_v3": sorted(V3N), "added_keys": ADDED_KEYS,
@@ -758,6 +808,7 @@ print("McNemar", N["mcnemar_phi35_plain_vs_wikitext"])
 print("tuning", json.dumps({k: v for k, v in N["tuning_serial"].items()}))
 print("community", json.dumps(N["community_serial"]["failing"]), N["community_serial"]["ollama_deepseek_6.7b_q3_K_M_q4_K_M"])
 print("deepseek 1.3b", N["deepseek_coder_1.3b"]); print("pretok other", N["pretokenizer_other_14"])
+print("template test", json.dumps(N["template_test"]["paper"]), "no-template equals census:", N["template_test"]["no_template_equals_census"])
 print("full164 derived", N["full164"]["derived"]); print("full164 changed", N["full164"]["census_full164_changed"])
 print("REGROUP", json.dumps({k: v for k, v in N["regroup"].items() if k not in ("baselines", "per_class", "blob_check")}))
 print("REGROUP blob check", json.dumps({k: v for k, v in N["regroup"]["blob_check"].items() if k != "note"}))

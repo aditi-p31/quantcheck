@@ -8,6 +8,10 @@ Ollama options are a parameter, so R2 can vary them. Entry kinds:
                                                            (TEMPLATE, PARAMETER, SYSTEM) is copied
   hf      {"id", "kind": "hf", "repo", "file", "donor"}    downloaded, then run as gguf
 Resumable: (id, setting) pairs already in the results file are skipped.
+Note (v3.4): donor_modelfile() drops lines that begin with "#" outside a triple-quoted block as
+header comments. A donor whose TEMPLATE is a double-quoted multi-line string with such lines
+(deepseek-coder's "### Instruction:" and "### Response:") therefore loses them; see
+rerun-2026-10/results-tpl/ (the "donor" condition). None of the October reruns before the template test used such a donor.
 
 Usage: run_entries.py ENTRIES.json --setting NAME [--options JSON] [--tasks suite|FILE]
                       [--results-dir DIR] [--keep] [--only ID]

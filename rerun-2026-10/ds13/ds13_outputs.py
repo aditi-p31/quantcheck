@@ -10,6 +10,9 @@ Its inputs are a selection of census transcripts in the run's working layout
 (DS/results/transcripts and DS/compare/results/transcripts, with DS = QUANTCHECK_DS13_DIR);
 the selection is the set of file names listed in the committed outputs_summary.json, all of
 which are in results/transcripts.
+Note (v3.4): the label "empty template" for the TheBloke 6.7B group means the census ran those
+files with no TEMPLATE line; the files carry no chat template, so llama-server applied its default
+ChatML format (see RELEASE_NOTES_v3.4.md). The key in outputs_summary.json is unchanged.
 """
 import ast, glob, json, os, re, statistics, sys, warnings
 warnings.filterwarnings("ignore")
