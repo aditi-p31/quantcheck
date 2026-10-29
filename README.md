@@ -73,12 +73,13 @@ scripts that run from a clean checkout. See
   on all 22). The files carry no `tokenizer.chat_template`; Ollama then selects
   no template (`ollama show --template` prints `{{ .Prompt }}`) and its bundled
   llama-server formats each request with its default ChatML template, which
-  the model was not trained on: 28 of their 30 answers run on into invented
-  chat turns. On one RTX 4090 pod with the same Ollama release
-  (`rerun-2026-10/results-tpl/`), the same files with no template reproduce the
-  census screen answers (5 and 6 of 15; all 30 answers identical) and solve 16
-  and 18 of 164; with the deepseek-coder instruction template they score 13 and
-  15 of 15 and 98 and 101 of 164, as they do on Metal (13 and 15, where
+  differs from the model's documented instruction format: 28 of their 30
+  answers run on into invented chat turns. On one RTX 4090 pod with the same
+  Ollama release (`rerun-2026-10/results-tpl/`), the same files with no
+  template reproduce the census screen answers (5 and 6 of 15; all 30 answers
+  identical) and solve 16 and 18 of 164; with the deepseek-coder instruction
+  template they score 13 and 15 of 15 and 98 and 101 of 164, as they do on
+  Metal (13 and 15, where
   `harness/mac_night.py` supplied that template). The paper's arXiv v2 text
   called the pair backend-dependent; this release corrects the census template
   documentation (see `RELEASE_NOTES_v3.4.md`), and the paper's next version (the

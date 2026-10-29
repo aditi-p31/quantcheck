@@ -23,10 +23,11 @@ the October reruns before the template test (`donor` in
 The two TheBloke deepseek-coder-6.7B files carry no `tokenizer.chat_template`.
 For them Ollama selects no template (`ollama show --template` prints
 `{{ .Prompt }}`), and its bundled llama-server formats each request with its
-default ChatML template, which the model was not trained on (server log:
-`template selection ... selected=none`, `chat format: peg-native`, prompts 16
-tokens longer than under the instruction template). The Metal
-replication (`harness/mac_night.py`) supplied the deepseek-coder instruction
+default ChatML template, which differs from the model's documented
+instruction format (server log: `template selection ... selected=none`,
+`chat format: peg-native`, prompts 16 tokens longer than under the
+instruction template). The Metal replication (`harness/mac_night.py`)
+supplied the deepseek-coder instruction
 template. The paper's arXiv v2 text compared the census (5 and 6 of 15 on
 CUDA) with Metal (13 and 15) "under the same runtime release and template"
 and called the pair backend-dependent. The runtime release was the same; the
