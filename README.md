@@ -7,6 +7,30 @@ through Ollama), and the full audit dataset behind the paper:
 > Registries and How to Catch Them.** Aditi Patodiya, 2026.
 > [arXiv:2609.05881](https://arxiv.org/abs/2609.05881)
 
+quantcheck tells you whether a quantized model file still does its job. It runs a
+fixed 15-task Python screen through Ollama (about 30 s of generation per tag on one
+consumer GPU), scores the answers with EvalPlus, and compares the score with the
+same model at higher precision. In the paper's census it flagged all seven
+non-functional official Ollama tags, and none of 66 sampled tags it passed was
+non-functional.
+
+## Quick start: test one tag
+
+```
+python3 -m venv .venv && .venv/bin/pip install evalplus==0.3.1
+echo '{"artifacts": [{"tag": "qwen2.5-coder:3b-instruct-q3_K_M"}]}' > one.json
+.venv/bin/python harness/audit.py --inventory one.json --results-dir my-results
+.venv/bin/python rerun-2026-10/scripts/rescore_census.py my-results my-results/scored.jsonl 1
+```
+
+The screen flags a tag that solves fewer than 9 of the 15 tasks (see
+[Smoke-test an artifact yourself](#smoke-test-an-artifact-yourself) for how to
+read the score and compare it with the same model at higher precision). The
+audit data is also on the Hugging Face Hub:
+[aditiPatodiya/quantcheck-audit](https://huggingface.co/datasets/aditiPatodiya/quantcheck-audit).
+
+## Release history
+
 Release `v3.4` adds a template test of the two TheBloke deepseek-coder-6.7B
 community files on one CUDA pod (`rerun-2026-10/results-tpl/`), which shows
 that their low census scores come from a missing chat template, not from the
@@ -737,7 +761,7 @@ tracked in `disclosure/DISCLOSURES.md`.
 
 Code is released under the MIT License (see `LICENSE`). The audit dataset
 (everything under `results*/`, the data files in `rerun-2026-10/`, and the
-top-level JSON data files) is released under CC BY 4.0. The calibration
+top-level JSON data files) is released under CC BY 4.0 (see `LICENSE-DATA`). The calibration
 texts are not included.
 
 ## Citing

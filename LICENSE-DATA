@@ -1,0 +1,13 @@
+The audit dataset in this repository is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+It covers everything under the results*/ directories, the data files in
+rerun-2026-10/, and the top-level JSON data files. The code is licensed
+separately under the MIT License (see LICENSE).
+
+Copyright (c) 2026 Aditi Patodiya
+
+When you use the data, cite the paper:
+Aditi Patodiya. Broken on Arrival: Non-Functional Quantized LLM Artifacts in
+Public Model Registries and How to Catch Them. arXiv:2609.05881, 2026.

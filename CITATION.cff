@@ -25,4 +25,4 @@ preferred-citation:
     - type: doi
       value: "10.48550/arXiv.2609.05881"
       description: "arXiv DOI"
-  notes: "Preprint, arXiv:2609.05881 [cs.SE]. Version 2 revises version 1 and corrects its defect diagnosis."
+  notes: "Preprint, arXiv:2609.05881 [cs.SE], version 3 (29 Oct 2026). Version 2 revised version 1 and corrected its defect diagnosis."
