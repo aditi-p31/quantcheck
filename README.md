@@ -1,5 +1,7 @@
 # quantcheck
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24211655.svg)](https://doi.org/10.5281/zenodo.24211655)
+
 Functional acceptance testing for quantized LLM artifacts (GGUF files served
 through Ollama), and the full audit dataset behind the paper:
 
