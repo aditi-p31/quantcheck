@@ -1,0 +1,26 @@
+{
+  "n_pass": 0,
+  "n_tasks": 15,
+  "passed": false,
+  "per_task": {
+    "HumanEval/107": false,
+    "HumanEval/11": false,
+    "HumanEval/12": false,
+    "HumanEval/15": false,
+    "HumanEval/152": false,
+    "HumanEval/156": false,
+    "HumanEval/157": false,
+    "HumanEval/162": false,
+    "HumanEval/18": false,
+    "HumanEval/2": false,
+    "HumanEval/21": false,
+    "HumanEval/23": false,
+    "HumanEval/28": false,
+    "HumanEval/29": false,
+    "HumanEval/3": false
+  },
+  "suite": "smoke_suite_v1.json",
+  "tag": "qwen2.5-coder:3b-instruct-q2_K",
+  "threshold": 9,
+  "trunc_frac": 1.0
+}

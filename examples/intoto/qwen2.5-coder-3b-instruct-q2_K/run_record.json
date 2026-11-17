@@ -1,0 +1,33 @@
+{
+  "recorded_at_utc": "2026-11-17T17:36:13Z",
+  "tag": "qwen2.5-coder:3b-instruct-q2_K",
+  "manifest_sha256": "ae1e7fbfd6ff76dba6c0f222b4fe17bf57181855316e68a860fe782688448583",
+  "model_sha256": "14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e",
+  "template_sha256": "1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+  "system_sha256": "66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e",
+  "config_sha256": "0277b37e82c369cebb98508c3b79a4dbdfcd2dd9d9655e1fb812d8d631d5e6b4",
+  "template_served_by_runtime_sha256": "1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320",
+  "runtime": {
+    "ollama_version": "0.32.6",
+    "backend": "Metal",
+    "machine": "arm64",
+    "cpu": "Apple M2",
+    "os": "macOS-26.5.1-arm64-arm-64bit"
+  },
+  "decode": {
+    "api": "/api/chat",
+    "temperature": 0.0,
+    "seed": 42,
+    "num_predict": 768,
+    "num_ctx": 2048
+  },
+  "suite": "smoke_suite_v1.json",
+  "suite_sha256": "0f50c6f29e2dfd2afe6153a60d9e806d7b8292bbebe23fe6276340a2180abf96",
+  "harness": {
+    "name": "quantcheck",
+    "version": "3.4.1",
+    "gitCommit": "fb27ff44f3eecba7f662e5514112a108a6ba503d",
+    "audit_py_sha256": "f051a42383b11bc7c575234d115f45eb28b312d760cfeabfa47dff2713a8d84a"
+  },
+  "evalplus_version": "0.3.1"
+}
