@@ -72,7 +72,11 @@ of a per-tag screen receipt came from Sattyam Jain in
 
 ## Release history
 
-Release `v3.4` adds a template test of the two TheBloke deepseek-coder-6.7B
+Release `v3.5` adds an in-toto record for a screen
+(`harness/screen_intoto.py`, `harness/intoto.py`, tests and an example; see
+[`RELEASE_NOTES_v3.5.md`](RELEASE_NOTES_v3.5.md) and
+[Write an in-toto record for a screen](#write-an-in-toto-record-for-a-screen)).
+It changes no data, census script or analysis value. Release `v3.4` adds a template test of the two TheBloke deepseek-coder-6.7B
 community files on one CUDA pod (`rerun-2026-10/results-tpl/`), which shows
 that their low census scores come from a missing chat template, not from the
 backend, and corrects the documentation that described the census template
