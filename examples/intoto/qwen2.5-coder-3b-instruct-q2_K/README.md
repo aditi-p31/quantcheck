@@ -7,5 +7,6 @@ The run on 17 Nov 2026 used the released harness (`harness/audit.py`, unchanged 
 - `run_record.json`: digests, runtime (Ollama 0.32.6, Metal, Apple M2) and decode settings, written at run start
 - `generations.jsonl`: the 15 model outputs
 - `scored.json`: per-task EvalPlus 0.3.1 results (0 of 15 solved; the screen passes a tag at 9 or more)
+- `statement.json`: the eval-result Statement for this run, as posted on in-toto/attestation#565 on 17 Nov 2026. `harness/intoto.py` rebuilds it byte for byte from the three files above (see `tests/test_intoto.py`).
 
 The census run of 12 Aug 2026 (CUDA) gave the same result, 0 of 15.

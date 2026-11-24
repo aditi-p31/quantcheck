@@ -1,0 +1,90 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "subject": [
+    {
+      "name": "registry.ollama.ai/library/qwen2.5-coder:3b-instruct-q2_K",
+      "digest": {
+        "sha256": "14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e"
+      }
+    }
+  ],
+  "predicateType": "https://in-toto.io/attestation/eval-result/v0.1",
+  "predicate": {
+    "evaluator": {
+      "id": "https://github.com/aditi-p31"
+    },
+    "evaluatedAt": "2026-11-17T17:36:13Z",
+    "suite": {
+      "name": "quantcheck HumanEval+ screen",
+      "version": "smoke_suite_v1"
+    },
+    "claims": [
+      {
+        "metric": "tasks_solved",
+        "comparator": ">=",
+        "threshold": "9",
+        "passed": false
+      }
+    ],
+    "sampleSize": 15,
+    "model": {
+      "name": "qwen2.5-coder:3b-instruct-q2_K",
+      "digest": {
+        "sha256": "14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e"
+      },
+      "mediaType": "application/vnd.ollama.image.model",
+      "uri": "https://registry.ollama.ai/v2/library/qwen2.5-coder/blobs/sha256:14c4247b8ce438992cf4fb41d5461ff9d3730a561345c47a224d21ea90f8545e"
+    },
+    "dataset": {
+      "name": "smoke_suite_v1.json",
+      "digest": {
+        "sha256": "0f50c6f29e2dfd2afe6153a60d9e806d7b8292bbebe23fe6276340a2180abf96"
+      },
+      "mediaType": "application/json",
+      "downloadLocation": "https://raw.githubusercontent.com/aditi-p31/quantcheck/v3.4.1/smoke_suite_v1.json"
+    },
+    "assuranceLevel": "self_attested",
+    "subjectProfile": "public_model",
+    "evidence": [
+      {
+        "name": "run record, written at run start (manifest, model and chat-template digests, runtime, decode settings)",
+        "digest": {
+          "sha256": "b9c61f9918eebb7643a318ce08afd4a35818f18b32894db8b4adb2b0b9111897"
+        },
+        "mediaType": "application/json",
+        "downloadLocation": "https://raw.githubusercontent.com/aditi-p31/quantcheck/01b3ae19c7601b143717c885853e7bd783c5d211/examples/intoto/qwen2.5-coder-3b-instruct-q2_K/run_record.json"
+      },
+      {
+        "name": "chat template layer, digest recorded at run start",
+        "digest": {
+          "sha256": "1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320"
+        },
+        "mediaType": "application/vnd.ollama.image.template",
+        "uri": "https://registry.ollama.ai/v2/library/qwen2.5-coder/blobs/sha256:1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320"
+      },
+      {
+        "name": "generations",
+        "digest": {
+          "sha256": "87d1a240db236a3171032e9dc6fb3c9aae25def01a0f418f21e6dba5861fd09a"
+        },
+        "mediaType": "application/jsonl",
+        "downloadLocation": "https://raw.githubusercontent.com/aditi-p31/quantcheck/01b3ae19c7601b143717c885853e7bd783c5d211/examples/intoto/qwen2.5-coder-3b-instruct-q2_K/generations.jsonl"
+      },
+      {
+        "name": "per-task scores",
+        "digest": {
+          "sha256": "efe0eea4e8dc1d16cba72e291dce08e860cb4f28e8878be9c6e2e07736331ad4"
+        },
+        "mediaType": "application/json",
+        "downloadLocation": "https://raw.githubusercontent.com/aditi-p31/quantcheck/01b3ae19c7601b143717c885853e7bd783c5d211/examples/intoto/qwen2.5-coder-3b-instruct-q2_K/scored.json"
+      }
+    ],
+    "harness": {
+      "name": "quantcheck",
+      "version": "3.4.1",
+      "digest": {
+        "gitCommit": "fb27ff44f3eecba7f662e5514112a108a6ba503d"
+      }
+    }
+  }
+}

@@ -31,6 +31,45 @@ read the score and compare it with the same model at higher precision). The
 audit data is also on the Hugging Face Hub:
 [aditiPatodiya/quantcheck-audit](https://huggingface.co/datasets/aditiPatodiya/quantcheck-audit).
 
+## Write an in-toto record for a screen
+
+`harness/screen_intoto.py` runs the same screen for one tag and also writes a
+record in the in-toto `eval-result` format (proposed in
+[in-toto/attestation#575](https://github.com/in-toto/attestation/pull/575),
+discussed in [#565](https://github.com/in-toto/attestation/issues/565)). The
+record names the model file by digest and links its evidence, so a registry or
+a CI job can check what was screened without reading quantcheck's own files.
+
+```
+.venv/bin/python harness/screen_intoto.py --tag qwen2.5-coder:3b-instruct-q3_K_M \
+    --out-dir my-record --evaluator-id https://github.com/YOUR-NAME
+.venv/bin/python harness/intoto.py check my-record/statement.json
+```
+
+The run record is written before generation starts. It holds the manifest,
+model and chat-template digests from the local Ollama store, each checked
+against its blob and against the manifest the running server lists, the template
+the server serves, and the HumanEval+ data version. The server must run on the
+same machine. The script stops without a record if the server serves a
+different template than the tag's own, or if the tag or template changes during
+the run. Before generating, it scores the 15 reference solutions and stops
+unless all of them pass, because a broken scoring setup fails every task
+silently. On macOS, EvalPlus cannot set its memory limit, which causes exactly
+that, so the script sets `EVALPLUS_MAX_MEMORY_BYTES=-1` there unless you set it
+yourself. It then generates with `harness/audit.py` and scores with the
+corrected scorer used for the paper. The output folder holds `run_record.json`,
+`generations.jsonl`, `scored.json` and `statement.json`. Add `--pull` to pull the tag first, and `--base-url` with the
+address where you will publish the files to put download links in the record.
+`intoto.py check --fetch` also downloads each linked file except the model blob
+(the subject digest pins that) and compares its digest. Records are unsigned. Sign them with in-toto or sigstore tooling if you
+need that.
+
+A complete example from a run on 17 Nov 2026 is in
+[`examples/intoto/`](examples/intoto/qwen2.5-coder-3b-instruct-q2_K/). The idea
+of a per-tag screen receipt came from Sattyam Jain in
+[#2](https://github.com/aditi-p31/quantcheck/issues/2). The tests run with
+`python3 -m unittest discover -s tests`.
+
 ## Release history
 
 Release `v3.4` adds a template test of the two TheBloke deepseek-coder-6.7B
